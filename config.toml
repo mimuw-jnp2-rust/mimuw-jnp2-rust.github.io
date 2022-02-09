@@ -1,0 +1,9 @@
+title = "JNP2: Rust"
+description = "A Rust course at MIM UW"
+base_url = "https://mimuw-jnp2-rust.github.io"
+compile_sass = true
+build_search_index = true
+generate_feed = true
+highlight_code = true
+
+default_language = "en"

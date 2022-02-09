@@ -1,0 +1,15 @@
+[package]
+name = "lessons"
+version = "0.1.0"
+edition = "2021"
+authors = ["Andrzej Głuszak", "Piotr Wojtczak"]
+
+[[bin]]
+name = "1_demo"
+path = "content/lessons/1_introduction/demo.rs"
+[[bin]]
+name = "1_hello"
+path = "content/lessons/1_introduction/hello-world.rs"
+
+[dependencies]
+

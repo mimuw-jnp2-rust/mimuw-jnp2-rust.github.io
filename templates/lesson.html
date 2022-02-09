@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1 class="title">
+    {{ page.title }}
+  </h1>
+  <p class="subtitle"><strong>{{ page.extra.lesson_date }}</strong> (last edit: {{ page.date }})</p>
+  {{ page.content | safe }}
+{% endblock content %}
