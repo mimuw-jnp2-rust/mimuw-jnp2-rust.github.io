@@ -1,0 +1,11 @@
+.history/
+out/
+.idea
+debug/
+target/
+node_modules/
+.npm/
+public/
+target/
+
+*.html

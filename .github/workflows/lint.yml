@@ -1,0 +1,41 @@
+name: Run linters and formatters
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  rust:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: clippy
+        run: cargo clippy --all-targets --all-features -- -D warnings
+      - name: rustfmt
+        run: cargo fmt --all --check
+      - name: rust test
+        run: cargo test --all-targets --all-features --no-fail-fast
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup node
+        uses: actions/setup-node@v2
+      - name: cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: npm-${{ hashFiles('package-lock.json') }}
+          restore-keys: npm-
+      - name: install dependencies
+        run: npm ci --ignore-scripts
+      - name: stylelint
+        run: npx stylelint "**/*.{scss,css}"
+      - name: eslint
+        run: npx eslint "**/*.{js, ts}"
+      - name: prettier
+        run: npx prettier --check .
