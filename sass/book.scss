@@ -1,9 +1,5 @@
 @charset "utf-8";
 @import "normalize";
-@import "navigation";
-@import "content";
-@import "header";
-@import "code";
 
 * {
   box-sizing: border-box;
@@ -38,3 +34,8 @@ body {
 }
 
 $sidebar-width: 300px;
+
+@import "navigation";
+@import "content";
+@import "header";
+@import "code";
