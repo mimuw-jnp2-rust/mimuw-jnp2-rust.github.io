@@ -15,3 +15,11 @@ npx stylelint "**/*.{scss, css}" --fix
 npx eslint "**/*.{js, ts}" --fix
 npx prettier --write .
 ```
+
+## Useful links
+
+* [Rust Playground](git@github.com:mimuw-jnp2-rust/mimuw-jnp2-rust.github.io.git)
+
+* [Rust Book](https://doc.rust-lang.org/book/title-page.html)
+
+* [Rust Async Book](https://rust-lang.github.io/async-book/)
