@@ -38,11 +38,12 @@
             {% if subsection.pages %}
               <ul>
                 {% for page in subsection.pages %}
-                  <li {% if current_path == page.path %}class="active"{% endif %}>
+                  <li {% if current_path == page.path %} class="active" {% endif %}>
                     <a href="{{ page.permalink }}">
                       {% if config.extra.book_number_chapters %}
                         <strong>{{ chapter_num }}.{{ loop.index }}
-                        .</strong>{% endif %}
+                          .</strong>
+                      {% endif %}
                       {{ page.title }}
                     </a>
                   </li>
@@ -59,7 +60,7 @@
 </div>
 
 <div class="page">
-  <div class="page__header">
+  <div class="page-header">
     <div class="menu-icon">
       <span></span>
       <span></span>
