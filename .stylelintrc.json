@@ -1,6 +1,7 @@
 {
   "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier"],
   "rules": {
-    "color-function-notation": null
+    "color-function-notation": null,
+    "no-invalid-position-at-import-rule": null
   }
 }

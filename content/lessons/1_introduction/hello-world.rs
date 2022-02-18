@@ -57,7 +57,9 @@ fn main() {
 
     labels();
 
-    print!("{}", break_with_value() + 10);
+    let forty_two = break_with_value() + 10;
+
+    dbg!(forty_two);
 }
 
 fn labels() {
@@ -84,10 +86,11 @@ fn labels() {
 
 fn break_with_value() -> i32 {
     let mut counter = 0;
-    loop {
+    let value = loop {
         counter += 1;
         if counter == 10 {
             break 32;
         }
-    }
+    };
+    value
 }
