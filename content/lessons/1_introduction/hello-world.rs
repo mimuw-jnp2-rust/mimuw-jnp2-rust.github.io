@@ -86,11 +86,13 @@ fn labels() {
 
 fn break_with_value() -> i32 {
     let mut counter = 0;
-    let value = loop {
+    // We can use break with a value.
+    // Because loops are expressions too,
+    // the value we break with will be returned from the functions
+    loop {
         counter += 1;
         if counter == 10 {
             break 32;
         }
-    };
-    value
+    }
 }
