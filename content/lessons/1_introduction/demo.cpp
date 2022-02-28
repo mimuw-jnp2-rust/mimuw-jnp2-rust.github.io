@@ -1,38 +1,54 @@
 #include <iostream>
 #include <cstdio>
+#include <array>
 
-using namespace std;
+using std::cout;
+using std::endl;
 
 int main() {
     //# Syntax error
     // cout < "hello world";
 
     // constexpr int length = 3;
-    // string array[length] = {"hello", "old", "world!"};
+    // std::array<std::string, length> array = {"hello", "old", "world!"};
 
-    //# Array out-of-bounds with a statically known index
+    //# Array access with an out of bounds index and bounds checking during compile time
+    // cout << std::get<length>(array) << endl;
+
+    //# Array access with an out of bounds index and bounds checking during runtime
+    // cout << array.at(length) << endl;
+
+    //# Most common access without any checks
     // cout << array[length] << endl;
     
     //# Array out-of-bounds with a dynamically computed index
     // for (int i = 0; i <= length; i++) {
-    //     cout << array[i] << endl;
+    //     cout << array.at(i) << endl;
     // }
 
-    //# Doing God knows what
+    //# This will be there in Clang 14 ...
+    // std::string format = std::format("a very innocent hello {}");
+    // cout << format << endl;
+
+    //# ... but for now, this is doing God knows what
     // const char* format = "a very innocent hello %s";
     // printf(format);
 
     //# Division by zero
     // int joy_division = 0/0;
 
+    //# Runtime error without explicit constexpr
+    // int joy = 0;
+    // int joy_division = 1/joy;
+
+    //# Even worse
     // int joy = 0;
     // int joy_division = 0/joy;
 
     // int joy = false ? 1 : 0;
     // int joy_division = 0/joy;
 
-    // printf("joy division equals %d", joy_division);
+    // cout << "joy division equals " << joy_division << endl;
 
     return 0;
 }
-
