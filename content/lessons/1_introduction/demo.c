@@ -21,13 +21,13 @@ int main() {
     // printf(format);
 
     //# Division by zero
-    // int joy_division = 0/0;
+    // int joy_division = 1/0;
 
     // int joy = 0;
-    // int joy_division = 0/joy;
+    // int joy_division = 1/joy;
 
     // int joy = 0 ? 1 : 0;
-    // int joy_division = 0/joy;
+    // int joy_division = 1/joy;
 
     // printf("joy division equals %d", joy_division);
 

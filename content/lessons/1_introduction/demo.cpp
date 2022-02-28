@@ -35,18 +35,13 @@ int main() {
     // printf(format);
 
     //# Division by zero
-    // int joy_division = 0/0;
+    // int joy_division = 1/0;
 
-    //# Runtime error without explicit constexpr
     // int joy = 0;
     // int joy_division = 1/joy;
 
-    //# Even worse
-    // int joy = 0;
-    // int joy_division = 0/joy;
-
     // int joy = false ? 1 : 0;
-    // int joy_division = 0/joy;
+    // int joy_division = 1/joy;
 
     // cout << "joy division equals " << joy_division << endl;
 
