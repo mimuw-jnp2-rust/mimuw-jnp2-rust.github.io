@@ -31,7 +31,7 @@ Even if you don't end up using Rust, learning it expands your horizons
 
 ## Demo
 
-Let's compare the same code written in [C++](demo.cpp) and [Rust](demo.rs).
+Let's compare the same code written in [C](demo.c), [C++](demo.cpp) and [Rust](demo.rs).
 
 ## Installing Rust
 
@@ -175,6 +175,10 @@ fn main() {
 ## Test assignment (not graded)
 
 Click [here](https://classroom.github.com/a/sFJOi1pT)
+
+## Obligatory reading
+
+- [The Book, chapters 1-3](https://doc.rust-lang.org/stable/book/)
 
 ## Additional reading
 
