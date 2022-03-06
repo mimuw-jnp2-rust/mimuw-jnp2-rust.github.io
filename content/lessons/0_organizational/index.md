@@ -16,7 +16,7 @@ Our main learning/teaching resource will be ["The Book"](https://doc.rust-lang.o
 ## Schedule
 
 1. 2022-03-01: Introduction. Setting up the environment. Why Rust? "Hello world".
-2. 2022-03-08: Data types, structures and enums. Pattern matching. Borrow checking.
+2. 2022-03-08: Ownership and borrow checking. Data types and structures.
 
 ## Grading
 
