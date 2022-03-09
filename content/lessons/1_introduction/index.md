@@ -41,13 +41,13 @@ and [Rust](errors_demo.rs).
 
 - [Rustup](https://rustup.rs/)
 - Setup an IDE
-    - [CLion](https://www.jetbrains.com/clion/) (you can get
-      it [for free](https://www.jetbrains.com/community/education/))
-      and [Intellij-Rust](https://intellij-rust.github.io/)
-    - [VSCode](https://code.visualstudio.com/)
-      and [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer)
-    - rust-analyzer also works
-      with [other IDEs](https://rust-analyzer.github.io/manual.html#installation)
+  - [CLion](https://www.jetbrains.com/clion/) (you can get
+    it [for free](https://www.jetbrains.com/community/education/))
+    and [Intellij-Rust](https://intellij-rust.github.io/)
+  - [VSCode](https://code.visualstudio.com/)
+    and [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer)
+  - rust-analyzer also works
+    with [other IDEs](https://rust-analyzer.github.io/manual.html#installation)
 
 ## Useful tools
 
