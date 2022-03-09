@@ -8,8 +8,8 @@ Before making a PR, please run the following commands:
 
 ```sh
 zola check
-cargo clippy --all-targets --all-features -- -D warnings
-cargo fmt --all --check
+cargo clippy --all-targets --all-features --fix -- -D warnings
+cargo fmt --all
 cargo test --all-targets --all-features --no-fail-fast
 npx stylelint "**/*.{scss, css}" --fix
 npx eslint "**/*.{js, ts}" --fix
