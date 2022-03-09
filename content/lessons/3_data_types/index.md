@@ -1,6 +1,6 @@
 +++
 title = "Data Types"
-date = 2022-03-07
+date = 2022-03-09
 weight = 1
 [extra]
 lesson_date = 2022-03-08
@@ -8,89 +8,9 @@ lesson_date = 2022-03-08
 
 ## Aggregating data
 
-Below is a compact overview of Rust's structs ([click here](data-types.rs) to download).
+Below is a compact overview of Rust's structs 
 
-```rust
-#[derive(Clone, Copy, Debug, Eq, PartialEq)]
-struct Position(i32, i32); // tuple struct
-
-// Could Hero derive the Copy trait?
-#[derive(Clone, Debug, Eq, PartialEq)]
-struct Hero {
-    name: String,
-    level: u32,
-    experience: u32,
-    position: Position,
-}
-
-// we can add methods to structs using the 'impl' keyword
-impl Hero {
-    // static method
-    fn new(name: String) -> Hero {
-        Hero {
-            name,
-            level: 1,
-            experience: 0,
-            position: Position(0, 0),
-        }
-    }
-}
-
-// multiple impl blocks are possible for one struct
-impl Hero {
-    // instance method, first argument (self) is the calling instance
-    fn distance(&self, pos: Position) -> u32 {
-        // fields of tuples and tuple structs can be accessed through 'tuple.[i]'
-        (pos.0 - self.position.0).unsigned_abs() + (pos.1 - self.position.1).unsigned_abs()
-    }
-
-    // mutable borrow of self allows to change instance fields
-    fn level_up(&mut self) {
-        self.experience = 0;
-        self.level += 1;
-    }
-
-    // 'self' is not borrowed here and will be moved into the method
-    fn die(self) {
-        println!("Here lies {}, a hero who reached level {}. RIP.", self.name, self.level);
-    }
-}
-
-fn main() {
-    let mut hero: Hero = Hero::new(String::from("Marty The Brave"));
-    hero.level_up(); // 'self' is always passed implicitly
-
-    // fields other than 'name' will be the same as in 'hero'
-    let steve = Hero {
-        name: String::from("Steve The Normal Guy"),
-        ..hero
-    };
-
-    assert_eq!(hero.level, steve.level);
-
-    let mut twin = hero.clone();
-
-    // we can compare Hero objects because it derives the PartialEq trait
-    assert_eq!(hero, twin);
-    twin.level_up();
-    assert_ne!(hero, twin);
-    hero.level_up();
-    assert_eq!(hero, twin);
-
-    // we can print out a the struct's debug string with '{:?}'
-    println!("print to stdout: {:?}", hero);
-
-    hero.die(); // 'hero' is not usable after this invocation, see the method's definiton
-
-    // the dbg! macro prints debug strings to stderr along with file and line number
-    dbg!("print to stderr: {}", twin);
-
-    let pos = Position(42, 0);
-    let dist = steve.distance(pos); // no clone here as Position derives the Copy trait
-    println!("{:?}", pos);
-    assert_eq!(dist, 42);
-}
-```
+{{ include_code_sample(path="lessons/3_data_types/data_types.rs", language="rust") }}
 
 ## Further reading
 

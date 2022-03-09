@@ -39,7 +39,10 @@ impl Hero {
 
     // 'self' is not borrowed here and will be moved into the method
     fn die(self) {
-        println!("Here lies {}, a hero who reached level {}. RIP.", self.name, self.level);
+        println!(
+            "Here lies {}, a hero who reached level {}. RIP.",
+            self.name, self.level
+        );
     }
 }
 
