@@ -25,6 +25,12 @@ path = "content/lessons/1_introduction/variables.rs"
 [[bin]]
 name = "3_data_types"
 path = "content/lessons/3_data_types/data_types.rs"
+[[bin]]
+name = "4_enums"
+path = "content/lessons/4_enums/enums.rs"
+[[bin]]
+name = "4_option"
+path = "content/lessons/4_enums/option.rs"
 
 [dependencies]
 
