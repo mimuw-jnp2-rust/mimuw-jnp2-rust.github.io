@@ -8,7 +8,7 @@ lesson_date = 2022-03-08
 
 ## Aggregating data
 
-Below is a compact overview of Rust's structs 
+Below is a compact overview of Rust's structs
 
 {{ include_code_sample(path="lessons/3_data_types/data_types.rs", language="rust") }}
 
