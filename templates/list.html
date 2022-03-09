@@ -6,7 +6,7 @@
   {% for page in section.pages %}
   <li>
     <a href="{{ page.permalink | safe }}"
-      >{{ page.title }} ({{ page.extra.lesson_date }})</a
+      >[{{ page.extra.lesson_date }}] {{ page.title }} (last edited: {{ page.date }})</a
     >
   </li>
   {% endfor %}
