@@ -23,6 +23,7 @@ int main() {
 ```
 
 In C++ enums are more type-safe:
+
 ```
 <source>:27:31: error: invalid conversion from 'int' to 'shirt_size' [-fpermissive]
    27 |     enum shirt_size my_size = 666;
@@ -42,7 +43,7 @@ In C++ we can use `union` with an `enum` tag to define it:
 C++17 introduced a new feature called `variant` which generalizes this concept.
 You can read more about it [here](https://en.cppreference.com/w/cpp/utility/variant).
 
-Java has a more or less analogous feature called `sealed classes` 
+Java has a more or less analogous feature called `sealed classes`
 since [version 17](https://docs.oracle.com/en/java/javase/17/language/sealed-classes-and-interfaces.html.).
 
 ## Enums in Rust
@@ -51,21 +52,23 @@ Let's see how they are defined in Rust.
 
 {{ include_code_sample(path="lessons/4_enums/enums.rs", language="rust") }}
 
-In Rust, enums are a core feature of the language. 
-You may have heard that one of Rust's defining characteristics is 
+In Rust, enums are a core feature of the language.
+You may have heard that one of Rust's defining characteristics is
 the absence of ["the billion dollar mistake"](https://en.wikipedia.org/wiki/Tony_Hoare#Apologies_and_retractions).
 So what can we do to say that a value is missing if there is no `null`?
 
 In Rust, we can use the `Option` type to represent the absence of a value.
 
 Option is defined as:
+
 ```rust
 enum Option<T> {
     Some(T),
     None,
 }
 ```
-The `<T>` part is called the "type parameter" and it causes Option to be generic. 
+
+The `<T>` part is called the "type parameter" and it causes Option to be generic.
 We won't go deeper into this for now.
 
 The fact that variables which could be `null` in other languages have a different type in Rust is
@@ -87,10 +90,8 @@ So how do we handle situations which can fail? That's where the `Result` type co
 
 {{ include_code_sample(path="lessons/4_enums/result.rs", language="rust") }}
 
-
 ## Obligatory reading
+
 - The Book, chapters 6, 8 and 9
 - https://doc.rust-lang.org/std/option/
 - https://doc.rust-lang.org/std/result/
-
-
