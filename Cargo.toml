@@ -31,6 +31,16 @@ path = "content/lessons/4_enums/enums.rs"
 [[bin]]
 name = "4_option"
 path = "content/lessons/4_enums/option.rs"
+[[bin]]
+name = "4_pattern_matching"
+path = "content/lessons/4_enums/pattern_matching.rs"
+[[bin]]
+name = "4_result"
+path = "content/lessons/4_enums/result.rs"
+[[bin]]
+name = "5_test"
+path = "content/lessons/5_tests/test.rs"
 
 [dependencies]
+rand = "0.8"
 

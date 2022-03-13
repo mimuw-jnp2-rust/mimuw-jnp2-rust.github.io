@@ -17,8 +17,12 @@ enum ShirtSize {
 }
 
 fn main() {
-    println!("Isn't it strange that some clothes' sizes are adjectives like {:?},",
-             ShirtSize::Named(NamedSize::Small));
-    println!("but sometimes they are numbers like {:?}?",
-             ShirtSize::Numeric(42));
+    println!(
+        "Isn't it strange that some clothes' sizes are adjectives like {:?},",
+        ShirtSize::Named(NamedSize::Small)
+    );
+    println!(
+        "but sometimes they are numbers like {:?}?",
+        ShirtSize::Numeric(42)
+    );
 }

@@ -1,9 +1,9 @@
 +++
 title = "Enums"
-date = 2022-03-14
+date = 2022-03-13
 weight = 1
 [extra]
-lesson_date = 2022-03-09
+lesson_date = 2022-03-14
 +++
 
 ## Enums
@@ -45,7 +45,7 @@ You can read more about it [here](https://en.cppreference.com/w/cpp/utility/vari
 Java has a more or less analogous feature called `sealed classes` 
 since [version 17](https://docs.oracle.com/en/java/javase/17/language/sealed-classes-and-interfaces.html.).
 
-## Rust
+## Enums in Rust
 
 Let's see how they are defined in Rust.
 
@@ -72,5 +72,25 @@ The fact that variables which could be `null` in other languages have a differen
 the solution to the billion dollar mistake!
 
 {{ include_code_sample(path="lessons/4_enums/option.rs", language="rust") }}
+
+## Pattern matching
+
+Pattern matching is a powerful feature of Rust and many functional languages, but it's slowly making
+its way into imperative languages like Java and Python.
+
+{{ include_code_sample(path="lessons/4_enums/pattern_matching.rs", language="rust") }}
+
+## Result
+
+We said there are no exceptions in Rust and panics mean errors which cannot be caught.
+So how do we handle situations which can fail? That's where the `Result` type comes in.
+
+{{ include_code_sample(path="lessons/4_enums/result.rs", language="rust") }}
+
+
+## Obligatory reading
+- The Book, chapters 6, 8 and 9
+- https://doc.rust-lang.org/std/option/
+- https://doc.rust-lang.org/std/result/
 
 
