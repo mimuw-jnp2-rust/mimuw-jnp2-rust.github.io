@@ -24,6 +24,7 @@
   {% endblock before_menu %}
   <nav role="navigation">
     <ul>
+      <li><a href="{{ get_url(path="/") | safe }}">Home</a></li>
       {% block menu %}
         {% set index = get_section(path="_index.md") %}
         {% for s in index.subsections %}
@@ -40,6 +41,7 @@
                 {% for page in subsection.pages %}
                   <li {% if current_path == page.path %} class="active" {% endif %}>
                     <a href="{{ page.permalink }}">
+                      [{{ page.extra.lesson_date }}]
                       {% if config.extra.book_number_chapters %}
                         <strong>{{ chapter_num }}.{{ loop.index }}
                           .</strong>
