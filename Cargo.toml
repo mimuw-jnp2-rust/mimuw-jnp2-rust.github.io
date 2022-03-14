@@ -5,11 +5,26 @@ edition = "2021"
 authors = ["Andrzej Głuszak", "Piotr Wojtczak"]
 
 [[bin]]
-name = "1_demo"
-path = "content/lessons/1_introduction/demo.rs"
+name = "1_errors_demo"
+path = "content/lessons/1_introduction/errors_demo.rs"
 [[bin]]
-name = "1_hello"
-path = "content/lessons/1_introduction/hello-world.rs"
+name = "1_hello_world"
+path = "content/lessons/1_introduction/hello_world.rs"
+[[bin]]
+name = "1_conditionals"
+path = "content/lessons/1_introduction/conditionals.rs"
+[[bin]]
+name = "1_functions"
+path = "content/lessons/1_introduction/functions.rs"
+[[bin]]
+name = "1_loops"
+path = "content/lessons/1_introduction/loops.rs"
+[[bin]]
+name = "1_variables"
+path = "content/lessons/1_introduction/variables.rs"
+[[bin]]
+name = "3_data_types"
+path = "content/lessons/3_data_types/data_types.rs"
 
 [dependencies]
 
