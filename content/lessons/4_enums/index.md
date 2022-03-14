@@ -92,8 +92,8 @@ So how do we handle situations which can fail? That's where the `Result` type co
 
 ## Obligatory reading
 
-- The Book, chapters [6](https://doc.rust-lang.org/stable/book/ch06-00-enums.html), 
-                     [8](https://doc.rust-lang.org/stable/book/ch08-00-common-collections.html) 
-                 and [9](https://doc.rust-lang.org/stable/book/ch09-00-error-handling.html)
+- The Book, chapters [6](https://doc.rust-lang.org/stable/book/ch06-00-enums.html),
+  [8](https://doc.rust-lang.org/stable/book/ch08-00-common-collections.html)
+  and [9](https://doc.rust-lang.org/stable/book/ch09-00-error-handling.html)
 - [Option docs](https://doc.rust-lang.org/std/option/)
 - [Result docs](https://doc.rust-lang.org/std/result/)
