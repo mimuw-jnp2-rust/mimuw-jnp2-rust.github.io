@@ -16,4 +16,4 @@ You can write `cargo test` to run all tests.
 
 ## Obligatory reading
 
-- The Book, chapter 11
+- [The Book, chapter 11](https://doc.rust-lang.org/stable/book/ch11-00-testing.html)

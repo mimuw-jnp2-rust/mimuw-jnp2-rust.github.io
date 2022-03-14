@@ -11,7 +11,7 @@ fn main() {
     nullable = None;
     nullable = Some(43);
 
-    // such construction is rare, but it's possible
+    // such construction is rare, but possible
     let mut double_nullable: Option<Option<i32>> = Some(Some(42));
     // assert_ne!(double_nullable, Some(42)); // this won't even compile because it's a different type!
     double_nullable = None;
@@ -28,6 +28,7 @@ fn main() {
     fn divide(dividend: i32, divisor: i32) -> i32 {
         dividend / divisor
     }
+
     // We get the divisor from the user, so it can be 0
     // We want to handle this situation gracefully - we don't want to crash the program!
     // We can do this by using the Option<T> type
@@ -39,7 +40,7 @@ fn main() {
         }
     }
 
-    // Fortunately, such function is already included in the standard library
+    // Fortunately, such a function is already included in the standard library
     let number: i32 = 42;
     // We need to specify the type explicitly
     // because checked_div is implemented for all integer types
@@ -59,7 +60,7 @@ fn main() {
     // Usually there are two kinds of methods:
     // ones that will panic if the argument is incorrect,
     // numbers[8]; // this will panic!
-    // ane `checked` ones that return an Option
+    // and `checked` ones that return an Option
     assert_eq!(numbers.get(8), None);
 
     // We can use `unwrap` to get the value out of an Option

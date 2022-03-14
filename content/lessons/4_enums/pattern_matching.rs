@@ -1,7 +1,7 @@
 #![allow(dead_code)]
 
 fn main() {
-    // Pattern matching is basically switch on steroids.
+    // Pattern matching is basically a switch on steroids.
     let number = rand::random::<i32>();
     match number % 7 {
         0 => println!("{number} is divisible by 7"),

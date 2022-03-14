@@ -8,7 +8,7 @@ lesson_date = 2022-03-14
 
 ## Enums
 
-It is often the case that you want to define a variable that can only take
+It is often the case that we want to define a variable that can only take
 a certain set of values and the values are known up front. In C you can an `enum` for this.
 
 {{ include_code_sample(path="lessons/4_enums/enums.c", language="c") }}
@@ -22,7 +22,7 @@ int main() {
 }
 ```
 
-In C++ enums are more type-safe:
+In C++ enums are more type-safe than in C (we compiled the same code as C++):
 
 ```
 <source>:27:31: error: invalid conversion from 'int' to 'shirt_size' [-fpermissive]
@@ -79,7 +79,7 @@ the solution to the billion dollar mistake!
 ## Pattern matching
 
 Pattern matching is a powerful feature of Rust and many functional languages, but it's slowly making
-its way into imperative languages like Java and Python.
+its way into imperative languages like Java and Python as well.
 
 {{ include_code_sample(path="lessons/4_enums/pattern_matching.rs", language="rust") }}
 
@@ -92,6 +92,8 @@ So how do we handle situations which can fail? That's where the `Result` type co
 
 ## Obligatory reading
 
-- The Book, chapters 6, 8 and 9
-- https://doc.rust-lang.org/std/option/
-- https://doc.rust-lang.org/std/result/
+- The Book, chapters [6](https://doc.rust-lang.org/stable/book/ch06-00-enums.html), 
+                     [8](https://doc.rust-lang.org/stable/book/ch08-00-common-collections.html) 
+                 and [9](https://doc.rust-lang.org/stable/book/ch09-00-error-handling.html)
+- [Option docs](https://doc.rust-lang.org/std/option/)
+- [Result docs](https://doc.rust-lang.org/std/result/)
