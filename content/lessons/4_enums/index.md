@@ -22,7 +22,7 @@ int main() {
 }
 ```
 
-In C++ enums are more type-safe than in C (we compiled the same code as C++):
+C++ introduces enum classes which are type-safe. Legacy enums are also somewhat safer than in C (same code as above):
 
 ```
 <source>:27:31: error: invalid conversion from 'int' to 'shirt_size' [-fpermissive]

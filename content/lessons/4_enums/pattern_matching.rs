@@ -1,4 +1,5 @@
 #![allow(dead_code)]
+#![allow(unused_variables)]
 
 fn main() {
     // Pattern matching is basically a switch on steroids.
@@ -9,6 +10,7 @@ fn main() {
         _ => println!("{number} is not divisible by 7"),
     }
 
+    #[derive(Debug)]
     enum Color {
         Pink,
         Brown,
@@ -60,6 +62,12 @@ fn main() {
 
     println!("John is {} years old and still kicking!", john.age);
 
+    // To save some time, we can use `if let` to match against only one thing
+    // We could also use `while let ... {}` in the same way
+    if let Color::Pink = &john.favorite_color {
+        println!("He's also a man of great taste");
+    }
+
     // We can match ranges...
     match john.age {
         0..=12 => println!("John is a kid!"),
@@ -86,4 +94,35 @@ fn main() {
         age if age % 2 == 0 => println!("John is an *even* man, age {}", age),
         _ => println!("John is normal"),
     }
+
+    // Finally, let's look at some references now
+    let reference: &i32 = &4;
+
+    match reference {
+        &val => println!("Value under reference is: {}", val),
+    }
+
+    // `ref` can be used to create a reference when destructuring
+    let Human {
+        age,
+        ref favorite_color,
+    } = john;
+    // `john` is still valid, because we borrowed using `ref`
+    if let Color::Pink = &john.favorite_color {
+        println!("John still has his color - {:?}!", favorite_color);
+    }
+
+    let mut john = john;
+
+    // `ref mut` borrows mutably
+    let Human {
+        age,
+        ref mut favorite_color,
+    } = john;
+    // We use `*` to dereference
+    *favorite_color = Color::Brown;
+    println!(
+        "Tastes do change with time and John likes {:?} now.",
+        john.favorite_color
+    );
 }
