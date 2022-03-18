@@ -97,3 +97,7 @@ So how do we handle situations which can fail? That's where the `Result` type co
   and [9](https://doc.rust-lang.org/stable/book/ch09-00-error-handling.html)
 - [Option docs](https://doc.rust-lang.org/std/option/)
 - [Result docs](https://doc.rust-lang.org/std/result/)
+
+## Assignment #2 (graded)
+
+[Here](https://classroom.github.com/a/KGDd4ofC) you can find the second graded assignment. Deadline for submissions is 24.03.2022.
