@@ -40,6 +40,12 @@ path = "content/lessons/4_enums/result.rs"
 [[bin]]
 name = "5_test"
 path = "content/lessons/5_tests/test.rs"
+[[bin]]
+name = "7_constructor"
+path = "content/lessons/7_feedback/constructor.rs"
+[[bin]]
+name = "7_number_conversions"
+path = "content/lessons/7_feedback/number_conversions.rs"
 
 [dependencies]
 rand = "0.8"
