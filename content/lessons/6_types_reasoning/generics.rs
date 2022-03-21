@@ -1,3 +1,7 @@
+#![allow(dead_code)]
+
+use std::fmt::Debug;
+
 // generic enums
 enum OurOption<T> {
     Some(T),
@@ -5,13 +9,13 @@ enum OurOption<T> {
 }
 
 // generic structs
-struct Point<T, U> {
+struct Tuple2<T, U> {
     x: T,
     y: U,
 }
 
 // generic implementation
-impl<T, U> Point<T, U> {
+impl<T, U> Tuple2<T, U> {
     fn new(x: T, y: U) -> Self {
         Self { x, y }
     }
@@ -34,27 +38,33 @@ impl<T: PartialOrd + Copy> Pair<T> {
 }
 
 // alternative syntax
-fn smallest<T>(pair: &Pair<T>) -> T
-    where T: PartialOrd + Copy
+impl<T> Pair<T>
+where
+    T: PartialOrd + Copy,
 {
-    if pair.x < pair.y {
-        pair.x
-    } else {
-        pair.y
+    fn smallest(&self) -> T {
+        if self.x < self.y {
+            self.x
+        } else {
+            self.y
+        }
     }
 }
 
-// syntactic sugar for trait bounds
-fn cloning_machine(item: &impl Clone) -> impl Clone {
+// Here information about the concrete underlying type is erased
+// We can only either format or clone the result
+fn cloning_machine(item: &(impl Clone + Debug)) -> impl Clone + Debug {
     item.clone()
 }
 
 fn main() {
-    let opt = OurOption::Some(10);
+    let _opt = OurOption::Some(10);
 
-    let p1 = Point { x: 5, y: 10 };
-    let p2 = Point::new(1, 2.5);
+    let _p1 = Tuple2 { x: 5, y: 10 };
+    let _p2 = Tuple2::new(1, 2.5);
 
     let arr = [1, 2, 3];
     let arr2 = cloning_machine(&arr);
+    // arr2[0]; // won't compile: cannot index into a value of type `impl std::clone::Clone + std::fmt::Debug`
+    println!("{:?}", arr2)
 }
