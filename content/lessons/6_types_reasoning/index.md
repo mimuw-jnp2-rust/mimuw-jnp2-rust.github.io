@@ -1,6 +1,6 @@
 +++
 title = "Reasoning About Types"
-date = 2022-03-20
+date = 2022-03-21
 weight = 1
 [extra]
 lesson_date = 2022-03-22
@@ -10,31 +10,39 @@ lesson_date = 2022-03-22
 
 Traits are a way to defined common behavior between different types. They can be compared to _interfaces_ from many other mainstream languages or to typeclasses from Haskell, however, Rust is not an object-oriented language and there are some notable differences between type traits and typeclasses.
 
-The way we describe behavior in Rust is through methods. Traits comprise of a set of these methods which then can be implemented by a type. We've already encountered examples of these, like the `Clone` trait which specified that the `clone()` method can be called on some given type. Now, let's take a deeper look and try defining our own trait.
+The way we describe behavior in Rust is through methods. Traits consist of a set of these methods which then should be implemented by a type. We've already encountered examples of these, like the `Clone` trait which specified that the `clone()` method can be called on some given type. Now, let's take a deeper look and try defining our own trait.
 
 {{ include_code_sample(path="lessons/6_types_reasoning/basic_trait.rs", language="rust") }}
 
-## Defaults
+## Default implementations
 
-Trait definitions can also be provided with default implementions of behaviors.
+Trait definitions can also be provided with default implementations of behaviors.
 
 {{ include_code_sample(path="lessons/6_types_reasoning/trait_default.rs", language="rust") }}
 
 ## What about _derive_?
 
-All is good and dandy, but there is a trait related thing we have used quite extensively and not explained yet, namely the `#[derive]` attribute. What it does is generate items (in our case a trait implementation) based on the given data definition (here a struct). Below you can find a list of derivable traits from the standard library. Writing derivation rules for user defined traits is also possible, but goes out of the scope of this lesson.
+There is a trait-related thing we have used quite extensively and not explained yet, namely the `#[derive]` attribute. What it does is generate items (in our case a trait implementation) based on the given data definition (here a struct). Below you can find a list of derivable traits from the standard library. Writing derivation rules for user defined traits is also possible, but goes out of the scope of this lesson.
 
 Derivable traits:
 
-- Comparison traits: `Eq`, `PartialEq`, `Ord` and `PartialOrd`
+- Equality traits: `Eq`, `PartialEq` and comparison traits: `Ord` and `PartialOrd`. The `Partial-` versions exist because there are types which don't fulfill the reflexivity requirement of equality (`NaN != NaN`) or do not form a total order (` NaN < 0.0 == false` and `NaN >= 0.0 == false`).
 
 - Data duplication traits: `Clone` and `Copy`
 
-- `Hash`
+- `Hash` - allows using values of that type as keys in a hashmap
 
-- `Default`
+- `Default` - provides a zero-arg constructor function
 
-- `Debug`
+- `Debug` - provides a formatting of the value which can be used in debugging context. It should _NOT_ be implemented manually. In general, if it's possible to derive the `Debug`, there are no reasons against doing it.
+
+### When is it possible to derive a trait?
+
+When all fields of a struct/variants of an enum implement that trait.
+
+### Should all traits always be derived if it is possible?
+
+No. Although it may be tempting to just slap `#[derive(Clone, Copy)]` everywhere, it would be counter-effective. For example, at some later point you might add a non-Copy field to the struct and your (or, what's worse, someone else's!) code would break. Another example: it makes little sense to use containers as keys in hashmaps or to compare tweets.
 
 # Generics
 

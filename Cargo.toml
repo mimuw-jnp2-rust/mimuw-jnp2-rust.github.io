@@ -40,7 +40,20 @@ path = "content/lessons/4_enums/result.rs"
 [[bin]]
 name = "5_test"
 path = "content/lessons/5_tests/test.rs"
-
+[[bin]]
+name = "6_basic_traits"
+path = "content/lessons/6_types_reasoning/basic_trait.rs"
+[[bin]]
+name = "6_generic_largest"
+path = "content/lessons/6_types_reasoning/generic_largest.rs"
+[[bin]]
+name = "6_generics"
+path = "content/lessons/6_types_reasoning/generics.rs"
+[[bin]]
+name = "6_non_generic"
+path = "content/lessons/6_types_reasoning/non_generic.rs"
+[[bin]]
+name = "6_trait_default"
+path = "content/lessons/6_types_reasoning/trait_default.rs"
 [dependencies]
 rand = "0.8"
-

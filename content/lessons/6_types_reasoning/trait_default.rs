@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 struct Upload {
     filename: String,
 }
@@ -9,18 +11,18 @@ struct Photo {
     height: u32,
 }
 
-trait Summary {
-    fn summarize(&self) -> String {
-        String::from("No summary available.")
+trait Description {
+    fn describe(&self) -> String {
+        String::from("No description available.")
     }
 }
 
 // All default implementations
-impl Summary for Upload {}
+impl Description for Upload {}
 
 // Default implementations can be overwritten
-impl Summary for Photo {
-    fn summarize(&self) -> String {
+impl Description for Photo {
+    fn describe(&self) -> String {
         format!("{} ({} x {})", self.filename, self.width, self.height)
     }
 }
@@ -48,9 +50,11 @@ impl Size for Photo {
 }
 
 fn main() {
-    let upload = Upload { filename: String::from("notes.txt") };
-    
-    println!("Upload: {}", upload.summarize());
+    let upload = Upload {
+        filename: String::from("notes.txt"),
+    };
+
+    println!("Upload: {}", upload.describe());
 
     let photo = Photo {
         filename: String::from("stock_crustacean.png"),
@@ -58,6 +62,6 @@ fn main() {
         height: 150,
     };
 
-    println!("Photo: {}", photo.summarize());
+    println!("Photo: {}", photo.describe());
     println!("Size: {}", photo.size());
 }
