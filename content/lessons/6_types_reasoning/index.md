@@ -139,6 +139,10 @@ A bit more involved example:
 
 {{ include_code_sample(path="lessons/6_types_reasoning/generics_fun.rs", language="rust") }}
 
+## Static vs dynamic dispatch
+
+{{ include_code_sample(path="lessons/6_types_reasoning/static_dynamic_dispatch.rs", language="rust") }}
+
 # Lifetimes
 
 Going back to the lesson about ownership, if we try to compile the following code:
@@ -317,6 +321,6 @@ There exists one special lifetime called `'static`, which means that a reference
 let s: &'static str = "I have a static lifetime.";
 ```
 
-# Further reading
+# Obligatory reading
 
 - [The Book, chapter 10](https://doc.rust-lang.org/book/ch10-00-generics.html)
