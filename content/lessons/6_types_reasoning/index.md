@@ -135,6 +135,10 @@ There's a lot more that we can do with generics:
 
 {{ include_code_sample(path="lessons/6_types_reasoning/generics.rs", language="rust") }}
 
+A bit more involved example:
+
+{{ include_code_sample(path="lessons/6_types_reasoning/generics_fun.rs", language="rust") }}
+
 # Lifetimes
 
 Going back to the lesson about ownership, if we try to compile the following code:
@@ -167,7 +171,7 @@ error[E0597]: `x` does not live long enough
    |                           - borrow later used here
 ```
 
-Curtesy of the borrow checker, we didn't end up with a dangling reference. But what exactly is happening behind the scenes? Rust introduces a concept of annotated lifetimes, where the lifetime of each value is being marked and tracked by the checker. Let's look at some examples:
+Courtesy of the borrow checker, we didn't end up with a dangling reference. But what exactly is happening behind the scenes? Rust introduces a concept of annotated lifetimes, where the lifetime of each value is being marked and tracked by the checker. Let's look at some examples:
 
 ```rust
 {
@@ -233,7 +237,7 @@ help: consider introducing a named lifetime parameter
 
 This is because Rust doesn't know which of the two provided strings (`x` or `y`) will be returned from the function. And because they potentially have different lifetimes, the lifetime of what we are returning remains unclear to the compiler - it needs our help.
 
-Rust provides syntax for specyfing lifetimes. The lifetime parameter name from the example (`a`) doesn't have any concrete meaning - it's just an arbitrary name for this one lifetime.
+Rust provides syntax for specifying lifetimes. The lifetime parameter name from the example (`a`) doesn't have any concrete meaning - it's just an arbitrary name for this one lifetime.
 
 ```rust
 &i32        // a reference

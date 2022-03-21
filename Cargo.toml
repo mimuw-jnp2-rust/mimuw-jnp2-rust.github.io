@@ -55,5 +55,14 @@ path = "content/lessons/6_types_reasoning/non_generic.rs"
 [[bin]]
 name = "6_trait_default"
 path = "content/lessons/6_types_reasoning/trait_default.rs"
+[[bin]]
+name = "6_lifetimes_basic"
+path = "content/lessons/6_types_reasoning/lifetimes_basic.rs"
+[[bin]]
+name = "6_lifetimes_elision"
+path = "content/lessons/6_types_reasoning/lifetimes_elision.rs"
+[[bin]]
+name = "6_generic_fun"
+path = "content/lessons/6_types_reasoning/generics_fun.rs"
 [dependencies]
 rand = "0.8"
