@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 trait Summary {
     fn summarize(&self) -> String;
 }
@@ -29,9 +31,7 @@ impl Summary for Tweet {
 fn main() {
     let tweet = Tweet {
         username: String::from("horse_ebooks"),
-        content: String::from(
-            "of course, as you probably already know, people",
-        ),
+        content: String::from("of course, as you probably already know, people"),
     };
 
     println!("1 new tweet: {}", tweet.summarize());
