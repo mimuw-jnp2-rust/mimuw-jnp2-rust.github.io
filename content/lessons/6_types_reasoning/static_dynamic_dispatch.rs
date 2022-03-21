@@ -26,7 +26,7 @@ fn static_dispatch<T: Speak>(speaking: &T) {
 }
 
 // Only one copy of that function will exist in the compiled binary
-fn dynamic_dispatch(speaking: &impl Speak) {
+fn dynamic_dispatch(speaking: &dyn Speak) {
     println!("{}!", speaking.speak());
 }
 
