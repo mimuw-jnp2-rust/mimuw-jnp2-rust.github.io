@@ -65,6 +65,9 @@ path = "content/lessons/6_types_reasoning/lifetimes_elision.rs"
 name = "6_generic_fun"
 path = "content/lessons/6_types_reasoning/generics_fun.rs"
 [[bin]]
+name = "6_static_dynamic_dispatch"
+path = "content/lessons/6_types_reasoning/static_dynamic_dispatch.rs"
+[[bin]]
 name = "7_constructor"
 path = "content/lessons/7_feedback/constructor.rs"
 [[bin]]
