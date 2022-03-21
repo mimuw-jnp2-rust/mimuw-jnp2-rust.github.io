@@ -10,9 +10,11 @@ lesson_date = 2022-04-02
 
 There are no "constructors" in Rust.
 [There is exactly one way to create an instance of a user-defined type: name
-it, and initialize all its fields at once.](https://doc.rust-lang.org/nomicon/constructors.html)
+it and initialize all its fields at once.](https://doc.rust-lang.org/nomicon/constructors.html)
 
 However, we often write associated functions that act as constructors.
+
+In the below example you may notice a new keyword - `pub`. In Rust, almost everything is _private_ by default (exceptions being items in a public `trait` and enum variants in a public `enum`). That means that it can be accessed from within the module it has been declared in, but cannot be accessed from the outside. So far we only worked with a singular file and no additional modules (apart from `tests`) so we didn't have to worry about it.
 
 {{ include_code_sample(path="lessons/7_feedback/constructor.rs", language="rust") }}
 
