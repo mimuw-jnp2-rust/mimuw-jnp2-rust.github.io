@@ -324,3 +324,5 @@ let s: &'static str = "I have a static lifetime.";
 # Obligatory reading
 
 - [The Book, chapter 10](https://doc.rust-lang.org/book/ch10-00-generics.html)
+
+- [Polymorphism in Rust](https://oswalt.dev/2021/06/polymorphism-in-rust/)
