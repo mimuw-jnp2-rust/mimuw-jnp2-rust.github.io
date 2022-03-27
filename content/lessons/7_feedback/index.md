@@ -3,7 +3,7 @@ title = "Random things #1"
 date = 2022-03-19
 weight = 1
 [extra]
-lesson_date = 2022-04-02
+lesson_date = 2022-03-22
 +++
 
 ## Constructors
