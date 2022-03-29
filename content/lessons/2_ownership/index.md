@@ -239,7 +239,7 @@ This is where the famous borrow checker comes in. To keep things super safe, Rus
 
 - There is any number of immutable references and no mutable ones.
 
-You may notice a parallel to the _readers - writers_ problem from concurrent programming. In fact, the way Rust's borrow checker is design lends itself incredibly well to preventing data race related issues.
+You may notice a parallel to the _readers - writers_ problem from concurrent programming. In fact, the way Rust's borrow checker is designed lends itself incredibly well to preventing data race related issues.
 
 ### Dangling references
 
