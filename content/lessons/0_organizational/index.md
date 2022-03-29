@@ -19,6 +19,7 @@ Our main learning/teaching resource will be ["The Book"](https://doc.rust-lang.o
 2. 2022-03-08: Ownership and borrow checking. Data types and structures.
 3. 2022-03-15: Enums. Pattern matching. Option and Result. Cargo test.
 4. 2022-03-22: Reasoning about types - generics, traits and lifetimes.
+5. 2022-03-29: Closures and iterators.
 
 ## Grading
 
@@ -28,3 +29,10 @@ Our main learning/teaching resource will be ["The Book"](https://doc.rust-lang.o
   - Making a presentation about some advanced topic (const generics, futures, macros, etc.) or about architecture of a selected Rust open-source library
   - Contributing to a selected Rust open-source library
   - Contributing to this course's materials
+
+## Project Deadlines
+
+1. 2022-04-12: Project ideas should be presented to us for further refining. If you wish to pair up with someone, now is the time to tell us.
+2. 2022-04-26: Final project ideas should be accepted by now.
+3. 2022-05-24: Deadline for submitting the first part of the project.
+4. 2022-06-21: Deadline for submitting the second and final part of the project.
