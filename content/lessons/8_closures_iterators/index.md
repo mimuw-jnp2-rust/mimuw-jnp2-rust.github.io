@@ -26,3 +26,8 @@ Most methods are defined in the [Iterator trait](https://doc.rust-lang.org/stabl
 - [The Book, chapter 13](https://doc.rust-lang.org/book/ch13-00-functional-features.html)
 - [The Book, chapter 14](https://doc.rust-lang.org/book/ch14-00-more-about-cargo.html)
 - [The Book, Advanced Functions and Closures](https://doc.rust-lang.org/stable/book/ch19-05-advanced-functions-and-closures.html)
+- [The Book, Advanced Traits](https://doc.rust-lang.org/stable/book/ch19-03-advanced-traits.html)
+
+# Assignment #3 (graded)
+
+[Here](https://classroom.github.com/a/OLqc7DAh) you can find the third graded assignment. Deadline for submissions is 05.04.2022.
