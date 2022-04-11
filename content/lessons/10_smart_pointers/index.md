@@ -62,4 +62,4 @@ Alongisde the `RefCell<T>` type described above, there is an analogous [`Cell<T>
 
 # Additional reading
 
-- [On wrapped references](https://doc.rust-lang.org/std/borrow/enum.Cow.html)
+- [On wrapped references](https://www.fpcomplete.com/blog/rust-asref-asderef/)
