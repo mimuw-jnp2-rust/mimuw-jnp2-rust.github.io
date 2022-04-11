@@ -10,7 +10,7 @@ lesson_date = 2022-04-05
 
 Rust's `Result` type implements a lot of methods that simplify working with the two variants of the enum, especially when we're only interested in one of them. These methods are called _combinators_.
 
-{{ include_code_sample(path="lessons/9_feedback2/combinators.rs", language="rust") }}
+{{ include_code_sample(path="lessons/09_feedback2/combinators.rs", language="rust") }}
 
 You can find more about the `Result` type and all its methods [here](https://doc.rust-lang.org/std/result/enum.Result.html).
 

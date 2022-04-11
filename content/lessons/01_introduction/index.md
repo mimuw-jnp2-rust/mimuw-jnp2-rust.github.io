@@ -63,23 +63,23 @@ and [Rust](errors_demo.rs).
 
 ## Hello world
 
-{{ include_code_sample(path="lessons/1_introduction/hello_world.rs", language="rust") }}
+{{ include_code_sample(path="lessons/01_introduction/hello_world.rs", language="rust") }}
 
 ### Variables
 
-{{ include_code_sample(path="lessons/1_introduction/variables.rs", language="rust") }}
+{{ include_code_sample(path="lessons/01_introduction/variables.rs", language="rust") }}
 
 ### Conditionals
 
-{{ include_code_sample(path="lessons/1_introduction/conditionals.rs", language="rust") }}
+{{ include_code_sample(path="lessons/01_introduction/conditionals.rs", language="rust") }}
 
 ### Loops
 
-{{ include_code_sample(path="lessons/1_introduction/loops.rs", language="rust") }}
+{{ include_code_sample(path="lessons/01_introduction/loops.rs", language="rust") }}
 
 ### Functions
 
-{{ include_code_sample(path="lessons/1_introduction/functions.rs", language="rust") }}
+{{ include_code_sample(path="lessons/01_introduction/functions.rs", language="rust") }}
 
 ## Test assignment (not graded)
 
