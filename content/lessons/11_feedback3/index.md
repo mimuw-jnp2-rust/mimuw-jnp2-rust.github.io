@@ -71,7 +71,7 @@ impl<I, J> Iterator for InterleaveIterator<I, J>
 {
     fn next(&mut self) -> Option<Self::Item> {
         self.next_from_i = !self.next_from_i;
-        if self.first {
+        if self.next_from_i {
             self.i.next().or_else(|| self.j.next())
         } else {
             self.j.next().or_else(|| self.i.next())
@@ -82,8 +82,8 @@ impl<I, J> Iterator for InterleaveIterator<I, J>
 
 ### Why not `or`?
 
-The `or` method evaluates the argument event if it's not used.
-Because calling `self.i.next()` is side-effecting, that would introduce a bug.
+The `or` method evaluates the argument even if it's not used (eager evaluation).
+Because calling `self.i.next()` has side effects, this would create a bug.
 
 ### step_by
 
@@ -142,24 +142,6 @@ impl<'a> Div<usize> for Shreds<'a> {
 }
 ```
 
-```rust
-impl<'a> Div<usize> for Shreds<'a> {
-    type Output = Shreds<'a>;
-
-    fn div(self, rhs: usize) -> Self::Output {
-        let mut counter = 0;
-        let shreds = self
-            .shreds
-            .into_iter()
-            .enumerate()
-            .filter_map(|(_, nr)| nr % rhs == 0)
-            .map(|(el, _)| el)
-            .collect();
-        Shreds { shreds }
-    }
-}
-```
-
 ### What's `collect()`?
 
 It's not magic. We can collect the elements of an iterator into any type which implements
@@ -189,7 +171,6 @@ string requires an additional heap allocation.
 ## Make illegal states unrepresentable
 
 Some people used an i8 or some other integer type to keep track of whose turn it is. But the only
-values that were only ever used were 0 and 1. It means that there was a lot of cases where the
+values that were ever used were 0 and 1. It means that there was a lot of cases where the
 program would panic. Making it possible to encode an illegal state is
-a [footgun](https://en.wiktionary.org/wiki/footgun). Using a `bool` would be a better choice. But
-what if there are more than two states? We can define a custom enum then.
+a [footgun](https://en.wiktionary.org/wiki/footgun). Using a `bool` is a better choice. What if there are more than two states? We can define a custom enum then.
