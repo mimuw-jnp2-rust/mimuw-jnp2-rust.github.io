@@ -1,4 +1,4 @@
-+++ 
++++
 title = "Small Task Feedback #3"
 date = 2022-04-11 
 weight = 1
@@ -82,7 +82,7 @@ impl<I, J> Iterator for InterleaveIterator<I, J>
 
 ### Why not `or`?
 
-The `or` method evaluates the argument event if it's not used. 
+The `or` method evaluates the argument event if it's not used.
 Because calling `self.i.next()` is side-effecting, that would introduce a bug.
 
 ### step_by
@@ -128,7 +128,7 @@ impl<'a> Div<usize> for Shreds<'a> {
 }
 ```
 
-However, it can be simplified even more. What we're doing here is basically reimplementing 
+However, it can be simplified even more. What we're doing here is basically reimplementing
 `step_by` :)
 
 ```rust
@@ -141,7 +141,6 @@ impl<'a> Div<usize> for Shreds<'a> {
     }
 }
 ```
-
 
 ```rust
 impl<'a> Div<usize> for Shreds<'a> {
@@ -163,7 +162,7 @@ impl<'a> Div<usize> for Shreds<'a> {
 
 ### What's `collect()`?
 
-It's not magic. We can collect the elements of an iterator into any type which implements 
+It's not magic. We can collect the elements of an iterator into any type which implements
 the appropriate `FromIterator` [trait](https://doc.rust-lang.org/std/iter/trait.FromIterator.html).
 
 ## Shredding usize
