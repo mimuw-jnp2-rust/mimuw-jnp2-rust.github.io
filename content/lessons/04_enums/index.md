@@ -11,7 +11,7 @@ lesson_date = 2022-03-14
 It is often the case that we want to define a variable that can only take
 a certain set of values and the values are known up front. In C you can an `enum` for this.
 
-{{ include_code_sample(path="lessons/4_enums/enums.c", language="c") }}
+{{ include_code_sample(path="lessons/04_enums/enums.c", language="c") }}
 
 However, in C enums are just integers. Nothing prevents us from writing
 
@@ -38,7 +38,7 @@ or `algebraic data types`.
 
 In C++ we can use `union` with an `enum` tag to define it:
 
-{{ include_code_sample(path="lessons/4_enums/tagged_union.cpp", language="cpp") }}
+{{ include_code_sample(path="lessons/04_enums/tagged_union.cpp", language="cpp") }}
 
 C++17 introduced a new feature called `variant` which generalizes this concept.
 You can read more about it [here](https://en.cppreference.com/w/cpp/utility/variant).
@@ -50,7 +50,7 @@ since [version 17](https://docs.oracle.com/en/java/javase/17/language/sealed-cla
 
 Let's see how they are defined in Rust.
 
-{{ include_code_sample(path="lessons/4_enums/enums.rs", language="rust") }}
+{{ include_code_sample(path="lessons/04_enums/enums.rs", language="rust") }}
 
 In Rust, enums are a core feature of the language.
 You may have heard that one of Rust's defining characteristics is
@@ -74,21 +74,21 @@ We won't go deeper into this for now.
 The fact that variables which could be `null` in other languages have a different type in Rust is
 the solution to the billion dollar mistake!
 
-{{ include_code_sample(path="lessons/4_enums/option.rs", language="rust") }}
+{{ include_code_sample(path="lessons/04_enums/option.rs", language="rust") }}
 
 ## Pattern matching
 
 Pattern matching is a powerful feature of Rust and many functional languages, but it's slowly making
 its way into imperative languages like Java and Python as well.
 
-{{ include_code_sample(path="lessons/4_enums/pattern_matching.rs", language="rust") }}
+{{ include_code_sample(path="lessons/04_enums/pattern_matching.rs", language="rust") }}
 
 ## Result
 
 We said there are no exceptions in Rust and panics mean errors which cannot be caught.
 So how do we handle situations which can fail? That's where the `Result` type comes in.
 
-{{ include_code_sample(path="lessons/4_enums/result.rs", language="rust") }}
+{{ include_code_sample(path="lessons/04_enums/result.rs", language="rust") }}
 
 ## Obligatory reading
 

@@ -12,13 +12,13 @@ Traits are a way to defined common behavior between different types. They can be
 
 The way we describe behavior in Rust is through methods. Traits consist of a set of these methods which then should be implemented by a type. We've already encountered examples of these, like the `Clone` trait which specified that the `clone()` method can be called on some given type. Now, let's take a deeper look and try defining our own trait.
 
-{{ include_code_sample(path="lessons/6_types_reasoning/basic_trait.rs", language="rust") }}
+{{ include_code_sample(path="lessons/06_types_reasoning/basic_trait.rs", language="rust") }}
 
 ## Default implementations
 
 Trait definitions can also be provided with default implementations of behaviors.
 
-{{ include_code_sample(path="lessons/6_types_reasoning/trait_default.rs", language="rust") }}
+{{ include_code_sample(path="lessons/06_types_reasoning/trait_default.rs", language="rust") }}
 
 ## What about _derive_?
 
@@ -48,7 +48,7 @@ No. Although it may be tempting to just slap `#[derive(Clone, Copy)]` everywhere
 
 Suppose we want to find the largest element in a sequence and return it. Very much on purpose, we didn't specify what type these elements would be - ideally, we would love it to work on all types that have a defined notion of a _largest_ element. However, to make things simpler for now, let's focus only on two primitive types: `i32` and `char`. Let's try to write the code:
 
-{{ include_code_sample(path="lessons/6_types_reasoning/non_generic.rs", language="rust") }}
+{{ include_code_sample(path="lessons/06_types_reasoning/non_generic.rs", language="rust") }}
 
 Perfect, it works! Now only twenty more types to go...
 
@@ -127,21 +127,21 @@ error[E0507]: cannot move out of a shared reference
 
 Our function attempts to take ownership, but, again, the compiler doesn't know whether `T` can just be trivially copied. Rust allows us to combine multiple trait bounds together:
 
-{{ include_code_sample(path="lessons/6_types_reasoning/generic_largest.rs", language="rust") }}
+{{ include_code_sample(path="lessons/06_types_reasoning/generic_largest.rs", language="rust") }}
 
 ## A powerful tool
 
 There's a lot more that we can do with generics:
 
-{{ include_code_sample(path="lessons/6_types_reasoning/generics.rs", language="rust") }}
+{{ include_code_sample(path="lessons/06_types_reasoning/generics.rs", language="rust") }}
 
 A bit more involved example:
 
-{{ include_code_sample(path="lessons/6_types_reasoning/generics_fun.rs", language="rust") }}
+{{ include_code_sample(path="lessons/06_types_reasoning/generics_fun.rs", language="rust") }}
 
 ## Static vs dynamic dispatch
 
-{{ include_code_sample(path="lessons/6_types_reasoning/static_dynamic_dispatch.rs", language="rust") }}
+{{ include_code_sample(path="lessons/06_types_reasoning/static_dynamic_dispatch.rs", language="rust") }}
 
 # Lifetimes
 
@@ -263,7 +263,7 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 
 When working with lifetimes, our work will usually revolve around specifying relationships between lifetimes of different values so that the compiler can successfully reason about the program's safety. In the context of the example above, this signature means that both of the function's arguments and its output will live at least as long as lifetime `'a`. In practice, this means that the output's lifetime will be equal to the smaller of the two inputs' lifetimes.
 
-{{ include_code_sample(path="lessons/6_types_reasoning/lifetimes_basic.rs", language="rust") }}
+{{ include_code_sample(path="lessons/06_types_reasoning/lifetimes_basic.rs", language="rust") }}
 
 Trying to compile the second variant displeases the compiler (just like we hoped).
 
@@ -283,7 +283,7 @@ error[E0597]: `string2` does not live long enough
 
 We now know how to explicitly write lifetime parameters, but you might recall that we don't always have to that. Indeed, Rust will first try to figure out the lifetimes itself, applying a set of predefined rules. We call this _lifetime elision_.
 
-{{ include_code_sample(path="lessons/6_types_reasoning/lifetimes_elision.rs", language="rust") }}
+{{ include_code_sample(path="lessons/06_types_reasoning/lifetimes_elision.rs", language="rust") }}
 
 The above works, even though we didn't specify any lifetime parameters at all. The reason lies in the rules we mentioned, which are as follows (where input lifetimes are lifetimes on parameters and output lifetimes are lifetimes on return values):
 
