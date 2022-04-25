@@ -8,9 +8,9 @@ lesson_date = 2022-04-26
 
 ## Parallelism vs Concurrency
 
-Concurrency is when tasks *can make* progress independently of each other. 
+Concurrency is when tasks **can make** progress **independently** of each other.
 
-Parallelism is when multiple tasks *make* progress at the same time.
+Parallelism is when multiple tasks **make** progress **at the same time**.
 
 ## Concurrency models in Rust
 
@@ -24,7 +24,7 @@ This method returns a `JoinHandle<T>` which can be used to wait for the thread t
 
 #### Propagating panics
 
-In Rust a panic of one thread doesn't affect the other threads (similar to how Java handles exceptions in threads). 
+In Rust a panic of one thread doesn't affect the other threads (similar to how Java handles exceptions in threads).
 
 #### Closures
 
@@ -50,12 +50,12 @@ But what if we need to share some state?
 
 ### Message passing
 
-One possible way is to use message passing. We can use a blocking queue (called `mpsc` - ["multi producer single consumer FIFO queue"](https://doc.rust-lang.org/std/sync/mpsc/index.html)) to do it. 
+One possible way is to use message passing. We can use a blocking queue (called `mpsc` - ["multi producer single consumer FIFO queue"](https://doc.rust-lang.org/std/sync/mpsc/index.html)) to do it.
 We talked about blocking queues in the Concurrent programming class. In Rust, they are strongly-typed. Sending and receiving ends have different types.
 
 ### Mutexes
 
-In Rust, a mutex *wraps* a value and makes it thread-safe. 
+In Rust, a mutex _wraps_ a value and makes it thread-safe.
 Because it becomes a part of the type, it's impossible to access the underlying value in an unsynchronized manner. It is conceptually similar to the `RefCell` type.
 
 `Arc` is a smart pointer like `Rc` but it can be shared between threads.
@@ -166,18 +166,17 @@ And that bound mentioned in the last line looks like this:
 pub fn spawn<F, T>(f: F) -> JoinHandle<T> where
     F: FnOnce() -> T,
     F: Send + 'static,
-    T: Send + 'static, 
+    T: Send + 'static,
 ```
 
 #### Exercise for the reader
 
 Why is it impossible to share a reference to a `Mutex` between threads?
 
-
 ## Data parallelism with Rayon
 
-[Rayon](https://docs.rs/rayon/latest/rayon/) is a library for parallelization of data processing. 
-It can be used to parallelize the execution of functions over a collection of data by switching the standard `Iterator` to a `ParallelIterator`. 
+[Rayon](https://docs.rs/rayon/latest/rayon/) is a library for parallelization of data processing.
+It can be used to parallelize the execution of functions over a collection of data by switching the standard `Iterator` to a `ParallelIterator`.
 It works very similar to [Java's parallel streams](https://docs.oracle.com/javase/tutorial/collections/streams/parallelism.html#executing_streams_in_parallel).
 
 Why do that? Because thread synchronization is hard! [Rust prevents data races](https://doc.rust-lang.org/nomicon/races.html), but [logical races and deadlocks are impossible to prevent!](https://users.rust-lang.org/t/deadlock-is-it-a-bug-or-is-it-intentional/1544)!
