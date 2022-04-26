@@ -182,3 +182,7 @@ It works very similar to [Java's parallel streams](https://docs.oracle.com/javas
 Why do that? Because thread synchronization is hard! [Rust prevents data races](https://doc.rust-lang.org/nomicon/races.html), but [logical races and deadlocks are impossible to prevent!](https://users.rust-lang.org/t/deadlock-is-it-a-bug-or-is-it-intentional/1544)!
 
 [Rayon's FAQ](https://github.com/rayon-rs/rayon/blob/master/FAQ.md) is worth reading.
+
+## Assignment #5 (graded)
+
+[Here](https://classroom.github.com/a/lKaeLu8O) you can find the fifth graded assignment. The deadline for submissions is 04.05.2022.
