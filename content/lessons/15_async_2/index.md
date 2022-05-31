@@ -187,4 +187,3 @@ We will follow the [steps](https://rust-lang.github.io/async-book/02_execution/0
 - [What color is your function](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/)
 - [Pin and suffering](https://fasterthanli.me/articles/pin-and-suffering)
 - [Understanding Rust futures by going way too deep](https://fasterthanli.me/articles/understanding-rust-futures-by-going-way-too-deep)
-
