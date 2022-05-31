@@ -176,6 +176,15 @@ We will follow the [steps](https://rust-lang.github.io/async-book/02_execution/0
 
 We will follow the [steps](https://rust-lang.github.io/async-book/02_execution/04_executor.html) in the book to create our own executor to run our futures on.
 
-## Further reading
+## Obligatory reading
 
 - [Pinning in detail](https://rust-lang.github.io/async-book/04_pinning/01_chapter.html)
+- [Pinning in even more detail](https://doc.rust-lang.org/nightly/std/pin/index.html)
+- [Async in depth](https://tokio.rs/tokio/tutorial/async)
+
+## Additional reading
+
+- [What color is your function](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/)
+- [Pin and suffering](https://fasterthanli.me/articles/pin-and-suffering)
+- [Understanding Rust futures by going way too deep](https://fasterthanli.me/articles/understanding-rust-futures-by-going-way-too-deep)
+
