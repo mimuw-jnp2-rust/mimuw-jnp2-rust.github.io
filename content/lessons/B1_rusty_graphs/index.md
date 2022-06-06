@@ -45,9 +45,29 @@ struct Edge {
 Here we implement a graph as a single, non-recursive struct, that owns the whole graph. The nodes are identified by their index. This implementation has its disadvantages when compared to adjacency list, but it has one major advantage: it plays nice with Rust as a language.
 
 ```rust
-    impl Graph {
+pub type NodeIdx = usize;
+
+
+struct Graph {
+    nodes: Vec<Node>,
+    edges: Vec<Edge>,
+    highest_idx: NodeIdx,
+}
+
+
+struct Node {
+    idx: NodeIdx,
+    data: String,
+}
+
+struct Edge {
+    idx1: NodeIdx,
+    idx2: NodeIdx,
+}
+
+impl Graph {
     pub fn new() -> Graph {
-    Graph { nodes: Vec::new(), edges: Vec::new(), highest_idx:0 }
+        Graph { nodes: Vec::new(), edges: Vec::new(), highest_idx: 0 }
     }
 
     pub fn add_node(&mut self, data: &str) {
@@ -58,7 +78,6 @@ Here we implement a graph as a single, non-recursive struct, that owns the whole
     pub fn add_edge(&mut self, idx1: NodeIdx, idx2: NodeIdx) {
         self.edges.push(Edge{idx1, idx2});
     }
-
 }
 ```
 
@@ -117,11 +136,51 @@ pub struct MatrixGraph<N, E, Ty = Directed, Null: Nullable<Wrapped = E> = Option
 
 This representations uses flattened 2D array to store the graph. No pointers in sight.
 
-The point of talking about all this is not to argue that representations X is better in some algorithmic sense than Y; it is to see that pointer based approach, which may work well in other language, is the hard one, which results in a nightmarish code. The proof by Petgraph example shows that real world implementations avoid pointers - for a good reason.
+Of course, those representations are not ideal: they have their issues. To name a few: `Graph` is problematic when it comes to frequent removals of nodes or edges - since they are stored in `Vec`, one has to either put some kind of placeholder in place of node/edge (which is not very Rusty) or copy the whole array (which is slow). `GraphMap` mitigates this issues by using hash map to store the graph, but that introduces some requirements on the `Node` type: it must implement `Ord` as well as `Copy` and `Eq + Hash` - which may be suitable for integers, but not exactly for more complicated types. `MatrixGraph` takes up much space and, similarly to `Graph`, has its problems when it comes to removing nodes.
+
+Yet, all this problems are not Rusty in nature - they hold across every programming language.
+
+The point of talking about all this is not to argue that representations X is better in some algorithmic sense than Y; it is to see that pointer based approach, which may work well in other language, is the hard one in Rust and results in a nightmarish code. The proof by Petgraph example shows that real world implementations avoid pointers - for a good reason.
 
 Here's some Petgraph code in action:
 
-{{ include_code_sample(path="lessons/B1_rusty_graphs/petgraph_sample_dfs.rs", language="rust") }}
+```rust
+fn dfs_helper(&mut self, graph: &mut Graph, node_index: NodeIndex) {
+    self.add_step(AlgorithmStep::Node(NodeStep::new(
+        node_index,
+        NodeState::Queued,
+    )));
+
+    if let Some(node) = graph.node_weight_mut(node_index) {
+        node.set_state(NodeState::Queued)
+    }
+
+    let mut walker = graph
+        .neighbors_directed(node_index, Direction::Outgoing)
+        .detach();
+
+    while let Some((edge_idx, other_node_idx)) = walker.next(graph) {
+        if let Some(other_state) = graph
+            .node_weight(other_node_idx)
+            .map(|node| node.get_state())
+        {
+            if matches!(other_state, NodeState::NotVisited) {
+                self.add_step(AlgorithmStep::Edge(EdgeStep::new(edge_idx)));
+                self.dfs_helper(graph, other_node_idx);
+            }
+        }
+    }
+
+    self.add_step(AlgorithmStep::Node(NodeStep::new(
+        node_index,
+        NodeState::Visited,
+    )));
+
+    if let Some(node) = graph.node_weight_mut(node_index) {
+        node.set_state(NodeState::Visited)
+    }
+}
+```
 
 Sources:
 
