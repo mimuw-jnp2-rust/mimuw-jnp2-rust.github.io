@@ -42,7 +42,7 @@ struct Edge {
 }
 ```
 
-Here we implement a graph as a single, non-recursive struct, that owns the whole graph. The nodes are identified by their index. This implementation has its disadvantages when compared to adjaceny list, but it has one major advantage: it plays nice with Rust as a language.
+Here we implement a graph as a single, non-recursive struct, that owns the whole graph. The nodes are identified by their index. This implementation has its disadvantages when compared to adjacency list, but it has one major advantage: it plays nice with Rust as a language.
 
 ```rust
     impl Graph {
