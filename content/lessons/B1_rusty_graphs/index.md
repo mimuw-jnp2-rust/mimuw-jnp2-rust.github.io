@@ -1,5 +1,5 @@
 +++
-title = "Rusty graphs"
+title = "[Bonus] Rusty graphs"
 date = 2022-06-07 
 weight = 1
 [extra]
@@ -132,3 +132,5 @@ Sources:
 [Rust's dev post about graphs](https://github.com/nrc/r4cppp/blob/master/graphs/README.md)
 
 [Another blog post about graphs](https://smallcultfollowing.com/babysteps/blog/2015/04/06/modeling-graphs-in-rust-using-vector-indices/)
+
+Author: Mikołaj Piróg
