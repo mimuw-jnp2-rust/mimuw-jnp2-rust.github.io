@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>JNP2: Rust</title>
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://mimuw-jnp2-rust.github.io/book.css">
+  
+
+  
+  
+</head>
+
+<body>
+<div class="menu">
+  
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="https://mimuw-jnp2-rust.github.io">Home</a></li>
+      
+        
+        
+          
+          <li >
+            
+            <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;">
+              
+              List of lessons
+            </a>
+            
+              <ul>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;00-organizational&#x2F;">
+                      [2022-03-01]
+                      
+                      Oragnizational lesson
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;01-introduction&#x2F;">
+                      [2022-03-01]
+                      
+                      Introduction to Rust
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;02-ownership&#x2F;">
+                      [2022-03-08]
+                      
+                      Ownership Model
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;03-data-types&#x2F;">
+                      [2022-03-08]
+                      
+                      Data Types
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;04-enums&#x2F;">
+                      [2022-03-14]
+                      
+                      Enums
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;05-tests&#x2F;">
+                      [2022-03-14]
+                      
+                      Tests
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;06-types-reasoning&#x2F;">
+                      [2022-03-22]
+                      
+                      Reasoning About Types
+                    </a>
+                  </li>
+                
+                  <li  class="active" >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;07-feedback&#x2F;">
+                      [2022-03-22]
+                      
+                      Small Task Feedback #1
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;08-closures-iterators&#x2F;">
+                      [2022-03-29]
+                      
+                      Closures and Iterators
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;09-feedback2&#x2F;">
+                      [2022-04-05]
+                      
+                      Small Task Feedback #2
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;10-smart-pointers&#x2F;">
+                      [2022-04-12]
+                      
+                      Smart Pointers
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;11-feedback3&#x2F;">
+                      [2022-04-12]
+                      
+                      Small Task Feedback #3
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;12-concurrency&#x2F;">
+                      [2022-04-26]
+                      
+                      Fearless concurrency
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;13-design-patterns&#x2F;">
+                      [2022-05-10]
+                      
+                      Design patterns
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;14-async-1&#x2F;">
+                      [2022-05-17]
+                      
+                      Async: Part 1
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;15-async-2&#x2F;">
+                      [2022-05-24]
+                      
+                      Async: Part 2
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;16-macros&#x2F;">
+                      [2022-06-07]
+                      
+                      Macros
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;b1-rusty-graphs&#x2F;">
+                      [2022-06-07]
+                      
+                      [Bonus] Rusty graphs
+                    </a>
+                  </li>
+                
+              </ul>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  
+  
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+      <span class="search-icon">🔎</span>
+    
+  </div>
+
+  <div class="page__content">
+    
+      <div class="search-container">
+        <input id="search" type="search" placeholder="Search..">
+        <div class="search-results">
+          <div class="search-results__header"></div>
+          <ul class="search-results__items"></ul>
+        </div>
+      </div>
+    
+    <div class="book-content">
+      
+<h1 class="title">Small Task Feedback #1</h1>
+<p class="subtitle">
+  <strong>2022-03-22</strong> (last edit: 2022-03-29)
+</p>
+<h2 id="constructors">Constructors</h2>
+<p>There are no &quot;constructors&quot; in Rust.
+<a href="https://doc.rust-lang.org/nomicon/constructors.html">There is exactly one way to create an instance of a user-defined type: name
+it and initialize all its fields at once.</a></p>
+<p>However, we often write associated functions that act as constructors.</p>
+<p>In the below example you may notice a new keyword - <code>pub</code>. In Rust, almost everything is <em>private</em> by default (exceptions being items in a public <code>trait</code> and enum variants in a public <code>enum</code>). That means that it can be accessed from within the module it has been declared in, but cannot be accessed from the outside. So far we only worked with a singular file and no additional modules (apart from <code>tests</code>) so we didn't have to worry about it.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">mod </span><span>one {
+</span><span>    </span><span style="color:#8959a8;">pub struct </span><span>Point {
+</span><span>        </span><span style="color:#c82829;">x</span><span>: </span><span style="color:#8959a8;">i32</span><span>,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">impl </span><span>Point {
+</span><span>        </span><span style="color:#8959a8;">pub fn </span><span style="color:#4271ae;">new</span><span>(</span><span style="color:#f5871f;">x</span><span>: </span><span style="color:#8959a8;">i32</span><span>) -&gt; Point {
+</span><span>            Point { x }
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#8959a8;">pub fn </span><span style="color:#4271ae;">x</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#f5871f;">self</span><span>) -&gt; </span><span style="color:#8959a8;">i32 </span><span>{
+</span><span>            </span><span style="color:#c82829;">self</span><span>.x
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">impl </span><span>Default </span><span style="color:#8959a8;">for </span><span>Point {
+</span><span>        </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">default</span><span>() -&gt; Point {
+</span><span>            Point { x: </span><span style="color:#f5871f;">10 </span><span>}
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#999999;">// won&#39;t compile, can&#39;t initialize private fields
+</span><span>    </span><span style="color:#999999;">// let p = one::Point {
+</span><span>    </span><span style="color:#999999;">//     x: 1,
+</span><span>    </span><span style="color:#999999;">// };
+</span><span>    </span><span style="color:#8959a8;">let</span><span> p </span><span style="color:#3e999f;">= </span><span>one::Point::new(</span><span style="color:#f5871f;">1</span><span>);
+</span><span>    </span><span style="color:#999999;">// won&#39;t compile, x is private
+</span><span>    </span><span style="color:#999999;">// println!(&quot;{}&quot;, p.x);
+</span><span>    println!(</span><span style="color:#718c00;">&quot;</span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, p.</span><span style="color:#4271ae;">x</span><span>());
+</span><span>    </span><span style="color:#8959a8;">let</span><span> p </span><span style="color:#3e999f;">= </span><span>one::Point::default();
+</span><span>    println!(</span><span style="color:#718c00;">&quot;</span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, p.</span><span style="color:#4271ae;">x</span><span>());
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="constructor.rs">constructor.rs</a>)</sub></p>
+<h2 id="field-initialization-shorthand">Field initialization shorthand</h2>
+<p>Note that in the above example, we wrote</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span>Point { x }
+</span></code></pre>
+<p>instead of</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span>Point { x: x }
+</span></code></pre>
+<h2 id="destructors">Destructors</h2>
+<p>If we need a custom destructor, we can implement the <code>Drop</code> trait.
+Read more <a href="https://doc.rust-lang.org/stable/reference/destructors.html">here</a>.</p>
+<h2 id="naming">Naming</h2>
+<p>Refer to <a href="https://rust-lang.github.io/api-guidelines/naming.html">this guideline</a> for naming conventions.</p>
+<h2 id="underscore">Underscore</h2>
+<p>Underscore is used to mark variables that are unused.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">example</span><span>(</span><span style="color:#f5871f;">used</span><span>: </span><span style="color:#8959a8;">i32</span><span>, </span><span style="color:#f5871f;">_unused_param</span><span>: </span><span style="color:#8959a8;">i32</span><span>) {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> _unused </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>;
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">match</span><span> used {
+</span><span>        </span><span style="color:#3e999f;">_ =&gt; </span><span>unimplemented!(),
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>It should not be used in other contexts.</p>
+<h2 id="hashmap-entry">Hashmap entry</h2>
+<p><a href="https://doc.rust-lang.org/std/collections/struct.HashMap.html#method.entry">entry</a> is a convenient way to get a mutable reference to a value in a hashmap.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">let mut</span><span> map </span><span style="color:#3e999f;">= </span><span>std::collections::HashMap::new();
+</span><span style="color:#3e999f;">*</span><span>map.</span><span style="color:#4271ae;">entry</span><span>(</span><span style="color:#718c00;">&quot;key&quot;</span><span>).</span><span style="color:#4271ae;">or_insert</span><span>(</span><span style="color:#f5871f;">0</span><span>) </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span style="color:#3e999f;">*</span><span>map.</span><span style="color:#4271ae;">entry</span><span>(</span><span style="color:#718c00;">&quot;key&quot;</span><span>).</span><span style="color:#4271ae;">or_insert</span><span>(</span><span style="color:#f5871f;">0</span><span>) </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>assert_eq!(map[</span><span style="color:#718c00;">&quot;key&quot;</span><span>], </span><span style="color:#f5871f;">2</span><span>);
+</span></code></pre>
+<h2 id="number-conversions">Number conversions</h2>
+<p>Number conversions are... not the most intuitive.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> small_number: </span><span style="color:#8959a8;">u32 </span><span style="color:#3e999f;">= </span><span style="color:#8959a8;">u32</span><span>::</span><span style="color:#666969;">MAX</span><span>;
+</span><span>    </span><span style="color:#999999;">// dbg!(small_number + 1); // this will panic (in debug builds, in release build it will wrap)
+</span><span>    assert_eq!(small_number </span><span style="color:#3e999f;">as </span><span style="color:#8959a8;">u8</span><span>, </span><span style="color:#f5871f;">255</span><span>);
+</span><span>    assert_eq!(small_number </span><span style="color:#3e999f;">as </span><span style="color:#8959a8;">i8</span><span>, </span><span style="color:#3e999f;">-</span><span style="color:#f5871f;">1</span><span>);
+</span><span>    assert_eq!(small_number </span><span style="color:#3e999f;">as </span><span style="color:#8959a8;">i64</span><span>, </span><span style="color:#f5871f;">4294967295</span><span>);
+</span><span>    </span><span style="color:#8959a8;">let</span><span> converted: </span><span style="color:#c99e00;">Result</span><span>&lt;</span><span style="color:#8959a8;">i8</span><span>, </span><span style="color:#3e999f;">_</span><span>&gt; </span><span style="color:#3e999f;">=</span><span> small_number.</span><span style="color:#4271ae;">try_into</span><span>();
+</span><span>    assert!(converted.</span><span style="color:#4271ae;">is_err</span><span>());
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="number_conversions.rs">number_conversions.rs</a>)</sub></p>
+<h2 id="use-rustfmt-in-clion">Use rustfmt in Clion</h2>
+<p><img src="rustfmt.png" alt="" /></p>
+<h2 id="use-clippy-in-clion">Use clippy in Clion</h2>
+<p><img src="clippy.png" alt="" /></p>
+<h2 id="clippy-auto-fixing">Clippy auto-fixing</h2>
+<p>Clippy can automagically fix some of the issues it detects if run with <code>cargo clippy --fix</code></p>
+<h2 id="obligatory-reading">Obligatory reading</h2>
+<ul>
+<li><a href="https://doc.rust-lang.org/stable/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html">The Book, chapter 7</a></li>
+</ul>
+
+
+    </div>
+  </div>
+
+  <div class="prev-link">
+    
+    
+  </div>
+
+  <div class="next-link">
+    
+    
+  </div>
+</div>
+
+
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/elasticlunr.min.js"></script>
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/search_index.en.js"></script>
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/book.js"></script>
+
+</body>
+
+</html>

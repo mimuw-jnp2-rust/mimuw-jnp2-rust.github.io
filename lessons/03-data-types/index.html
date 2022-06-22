@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>JNP2: Rust</title>
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://mimuw-jnp2-rust.github.io/book.css">
+  
+
+  
+  
+</head>
+
+<body>
+<div class="menu">
+  
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="https://mimuw-jnp2-rust.github.io">Home</a></li>
+      
+        
+        
+          
+          <li >
+            
+            <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;">
+              
+              List of lessons
+            </a>
+            
+              <ul>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;00-organizational&#x2F;">
+                      [2022-03-01]
+                      
+                      Oragnizational lesson
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;01-introduction&#x2F;">
+                      [2022-03-01]
+                      
+                      Introduction to Rust
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;02-ownership&#x2F;">
+                      [2022-03-08]
+                      
+                      Ownership Model
+                    </a>
+                  </li>
+                
+                  <li  class="active" >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;03-data-types&#x2F;">
+                      [2022-03-08]
+                      
+                      Data Types
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;04-enums&#x2F;">
+                      [2022-03-14]
+                      
+                      Enums
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;05-tests&#x2F;">
+                      [2022-03-14]
+                      
+                      Tests
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;06-types-reasoning&#x2F;">
+                      [2022-03-22]
+                      
+                      Reasoning About Types
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;07-feedback&#x2F;">
+                      [2022-03-22]
+                      
+                      Small Task Feedback #1
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;08-closures-iterators&#x2F;">
+                      [2022-03-29]
+                      
+                      Closures and Iterators
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;09-feedback2&#x2F;">
+                      [2022-04-05]
+                      
+                      Small Task Feedback #2
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;10-smart-pointers&#x2F;">
+                      [2022-04-12]
+                      
+                      Smart Pointers
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;11-feedback3&#x2F;">
+                      [2022-04-12]
+                      
+                      Small Task Feedback #3
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;12-concurrency&#x2F;">
+                      [2022-04-26]
+                      
+                      Fearless concurrency
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;13-design-patterns&#x2F;">
+                      [2022-05-10]
+                      
+                      Design patterns
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;14-async-1&#x2F;">
+                      [2022-05-17]
+                      
+                      Async: Part 1
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;15-async-2&#x2F;">
+                      [2022-05-24]
+                      
+                      Async: Part 2
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;16-macros&#x2F;">
+                      [2022-06-07]
+                      
+                      Macros
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;b1-rusty-graphs&#x2F;">
+                      [2022-06-07]
+                      
+                      [Bonus] Rusty graphs
+                    </a>
+                  </li>
+                
+              </ul>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  
+  
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+      <span class="search-icon">🔎</span>
+    
+  </div>
+
+  <div class="page__content">
+    
+      <div class="search-container">
+        <input id="search" type="search" placeholder="Search..">
+        <div class="search-results">
+          <div class="search-results__header"></div>
+          <ul class="search-results__items"></ul>
+        </div>
+      </div>
+    
+    <div class="book-content">
+      
+<h1 class="title">Data Types</h1>
+<p class="subtitle">
+  <strong>2022-03-08</strong> (last edit: 2022-03-09)
+</p>
+<h2 id="aggregating-data">Aggregating data</h2>
+<p>Below is a compact overview of Rust's structs</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#c82829;">derive</span><span>(Clone, Copy, Debug, Eq, PartialEq)]
+</span><span style="color:#8959a8;">struct </span><span>Position(</span><span style="color:#8959a8;">i32</span><span>, </span><span style="color:#8959a8;">i32</span><span>); </span><span style="color:#999999;">// tuple struct
+</span><span>
+</span><span style="color:#999999;">// Could Hero derive the Copy trait?
+</span><span>#[</span><span style="color:#c82829;">derive</span><span>(Clone, Debug, Eq, PartialEq)]
+</span><span style="color:#8959a8;">struct </span><span>Hero {
+</span><span>    </span><span style="color:#c82829;">name</span><span>: String,
+</span><span>    </span><span style="color:#c82829;">level</span><span>: </span><span style="color:#8959a8;">u32</span><span>,
+</span><span>    </span><span style="color:#c82829;">experience</span><span>: </span><span style="color:#8959a8;">u32</span><span>,
+</span><span>    </span><span style="color:#c82829;">position</span><span>: Position,
+</span><span>}
+</span><span>
+</span><span style="color:#999999;">// we can add methods to structs using the &#39;impl&#39; keyword
+</span><span style="color:#8959a8;">impl </span><span>Hero {
+</span><span>    </span><span style="color:#999999;">// static method
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">new</span><span>(</span><span style="color:#f5871f;">name</span><span>: String) -&gt; Hero {
+</span><span>        Hero {
+</span><span>            name,
+</span><span>            level: </span><span style="color:#f5871f;">1</span><span>,
+</span><span>            experience: </span><span style="color:#f5871f;">0</span><span>,
+</span><span>            position: Position(</span><span style="color:#f5871f;">0</span><span>, </span><span style="color:#f5871f;">0</span><span>),
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#999999;">// multiple impl blocks are possible for one struct
+</span><span style="color:#8959a8;">impl </span><span>Hero {
+</span><span>    </span><span style="color:#999999;">// instance method, first argument (self) is the calling instance
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">distance</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#f5871f;">self</span><span>, </span><span style="color:#f5871f;">pos</span><span>: Position) -&gt; </span><span style="color:#8959a8;">u32 </span><span>{
+</span><span>        </span><span style="color:#999999;">// fields of tuples and tuple structs can be accessed through &#39;tuple.[i]&#39;
+</span><span>        (pos.</span><span style="color:#f5871f;">0 </span><span style="color:#3e999f;">- </span><span style="color:#c82829;">self</span><span>.position.</span><span style="color:#f5871f;">0</span><span>).</span><span style="color:#4271ae;">unsigned_abs</span><span>() </span><span style="color:#3e999f;">+ </span><span>(pos.</span><span style="color:#f5871f;">1 </span><span style="color:#3e999f;">- </span><span style="color:#c82829;">self</span><span>.position.</span><span style="color:#f5871f;">1</span><span>).</span><span style="color:#4271ae;">unsigned_abs</span><span>()
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// mutable borrow of self allows to change instance fields
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">level_up</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut </span><span style="color:#f5871f;">self</span><span>) {
+</span><span>        </span><span style="color:#c82829;">self</span><span>.experience </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>;
+</span><span>        </span><span style="color:#c82829;">self</span><span>.level </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// &#39;self&#39; is not borrowed here and will be moved into the method
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">die</span><span>(</span><span style="color:#f5871f;">self</span><span>) {
+</span><span>        println!(
+</span><span>            </span><span style="color:#718c00;">&quot;Here lies </span><span style="color:#666969;">{}</span><span style="color:#718c00;">, a hero who reached level </span><span style="color:#666969;">{}</span><span style="color:#718c00;">. RIP.&quot;</span><span>,
+</span><span>            </span><span style="color:#c82829;">self</span><span>.name, </span><span style="color:#c82829;">self</span><span>.level
+</span><span>        );
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> hero: Hero </span><span style="color:#3e999f;">= </span><span>Hero::new(</span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;Marty The Brave&quot;</span><span>));
+</span><span>    hero.</span><span style="color:#4271ae;">level_up</span><span>(); </span><span style="color:#999999;">// &#39;self&#39; is always passed implicitly
+</span><span>
+</span><span>    </span><span style="color:#999999;">// fields other than &#39;name&#39; will be the same as in &#39;hero&#39;
+</span><span>    </span><span style="color:#8959a8;">let</span><span> steve </span><span style="color:#3e999f;">=</span><span> Hero {
+</span><span>        name: </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;Steve The Normal Guy&quot;</span><span>),
+</span><span>        </span><span style="color:#3e999f;">..</span><span>hero
+</span><span>    };
+</span><span>
+</span><span>    assert_eq!(hero.level, steve.level);
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> twin </span><span style="color:#3e999f;">=</span><span> hero.</span><span style="color:#4271ae;">clone</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#999999;">// we can compare Hero objects because it derives the PartialEq trait
+</span><span>    assert_eq!(hero, twin);
+</span><span>    twin.</span><span style="color:#4271ae;">level_up</span><span>();
+</span><span>    assert_ne!(hero, twin);
+</span><span>    hero.</span><span style="color:#4271ae;">level_up</span><span>();
+</span><span>    assert_eq!(hero, twin);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// we can print out a the struct&#39;s debug string with &#39;{:?}&#39;
+</span><span>    println!(</span><span style="color:#718c00;">&quot;print to stdout: </span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">&quot;</span><span>, hero);
+</span><span>
+</span><span>    hero.</span><span style="color:#4271ae;">die</span><span>(); </span><span style="color:#999999;">// &#39;hero&#39; is not usable after this invocation, see the method&#39;s definiton
+</span><span>
+</span><span>    </span><span style="color:#999999;">// the dbg! macro prints debug strings to stderr along with file and line number
+</span><span>    dbg!(</span><span style="color:#718c00;">&quot;print to stderr: {}&quot;</span><span>, twin);
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let</span><span> pos </span><span style="color:#3e999f;">=</span><span> Position(</span><span style="color:#f5871f;">42</span><span>, </span><span style="color:#f5871f;">0</span><span>);
+</span><span>    </span><span style="color:#8959a8;">let</span><span> dist </span><span style="color:#3e999f;">=</span><span> steve.</span><span style="color:#4271ae;">distance</span><span>(pos); </span><span style="color:#999999;">// no clone here as Position derives the Copy trait
+</span><span>    println!(</span><span style="color:#718c00;">&quot;</span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">&quot;</span><span>, pos);
+</span><span>    assert_eq!(dist, </span><span style="color:#f5871f;">42</span><span>);
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="data_types.rs">data_types.rs</a>)</sub></p>
+<h2 id="further-reading">Further reading</h2>
+<ul>
+<li><a href="https://doc.rust-lang.org/book/ch05-00-structs.html">The Book, chapter 5</a></li>
+</ul>
+<h2 id="assignment-1-graded">Assignment #1 (graded)</h2>
+<p><a href="https://classroom.github.com/a/nc92p2Ow">Here</a> you can find our first biweekly assignment. The deadline for submissions is 14.03.2022.</p>
+
+
+    </div>
+  </div>
+
+  <div class="prev-link">
+    
+    
+  </div>
+
+  <div class="next-link">
+    
+    
+  </div>
+</div>
+
+
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/elasticlunr.min.js"></script>
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/search_index.en.js"></script>
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/book.js"></script>
+
+</body>
+
+</html>

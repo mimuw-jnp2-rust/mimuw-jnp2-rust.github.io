@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>JNP2: Rust</title>
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://mimuw-jnp2-rust.github.io/book.css">
+  
+
+  
+  
+</head>
+
+<body>
+<div class="menu">
+  
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="https://mimuw-jnp2-rust.github.io">Home</a></li>
+      
+        
+        
+          
+          <li >
+            
+            <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;">
+              
+              List of lessons
+            </a>
+            
+              <ul>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;00-organizational&#x2F;">
+                      [2022-03-01]
+                      
+                      Oragnizational lesson
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;01-introduction&#x2F;">
+                      [2022-03-01]
+                      
+                      Introduction to Rust
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;02-ownership&#x2F;">
+                      [2022-03-08]
+                      
+                      Ownership Model
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;03-data-types&#x2F;">
+                      [2022-03-08]
+                      
+                      Data Types
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;04-enums&#x2F;">
+                      [2022-03-14]
+                      
+                      Enums
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;05-tests&#x2F;">
+                      [2022-03-14]
+                      
+                      Tests
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;06-types-reasoning&#x2F;">
+                      [2022-03-22]
+                      
+                      Reasoning About Types
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;07-feedback&#x2F;">
+                      [2022-03-22]
+                      
+                      Small Task Feedback #1
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;08-closures-iterators&#x2F;">
+                      [2022-03-29]
+                      
+                      Closures and Iterators
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;09-feedback2&#x2F;">
+                      [2022-04-05]
+                      
+                      Small Task Feedback #2
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;10-smart-pointers&#x2F;">
+                      [2022-04-12]
+                      
+                      Smart Pointers
+                    </a>
+                  </li>
+                
+                  <li  class="active" >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;11-feedback3&#x2F;">
+                      [2022-04-12]
+                      
+                      Small Task Feedback #3
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;12-concurrency&#x2F;">
+                      [2022-04-26]
+                      
+                      Fearless concurrency
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;13-design-patterns&#x2F;">
+                      [2022-05-10]
+                      
+                      Design patterns
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;14-async-1&#x2F;">
+                      [2022-05-17]
+                      
+                      Async: Part 1
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;15-async-2&#x2F;">
+                      [2022-05-24]
+                      
+                      Async: Part 2
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;16-macros&#x2F;">
+                      [2022-06-07]
+                      
+                      Macros
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;b1-rusty-graphs&#x2F;">
+                      [2022-06-07]
+                      
+                      [Bonus] Rusty graphs
+                    </a>
+                  </li>
+                
+              </ul>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  
+  
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+      <span class="search-icon">🔎</span>
+    
+  </div>
+
+  <div class="page__content">
+    
+      <div class="search-container">
+        <input id="search" type="search" placeholder="Search..">
+        <div class="search-results">
+          <div class="search-results__header"></div>
+          <ul class="search-results__items"></ul>
+        </div>
+      </div>
+    
+    <div class="book-content">
+      
+<h1 class="title">Small Task Feedback #3</h1>
+<p class="subtitle">
+  <strong>2022-04-12</strong> (last edit: 2022-04-11)
+</p>
+<h2 id="iterators">Iterators</h2>
+<h3 id="too-many-bools">Too many bools</h3>
+<p>Many people implemented the InterleaveIterator like this:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">pub struct </span><span>InterleaveIterator&lt;I: </span><span style="color:#c99e00;">Iterator</span><span>, J: </span><span style="color:#c99e00;">Iterator</span><span>&gt; {
+</span><span>    </span><span style="color:#c82829;">iter1</span><span>: I,
+</span><span>    </span><span style="color:#c82829;">iter2</span><span>: J,
+</span><span>    </span><span style="color:#c82829;">not_finished1</span><span>: </span><span style="color:#8959a8;">bool</span><span>,
+</span><span>    </span><span style="color:#c82829;">not_finished2</span><span>: </span><span style="color:#8959a8;">bool</span><span>,
+</span><span>    </span><span style="color:#c82829;">turn_of_first</span><span>: </span><span style="color:#8959a8;">bool</span><span>,
+</span><span>}
+</span></code></pre>
+<p>There's no need to use <code>bool</code>s to keep track of whether the iterators are finished. The contract of
+the <code>Iterator</code> trait specifies that <code>next()</code></p>
+<blockquote>
+<p>returns None when iteration is finished. Individual iterator implementations may choose to resume iteration,
+and so calling next() again may or may not eventually start returning Some(Item) again at some point.</p>
+</blockquote>
+<p>If you want to make sure that once the iterator returns None, it will always return None, you can
+use the <code>fuse()</code> method.</p>
+<h3 id="or-else">or_else</h3>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">impl</span><span>&lt;I, J&gt; Iterator </span><span style="color:#8959a8;">for </span><span>InterleaveIterator&lt;I, J&gt;
+</span><span style="color:#999999;">// where etc.
+</span><span>{
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">next</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut </span><span style="color:#f5871f;">self</span><span>) -&gt; </span><span style="color:#c99e00;">Option</span><span>&lt;</span><span style="color:#8959a8;">Self::</span><span>Item&gt; {
+</span><span>        </span><span style="color:#8959a8;">let mut</span><span> ret_val;
+</span><span>
+</span><span>        </span><span style="color:#8959a8;">match </span><span style="color:#c82829;">self</span><span>.next_from_a {
+</span><span>            </span><span style="color:#f5871f;">true </span><span style="color:#3e999f;">=&gt; </span><span>{
+</span><span>                ret_val </span><span style="color:#3e999f;">= </span><span style="color:#c82829;">self</span><span>.i.</span><span style="color:#4271ae;">next</span><span>();
+</span><span>                </span><span style="color:#8959a8;">if</span><span> ret_val.</span><span style="color:#4271ae;">is_none</span><span>() {
+</span><span>                    ret_val </span><span style="color:#3e999f;">= </span><span style="color:#c82829;">self</span><span>.j.</span><span style="color:#4271ae;">next</span><span>()
+</span><span>                }
+</span><span>            }
+</span><span>            </span><span style="color:#f5871f;">false </span><span style="color:#3e999f;">=&gt; </span><span>{
+</span><span>                ret_val </span><span style="color:#3e999f;">= </span><span style="color:#c82829;">self</span><span>.j.</span><span style="color:#4271ae;">next</span><span>();
+</span><span>                </span><span style="color:#8959a8;">if</span><span> ret_val.</span><span style="color:#4271ae;">is_none</span><span>() {
+</span><span>                    ret_val </span><span style="color:#3e999f;">= </span><span style="color:#c82829;">self</span><span>.i.</span><span style="color:#4271ae;">next</span><span>()
+</span><span>                }
+</span><span>            }
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#c82829;">self</span><span>.next_from_i </span><span style="color:#3e999f;">= !</span><span style="color:#c82829;">self</span><span>.next_from_i;
+</span><span>
+</span><span>        ret_val
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>Even though in this definition we don't have the excessive <code>bool</code>s,
+it can still be written a lot more concisely using <code>or_else</code>.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">impl</span><span>&lt;I, J&gt; Iterator </span><span style="color:#8959a8;">for </span><span>InterleaveIterator&lt;I, J&gt;
+</span><span style="color:#999999;">// where etc.
+</span><span>{
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">next</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut </span><span style="color:#f5871f;">self</span><span>) -&gt; </span><span style="color:#c99e00;">Option</span><span>&lt;</span><span style="color:#8959a8;">Self::</span><span>Item&gt; {
+</span><span>        </span><span style="color:#c82829;">self</span><span>.next_from_i </span><span style="color:#3e999f;">= !</span><span style="color:#c82829;">self</span><span>.next_from_i;
+</span><span>        </span><span style="color:#8959a8;">if </span><span style="color:#c82829;">self</span><span>.next_from_i {
+</span><span>            </span><span style="color:#c82829;">self</span><span>.i.</span><span style="color:#4271ae;">next</span><span>().</span><span style="color:#4271ae;">or_else</span><span>(|| </span><span style="color:#c82829;">self</span><span>.j.</span><span style="color:#4271ae;">next</span><span>())
+</span><span>        } </span><span style="color:#8959a8;">else </span><span>{
+</span><span>            </span><span style="color:#c82829;">self</span><span>.j.</span><span style="color:#4271ae;">next</span><span>().</span><span style="color:#4271ae;">or_else</span><span>(|| </span><span style="color:#c82829;">self</span><span>.i.</span><span style="color:#4271ae;">next</span><span>())
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="why-not-or">Why not <code>or</code>?</h3>
+<p>The <code>or</code> method evaluates the argument even if it's not used (eager evaluation).
+Because calling <code>self.i.next()</code> has side effects, this would create a bug.</p>
+<h3 id="step-by">step_by</h3>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">impl</span><span>&lt;</span><span style="color:#8959a8;">&#39;a</span><span>&gt; Div&lt;</span><span style="color:#8959a8;">usize</span><span>&gt; </span><span style="color:#8959a8;">for </span><span>Shreds&lt;</span><span style="color:#8959a8;">&#39;a</span><span>&gt; {
+</span><span>    </span><span style="color:#8959a8;">type </span><span>Output </span><span style="color:#3e999f;">= </span><span>Shreds&lt;</span><span style="color:#8959a8;">&#39;a</span><span>&gt;;
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">div</span><span>(</span><span style="color:#f5871f;">self</span><span>, </span><span style="color:#f5871f;">rhs</span><span>: </span><span style="color:#8959a8;">usize</span><span>) -&gt; </span><span style="color:#8959a8;">Self::</span><span>Output {
+</span><span>        </span><span style="color:#8959a8;">let mut</span><span> counter </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>;
+</span><span>        </span><span style="color:#8959a8;">let</span><span> shreds </span><span style="color:#3e999f;">= </span><span style="color:#c82829;">self
+</span><span>            .shreds
+</span><span>            .</span><span style="color:#4271ae;">into_iter</span><span>()
+</span><span>            .</span><span style="color:#4271ae;">fold</span><span>(vec![], |</span><span style="color:#8959a8;">mut </span><span style="color:#f5871f;">acc</span><span>, </span><span style="color:#f5871f;">el</span><span>| {
+</span><span>                acc.</span><span style="color:#4271ae;">push</span><span>((el, acc.</span><span style="color:#4271ae;">len</span><span>()));
+</span><span>                acc
+</span><span>            })
+</span><span>            .</span><span style="color:#4271ae;">filter</span><span>(|(_, </span><span style="color:#f5871f;">nr</span><span>)| nr </span><span style="color:#3e999f;">%</span><span> rhs </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">0</span><span>)
+</span><span>            .</span><span style="color:#4271ae;">map</span><span>(|(</span><span style="color:#f5871f;">el</span><span>, _)| el)
+</span><span>            .</span><span style="color:#4271ae;">collect</span><span>();
+</span><span>        Shreds { shreds }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>Instead of <code>fold</code> we can use <code>enumerate</code> to pair each element with its index.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">impl</span><span>&lt;</span><span style="color:#8959a8;">&#39;a</span><span>&gt; Div&lt;</span><span style="color:#8959a8;">usize</span><span>&gt; </span><span style="color:#8959a8;">for </span><span>Shreds&lt;</span><span style="color:#8959a8;">&#39;a</span><span>&gt; {
+</span><span>    </span><span style="color:#8959a8;">type </span><span>Output </span><span style="color:#3e999f;">= </span><span>Shreds&lt;</span><span style="color:#8959a8;">&#39;a</span><span>&gt;;
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">div</span><span>(</span><span style="color:#f5871f;">self</span><span>, </span><span style="color:#f5871f;">rhs</span><span>: </span><span style="color:#8959a8;">usize</span><span>) -&gt; </span><span style="color:#8959a8;">Self::</span><span>Output {
+</span><span>        </span><span style="color:#8959a8;">let mut</span><span> counter </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>;
+</span><span>        </span><span style="color:#8959a8;">let</span><span> shreds </span><span style="color:#3e999f;">= </span><span style="color:#c82829;">self
+</span><span>            .shreds
+</span><span>            .</span><span style="color:#4271ae;">into_iter</span><span>()
+</span><span>            .</span><span style="color:#4271ae;">enumerate</span><span>()
+</span><span>            .</span><span style="color:#4271ae;">filter</span><span>(|(_, </span><span style="color:#f5871f;">nr</span><span>)| nr </span><span style="color:#3e999f;">%</span><span> rhs </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">0</span><span>)
+</span><span>            .</span><span style="color:#4271ae;">map</span><span>(|(</span><span style="color:#f5871f;">el</span><span>, _)| el)
+</span><span>            .</span><span style="color:#4271ae;">collect</span><span>();
+</span><span>        Shreds { shreds }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>However, it can be simplified even more. What we're doing here is basically reimplementing
+<code>step_by</code> :)</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">impl</span><span>&lt;</span><span style="color:#8959a8;">&#39;a</span><span>&gt; Div&lt;</span><span style="color:#8959a8;">usize</span><span>&gt; </span><span style="color:#8959a8;">for </span><span>Shreds&lt;</span><span style="color:#8959a8;">&#39;a</span><span>&gt; {
+</span><span>    </span><span style="color:#8959a8;">type </span><span>Output </span><span style="color:#3e999f;">= </span><span>Shreds&lt;</span><span style="color:#8959a8;">&#39;a</span><span>&gt;;
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">div</span><span>(</span><span style="color:#f5871f;">self</span><span>, </span><span style="color:#f5871f;">rhs</span><span>: </span><span style="color:#8959a8;">usize</span><span>) -&gt; </span><span style="color:#8959a8;">Self::</span><span>Output {
+</span><span>        Shreds {
+</span><span>            shreds: </span><span style="color:#c82829;">self</span><span>.shreds.</span><span style="color:#4271ae;">into_iter</span><span>().</span><span style="color:#4271ae;">step_by</span><span>(rhs).</span><span style="color:#4271ae;">collect</span><span>(),
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="what-s-collect">What's <code>collect()</code>?</h3>
+<p>It's not magic. We can collect the elements of an iterator into any type which implements
+the appropriate <code>FromIterator</code> <a href="https://doc.rust-lang.org/std/iter/trait.FromIterator.html">trait</a>.</p>
+<h2 id="shredding-usize">Shredding usize</h2>
+<p>Instead of</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">impl </span><span>Shredder </span><span style="color:#8959a8;">for </span><span>usize {
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">shred</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#f5871f;">self</span><span>) -&gt; Shreds {
+</span><span>        </span><span style="color:#8959a8;">let mut</span><span> elements </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">Vec</span><span>::new();
+</span><span>        </span><span style="color:#8959a8;">for</span><span> i </span><span style="color:#3e999f;">in </span><span style="color:#c82829;">self</span><span>.</span><span style="color:#4271ae;">to_string</span><span>().</span><span style="color:#4271ae;">chars</span><span>() {
+</span><span>            </span><span style="color:#8959a8;">let</span><span> dig </span><span style="color:#3e999f;">=</span><span> i </span><span style="color:#3e999f;">as </span><span style="color:#8959a8;">usize </span><span style="color:#3e999f;">- </span><span style="color:#718c00;">&#39;0&#39; </span><span style="color:#3e999f;">as </span><span style="color:#8959a8;">usize</span><span>;
+</span><span>            </span><span style="color:#8959a8;">let</span><span> val_dig </span><span style="color:#3e999f;">= </span><span style="color:#8959a8;">crate</span><span>::value::Digit::new(dig);
+</span><span>            elements.</span><span style="color:#4271ae;">push</span><span>(Value::Digit(val_dig));
+</span><span>        }
+</span><span>        Shreds { elements }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>it's better to use the modulo operator and division to get the digits. Why? Converting a number to
+string requires an additional heap allocation.</p>
+<h2 id="make-illegal-states-unrepresentable">Make illegal states unrepresentable</h2>
+<p>Some people used an i8 or some other integer type to keep track of whose turn it is. But the only
+values that were ever used were 0 and 1. It means that there was a lot of cases where the
+program would panic. Making it possible to encode an illegal state is
+a <a href="https://en.wiktionary.org/wiki/footgun">footgun</a>. Using a <code>bool</code> is a better choice. What if there are more than two states? We can define a custom enum then.</p>
+
+
+    </div>
+  </div>
+
+  <div class="prev-link">
+    
+    
+  </div>
+
+  <div class="next-link">
+    
+    
+  </div>
+</div>
+
+
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/elasticlunr.min.js"></script>
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/search_index.en.js"></script>
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/book.js"></script>
+
+</body>
+
+</html>

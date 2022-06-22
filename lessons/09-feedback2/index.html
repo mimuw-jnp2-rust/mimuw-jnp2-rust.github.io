@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>JNP2: Rust</title>
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://mimuw-jnp2-rust.github.io/book.css">
+  
+
+  
+  
+</head>
+
+<body>
+<div class="menu">
+  
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="https://mimuw-jnp2-rust.github.io">Home</a></li>
+      
+        
+        
+          
+          <li >
+            
+            <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;">
+              
+              List of lessons
+            </a>
+            
+              <ul>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;00-organizational&#x2F;">
+                      [2022-03-01]
+                      
+                      Oragnizational lesson
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;01-introduction&#x2F;">
+                      [2022-03-01]
+                      
+                      Introduction to Rust
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;02-ownership&#x2F;">
+                      [2022-03-08]
+                      
+                      Ownership Model
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;03-data-types&#x2F;">
+                      [2022-03-08]
+                      
+                      Data Types
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;04-enums&#x2F;">
+                      [2022-03-14]
+                      
+                      Enums
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;05-tests&#x2F;">
+                      [2022-03-14]
+                      
+                      Tests
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;06-types-reasoning&#x2F;">
+                      [2022-03-22]
+                      
+                      Reasoning About Types
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;07-feedback&#x2F;">
+                      [2022-03-22]
+                      
+                      Small Task Feedback #1
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;08-closures-iterators&#x2F;">
+                      [2022-03-29]
+                      
+                      Closures and Iterators
+                    </a>
+                  </li>
+                
+                  <li  class="active" >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;09-feedback2&#x2F;">
+                      [2022-04-05]
+                      
+                      Small Task Feedback #2
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;10-smart-pointers&#x2F;">
+                      [2022-04-12]
+                      
+                      Smart Pointers
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;11-feedback3&#x2F;">
+                      [2022-04-12]
+                      
+                      Small Task Feedback #3
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;12-concurrency&#x2F;">
+                      [2022-04-26]
+                      
+                      Fearless concurrency
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;13-design-patterns&#x2F;">
+                      [2022-05-10]
+                      
+                      Design patterns
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;14-async-1&#x2F;">
+                      [2022-05-17]
+                      
+                      Async: Part 1
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;15-async-2&#x2F;">
+                      [2022-05-24]
+                      
+                      Async: Part 2
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;16-macros&#x2F;">
+                      [2022-06-07]
+                      
+                      Macros
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;b1-rusty-graphs&#x2F;">
+                      [2022-06-07]
+                      
+                      [Bonus] Rusty graphs
+                    </a>
+                  </li>
+                
+              </ul>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  
+  
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+      <span class="search-icon">🔎</span>
+    
+  </div>
+
+  <div class="page__content">
+    
+      <div class="search-container">
+        <input id="search" type="search" placeholder="Search..">
+        <div class="search-results">
+          <div class="search-results__header"></div>
+          <ul class="search-results__items"></ul>
+        </div>
+      </div>
+    
+    <div class="book-content">
+      
+<h1 class="title">Small Task Feedback #2</h1>
+<p class="subtitle">
+  <strong>2022-04-05</strong> (last edit: 2022-04-04)
+</p>
+<h2 id="result-combinators">Result combinators</h2>
+<p>Rust's <code>Result</code> type implements a lot of methods that simplify working with the two variants of the enum, especially when we're only interested in one of them. These methods are called <em>combinators</em>.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> res: </span><span style="color:#c99e00;">Result</span><span>&lt;</span><span style="color:#8959a8;">i32</span><span>, </span><span style="color:#8959a8;">i32</span><span>&gt; </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">Ok</span><span>(</span><span style="color:#f5871f;">5</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// `map` allows us to transform the value inside `Ok()`,
+</span><span>    </span><span style="color:#999999;">// while leaving the `Err` untouched
+</span><span>    assert_eq!(res.</span><span style="color:#4271ae;">map</span><span>(|</span><span style="color:#f5871f;">v</span><span>| v </span><span style="color:#3e999f;">*</span><span> v), </span><span style="color:#c99e00;">Ok</span><span>(</span><span style="color:#f5871f;">25</span><span>));
+</span><span>
+</span><span>    res </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">Err</span><span>(</span><span style="color:#f5871f;">5</span><span>);
+</span><span>    assert_eq!(res.</span><span style="color:#4271ae;">map</span><span>(|</span><span style="color:#f5871f;">v</span><span>| v </span><span style="color:#3e999f;">*</span><span> v), </span><span style="color:#c99e00;">Err</span><span>(</span><span style="color:#f5871f;">5</span><span>));
+</span><span>
+</span><span>    </span><span style="color:#999999;">// With most combinators there are mirrored ones that work on `Err`
+</span><span>    </span><span style="color:#999999;">// variants instead of `Ok`s.
+</span><span>    assert_eq!(res.</span><span style="color:#4271ae;">map_err</span><span>(|</span><span style="color:#f5871f;">v</span><span>| v </span><span style="color:#3e999f;">*</span><span> v), </span><span style="color:#c99e00;">Err</span><span>(</span><span style="color:#f5871f;">25</span><span>));
+</span><span>
+</span><span>    </span><span style="color:#999999;">// We can swap an `Ok` value for a different one with `and()`.
+</span><span>    </span><span style="color:#999999;">// Analogously for `Err` and `or()`.
+</span><span>    res </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">Ok</span><span>(</span><span style="color:#f5871f;">5</span><span>);
+</span><span>    assert_eq!(res.</span><span style="color:#4271ae;">and</span><span>(</span><span style="color:#c99e00;">Ok</span><span>(</span><span style="color:#f5871f;">100</span><span>)), </span><span style="color:#c99e00;">Ok</span><span>(</span><span style="color:#f5871f;">100</span><span>));
+</span><span>
+</span><span>    res </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">Err</span><span>(</span><span style="color:#f5871f;">5</span><span>);
+</span><span>    assert_eq!(res.</span><span style="color:#4271ae;">and</span><span>(</span><span style="color:#c99e00;">Ok</span><span>(</span><span style="color:#f5871f;">100</span><span>)), </span><span style="color:#c99e00;">Err</span><span>(</span><span style="color:#f5871f;">5</span><span>));
+</span><span>
+</span><span>    </span><span style="color:#999999;">// `and_then()` and `or_else()` allow us to invoke functions
+</span><span>    </span><span style="color:#999999;">// only when the result is either an `Ok` or an `Err` respectively.
+</span><span>    </span><span style="color:#8959a8;">let </span><span style="color:#4271ae;">sq </span><span style="color:#3e999f;">= </span><span>|</span><span style="color:#f5871f;">x</span><span>: </span><span style="color:#8959a8;">i32</span><span>| -&gt; </span><span style="color:#c99e00;">Result</span><span>&lt;</span><span style="color:#8959a8;">i32</span><span>, </span><span style="color:#8959a8;">i32</span><span>&gt; { </span><span style="color:#c99e00;">Ok</span><span>(x </span><span style="color:#3e999f;">*</span><span> x) };
+</span><span>    </span><span style="color:#8959a8;">let </span><span style="color:#4271ae;">err </span><span style="color:#3e999f;">= </span><span>|</span><span style="color:#f5871f;">x</span><span>: </span><span style="color:#8959a8;">i32</span><span>| -&gt; </span><span style="color:#c99e00;">Result</span><span>&lt;</span><span style="color:#8959a8;">i32</span><span>, </span><span style="color:#8959a8;">i32</span><span>&gt; { </span><span style="color:#c99e00;">Err</span><span>(x) };
+</span><span>    
+</span><span>    assert_eq!(</span><span style="color:#c99e00;">Ok</span><span>(</span><span style="color:#f5871f;">2</span><span>).</span><span style="color:#4271ae;">and_then</span><span>(sq).</span><span style="color:#4271ae;">and_then</span><span>(sq), </span><span style="color:#c99e00;">Ok</span><span>(</span><span style="color:#f5871f;">16</span><span>));
+</span><span>    assert_eq!(</span><span style="color:#c99e00;">Ok</span><span>(</span><span style="color:#f5871f;">2</span><span>).</span><span style="color:#4271ae;">and_then</span><span>(sq).</span><span style="color:#4271ae;">and_then</span><span>(err), </span><span style="color:#c99e00;">Err</span><span>(</span><span style="color:#f5871f;">4</span><span>));
+</span><span>    assert_eq!(</span><span style="color:#c99e00;">Ok</span><span>(</span><span style="color:#f5871f;">2</span><span>).</span><span style="color:#4271ae;">and_then</span><span>(err).</span><span style="color:#4271ae;">and_then</span><span>(sq), </span><span style="color:#c99e00;">Err</span><span>(</span><span style="color:#f5871f;">2</span><span>));
+</span><span>    assert_eq!(</span><span style="color:#c99e00;">Err</span><span>(</span><span style="color:#f5871f;">3</span><span>).</span><span style="color:#4271ae;">and_then</span><span>(sq).</span><span style="color:#4271ae;">and_then</span><span>(sq), </span><span style="color:#c99e00;">Err</span><span>(</span><span style="color:#f5871f;">3</span><span>));
+</span><span>
+</span><span>    assert_eq!(</span><span style="color:#c99e00;">Ok</span><span>(</span><span style="color:#f5871f;">2</span><span>).</span><span style="color:#4271ae;">or_else</span><span>(sq).</span><span style="color:#4271ae;">or_else</span><span>(sq), </span><span style="color:#c99e00;">Ok</span><span>(</span><span style="color:#f5871f;">2</span><span>));
+</span><span>    assert_eq!(</span><span style="color:#c99e00;">Ok</span><span>(</span><span style="color:#f5871f;">2</span><span>).</span><span style="color:#4271ae;">or_else</span><span>(err).</span><span style="color:#4271ae;">or_else</span><span>(sq), </span><span style="color:#c99e00;">Ok</span><span>(</span><span style="color:#f5871f;">2</span><span>));
+</span><span>    assert_eq!(</span><span style="color:#c99e00;">Err</span><span>(</span><span style="color:#f5871f;">3</span><span>).</span><span style="color:#4271ae;">or_else</span><span>(sq).</span><span style="color:#4271ae;">or_else</span><span>(err), </span><span style="color:#c99e00;">Ok</span><span>(</span><span style="color:#f5871f;">9</span><span>));
+</span><span>    assert_eq!(</span><span style="color:#c99e00;">Err</span><span>(</span><span style="color:#f5871f;">3</span><span>).</span><span style="color:#4271ae;">or_else</span><span>(err).</span><span style="color:#4271ae;">or_else</span><span>(err), </span><span style="color:#c99e00;">Err</span><span>(</span><span style="color:#f5871f;">3</span><span>));
+</span><span>}
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="combinators.rs">combinators.rs</a>)</sub></p>
+<p>You can find more about the <code>Result</code> type and all its methods <a href="https://doc.rust-lang.org/std/result/enum.Result.html">here</a>.</p>
+<h2 id="useful-hashmap-methods">Useful hashmap methods</h2>
+<p>We can create a new hashmap in two ways in Rust - either an empty one using the <code>new()</code> method or from a list of key-value pairs using the <code>from()</code> method.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">let mut</span><span> empty: HashMap&lt;</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">str</span><span>, </span><span style="color:#8959a8;">i32</span><span>&gt; </span><span style="color:#3e999f;">= </span><span>HashMap::new();
+</span><span style="color:#8959a8;">let</span><span> filled </span><span style="color:#3e999f;">= </span><span>HashMap::from([
+</span><span>    (</span><span style="color:#718c00;">&quot;a&quot;</span><span>, </span><span style="color:#f5871f;">1</span><span>),
+</span><span>    (</span><span style="color:#718c00;">&quot;b&quot;</span><span>, </span><span style="color:#f5871f;">2</span><span>),
+</span><span>    (</span><span style="color:#718c00;">&quot;c&quot;</span><span>, </span><span style="color:#f5871f;">3</span><span>),
+</span><span>    (</span><span style="color:#718c00;">&quot;d&quot;</span><span>, </span><span style="color:#f5871f;">4</span><span>),
+</span><span>]);
+</span></code></pre>
+<p><code>std::collections::Hashmap</code> implements the <code>IntoIterator</code> trait, but there are also other very handy methods for iterating over the collection. We can use the <code>values()</code> and <code>values_mut()</code> methods to just iterate over values inside the map and the <code>keys()</code> method to iterate only over the keys.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">let mut</span><span> map </span><span style="color:#3e999f;">= </span><span>HashMap::from([(</span><span style="color:#718c00;">&quot;a&quot;</span><span>, </span><span style="color:#f5871f;">1</span><span>), (</span><span style="color:#718c00;">&quot;b&quot;</span><span>, </span><span style="color:#f5871f;">2</span><span>)]);
+</span><span>
+</span><span>map.</span><span style="color:#4271ae;">values</span><span>().</span><span style="color:#4271ae;">for_each</span><span>(|</span><span style="color:#f5871f;">v</span><span>| println!(</span><span style="color:#718c00;">&quot;</span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, v));
+</span><span>
+</span><span style="color:#8959a8;">for</span><span> v </span><span style="color:#3e999f;">in</span><span> map.</span><span style="color:#4271ae;">values_mut</span><span>() {
+</span><span>    </span><span style="color:#3e999f;">*</span><span>v </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>;
+</span><span>}
+</span><span>
+</span><span>map.</span><span style="color:#4271ae;">keys</span><span>().</span><span style="color:#4271ae;">filter</span><span>(|</span><span style="color:#f5871f;">key</span><span>| key.</span><span style="color:#4271ae;">len</span><span>() </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">1</span><span>).</span><span style="color:#4271ae;">count</span><span>();
+</span></code></pre>
+<p>We can also consume all the key-value pairs from the map using <code>drain()</code>.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">use </span><span>std::collections::HashMap;
+</span><span>
+</span><span style="color:#8959a8;">let mut</span><span> a </span><span style="color:#3e999f;">= </span><span>HashMap::new();
+</span><span>a.</span><span style="color:#4271ae;">insert</span><span>(</span><span style="color:#f5871f;">1</span><span>, </span><span style="color:#718c00;">&quot;a&quot;</span><span>);
+</span><span>a.</span><span style="color:#4271ae;">insert</span><span>(</span><span style="color:#f5871f;">2</span><span>, </span><span style="color:#718c00;">&quot;b&quot;</span><span>);
+</span><span>
+</span><span style="color:#8959a8;">for </span><span>(k, v) </span><span style="color:#3e999f;">in</span><span> a.</span><span style="color:#4271ae;">drain</span><span>().</span><span style="color:#4271ae;">take</span><span>(</span><span style="color:#f5871f;">1</span><span>) {
+</span><span>    assert!(k </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">1 </span><span style="color:#3e999f;">||</span><span> k </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">2</span><span>);
+</span><span>    assert!(v </span><span style="color:#3e999f;">== </span><span style="color:#718c00;">&quot;a&quot; </span><span style="color:#3e999f;">||</span><span> v </span><span style="color:#3e999f;">== </span><span style="color:#718c00;">&quot;b&quot;</span><span>);
+</span><span>}
+</span><span>
+</span><span>assert!(a.</span><span style="color:#4271ae;">is_empty</span><span>());
+</span></code></pre>
+<p>In the previous feedback you can also read about the <code>Entry</code> enum and how to work with it to access and modify values in a hashmap.</p>
+<h2 id="matches-macro"><code>matches!()</code> macro</h2>
+<p>Rust has a very convenient macro for checking whether something matches a given pattern. You can read more about the <code>matches!()</code> macro <a href="https://doc.rust-lang.org/std/macro.matches.html">here</a>.</p>
+<h2 id="assignment-4-graded">Assignment #4 (graded)</h2>
+<p><a href="https://classroom.github.com/a/jL6DS9YM">Here</a> you can find the fourth graded assignment. Deadline for submissions is 12.04.2022.</p>
+
+
+    </div>
+  </div>
+
+  <div class="prev-link">
+    
+    
+  </div>
+
+  <div class="next-link">
+    
+    
+  </div>
+</div>
+
+
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/elasticlunr.min.js"></script>
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/search_index.en.js"></script>
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/book.js"></script>
+
+</body>
+
+</html>

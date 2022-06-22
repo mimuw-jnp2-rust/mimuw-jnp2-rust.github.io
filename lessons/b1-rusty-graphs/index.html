@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>JNP2: Rust</title>
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://mimuw-jnp2-rust.github.io/book.css">
+  
+
+  
+  
+</head>
+
+<body>
+<div class="menu">
+  
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="https://mimuw-jnp2-rust.github.io">Home</a></li>
+      
+        
+        
+          
+          <li >
+            
+            <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;">
+              
+              List of lessons
+            </a>
+            
+              <ul>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;00-organizational&#x2F;">
+                      [2022-03-01]
+                      
+                      Oragnizational lesson
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;01-introduction&#x2F;">
+                      [2022-03-01]
+                      
+                      Introduction to Rust
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;02-ownership&#x2F;">
+                      [2022-03-08]
+                      
+                      Ownership Model
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;03-data-types&#x2F;">
+                      [2022-03-08]
+                      
+                      Data Types
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;04-enums&#x2F;">
+                      [2022-03-14]
+                      
+                      Enums
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;05-tests&#x2F;">
+                      [2022-03-14]
+                      
+                      Tests
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;06-types-reasoning&#x2F;">
+                      [2022-03-22]
+                      
+                      Reasoning About Types
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;07-feedback&#x2F;">
+                      [2022-03-22]
+                      
+                      Small Task Feedback #1
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;08-closures-iterators&#x2F;">
+                      [2022-03-29]
+                      
+                      Closures and Iterators
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;09-feedback2&#x2F;">
+                      [2022-04-05]
+                      
+                      Small Task Feedback #2
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;10-smart-pointers&#x2F;">
+                      [2022-04-12]
+                      
+                      Smart Pointers
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;11-feedback3&#x2F;">
+                      [2022-04-12]
+                      
+                      Small Task Feedback #3
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;12-concurrency&#x2F;">
+                      [2022-04-26]
+                      
+                      Fearless concurrency
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;13-design-patterns&#x2F;">
+                      [2022-05-10]
+                      
+                      Design patterns
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;14-async-1&#x2F;">
+                      [2022-05-17]
+                      
+                      Async: Part 1
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;15-async-2&#x2F;">
+                      [2022-05-24]
+                      
+                      Async: Part 2
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;16-macros&#x2F;">
+                      [2022-06-07]
+                      
+                      Macros
+                    </a>
+                  </li>
+                
+                  <li  class="active" >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;b1-rusty-graphs&#x2F;">
+                      [2022-06-07]
+                      
+                      [Bonus] Rusty graphs
+                    </a>
+                  </li>
+                
+              </ul>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  
+  
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+      <span class="search-icon">🔎</span>
+    
+  </div>
+
+  <div class="page__content">
+    
+      <div class="search-container">
+        <input id="search" type="search" placeholder="Search..">
+        <div class="search-results">
+          <div class="search-results__header"></div>
+          <ul class="search-results__items"></ul>
+        </div>
+      </div>
+    
+    <div class="book-content">
+      
+<h1 class="title">[Bonus] Rusty graphs</h1>
+<p class="subtitle">
+  <strong>2022-06-07</strong> (last edit: 2022-06-07)
+</p>
+<h2 id="introduction">Introduction</h2>
+<p>We all had to deal with graphs in Rust, thanks to the task &quot;corpos&quot;. Handling the graphs the way that was intended - implementing adjacency list by using <code>Rc&lt;RefCell&lt;Node&gt;&gt;</code> - had its drawbacks: an endless stream of derefing, a risk of creating a reference cycle and this mysterious &quot;interior mutability&quot; mechanism.</p>
+<h2 id="rc-madness">Rc madness</h2>
+<p>To quickly recap why and how this works: <code>Rc&lt;&gt;</code> is a smart pointer that utilizes reference counting, similar to <code>shared_ptr&lt;&gt;</code> from C++. However, due to Rust's ownerships rules it does not allow us to mutate the data behind the pointer. That's why we don't actually point to the node itself - we hide it behind <code>RefCell&lt;&gt;</code> allowing us to mutate the data, by utilizing interior mutability pattern.</p>
+<p>There are serval caveats, however. First, we lose compiler's help - it won't scream at us when we try to do something illegal. Speaking technically, when using <code>RefCell&lt;&gt;</code> Rust can no longer help us statically - it employs runtime checks to ensure ownership rules. The program will panic if something goes wrong, which is somewhat orthogonal to Rust's mission of catching bugs at compile time. Even if our program is bug-less, we still have to pay performance penalty, since runtime checks are not free.</p>
+<p>Opinion: working with <code>Rc&lt;RefCell&lt;&gt;&gt;</code> in Rust feels very off, since it abandons some of the core designs goals of Rust - catching bugs at compile time and introducing runtime cost that other languages avoid. Not to mention the syntax which at time can be daunting. Can we do better? Is it possible to employ graphs that go better with Rust?</p>
+<h2 id="owning-the-graph">Owning the graph</h2>
+<p>The problems encountered above arise from the same source: C/C++-like pointer structures don't go well with Rust. Sure, they can be done, but at what cost? Maybe instead of trying to force Rust into doing something it clearly does not want us to do, we should try different approach?</p>
+<p>We could reason somewhat like this: if multiple mutable ownership is the problem, maybe let's abandon it altogether? Maybe we could let a single object own the whole graph?</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">struct </span><span>Graph {
+</span><span>    </span><span style="color:#c82829;">nodes</span><span>: </span><span style="color:#c99e00;">Vec</span><span>&lt;Node&gt;,
+</span><span>    </span><span style="color:#c82829;">edges</span><span>: </span><span style="color:#c99e00;">Vec</span><span>&lt;Edge&gt;,
+</span><span>    </span><span style="color:#c82829;">highest_idx</span><span>: NodeIdx,
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">struct </span><span>Node {
+</span><span>    </span><span style="color:#c82829;">idx</span><span>: NodeIdx,
+</span><span>    </span><span style="color:#c82829;">data</span><span>: String,
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">struct </span><span>Edge {
+</span><span>    </span><span style="color:#c82829;">idx1</span><span>: NodeIdx,
+</span><span>    </span><span style="color:#c82829;">idx2</span><span>: NodeIdx,
+</span><span>}
+</span></code></pre>
+<p>Here we implement a graph as a single, non-recursive struct, that owns the whole graph. The nodes are identified by their index. This implementation has its disadvantages when compared to adjacency list, but it has one major advantage: it plays nice with Rust as a language.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">pub type </span><span>NodeIdx </span><span style="color:#3e999f;">= </span><span style="color:#8959a8;">usize</span><span>;
+</span><span>
+</span><span>
+</span><span style="color:#8959a8;">struct </span><span>Graph {
+</span><span>    </span><span style="color:#c82829;">nodes</span><span>: </span><span style="color:#c99e00;">Vec</span><span>&lt;Node&gt;,
+</span><span>    </span><span style="color:#c82829;">edges</span><span>: </span><span style="color:#c99e00;">Vec</span><span>&lt;Edge&gt;,
+</span><span>    </span><span style="color:#c82829;">highest_idx</span><span>: NodeIdx,
+</span><span>}
+</span><span>
+</span><span>
+</span><span style="color:#8959a8;">struct </span><span>Node {
+</span><span>    </span><span style="color:#c82829;">idx</span><span>: NodeIdx,
+</span><span>    </span><span style="color:#c82829;">data</span><span>: String,
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">struct </span><span>Edge {
+</span><span>    </span><span style="color:#c82829;">idx1</span><span>: NodeIdx,
+</span><span>    </span><span style="color:#c82829;">idx2</span><span>: NodeIdx,
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">impl </span><span>Graph {
+</span><span>    </span><span style="color:#8959a8;">pub fn </span><span style="color:#4271ae;">new</span><span>() -&gt; Graph {
+</span><span>        Graph { nodes: </span><span style="color:#c99e00;">Vec</span><span>::new(), edges: </span><span style="color:#c99e00;">Vec</span><span>::new(), highest_idx: </span><span style="color:#f5871f;">0 </span><span>}
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">pub fn </span><span style="color:#4271ae;">add_node</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut </span><span style="color:#f5871f;">self</span><span>, </span><span style="color:#f5871f;">data</span><span>: </span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">str</span><span>) {
+</span><span>        </span><span style="color:#c82829;">self</span><span>.nodes.</span><span style="color:#4271ae;">push</span><span>(Node { idx: </span><span style="color:#c82829;">self</span><span>.highest_idx </span><span style="color:#3e999f;">+ </span><span style="color:#f5871f;">1</span><span>, data: data.</span><span style="color:#4271ae;">to_string</span><span>() });
+</span><span>        </span><span style="color:#c82829;">self</span><span>.highest_idx </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">pub fn </span><span style="color:#4271ae;">add_edge</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut </span><span style="color:#f5871f;">self</span><span>, </span><span style="color:#f5871f;">idx1</span><span>: NodeIdx, </span><span style="color:#f5871f;">idx2</span><span>: NodeIdx) {
+</span><span>        </span><span style="color:#c82829;">self</span><span>.edges.</span><span style="color:#4271ae;">push</span><span>(Edge{idx1, idx2});
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> graph </span><span style="color:#3e999f;">= </span><span>Graph::new();
+</span><span>
+</span><span>    graph.</span><span style="color:#4271ae;">add_node</span><span>(</span><span style="color:#718c00;">&quot;123&quot;</span><span>);
+</span><span>
+</span><span>    graph.</span><span style="color:#4271ae;">add_edge</span><span>(</span><span style="color:#f5871f;">0</span><span>, </span><span style="color:#f5871f;">0</span><span>);
+</span><span>
+</span><span>}
+</span></code></pre>
+<p>This implementation and representations may not be the best one - but it is not meant to be; I simply want to showcase an idea, not implement the fastest graph at mimuw.</p>
+<p>This implementations has its problems of algorithmic nature (problematic removal and so on), but, I will write that again, it plays nice with Rust. There is no runtime penalty and we enable compiler to help us. It also is not a syntactic nightmare.</p>
+<h2 id="hero-we-definitely-need">Hero we definitely need</h2>
+<p>If one tries to implement graphs in Rust and embarks on Google journey how to exactly do it, they will find that the go-to answer is: it's a nightmare, use Petgraph. It's a sensible route to choose - Petgraph really simplifies things. In fact my team has done exactly that with our final program. Let's dive deeper into how Petgraph does it magic:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">pub struct </span><span>Graph&lt;N, E, Ty = Directed, Ix = DefaultIx&gt; {
+</span><span>    </span><span style="color:#c82829;">nodes</span><span>: </span><span style="color:#c99e00;">Vec</span><span>&lt;Node&lt;N, Ix&gt;&gt;,
+</span><span>    </span><span style="color:#c82829;">edges</span><span>: </span><span style="color:#c99e00;">Vec</span><span>&lt;Edge&lt;E, Ix&gt;&gt;,
+</span><span>    </span><span style="color:#c82829;">ty</span><span>: PhantomData&lt;Ty&gt;,
+</span><span>}
+</span></code></pre>
+<p>Huh, this is isomorphic to what's been discussed above. Maybe the next one will be different?</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span>    </span><span style="color:#8959a8;">pub struct </span><span>GraphMap&lt;N, E, Ty&gt; {
+</span><span>    </span><span style="color:#c82829;">nodes</span><span>: IndexMap&lt;N, </span><span style="color:#c99e00;">Vec</span><span>&lt;(N, CompactDirection)&gt;&gt;,
+</span><span>    </span><span style="color:#c82829;">edges</span><span>: IndexMap&lt;(N, N), E&gt;,
+</span><span>    </span><span style="color:#c82829;">ty</span><span>: PhantomData&lt;Ty&gt;,
+</span><span>}
+</span></code></pre>
+<p>At first glance it is, but if we learn that <code>IndexMap</code> is a crate that essentially provides a map (this crate claims to be compatible with Rust's <code>HashMap</code>), this example also is similar to the previous one (in a sense of using arena allocation [region-based memory management]).</p>
+<p>One last representation to go:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">pub struct </span><span>MatrixGraph&lt;N, E, Ty = Directed, Null: Nullable&lt;Wrapped = E&gt; = </span><span style="color:#c99e00;">Option</span><span>&lt;E&gt;, Ix = DefaultIx&gt;
+</span><span>{
+</span><span>    </span><span style="color:#c82829;">node_adjacencies</span><span>: </span><span style="color:#c99e00;">Vec</span><span>&lt;Null&gt;,
+</span><span>    </span><span style="color:#c82829;">node_capacity</span><span>: </span><span style="color:#8959a8;">usize</span><span>,
+</span><span>    </span><span style="color:#c82829;">nodes</span><span>: IdStorage&lt;N&gt;,
+</span><span>    </span><span style="color:#c82829;">nb_edges</span><span>: </span><span style="color:#8959a8;">usize</span><span>,
+</span><span>    </span><span style="color:#c82829;">ty</span><span>: PhantomData&lt;Ty&gt;,
+</span><span>    </span><span style="color:#c82829;">ix</span><span>: PhantomData&lt;Ix&gt;,
+</span><span>}
+</span></code></pre>
+<p>This representations uses flattened 2D array to store the graph. No pointers in sight.</p>
+<p>Of course, those representations are not ideal: they have their issues. To name a few: <code>Graph</code> is problematic when it comes to frequent removals of nodes or edges - since they are stored in <code>Vec</code>, one has to either put some kind of placeholder in place of node/edge (which is not very Rusty) or copy the whole array (which is slow). <code>GraphMap</code> mitigates this issues by using hash map to store the graph, but that introduces some requirements on the <code>Node</code> type: it must implement <code>Ord</code> as well as <code>Copy</code> and <code>Eq + Hash</code> - which may be suitable for integers, but not exactly for more complicated types. <code>MatrixGraph</code> takes up much space and, similarly to <code>Graph</code>, has its problems when it comes to removing nodes.</p>
+<p>Yet, all this problems are not Rusty in nature - they hold across every programming language.</p>
+<p>The point of talking about all this is not to argue that representations X is better in some algorithmic sense than Y; it is to see that pointer based approach, which may work well in other language, is the hard one in Rust and results in a nightmarish code. The proof by Petgraph example shows that real world implementations avoid pointers - for a good reason.</p>
+<p>Here's some Petgraph code in action:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">dfs_helper</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut </span><span style="color:#f5871f;">self</span><span>, </span><span style="color:#f5871f;">graph</span><span>: </span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut</span><span> Graph, </span><span style="color:#f5871f;">node_index</span><span>: NodeIndex) {
+</span><span>    </span><span style="color:#c82829;">self</span><span>.</span><span style="color:#4271ae;">add_step</span><span>(AlgorithmStep::Node(NodeStep::new(
+</span><span>        node_index,
+</span><span>        NodeState::Queued,
+</span><span>    )));
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">if let </span><span style="color:#c99e00;">Some</span><span>(node) </span><span style="color:#3e999f;">=</span><span> graph.</span><span style="color:#4271ae;">node_weight_mut</span><span>(node_index) {
+</span><span>        node.</span><span style="color:#4271ae;">set_state</span><span>(NodeState::Queued)
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> walker </span><span style="color:#3e999f;">=</span><span> graph
+</span><span>        .</span><span style="color:#4271ae;">neighbors_directed</span><span>(node_index, Direction::Outgoing)
+</span><span>        .</span><span style="color:#4271ae;">detach</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">while let </span><span style="color:#c99e00;">Some</span><span>((edge_idx, other_node_idx)) </span><span style="color:#3e999f;">=</span><span> walker.</span><span style="color:#4271ae;">next</span><span>(graph) {
+</span><span>        </span><span style="color:#8959a8;">if let </span><span style="color:#c99e00;">Some</span><span>(other_state) </span><span style="color:#3e999f;">=</span><span> graph
+</span><span>            .</span><span style="color:#4271ae;">node_weight</span><span>(other_node_idx)
+</span><span>            .</span><span style="color:#4271ae;">map</span><span>(|</span><span style="color:#f5871f;">node</span><span>| node.</span><span style="color:#4271ae;">get_state</span><span>())
+</span><span>        {
+</span><span>            </span><span style="color:#8959a8;">if </span><span>matches!(other_state, NodeState::NotVisited) {
+</span><span>                </span><span style="color:#c82829;">self</span><span>.</span><span style="color:#4271ae;">add_step</span><span>(AlgorithmStep::Edge(EdgeStep::new(edge_idx)));
+</span><span>                </span><span style="color:#c82829;">self</span><span>.</span><span style="color:#4271ae;">dfs_helper</span><span>(graph, other_node_idx);
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#c82829;">self</span><span>.</span><span style="color:#4271ae;">add_step</span><span>(AlgorithmStep::Node(NodeStep::new(
+</span><span>        node_index,
+</span><span>        NodeState::Visited,
+</span><span>    )));
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">if let </span><span style="color:#c99e00;">Some</span><span>(node) </span><span style="color:#3e999f;">=</span><span> graph.</span><span style="color:#4271ae;">node_weight_mut</span><span>(node_index) {
+</span><span>        node.</span><span style="color:#4271ae;">set_state</span><span>(NodeState::Visited)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>Sources:</p>
+<p><a href="https://docs.rs/petgraph/latest/petgraph/index.html">Petgraph</a></p>
+<p><a href="https://github.com/petgraph/petgraph">Petgraph's source code</a></p>
+<p><a href="https://github.com/nrc/r4cppp/blob/master/graphs/README.md">Rust's dev post about graphs</a></p>
+<p><a href="https://smallcultfollowing.com/babysteps/blog/2015/04/06/modeling-graphs-in-rust-using-vector-indices/">Another blog post about graphs</a></p>
+<p>Author: Mikołaj Piróg</p>
+
+
+    </div>
+  </div>
+
+  <div class="prev-link">
+    
+    
+  </div>
+
+  <div class="next-link">
+    
+    
+  </div>
+</div>
+
+
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/elasticlunr.min.js"></script>
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/search_index.en.js"></script>
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/book.js"></script>
+
+</body>
+
+</html>
