@@ -92,7 +92,7 @@ fn main() {
 }
 ```
 
-This implementations has its problems of algorithmic nature (problematic removal and so on), but it plays nice with Rust. There is no runtime penalty and we enable compiler to help us. It also is not a syntactic nightmare.
+This implementation has its problems of algorithmic nature (problematic removal and so on), but it plays nice with Rust. There is no runtime penalty and we enable compiler to help us. It also is not a syntactic nightmare.
 
 ## Real-world solution
 
