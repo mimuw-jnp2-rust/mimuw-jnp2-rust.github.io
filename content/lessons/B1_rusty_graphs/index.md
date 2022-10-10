@@ -16,13 +16,13 @@ To quickly recap why and how this works: `Rc<>` is a smart pointer that utilizes
 
 There are serval caveats, however. First, we lose compiler's help - it won't scream at us when we try to do something illegal. Speaking technically, when using `RefCell<>` Rust can no longer help us statically - it employs runtime checks to ensure ownership rules. The program will panic if something goes wrong, which is somewhat orthogonal to Rust's mission of catching bugs at compile time. Even if our program is bug-less, we still have to pay performance penalty, since runtime checks are not free.
 
-Opinion: working with `Rc<RefCell<>>` in Rust feels very off, since it abandons some of the core designs goals of Rust - catching bugs at compile time and introducing runtime cost that other languages avoid. Not to mention the syntax which at time can be daunting. Can we do better? Is it possible to employ graphs that go better with Rust?
+Opinion: working with `Rc<RefCell<>>` in Rust feels very off, since it abandons some of the core designs goals of Rust - catching bugs at compile time and introducing runtime cost that other languages avoid. Not to mention the syntax which at time can be daunting. Can we do better?
 
 ## Owning the graph
 
 The problems encountered above arise from the same source: C/C++-like pointer structures don't go well with Rust. Sure, they can be done, but at what cost? Maybe instead of trying to force Rust into doing something it clearly does not want us to do, we should try different approach?
 
-We could reason somewhat like this: if multiple mutable ownership is the problem, maybe let's abandon it altogether? Maybe we could let a single object own the whole graph?
+We could reason somewhat like this: if multiple mutable ownership is the problem, maybe let's abandon it altogether? What about a single object owning the whole graph?
 
 ```rust
 struct Graph {
@@ -92,13 +92,11 @@ fn main() {
 }
 ```
 
-This implementation and representations may not be the best one - but it is not meant to be; I simply want to showcase an idea, not implement the fastest graph at mimuw.
+This implementation has its problems of algorithmic nature (problematic removal and so on), but it plays nice with Rust. There is no runtime penalty and we enable compiler to help us. It also is not a syntactic nightmare.
 
-This implementations has its problems of algorithmic nature (problematic removal and so on), but, I will write that again, it plays nice with Rust. There is no runtime penalty and we enable compiler to help us. It also is not a syntactic nightmare.
+## Real-world solution
 
-## Hero we definitely need
-
-If one tries to implement graphs in Rust and embarks on Google journey how to exactly do it, they will find that the go-to answer is: it's a nightmare, use Petgraph. It's a sensible route to choose - Petgraph really simplifies things. In fact my team has done exactly that with our final program. Let's dive deeper into how Petgraph does it magic:
+If one tries to implement graphs in Rust and embarks on a Google journey how to exactly do it, they will find that the go-to answer is: it's a nightmare, use Petgraph. It's a sensible route to choose - Petgraph really simplifies things. In fact my team has done exactly that with our final program. Let's dive deeper into how Petgraph does its magic:
 
 ```rust
 pub struct Graph<N, E, Ty = Directed, Ix = DefaultIx> {
@@ -118,7 +116,7 @@ Huh, this is isomorphic to what's been discussed above. Maybe the next one will 
 }
 ```
 
-At first glance it is, but if we learn that `IndexMap` is a crate that essentially provides a map (this crate claims to be compatible with Rust's `HashMap`), this example also is similar to the previous one (in a sense of using arena allocation [region-based memory management]).
+At first glance it is, but if we learn that `IndexMap` is a crate that essentially provides a map, we see that this example also is similar to the previous one (in a sense of using arena allocation [region-based memory management]).
 
 One last representation to go:
 
