@@ -1,16 +1,12 @@
 +++
 title = "Introduction to Rust"
-date = 2022-10-10
+date = 2022-03-09 
 weight = 1
 [extra]
-lesson_date = 2022-10-10
+lesson_date = 2022-03-01 
 +++
 
 ![Logo](https://www.rust-lang.org/logos/rust-logo-blk.svg)
-
-# A language empowering everyone to build reliable and efficient software.
-
-([unofficial logo](https://rustacean.net/))
 
 ## Why use Rust?
 
@@ -34,32 +30,12 @@ Even if you don't end up using Rust, learning it expands your horizons
 - Some people say Rust is too hard to learn because of the borrow checker
 - Once you get to know Cargo you won't ever want to use a language without a built-in package
   manager ;)
-- You will start hating C++
+- You will start hating C++ (Piotrek, don't punch me!)
 
-## Demos
-
-![Meme](cpp_meme.jpg)
+## Demo
 
 Let's compare the same code written in [C](errors_demo.c), [C++](errors_demo.cpp)
 and [Rust](errors_demo.rs).
-
-## Code you sent me!
-
-### Aleksander Tudruj
-
-{{ include_code_sample(path="lessons/01_introduction/students/tudruj.cpp", language="cpp") }}
-
-### Krystyna Gasińska
-
-{{ include_code_sample(path="lessons/01_introduction/students/gasinska.py", language="python") }}
-
-### Antoni Koszowski
-
-{{ include_code_sample(path="lessons/01_introduction/students/koszowski.go", language="go") }}
-
-### Mieszko Grodzicki
-
-{{ include_code_sample(path="lessons/01_introduction/students/grodzicki.py", language="python") }}
 
 ## Installing Rust
 
@@ -107,7 +83,7 @@ and [Rust](errors_demo.rs).
 
 ## Test assignment (not graded)
 
-Click [here](https://classroom.github.com/a/P_z-gHH-)
+Click [here](https://classroom.github.com/a/sFJOi1pT)
 
 ## Obligatory reading
 

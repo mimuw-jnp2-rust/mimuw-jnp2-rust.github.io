@@ -34,7 +34,7 @@ prettier --write .
 # Run checks
 echo
 echo "ZOLA"
-zola check
+zola build
 ZOLA_SUCCESS=$?
 
 echo
