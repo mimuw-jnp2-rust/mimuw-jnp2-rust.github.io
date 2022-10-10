@@ -12,7 +12,7 @@ Rust has a built-in testing framework.
 
 You can write `cargo test` to run all tests.
 
-{{ include_code_sample(path="lessons/05_tests/test.rs", language="rust") }}
+{{ include_code_sample(path="lessons/old/2021L/05_tests/test.rs", language="rust") }}
 
 ## Obligatory reading
 

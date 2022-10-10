@@ -10,7 +10,7 @@ lesson_date = 2022-03-08
 
 Below is a compact overview of Rust's structs
 
-{{ include_code_sample(path="lessons/03_data_types/data_types.rs", language="rust") }}
+{{ include_code_sample(path="lessons/old/2021L/03_data_types/data_types.rs", language="rust") }}
 
 ## Further reading
 
