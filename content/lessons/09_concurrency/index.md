@@ -184,5 +184,6 @@ Why do that? Because thread synchronization is hard! [Rust prevents data races](
 [Rayon's FAQ](https://github.com/rayon-rs/rayon/blob/master/FAQ.md) is worth reading.
 
 ## Reading
+
 - [The Book](https://doc.rust-lang.org/book/ch16-00-concurrency.html)
 - [Safely writing code that isn't thread-safe](http://archive.today/WFlZV)
