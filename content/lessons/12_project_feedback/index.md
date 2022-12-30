@@ -44,7 +44,7 @@ fn main() {
 ## Question mark operator
 
 In methods that return `Result` or `Option`, you can use the question mark operator to return early if the value is `None` or `Err`.
-See: https://doc.rust-lang.org/rust-by-example/std/result/question_mark.html
+See: [https://doc.rust-lang.org/rust-by-example/std/result/question_mark.html](https://doc.rust-lang.org/rust-by-example/std/result/question_mark.html)
 
 ## Logging
 
@@ -54,7 +54,7 @@ log messages above a certain level.
 
 ## &String vs &str
 
-See https://doc.rust-lang.org/book/ch04-03-slices.html#string-slices-as-parameters
+See [https://doc.rust-lang.org/book/ch04-03-slices.html#string-slices-as-parameters](https://doc.rust-lang.org/book/ch04-03-slices.html#string-slices-as-parameters)
 In general, if you want to pass a reference to a string, use `&str` instead of `&String`.
 
 ## Use current versions of dependencies
@@ -74,13 +74,13 @@ but in most cases you shouldn't do that.
 
 ## If you need to escape characters in a string, use raw strings
 
-See https://doc.rust-lang.org/reference/tokens.html#raw-string-literals
+See [https://doc.rust-lang.org/reference/tokens.html#raw-string-literals](https://doc.rust-lang.org/reference/tokens.html#raw-string-literals)
 
 ## How to handle errors?
 
-Short: https://kerkour.com/rust-error-handling
+Short: [https://kerkour.com/rust-error-handling](https://kerkour.com/rust-error-handling)
 
-Long: https://www.lpalmieri.com/posts/error-handling-rust/
+Long: [https://www.lpalmieri.com/posts/error-handling-rust/](https://www.lpalmieri.com/posts/error-handling-rust/)
 
 ## Don't pass around locked mutex's contents
 
