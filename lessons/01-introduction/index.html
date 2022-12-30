@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>JNP: Rust</title>
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://mimuw-jnp2-rust.github.io/book.css">
+  
+
+  
+  
+</head>
+
+<body>
+<div class="menu">
+  
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="https://mimuw-jnp2-rust.github.io">Home</a></li>
+      
+        
+        
+          
+          <li >
+            
+            <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;">
+              
+              List of lessons
+            </a>
+            
+              <ul>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;00-organizational&#x2F;">
+                      [2022-10-10]
+                      
+                      Oragnizational lesson
+                    </a>
+                  </li>
+                
+                  <li  class="active" >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;01-introduction&#x2F;">
+                      [2022-10-10]
+                      
+                      Introduction to Rust
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;02-ownership&#x2F;">
+                      [2022-10-17]
+                      
+                      Ownership Model
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;03-data-types&#x2F;">
+                      [2022-10-24]
+                      
+                      Data Types
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;04-feedback-1&#x2F;">
+                      [2022-11-07]
+                      
+                      Feedback #1
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;05-types-reasoning&#x2F;">
+                      [2022-11-07]
+                      
+                      Reasoning About Types
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;06-closures-iterators&#x2F;">
+                      [2022-11-14]
+                      
+                      Closures and Iterators
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;07-smart-pointers&#x2F;">
+                      [2022-11-21]
+                      
+                      Smart Pointers
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;08-feedback-2&#x2F;">
+                      [2022-11-21]
+                      
+                      Feedback #2
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;09-concurrency&#x2F;">
+                      [2022-12-12]
+                      
+                      Fearless concurrency
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;10-design-patterns&#x2F;">
+                      [2022-12-05]
+                      
+                      Design patterns
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;11-async-1&#x2F;">
+                      [2022-12-12]
+                      
+                      Async: Part 1
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;12-project-feedback&#x2F;">
+                      [2022-12-29]
+                      
+                      Project feedback
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;project-showcase&#x2F;">
+                      [2022-10-17]
+                      
+                      2021L Project showcase
+                    </a>
+                  </li>
+                
+              </ul>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  
+  
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+      <span class="search-icon">🔎</span>
+    
+  </div>
+
+  <div class="page__content">
+    
+      <div class="search-container">
+        <input id="search" type="search" placeholder="Search..">
+        <div class="search-results">
+          <div class="search-results__header"></div>
+          <ul class="search-results__items"></ul>
+        </div>
+      </div>
+    
+    <div class="book-content">
+      
+<h1 class="title">Introduction to Rust</h1>
+<p class="subtitle">
+  <strong>2022-10-10</strong> (last edit: 2022-10-10)
+</p>
+<p><img src="https://www.rust-lang.org/logos/rust-logo-blk.svg" alt="Logo" /></p>
+<h1 id="a-language-empowering-everyone-to-build-reliable-and-efficient-software">A language empowering everyone to build reliable and efficient software.</h1>
+<p>(<a href="https://rustacean.net/">unofficial logo</a>)</p>
+<h2 id="why-use-rust">Why use Rust?</h2>
+<ul>
+<li>It is <strong>safe</strong> (compared to C++ for example, as we will see in a minute)</li>
+<li>It is <strong>fast</strong> (because it is compiled to machine code)</li>
+<li>It is ergonomic and pleasant to use (static typing, expressive type system, helpful compiler
+warnings)</li>
+<li>It
+is <a href="https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-programming-scripting-and-markup-languages">loved by programmers</a></li>
+<li>It provides excellent tooling</li>
+</ul>
+<h2 id="why-learn-rust">Why learn Rust?</h2>
+<p>Even if you don't end up using Rust, learning it expands your horizons</p>
+<ul>
+<li>it helps especially with the awareness of what you can and can't do in concurrent applications</li>
+<li>it helps you understand memory management and learn its good practices</li>
+</ul>
+<h2 id="why-not-to-learn-rust">Why not to learn Rust?</h2>
+<ul>
+<li>Some people say Rust is too hard to learn because of the borrow checker</li>
+<li>Once you get to know Cargo you won't ever want to use a language without a built-in package
+manager ;)</li>
+<li>You will start hating C++</li>
+</ul>
+<h2 id="demos">Demos</h2>
+<p><img src="cpp_meme.jpg" alt="Meme" /></p>
+<p>Let's compare the same code written in <a href="errors_demo.c">C</a>, <a href="errors_demo.cpp">C++</a>
+and <a href="errors_demo.rs">Rust</a>.</p>
+<h2 id="code-you-sent-me">Code you sent me!</h2>
+<h3 id="aleksander-tudruj">Aleksander Tudruj</h3>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#4d4d4c;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#8959a8;">#include </span><span style="color:#718c00;">&lt;iostream&gt;
+</span><span style="color:#8959a8;">#include </span><span style="color:#718c00;">&lt;unordered_map&gt;
+</span><span>
+</span><span style="color:#8959a8;">using </span><span>name </span><span style="color:#3e999f;">=</span><span> std::string;
+</span><span style="color:#8959a8;">using </span><span>age </span><span style="color:#3e999f;">= </span><span style="color:#8959a8;">int</span><span>;
+</span><span style="color:#8959a8;">using </span><span>person </span><span style="color:#3e999f;">=</span><span> std::pair&lt;name, age&gt;;
+</span><span style="color:#8959a8;">using </span><span>address </span><span style="color:#3e999f;">=</span><span> std::string;
+</span><span style="color:#8959a8;">using </span><span>address_book </span><span style="color:#3e999f;">=</span><span> std::unordered_map&lt;person, address&gt;;
+</span><span>
+</span><span style="color:#8959a8;">void </span><span style="color:#4271ae;">print_address_book</span><span>(</span><span style="color:#8959a8;">const</span><span> address_book </span><span style="color:#3e999f;">&amp;</span><span style="color:#f5871f;">book</span><span>)
+</span><span>{
+</span><span>    </span><span style="color:#8959a8;">for </span><span>(</span><span style="color:#8959a8;">const auto </span><span style="color:#3e999f;">&amp;</span><span>[person, address] </span><span style="color:#3e999f;">:</span><span> book)
+</span><span>    {
+</span><span>        std::cout </span><span style="color:#3e999f;">&lt;&lt;</span><span> person.</span><span style="color:#c82829;">first </span><span style="color:#3e999f;">&lt;&lt; </span><span style="color:#718c00;">&quot; is &quot; </span><span style="color:#3e999f;">&lt;&lt;</span><span> person.</span><span style="color:#c82829;">second </span><span style="color:#3e999f;">&lt;&lt; </span><span style="color:#718c00;">&quot; years old and lives at &quot; </span><span style="color:#3e999f;">&lt;&lt;</span><span> address </span><span style="color:#3e999f;">&lt;&lt;</span><span> std::endl;
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">int </span><span style="color:#4271ae;">main</span><span>()
+</span><span>{
+</span><span>
+</span><span>    address_book </span><span style="color:#c82829;">people</span><span style="color:#4271ae;">{}</span><span>;
+</span><span>    people.</span><span style="color:#c82829;">insert</span><span>({{</span><span style="color:#718c00;">&quot;John&quot;</span><span>, </span><span style="color:#f5871f;">20</span><span>}, </span><span style="color:#718c00;">&quot;221B Baker Street, London&quot;</span><span>});
+</span><span>    people.</span><span style="color:#c82829;">insert</span><span>({{</span><span style="color:#718c00;">&quot;Mary&quot;</span><span>, </span><span style="color:#f5871f;">30</span><span>}, </span><span style="color:#718c00;">&quot;Avenue des Champs-Élysées, Paris&quot;</span><span>});
+</span><span>    people.</span><span style="color:#c82829;">insert</span><span>({{</span><span style="color:#718c00;">&quot;Jack&quot;</span><span>, </span><span style="color:#f5871f;">73</span><span>}, </span><span style="color:#718c00;">&quot;Wall Street, New York&quot;</span><span>});
+</span><span>    </span><span style="color:#c82829;">print_address_book</span><span style="color:#4271ae;">(people)</span><span>;
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">return </span><span style="color:#f5871f;">0</span><span>;
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="tudruj.cpp">tudruj.cpp</a>)</sub></p>
+<h3 id="krystyna-gasinska">Krystyna Gasińska</h3>
+<pre data-lang="python" style="background-color:#ffffff;color:#4d4d4c;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#999999;"># sample 1 - different ways of removing elements from the list while iterating
+</span><span>list1 </span><span style="color:#3e999f;">= </span><span>[</span><span style="color:#f5871f;">1</span><span>, </span><span style="color:#f5871f;">2</span><span>, </span><span style="color:#f5871f;">3</span><span>, </span><span style="color:#f5871f;">4</span><span>]
+</span><span style="color:#8959a8;">for </span><span>idx, item </span><span style="color:#8959a8;">in </span><span style="color:#4271ae;">enumerate(list1)</span><span>:
+</span><span>    </span><span style="color:#8959a8;">del </span><span>item
+</span><span>list1
+</span><span>
+</span><span style="color:#999999;"># [1, 2, 3, 4]
+</span><span>
+</span><span>list2 </span><span style="color:#3e999f;">= </span><span>[</span><span style="color:#f5871f;">1</span><span>, </span><span style="color:#f5871f;">2</span><span>, </span><span style="color:#f5871f;">3</span><span>, </span><span style="color:#f5871f;">4</span><span>]
+</span><span style="color:#8959a8;">for </span><span>idx, item </span><span style="color:#8959a8;">in </span><span style="color:#4271ae;">enumerate(list2)</span><span>:
+</span><span>    </span><span style="color:#4271ae;">list2.</span><span style="color:#c82829;">remove</span><span style="color:#4271ae;">(item)
+</span><span>list2
+</span><span>
+</span><span style="color:#999999;"># [2, 4]
+</span><span>
+</span><span>list3 </span><span style="color:#3e999f;">= </span><span>[</span><span style="color:#f5871f;">1</span><span>, </span><span style="color:#f5871f;">2</span><span>, </span><span style="color:#f5871f;">3</span><span>, </span><span style="color:#f5871f;">4</span><span>]
+</span><span style="color:#8959a8;">for </span><span>idx, item </span><span style="color:#8959a8;">in </span><span style="color:#4271ae;">enumerate(list3[:])</span><span>:
+</span><span>    </span><span style="color:#4271ae;">list3.</span><span style="color:#c82829;">remove</span><span style="color:#4271ae;">(item)
+</span><span>list3
+</span><span>
+</span><span style="color:#999999;"># []
+</span><span>
+</span><span>list4 </span><span style="color:#3e999f;">= </span><span>[</span><span style="color:#f5871f;">1</span><span>, </span><span style="color:#f5871f;">2</span><span>, </span><span style="color:#f5871f;">3</span><span>, </span><span style="color:#f5871f;">4</span><span>]
+</span><span style="color:#8959a8;">for </span><span>idx, item </span><span style="color:#8959a8;">in </span><span style="color:#4271ae;">enumerate(list4)</span><span>:
+</span><span>    </span><span style="color:#4271ae;">list4.</span><span style="color:#c82829;">pop</span><span style="color:#4271ae;">(idx)
+</span><span>list4
+</span><span>
+</span><span style="color:#999999;"># [2, 4]
+</span><span>
+</span><span style="color:#999999;"># sample 2 - string interning
+</span><span>a </span><span style="color:#3e999f;">= </span><span style="color:#718c00;">&quot;abc&quot;
+</span><span>b </span><span style="color:#3e999f;">= </span><span style="color:#718c00;">&quot;abc&quot;
+</span><span>a </span><span style="color:#3e999f;">is </span><span>b
+</span><span>
+</span><span style="color:#999999;"># True
+</span><span>
+</span><span>a </span><span style="color:#3e999f;">= </span><span style="color:#718c00;">&#39;&#39;</span><span style="color:#4271ae;">.</span><span style="color:#c82829;">join</span><span style="color:#4271ae;">([</span><span style="color:#718c00;">&#39;a&#39;</span><span style="color:#4271ae;">, </span><span style="color:#718c00;">&#39;b&#39;</span><span style="color:#4271ae;">, </span><span style="color:#718c00;">&#39;c&#39;</span><span style="color:#4271ae;">])
+</span><span>b </span><span style="color:#3e999f;">= </span><span style="color:#718c00;">&#39;&#39;</span><span style="color:#4271ae;">.</span><span style="color:#c82829;">join</span><span style="color:#4271ae;">([</span><span style="color:#718c00;">&#39;a&#39;</span><span style="color:#4271ae;">, </span><span style="color:#718c00;">&#39;b&#39;</span><span style="color:#4271ae;">, </span><span style="color:#718c00;">&#39;c&#39;</span><span style="color:#4271ae;">])
+</span><span>a </span><span style="color:#3e999f;">is </span><span>b
+</span><span>
+</span><span style="color:#999999;"># False
+</span><span>
+</span><span>a </span><span style="color:#3e999f;">= </span><span style="color:#718c00;">&quot;abc!&quot;
+</span><span>b </span><span style="color:#3e999f;">= </span><span style="color:#718c00;">&quot;abc!&quot;
+</span><span>a </span><span style="color:#3e999f;">is </span><span>b
+</span><span>
+</span><span style="color:#999999;"># False
+</span><span>
+</span><span style="color:#999999;"># sample 3 - chained operations
+</span><span>(</span><span style="color:#f5871f;">False </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">False</span><span>) </span><span style="color:#3e999f;">in </span><span>[</span><span style="color:#f5871f;">False</span><span>]
+</span><span>
+</span><span style="color:#999999;"># False
+</span><span>
+</span><span style="color:#f5871f;">False </span><span style="color:#3e999f;">== </span><span>(</span><span style="color:#f5871f;">False </span><span style="color:#3e999f;">in </span><span>[</span><span style="color:#f5871f;">False</span><span>])
+</span><span>
+</span><span style="color:#999999;"># False
+</span><span>
+</span><span style="color:#f5871f;">False </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">False </span><span style="color:#3e999f;">in </span><span>[</span><span style="color:#f5871f;">False</span><span>] </span><span style="color:#999999;"># unexpected...
+</span><span>
+</span><span style="color:#999999;"># True
+</span><span>
+</span><span style="color:#999999;"># sample 4 - is operator
+</span><span>a </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">256
+</span><span>b </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">256
+</span><span>a </span><span style="color:#3e999f;">is </span><span>b
+</span><span>
+</span><span style="color:#999999;"># True
+</span><span>
+</span><span>a </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">257
+</span><span>b </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">257
+</span><span>a </span><span style="color:#3e999f;">is </span><span>b
+</span><span>
+</span><span style="color:#999999;"># False
+</span><span>
+</span><span>a, b </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">257</span><span>, </span><span style="color:#f5871f;">257
+</span><span>a </span><span style="color:#3e999f;">is </span><span>b
+</span><span>
+</span><span style="color:#999999;"># True
+</span><span>
+</span><span style="color:#f5871f;">257 </span><span style="color:#3e999f;">is </span><span style="color:#f5871f;">257
+</span><span>
+</span><span style="color:#999999;"># &lt;&gt;:1: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
+</span><span style="color:#999999;"># &lt;&gt;:1: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
+</span><span style="color:#999999;"># C:\Users\kgasinsk\AppData\Local\Temp\ipykernel_15776\331119389.py:1: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
+</span><span style="color:#999999;">#  257 is 257
+</span><span>
+</span><span style="color:#999999;"># sample 5 - local variables
+</span><span style="color:#8959a8;">def </span><span style="color:#4271ae;">f</span><span>(</span><span style="color:#f5871f;">trufel</span><span>):
+</span><span>    </span><span style="color:#8959a8;">if </span><span>trufel:
+</span><span>        y </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">1
+</span><span>    y </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1
+</span><span>
+</span><span style="color:#c82829;">f</span><span style="color:#4271ae;">(</span><span style="color:#f5871f;">True</span><span style="color:#4271ae;">) </span><span style="color:#999999;"># everything is fine
+</span><span>
+</span><span style="color:#c82829;">f</span><span style="color:#4271ae;">(</span><span style="color:#f5871f;">False</span><span style="color:#4271ae;">) </span><span style="color:#999999;"># gives error: local variable &#39;y&#39; referenced before assignment
+</span><span>
+</span><span style="color:#999999;"># ---------------------------------------------------------------------------
+</span><span style="color:#999999;"># UnboundLocalError                         Traceback (most recent call last)
+</span><span style="color:#999999;"># Input In [17], in &lt;cell line: 1&gt;()
+</span><span style="color:#999999;"># ----&gt; 1 f(False)
+</span><span>
+</span><span style="color:#999999;"># Input In [15], in f(trufel)
+</span><span style="color:#999999;">#       3 if trufel:
+</span><span style="color:#999999;">#       4     y = 1
+</span><span style="color:#999999;"># ----&gt; 5 y += 1
+</span><span>
+</span><span style="color:#999999;"># UnboundLocalError: local variable &#39;y&#39; referenced before assignment
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="gasinska.py">gasinska.py</a>)</sub></p>
+<h3 id="antoni-koszowski">Antoni Koszowski</h3>
+<pre data-lang="go" style="background-color:#ffffff;color:#4d4d4c;" class="language-go "><code class="language-go" data-lang="go"><span style="color:#999999;">// mutowalność jest wbudowana w język
+</span><span>
+</span><span style="color:#8959a8;">type </span><span>S </span><span style="color:#8959a8;">struct </span><span>{
+</span><span>    </span><span style="color:#c82829;">A </span><span style="color:#c99e00;">string
+</span><span>    </span><span style="color:#c82829;">B </span><span>[]</span><span style="color:#c99e00;">string
+</span><span>}
+</span><span> 
+</span><span style="color:#8959a8;">func </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#c82829;">x </span><span style="color:#3e999f;">:= </span><span style="color:#c82829;">S</span><span>{</span><span style="color:#718c00;">&quot;x-A&quot;</span><span>, []</span><span style="color:#c99e00;">string</span><span>{</span><span style="color:#718c00;">&quot;x-B&quot;</span><span>}}
+</span><span>    </span><span style="color:#c82829;">y </span><span style="color:#3e999f;">:= </span><span style="color:#c82829;">x </span><span style="color:#999999;">// copy the struct
+</span><span>    </span><span style="color:#c82829;">y</span><span>.</span><span style="color:#c82829;">A </span><span style="color:#3e999f;">= </span><span style="color:#718c00;">&quot;y-A&quot;
+</span><span>    </span><span style="color:#c82829;">y</span><span>.</span><span style="color:#c82829;">B</span><span>[</span><span style="color:#f5871f;">0</span><span>] </span><span style="color:#3e999f;">= </span><span style="color:#718c00;">&quot;y-B&quot;
+</span><span> 
+</span><span>    </span><span style="color:#c82829;">fmt</span><span>.</span><span style="color:#c82829;">Println</span><span>(</span><span style="color:#c82829;">x</span><span>, </span><span style="color:#c82829;">y</span><span>)
+</span><span>    </span><span style="color:#999999;">// Outputs &quot;{x-A [y-B]} {y-A [y-B]}&quot; -- x was modified!
+</span><span>}
+</span><span>
+</span><span style="color:#999999;">// slices i kwestia append
+</span><span>
+</span><span style="color:#8959a8;">func </span><span style="color:#4271ae;">doStuff</span><span>(</span><span style="color:#f5871f;">value </span><span>[]</span><span style="color:#c99e00;">string</span><span>) {
+</span><span>    </span><span style="color:#c82829;">fmt</span><span>.</span><span style="color:#c82829;">Printf</span><span>(</span><span style="color:#718c00;">&quot;value=</span><span style="color:#666969;">%v</span><span style="color:#f5871f;">\n</span><span style="color:#718c00;">&quot;</span><span>, </span><span style="color:#c82829;">value</span><span>)
+</span><span> 
+</span><span>    </span><span style="color:#c82829;">value2 </span><span style="color:#3e999f;">:= </span><span style="color:#c82829;">value</span><span>[:]
+</span><span>    </span><span style="color:#c82829;">value2 </span><span style="color:#3e999f;">= </span><span style="color:#4271ae;">append</span><span>(</span><span style="color:#c82829;">value2</span><span>, </span><span style="color:#718c00;">&quot;b&quot;</span><span>)
+</span><span>    </span><span style="color:#c82829;">fmt</span><span>.</span><span style="color:#c82829;">Printf</span><span>(</span><span style="color:#718c00;">&quot;value=</span><span style="color:#666969;">%v</span><span style="color:#718c00;">, value2=</span><span style="color:#666969;">%v</span><span style="color:#f5871f;">\n</span><span style="color:#718c00;">&quot;</span><span>, </span><span style="color:#c82829;">value</span><span>, </span><span style="color:#c82829;">value2</span><span>)
+</span><span> 
+</span><span>    </span><span style="color:#c82829;">value2</span><span>[</span><span style="color:#f5871f;">0</span><span>] </span><span style="color:#3e999f;">= </span><span style="color:#718c00;">&quot;z&quot;
+</span><span>    </span><span style="color:#c82829;">fmt</span><span>.</span><span style="color:#c82829;">Printf</span><span>(</span><span style="color:#718c00;">&quot;value=</span><span style="color:#666969;">%v</span><span style="color:#718c00;">, value2=</span><span style="color:#666969;">%v</span><span style="color:#f5871f;">\n</span><span style="color:#718c00;">&quot;</span><span>, </span><span style="color:#c82829;">value</span><span>, </span><span style="color:#c82829;">value2</span><span>)
+</span><span>}
+</span><span> 
+</span><span style="color:#8959a8;">func </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#c82829;">slice1 </span><span style="color:#3e999f;">:= </span><span>[]</span><span style="color:#c99e00;">string</span><span>{</span><span style="color:#718c00;">&quot;a&quot;</span><span>} </span><span style="color:#999999;">// length 1, capacity 1
+</span><span> 
+</span><span>    </span><span style="color:#c82829;">doStuff</span><span>(</span><span style="color:#c82829;">slice1</span><span>)
+</span><span>    </span><span style="color:#999999;">// Output:
+</span><span>    </span><span style="color:#999999;">// value=[a] -- ok
+</span><span>    </span><span style="color:#999999;">// value=[a], value2=[a b] -- ok: value unchanged, value2 updated
+</span><span>    </span><span style="color:#999999;">// value=[a], value2=[z b] -- ok: value unchanged, value2 updated
+</span><span> 
+</span><span>    </span><span style="color:#c82829;">slice10 </span><span style="color:#3e999f;">:= </span><span style="color:#4271ae;">make</span><span>([]</span><span style="color:#c99e00;">string</span><span>, </span><span style="color:#f5871f;">1</span><span>, </span><span style="color:#f5871f;">10</span><span>) </span><span style="color:#999999;">// length 1, capacity 10
+</span><span>    </span><span style="color:#c82829;">slice10</span><span>[</span><span style="color:#f5871f;">0</span><span>] </span><span style="color:#3e999f;">= </span><span style="color:#718c00;">&quot;a&quot;
+</span><span> 
+</span><span>    </span><span style="color:#c82829;">doStuff</span><span>(</span><span style="color:#c82829;">slice10</span><span>)
+</span><span>    </span><span style="color:#999999;">// Output:
+</span><span>    </span><span style="color:#999999;">// value=[a] -- ok
+</span><span>    </span><span style="color:#999999;">// value=[a], value2=[a b] -- ok: value unchanged, value2 updated
+</span><span>    </span><span style="color:#999999;">// value=[z], value2=[z b] -- WTF?!? value changed???
+</span><span>}
+</span><span>
+</span><span style="color:#999999;">// error handling
+</span><span>
+</span><span style="color:#c82829;">len</span><span>, </span><span style="color:#c82829;">err </span><span style="color:#3e999f;">:= </span><span style="color:#c82829;">reader</span><span>.</span><span style="color:#c82829;">Read</span><span>(</span><span style="color:#c82829;">bytes</span><span>)
+</span><span style="color:#8959a8;">if </span><span style="color:#c82829;">err </span><span style="color:#3e999f;">!= </span><span style="color:#f5871f;">nil </span><span>{
+</span><span>    </span><span style="color:#8959a8;">if </span><span style="color:#c82829;">err </span><span style="color:#3e999f;">== </span><span style="color:#c82829;">io</span><span>.</span><span style="color:#c82829;">EOF </span><span>{
+</span><span>        </span><span style="color:#999999;">// All good, end of file
+</span><span>    } </span><span style="color:#8959a8;">else </span><span>{
+</span><span>        </span><span style="color:#8959a8;">return </span><span style="color:#c82829;">err
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span>
+</span><span style="color:#999999;">// interfejs nil
+</span><span>
+</span><span style="color:#8959a8;">type </span><span>Explodes </span><span style="color:#8959a8;">interface </span><span>{
+</span><span>    </span><span style="color:#4271ae;">Bang</span><span>()
+</span><span>    </span><span style="color:#4271ae;">Boom</span><span>()
+</span><span>}
+</span><span> 
+</span><span style="color:#999999;">// Type Bomb implements Explodes
+</span><span style="color:#8959a8;">type </span><span>Bomb </span><span style="color:#8959a8;">struct </span><span>{}
+</span><span style="color:#8959a8;">func </span><span>(</span><span style="color:#3e999f;">*</span><span style="color:#8959a8;">Bomb</span><span>) </span><span style="color:#4271ae;">Bang</span><span>() {}
+</span><span style="color:#8959a8;">func </span><span>(</span><span style="color:#8959a8;">Bomb</span><span>) </span><span style="color:#4271ae;">Boom</span><span>() {}
+</span><span> 
+</span><span style="color:#8959a8;">func </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">var </span><span style="color:#c82829;">bomb </span><span style="color:#3e999f;">*</span><span style="color:#8959a8;">Bomb </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">nil
+</span><span>    </span><span style="color:#8959a8;">var </span><span style="color:#c82829;">explodes </span><span style="color:#8959a8;">Explodes </span><span style="color:#3e999f;">= </span><span style="color:#c82829;">bomb
+</span><span>    </span><span style="color:#4271ae;">println</span><span>(</span><span style="color:#c82829;">bomb</span><span>, </span><span style="color:#c82829;">explodes</span><span>) </span><span style="color:#999999;">// &#39;0x0 (0x10a7060,0x0)&#39;
+</span><span>    </span><span style="color:#8959a8;">if </span><span style="color:#c82829;">explodes </span><span style="color:#3e999f;">!= </span><span style="color:#f5871f;">nil </span><span>{
+</span><span>        </span><span style="color:#4271ae;">println</span><span>(</span><span style="color:#718c00;">&quot;Not nil!&quot;</span><span>) </span><span style="color:#999999;">// &#39;Not nil!&#39; What are we doing here?!?!
+</span><span>        </span><span style="color:#c82829;">explodes</span><span>.</span><span style="color:#c82829;">Bang</span><span>()     </span><span style="color:#999999;">// works fine
+</span><span>        </span><span style="color:#c82829;">explodes</span><span>.</span><span style="color:#c82829;">Boom</span><span>()     </span><span style="color:#999999;">// panic: value method main.Bomb.Boom called using nil *Bomb pointer
+</span><span>    } </span><span style="color:#8959a8;">else </span><span>{
+</span><span>        </span><span style="color:#4271ae;">println</span><span>(</span><span style="color:#718c00;">&quot;nil!&quot;</span><span>)     </span><span style="color:#999999;">// why don&#39;t we end up here?
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#999999;">// ubogie struktury danych, takie customowe tracą type safety m.in poprzez castowanie do interface{}
+</span><span style="color:#999999;">// kiedyś brak generyków, choć teraz w znacznym stopniu problem został rozwiązany.
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="koszowski.go">koszowski.go</a>)</sub></p>
+<h3 id="mieszko-grodzicki">Mieszko Grodzicki</h3>
+<pre data-lang="python" style="background-color:#ffffff;color:#4d4d4c;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#8959a8;">def </span><span style="color:#4271ae;">add_contents</span><span>(</span><span style="color:#f5871f;">input_list</span><span>, </span><span style="color:#f5871f;">contents</span><span style="color:#3e999f;">=</span><span>[]):
+</span><span>     </span><span style="color:#8959a8;">for </span><span>val </span><span style="color:#8959a8;">in </span><span>input_list:
+</span><span>         </span><span style="color:#4271ae;">contents.</span><span style="color:#c82829;">append</span><span style="color:#4271ae;">(val)
+</span><span>     </span><span style="color:#8959a8;">return </span><span>contents
+</span><span>
+</span><span style="color:#4271ae;">print(</span><span style="color:#c82829;">add_contents</span><span style="color:#4271ae;">([</span><span style="color:#f5871f;">1</span><span style="color:#4271ae;">])) </span><span style="color:#999999;"># [1]
+</span><span style="color:#4271ae;">print(</span><span style="color:#c82829;">add_contents</span><span style="color:#4271ae;">([</span><span style="color:#f5871f;">2</span><span style="color:#4271ae;">])) </span><span style="color:#999999;"># [1, 2]
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="grodzicki.py">grodzicki.py</a>)</sub></p>
+<h2 id="installing-rust">Installing Rust</h2>
+<ul>
+<li><a href="https://rustup.rs/">Rustup</a></li>
+<li>Setup an IDE
+<ul>
+<li><a href="https://www.jetbrains.com/clion/">CLion</a> (you can get
+it <a href="https://www.jetbrains.com/community/education/">for free</a>)
+and <a href="https://intellij-rust.github.io/">Intellij-Rust</a></li>
+<li><a href="https://code.visualstudio.com/">VSCode</a>
+and <a href="https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer">rust-analyzer</a></li>
+<li>rust-analyzer also works
+with <a href="https://rust-analyzer.github.io/manual.html#installation">other IDEs</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="useful-tools">Useful tools</h2>
+<p><img src="clippy.jpg" alt="Clippy" /></p>
+<ul>
+<li><code>cargo clippy</code> (for static analysis)</li>
+<li>there's also <code>cargo check</code>, but it's less powerful than clippy</li>
+<li><code>cargo fmt</code> (for code formatting)</li>
+</ul>
+<h3 id="rust-playground">Rust Playground</h3>
+<ul>
+<li><a href="https://play.rust-lang.org/">online Rust compiler</a></li>
+</ul>
+<h2 id="hello-world">Hello world</h2>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> name </span><span style="color:#3e999f;">= </span><span style="color:#718c00;">&quot;World&quot;</span><span>;
+</span><span>    println!(</span><span style="color:#718c00;">&quot;Hello, </span><span style="color:#666969;">{}</span><span style="color:#718c00;">!&quot;</span><span>, name); </span><span style="color:#999999;">// using the println! macro
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="hello_world.rs">hello_world.rs</a>)</sub></p>
+<h3 id="variables">Variables</h3>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#![</span><span style="color:#c82829;">allow</span><span>(unused_variables)]
+</span><span>#![</span><span style="color:#c82829;">allow</span><span>(unused_assignments)]
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> x </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">40</span><span>; </span><span style="color:#999999;">// inferred type
+</span><span>    </span><span style="color:#8959a8;">let</span><span> y: </span><span style="color:#8959a8;">i32 </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">100</span><span>; </span><span style="color:#999999;">// specified type
+</span><span>
+</span><span>    {
+</span><span>        </span><span style="color:#8959a8;">let</span><span> x </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">40 </span><span style="color:#3e999f;">+ </span><span style="color:#f5871f;">2</span><span>; </span><span style="color:#999999;">// shadowing
+</span><span>        println!(</span><span style="color:#718c00;">&quot;x is </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, x); </span><span style="color:#999999;">// prints 42
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// x = 0; // compilation error, variables are by default immutable
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> x </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">40</span><span>; </span><span style="color:#999999;">// declare as mutable
+</span><span>    x </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>; </span><span style="color:#999999;">// now we can reassign
+</span><span>
+</span><span>    x </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>; </span><span style="color:#999999;">// x = x + 1
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="variables.rs">variables.rs</a>)</sub></p>
+<h3 id="conditionals">Conditionals</h3>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#![</span><span style="color:#c82829;">allow</span><span>(unused_variables)]
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> x </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">42</span><span>;
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">if</span><span> x </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">42 </span><span>{
+</span><span>        println!(</span><span style="color:#718c00;">&quot;x is 42&quot;</span><span>);
+</span><span>    } </span><span style="color:#8959a8;">else if</span><span> x </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">43 </span><span>{
+</span><span>        println!(</span><span style="color:#718c00;">&quot;x is 43&quot;</span><span>);
+</span><span>    } </span><span style="color:#8959a8;">else </span><span>{
+</span><span>        println!(</span><span style="color:#718c00;">&quot;x is not 42 or 43&quot;</span><span>);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// we can also use ifs as expressions
+</span><span>    </span><span style="color:#8959a8;">let</span><span> a_or_b </span><span style="color:#3e999f;">= </span><span style="color:#8959a8;">if</span><span> x </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">0 </span><span>{
+</span><span>        </span><span style="color:#718c00;">&quot;a&quot; </span><span style="color:#999999;">// notice no semicolon at the end
+</span><span>    } </span><span style="color:#8959a8;">else </span><span>{
+</span><span>        </span><span style="color:#718c00;">&quot;b&quot;
+</span><span>    };
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="conditionals.rs">conditionals.rs</a>)</sub></p>
+<h3 id="loops">Loops</h3>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#![</span><span style="color:#c82829;">allow</span><span>(unused_variables)]
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">for</span><span> i </span><span style="color:#3e999f;">in </span><span style="color:#f5871f;">0</span><span style="color:#3e999f;">..</span><span style="color:#f5871f;">10 </span><span>{
+</span><span>        println!(</span><span style="color:#718c00;">&quot;i is </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, i); </span><span style="color:#999999;">// i in [0, 10)
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> x </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>;
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">while</span><span> x </span><span style="color:#3e999f;">&lt; </span><span style="color:#f5871f;">50 </span><span>{
+</span><span>        x </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> y </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>;
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> iterations </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>;
+</span><span>    </span><span style="color:#8959a8;">loop </span><span>{
+</span><span>        iterations </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>        </span><span style="color:#8959a8;">if</span><span> iterations </span><span style="color:#3e999f;">% </span><span style="color:#f5871f;">2 </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">0 </span><span>{
+</span><span>            </span><span style="color:#8959a8;">continue</span><span>;
+</span><span>        }
+</span><span>        y </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>        </span><span style="color:#8959a8;">if</span><span> y </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">10 </span><span>{
+</span><span>            </span><span style="color:#8959a8;">break</span><span>;
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// we can use labels to refer to a specific loop
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> count </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>;
+</span><span>    &#39;counting_up: </span><span style="color:#8959a8;">loop </span><span>{
+</span><span>        </span><span style="color:#8959a8;">let mut</span><span> remaining </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">10</span><span>;
+</span><span>
+</span><span>        </span><span style="color:#8959a8;">loop </span><span>{
+</span><span>            </span><span style="color:#8959a8;">if</span><span> remaining </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">9 </span><span>{
+</span><span>                </span><span style="color:#8959a8;">break</span><span>;
+</span><span>            }
+</span><span>            </span><span style="color:#8959a8;">if</span><span> count </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">2 </span><span>{
+</span><span>                </span><span style="color:#8959a8;">break &#39;counting_up</span><span>; </span><span style="color:#999999;">// ends the outer loop
+</span><span>            }
+</span><span>            remaining </span><span style="color:#3e999f;">-= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>        }
+</span><span>
+</span><span>        count </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// We can use break with a value.
+</span><span>    </span><span style="color:#999999;">// Because loops are expressions too,
+</span><span>    </span><span style="color:#999999;">// the value we break with will be returned from the functions
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> counter </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>;
+</span><span>    </span><span style="color:#8959a8;">let</span><span> value </span><span style="color:#3e999f;">= </span><span style="color:#8959a8;">loop </span><span>{
+</span><span>        counter </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>        </span><span style="color:#8959a8;">if</span><span> counter </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">10 </span><span>{
+</span><span>            </span><span style="color:#8959a8;">break </span><span style="color:#f5871f;">32</span><span>;
+</span><span>        }
+</span><span>    };
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="loops.rs">loops.rs</a>)</sub></p>
+<h3 id="functions">Functions</h3>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">get_5</span><span>() -&gt; </span><span style="color:#8959a8;">u32 </span><span>{
+</span><span>    </span><span style="color:#f5871f;">5 </span><span style="color:#999999;">// we could also write &quot;return 5;&quot;
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">print_sum</span><span>(</span><span style="color:#f5871f;">a</span><span>: </span><span style="color:#8959a8;">u32</span><span>, </span><span style="color:#f5871f;">b</span><span>: </span><span style="color:#8959a8;">u32</span><span>) {
+</span><span>    println!(</span><span style="color:#718c00;">&quot;a + b = </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, a </span><span style="color:#3e999f;">+</span><span> b);
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> a </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">100</span><span>;
+</span><span>    </span><span style="color:#4271ae;">print_sum</span><span>(a, </span><span style="color:#4271ae;">get_5</span><span>());
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="functions.rs">functions.rs</a>)</sub></p>
+<h2 id="test-assignment-not-graded">Test assignment (not graded)</h2>
+<p>Click <a href="https://classroom.github.com/a/P_z-gHH-">here</a></p>
+<h2 id="obligatory-reading">Obligatory reading</h2>
+<ul>
+<li><a href="https://doc.rust-lang.org/stable/book/">The Book, chapters 1-3</a></li>
+</ul>
+<h2 id="additional-reading">Additional reading</h2>
+<ul>
+<li><a href="https://doc.rust-lang.org/stable/rust-by-example/">Rust By Example</a></li>
+</ul>
+
+
+    </div>
+  </div>
+
+  <div class="prev-link">
+    
+    
+  </div>
+
+  <div class="next-link">
+    
+    
+  </div>
+</div>
+
+
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/elasticlunr.min.js"></script>
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/search_index.en.js"></script>
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/book.js"></script>
+
+</body>
+
+</html>
