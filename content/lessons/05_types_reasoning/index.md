@@ -2,13 +2,13 @@
 title = "Reasoning About Types"
 date = 2022-11-07
 weight = 1
-[extra]
-lesson_date = 2022-11-07
+[extra]   
+lesson_date = 2024-10-24
 +++
 
 # Type traits
 
-Traits are a way to defined common behavior between different types. They can be compared to _interfaces_ from many other mainstream languages or to typeclasses from Haskell, however, Rust is not an object-oriented language and there are some notable differences between type traits and Java interfaces.
+Traits are a way to defined common behavior between different types. They can be compared to _interfaces_ from many other mainstream languages or to type classes from Haskell, however, Rust is not an object-oriented language and there are some notable differences between type traits and Java interfaces.
 
 The way we describe behavior in Rust is through methods. Traits consist of a set of these methods which then should be implemented by a type. We've already encountered examples of these, like the `Clone` trait which specified that the `clone()` method can be called on some given type. Now, let's take a deeper look and try defining our own trait.
 
