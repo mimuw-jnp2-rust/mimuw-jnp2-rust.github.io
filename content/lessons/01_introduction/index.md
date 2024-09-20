@@ -1,9 +1,9 @@
 +++
 title = "Introduction to Rust"
-date = 2022-10-10
+date = 2024-09-20
 weight = 1
 [extra]
-lesson_date = 2022-10-10
+lesson_date = 2024-10-03
 +++
 
 ![Logo](https://www.rust-lang.org/logos/rust-logo-blk.svg)
@@ -43,7 +43,7 @@ Even if you don't end up using Rust, learning it expands your horizons
 Let's compare the same code written in [C](errors_demo.c), [C++](errors_demo.cpp)
 and [Rust](errors_demo.rs).
 
-## Code you sent me!
+## Code you sent in previous editions!
 
 ### Aleksander Tudruj
 
@@ -67,7 +67,7 @@ and [Rust](errors_demo.rs).
 - Setup an IDE
   - [CLion](https://www.jetbrains.com/clion/) (you can get
     it [for free](https://www.jetbrains.com/community/education/))
-    and [Intellij-Rust](https://intellij-rust.github.io/)
+    and [RustRover](https://intellij-rust.github.io/)
   - [VSCode](https://code.visualstudio.com/)
     and [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer)
   - rust-analyzer also works
@@ -107,7 +107,7 @@ and [Rust](errors_demo.rs).
 
 ## Test assignment (not graded)
 
-Click [here](https://classroom.github.com/a/P_z-gHH-)
+Click [here](https://classroom.github.com/a/l3iF_TJU)
 
 ## Obligatory reading
 

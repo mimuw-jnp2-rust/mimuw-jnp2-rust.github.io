@@ -3,7 +3,7 @@ title = "Feedback #2"
 date = 2022-11-21
 weight = 1
 [extra]
-lesson_date = 2022-11-21
+lesson_date = TODO
 +++
 
 ## Feedback

@@ -3,7 +3,7 @@ title = "Fearless concurrency"
 date = 2022-11-28
 weight = 1
 [extra]
-lesson_date = 2022-12-12
+lesson_date = 2024-11-21
 +++
 
 ## Parallelism vs Concurrency

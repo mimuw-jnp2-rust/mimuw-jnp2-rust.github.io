@@ -3,7 +3,7 @@ title = "Project feedback"
 date = 2022-12-29
 weight = 1
 [extra]
-lesson_date = 2022-12-29
+lesson_date = TODO
 +++
 
 # Project feedback
