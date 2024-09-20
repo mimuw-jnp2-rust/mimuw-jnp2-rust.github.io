@@ -9,16 +9,22 @@ enum shirt_size {
 
 void print_size(enum shirt_size size) {
     printf("my size is ");
-    if (size == small) {
-        printf("small");
-    } else if (size == medium) {
-        printf("medium");
-    } else if (size == large) {
-        printf("large");
-    } else if (size == xlarge) {
-        printf("xlarge");
-    } else {
-        printf("unknown");
+    switch (size) {
+        case small:
+            printf("small");
+            break;
+        case medium:
+            printf("medium");
+            break;
+        case large:
+            printf("large");
+            break;
+        case xlarge:
+            printf("xlarge");
+            break;
+        default:
+            printf("unknown");
+            break;
     }
     printf("\n");
 }
