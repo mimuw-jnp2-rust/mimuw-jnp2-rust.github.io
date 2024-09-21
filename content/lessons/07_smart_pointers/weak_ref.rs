@@ -32,5 +32,5 @@ fn main() {
     }
 
     println!("The value should be deallocated by now.");
-    matches!(weak_ref.upgrade(), None);
+    assert!(weak_ref.upgrade().is_none());
 }

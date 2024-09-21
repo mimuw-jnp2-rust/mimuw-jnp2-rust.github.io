@@ -48,8 +48,8 @@ fn main() {
     assert_eq!(number.checked_div(2), Some(21));
     assert_eq!(number.checked_div(0), None);
 
-    // Now let's imagine we search for a value in a vector
-    let numbers = vec![1, 2, 3, 4, 5];
+    // Now let's imagine we search for a value in an array.
+    let numbers = [1, 2, 3, 4, 5];
     let three = numbers.iter().copied().find(|&x| x == 3);
     assert_eq!(three, Some(3));
     let seven = numbers.iter().copied().find(|&x| x == 7);
