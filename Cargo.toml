@@ -5,73 +5,73 @@ edition = "2021"
 authors = ["Andrzej Głuszak", "Piotr Wojtczak"]
 
 [[bin]]
-name = "1_errors_demo"
+name = "01_errors_demo"
 path = "content/lessons/old/2021L/01_introduction/errors_demo.rs"
 [[bin]]
-name = "1_hello_world"
+name = "01_hello_world"
 path = "content/lessons/old/2021L/01_introduction/hello_world.rs"
 [[bin]]
-name = "1_conditionals"
+name = "01_conditionals"
 path = "content/lessons/old/2021L/01_introduction/conditionals.rs"
 [[bin]]
-name = "1_functions"
+name = "01_functions"
 path = "content/lessons/old/2021L/01_introduction/functions.rs"
 [[bin]]
-name = "1_loops"
+name = "01_loops"
 path = "content/lessons/old/2021L/01_introduction/loops.rs"
 [[bin]]
-name = "1_variables"
+name = "01_variables"
 path = "content/lessons/old/2021L/01_introduction/variables.rs"
 [[bin]]
-name = "3_data_types"
+name = "03_data_types"
 path = "content/lessons/old/2021L/03_data_types/data_types.rs"
 [[bin]]
-name = "4_enums"
+name = "04_enums"
 path = "content/lessons/old/2021L/04_enums/enums.rs"
 [[bin]]
-name = "4_option"
+name = "04_option"
 path = "content/lessons/old/2021L/04_enums/option.rs"
 [[bin]]
-name = "4_pattern_matching"
+name = "04_pattern_matching"
 path = "content/lessons/old/2021L/04_enums/pattern_matching.rs"
 [[bin]]
-name = "4_result"
+name = "04_result"
 path = "content/lessons/old/2021L/04_enums/result.rs"
 [[bin]]
-name = "5_test"
+name = "05_test"
 path = "content/lessons/old/2021L/05_tests/test.rs"
 [[bin]]
-name = "6_basic_traits"
+name = "06_basic_traits"
 path = "content/lessons/old/2021L/06_types_reasoning/basic_trait.rs"
 [[bin]]
-name = "6_generic_largest"
+name = "06_generic_largest"
 path = "content/lessons/old/2021L/06_types_reasoning/generic_largest.rs"
 [[bin]]
-name = "6_generics"
+name = "06_generics"
 path = "content/lessons/old/2021L/06_types_reasoning/generics.rs"
 [[bin]]
-name = "6_non_generic"
+name = "06_non_generic"
 path = "content/lessons/old/2021L/06_types_reasoning/non_generic.rs"
 [[bin]]
-name = "6_trait_default"
+name = "06_trait_default"
 path = "content/lessons/old/2021L/06_types_reasoning/trait_default.rs"
 [[bin]]
-name = "6_lifetimes_basic"
+name = "06_lifetimes_basic"
 path = "content/lessons/old/2021L/06_types_reasoning/lifetimes_basic.rs"
 [[bin]]
-name = "6_lifetimes_elision"
+name = "06_lifetimes_elision"
 path = "content/lessons/old/2021L/06_types_reasoning/lifetimes_elision.rs"
 [[bin]]
-name = "6_generic_fun"
+name = "06_generic_fun"
 path = "content/lessons/old/2021L/06_types_reasoning/generics_fun.rs"
 [[bin]]
-name = "6_static_dynamic_dispatch"
+name = "06_static_dynamic_dispatch"
 path = "content/lessons/old/2021L/06_types_reasoning/static_dynamic_dispatch.rs"
 [[bin]]
-name = "7_constructor"
+name = "07_constructor"
 path = "content/lessons/old/2021L/07_feedback/constructor.rs"
 [[bin]]
-name = "7_number_conversions"
+name = "07_number_conversions"
 path = "content/lessons/old/2021L/07_feedback/number_conversions.rs"
 [[bin]]
 name = "10_box"
