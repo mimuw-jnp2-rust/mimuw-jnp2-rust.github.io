@@ -1,6 +1,6 @@
 +++
 title = "Ownership Model"
-date = 2022-10-17
+date = 2024-10-08
 weight = 1
 [extra]
 lesson_date = 2024-10-10
@@ -141,7 +141,7 @@ fn main() {
 
 ## Let's borrow some books
 
-We now know how to move things around and how to clone them if moving is not possible. But what if making a copy is unnecessary - maybe we just want to let someone look at our resource and keep on holding onto it once their done. Consider the following example:
+We now know how to move things around and how to clone them if moving is not possible. But what if making a copy is unnecessary - maybe we just want to let someone look at our resource and keep on holding onto it once they're done. Consider the following example:
 
 ```rust
 fn read_book(book: String) {
