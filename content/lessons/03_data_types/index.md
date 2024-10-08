@@ -105,6 +105,3 @@ So how do we handle situations which can fail? That's where the `Result` type co
 - [Option docs](https://doc.rust-lang.org/std/option/)
 - [Result docs](https://doc.rust-lang.org/std/result/)
 
-## Assignment #1 (graded)
-
-(TBA)

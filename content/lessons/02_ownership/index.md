@@ -354,3 +354,9 @@ fn main() {
 - [Working with strings in Rust](https://fasterthanli.me/articles/working-with-strings-in-rust)
 
 - [The Book, chapter 4](https://doc.rust-lang.org/stable/book/ch04-00-understanding-ownership.html)
+
+### Assignment 1 (graded)
+
+[ordering in Van Binh](https://classroom.github.com/a/prGDl5Xa)
+
+Deadline: 16.10.2024 23:59
