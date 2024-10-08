@@ -1,6 +1,6 @@
 +++
 title = "Organizational lesson"
-date = 2024-09-20
+date = 2024-10-06
 weight = 0
 [extra]
 lesson_date = 2024-10-03
@@ -8,7 +8,7 @@ lesson_date = 2024-10-03
 
 # Rust course
 
-We will be using [Github Classroom](https://classroom.github.com) for task submission and [Discord (link TODO)](TODO) for discussions.
+We will be using [Github Classroom](https://classroom.github.com) for task submission and [Discord](https://discord.gg/UyvepYkPs9) for discussions.
 
 Our main learning/teaching resource will be ["The Book"](https://doc.rust-lang.org/stable/book/).
 
