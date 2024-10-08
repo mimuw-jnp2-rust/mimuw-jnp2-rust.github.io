@@ -50,7 +50,7 @@ Rust also provides a non-owning pointer in the form of `Weak<T>` (equivalent to 
 
 # Mutating the immutable
 
-Good examples and explanation of the inferior mutability pattern and runtime borrow checking can be found in the [book](https://doc.rust-lang.org/book/ch15-05-interior-mutability.html).
+Good examples and explanation of the interior mutability pattern and runtime borrow checking can be found in the [book](https://doc.rust-lang.org/book/ch15-05-interior-mutability.html).
 
 Alongisde the `RefCell<T>` type described above, there is an analogous [`Cell<T>`](https://doc.rust-lang.org/std/cell/struct.Cell.html) type that operates on values instead of references.
 
