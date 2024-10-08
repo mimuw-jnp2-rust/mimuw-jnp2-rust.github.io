@@ -18,7 +18,7 @@ And then we have Rust. Rust is a systems programming language and in many ways i
 
 In a way, programming in Rust is like pair-programming with a patient and very experienced partner. Rust's compiler will make sure you follow all the good patterns and practices (by having them ingrained in the language itself) and very often even tell you how to fix the issues it finds.
 
-_**Disclaimer:** when delving deeper into Rust below we will make heavy use of concepts like scopes, moving data, stack and heap, which should have been introduced as part of the JNP1 C++ course. If you need a refresher of any of these, it's best to do so now, before reading further._
+_**Disclaimer:** when delving deeper into Rust below we will make heavy use of concepts like scopes, moving data, stack and heap, which should have been introduced as part of the C++ course. If you need a refresher of any of these, it's best to do so now, before reading further._
 
 ## Start with the basics - ownership
 
