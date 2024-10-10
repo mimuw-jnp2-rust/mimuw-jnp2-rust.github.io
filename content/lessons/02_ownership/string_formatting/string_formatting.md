@@ -83,6 +83,7 @@ fn agriculture() {
     // ]
 }
 ```
+---
 
 ### Various ways to panic
 
