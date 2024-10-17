@@ -105,3 +105,8 @@ So how do we handle situations which can fail? That's where the `Result` type co
 - [Option docs](https://doc.rust-lang.org/std/option/)
 - [Result docs](https://doc.rust-lang.org/std/result/)
 
+## Assignment 2 (graded)
+
+[Communications](https://classroom.github.com/a/K_w_zJJ9)
+
+Deadline: 23.10.2024 23:59
