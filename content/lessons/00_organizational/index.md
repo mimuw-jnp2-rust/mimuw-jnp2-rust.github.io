@@ -12,6 +12,8 @@ We will be using [Github Classroom](https://classroom.github.com) for task submi
 
 Our main learning/teaching resource will be ["The Book"](https://doc.rust-lang.org/stable/book/).
 
+Also worth mentioning: ["Rust by Example"](https://doc.rust-lang.org/rust-by-example/index.html).
+
 ## Grading
 
 - 1/3 of the grade is based on small tasks. There will be approximately 1 task every two weeks and each task will be graded on a scale of 0 to 3.
