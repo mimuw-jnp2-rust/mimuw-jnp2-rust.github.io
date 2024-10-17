@@ -1,6 +1,6 @@
 +++
 title = "Data Types"
-date = 2024-09-20
+date = 2024-10-17
 weight = 1
 [extra]
 lesson_date = 2024-10-17
@@ -15,7 +15,7 @@ Below is a compact overview of Rust's structs
 ## Enums
 
 It is often the case that we want to define a variable that can only take
-a certain set of values and the values are known up front. In C you can an `enum` for this.
+a certain set of values and the values are known up front. In C you can use an `enum` for this.
 
 {{ include_code_sample(path="lessons/03_data_types/enums.c", language="c") }}
 
