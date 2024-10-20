@@ -122,7 +122,7 @@ fn div(dividend: i32, divisor: NonZeroI32) -> i32 {
 }
 fn main() {
     // let quotient = div(2137, 42); // This would not type check, because 42 is not NonZeroI32.
-    
+
     // We have to create a NonZeroI32 instance:
     let non_zero_divisor_opt: Option<NonZeroI32> = NonZeroI32::new(42);
 
@@ -143,13 +143,14 @@ fn main() {
 
 ### But wait, we ended up with an `unwrap()` anyway. Did we then improve at all?
 
-Actually, yes. Now, the function (here: `div()`) with some (possibly complex) logic **only accepts** (so that the compiler verifies that in compile-time) valid arguments. This way, the function's code can be simpler (no invalid-input-related error handling). Also, it's easier to convince yourself that your number is nonzero that to make sure that it upholds all guarantees required in the docs of the function containing logic. 
+Actually, yes. Now, the function (here: `div()`) with some (possibly complex) logic **only accepts** (so that the compiler verifies that in compile-time) valid arguments. This way, the function's code can be simpler (no invalid-input-related error handling). Also, it's easier to convince yourself that your number is nonzero that to make sure that it upholds all guarantees required in the docs of the function containing logic.
 
 ---
 
 ## To `panic` or not to `panic`
 
 Don't panic:
+
 - if the failure is caused by bad user input - you don't want to open up a highway for DoS attackers, do you?
 - if the failure only affects some task and not the program in general, e.g. when the server returned bad data for a request of one of the users; others are unaffected;
 - if the failure is recoverable (there is a reasonable action to be done in such situation, e.g. give user the default value when the server can't be queried for the actual value);
@@ -159,7 +160,8 @@ Don't panic:
 ## To `panic` or not to `panic`
 
 Do panic:
+
 - if the failure is for sure caused by a bug in your code. It makes sense to inform the whole world that you wrote deficient software, by yelling at them. More seriously, this shortens the feedback loop and bugs are fixed earlier, instead of silently damaging production;
-- if the failure is not recoverable (there is no hope, the program is broken, *R.I.P.*, only the famous *restart* could help here);
+- if the failure is not recoverable (there is no hope, the program is broken, _R.I.P._, only the famous _restart_ could help here);
 
 ---
