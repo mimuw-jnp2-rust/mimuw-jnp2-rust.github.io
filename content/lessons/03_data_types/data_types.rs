@@ -26,19 +26,22 @@ impl Hero {
 // multiple impl blocks are possible for one struct
 impl Hero {
     // instance method, first argument (self) is the calling instance
-    fn distance(&self, pos: Position) -> u32 { // shorthand to: `self: &Self`
+    fn distance(&self, pos: Position) -> u32 {
+        // shorthand to: `self: &Self`
         // field `i` of a tuple or a tuple struct can be accessed through 'tuple.i'
         (pos.0 - self.position.0).unsigned_abs() + (pos.1 - self.position.1).unsigned_abs()
     }
 
     // mutable borrow of self allows to change instance fields
-    fn level_up(&mut self) { // shorthand to: `self: &mut Self`
+    fn level_up(&mut self) {
+        // shorthand to: `self: &mut Self`
         self.experience = 0;
         self.level += 1;
     }
 
     // 'self' is not borrowed here and will be moved into the method
-    fn die(self) { // shorthand to: `self: Self`
+    fn die(self) {
+        // shorthand to: `self: Self`
         println!(
             "Here lies {}, a hero who reached level {}. RIP.",
             self.name, self.level
