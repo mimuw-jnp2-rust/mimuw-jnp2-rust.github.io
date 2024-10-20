@@ -47,7 +47,7 @@ fn agriculture() {
         "Nothing is better than {0} {2}, except for {1} {2},",
         num_animals, num_animals + 1, animal_name
     );
-    
+
     // Minimal assert.
     assert!(num_animals >= 42);
     // assert with a custom panic message.
@@ -83,6 +83,7 @@ fn agriculture() {
     // ]
 }
 ```
+
 ---
 
 ### Various ways to panic
@@ -91,10 +92,10 @@ fn agriculture() {
 fn panicking_is_fun() {
     panic!("A general panic.");
     assert!(false, "An assertion failed.");
-    
+
     unimplemented!("This code is not implemented.");
     todo!("This code is not YET implemented - it's going to change.");
-    
+
     unreachable!("We should never reach this line of code!");
 }
 ```

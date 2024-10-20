@@ -52,31 +52,32 @@ my-project
 
 ---
 
-## *Lib crates* can be shared
+## _Lib crates_ can be shared
 
-- *crates.io* is the main crate repository.
-- If you specify a dependency in `Cargo.toml`, it's fetched from `crates.io` automatically by *Cargo*.
-- `lib.rs` is the root of a *lib crate*.
+- _crates.io_ is the main crate repository.
+- If you specify a dependency in `Cargo.toml`, it's fetched from `crates.io` automatically by _Cargo_.
+- `lib.rs` is the root of a _lib crate_.
 
 ---
 
-## *Binary crates* can be executed
+## _Binary crates_ can be executed
 
 - `cargo run` executes the bin crate in your package.
 - If you have multiple bin crates, you have to specify which to run:
-`cargo run --bin <bin_name>`
+  `cargo run --bin <bin_name>`
 - Each bin crate in a package can import code from the lib crate there.
 
 ---
 
 ## Modules: grouping related code (& encapsulation)
+
 ```rust
 mod front_of_house {
     mod hosting {
         fn add_to_waitlist() {}
         fn seat_at_table() {}
     }
-    
+
     // Alternatively, this could be located in `serving.rs` file and imported.
     mod serving {
         fn take_order() {}
@@ -87,6 +88,7 @@ mod front_of_house {
 ```
 
 ---
+
 ## Modules: grouping related code (& encapsulation)
 
 ```
@@ -105,7 +107,8 @@ crate
 
 ## Exports & imports
 
-- exports: using privacy modifier (`pub`, `pub(crate)`, <no modifier>)
+- exports: using privacy modifier (`pub`, `pub(crate)`, [no modifier])
+
 ```rust
 mod some_mod {
     struct ModulePublic;
@@ -114,7 +117,9 @@ mod some_mod {
     pub struct WorldPublic;
 }
 ```
+
 - imports: using `use` statement
+
 ```rust
 use some_mod::CratePublic;
 pub use some_mod::WorldPublic; // <-- re-export
