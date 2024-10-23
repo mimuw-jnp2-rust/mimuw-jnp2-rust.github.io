@@ -1,6 +1,6 @@
 +++
 title = "Reasoning About Types"
-date = 2022-11-07
+date = 2024-10-23
 weight = 1
 [extra]   
 lesson_date = 2024-10-24
