@@ -41,6 +41,18 @@ path = "content/lessons/03_data_types/result.rs"
 name = "05_basic_traits"
 path = "content/lessons/05_types_reasoning/basic_trait.rs"
 [[bin]]
+name = "05_basic_trait_display"
+path = "content/lessons/05_types_reasoning/basic_trait_display.rs"
+[[bin]]
+name = "05_trait_associated_types"
+path = "content/lessons/05_types_reasoning/trait_associated_type.rs"
+[[bin]]
+name = "05_trait_generic_types"
+path = "content/lessons/05_types_reasoning/trait_generic_type.rs"
+[[bin]]
+name = "05_impl_trait"
+path = "content/lessons/05_types_reasoning/impl_trait.rs"
+[[bin]]
 name = "05_generic_largest"
 path = "content/lessons/05_types_reasoning/generic_largest.rs"
 [[bin]]
