@@ -339,15 +339,15 @@ The problem here is that nothing hinders us from implement the trait (with vario
 
 The use of generic types in `Summary` trait makes it semantics like this:
 
-> Any type can be summarized with any type supporting it.
+> A type can be summarized with any type supporting it.
 
-When we want the trait to require exactly one possible generic implementation for a given type, we can leverage _associated types_. Example here:
+When we want the trait to require exactly one possible generic implementation for a given type, we can leverage *associated types*. Example here:
 
 {{ include_code_sample(path="lessons/05_types_reasoning/trait_associated_type.rs", language="rust") }}
 
 The use of associated types in Summary trait makes it semantics like this:
 
-> Any type can be summarized with at most one specific type.
+> A type can be summarized with at most one specific type.
 
 Yet another approach (arguably, the cleanest one) would be to use the `impl trait` syntax in a trait (quite recently stabilized!).
 Example:
