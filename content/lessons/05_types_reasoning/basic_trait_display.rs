@@ -11,7 +11,11 @@ struct NewsArticle {
 
 impl Display for NewsArticle {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "{}, by {} ({})", self.headline, self.author, self.location)
+        write!(
+            f,
+            "{}, by {} ({})",
+            self.headline, self.author, self.location
+        )
     }
 }
 
@@ -20,7 +24,7 @@ struct Tweet {
     content: String,
 }
 
-impl Display for Tweet {    
+impl Display for Tweet {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "{}: {}", self.username, self.content)
     }

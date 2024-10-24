@@ -15,7 +15,11 @@ struct NewsArticle {
 
 impl Display for NewsArticle {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        writeln!(f, "{}, by {} ({})", self.headline, self.author, self.location)?;
+        writeln!(
+            f,
+            "{}, by {} ({})",
+            self.headline, self.author, self.location
+        )?;
         f.write_str(&self.content)
     }
 }
@@ -25,7 +29,11 @@ struct NewsArticleSummarizer<'a>(&'a NewsArticle);
 impl Display for NewsArticleSummarizer<'_> {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let article = self.0;
-        write!(f, "{}, by {} ({})", article.headline, article.author, article.location)
+        write!(
+            f,
+            "{}, by {} ({})",
+            article.headline, article.author, article.location
+        )
     }
 }
 
