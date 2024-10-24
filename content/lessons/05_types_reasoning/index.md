@@ -359,3 +359,9 @@ Example:
 - [The Book, chapter 10](https://doc.rust-lang.org/book/ch10-00-generics.html)
 
 - [Polymorphism in Rust](https://oswalt.dev/2021/06/polymorphism-in-rust/)
+
+## Assignment 3 (graded)
+
+[Passage Pathing](https://classroom.github.com/a/VTyPdlC2)
+
+Deadline: 30.10.2024 23:59
