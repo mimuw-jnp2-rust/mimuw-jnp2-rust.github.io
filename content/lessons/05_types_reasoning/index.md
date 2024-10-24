@@ -1,6 +1,6 @@
 +++
 title = "Reasoning About Types"
-date = 2024-10-23
+date = 2024-10-24
 weight = 1
 [extra]   
 lesson_date = 2024-10-24
@@ -320,6 +320,39 @@ There exists one special lifetime called `'static`, which means that a reference
 ```rust
 let s: &'static str = "I have a static lifetime.";
 ```
+
+# Trait + lifetimes - a challenging tandem
+
+Let's go back to our `basic_trait.rs` example. The `Summary` trait was really wasteful: it always allocated the `String`s on heap, even though we only needed to display the formatted string, and we could do that without allocations. How? By using `Display` trait, of course.
+
+The simplest possible optimisation would be like this:
+
+{{ include_code_sample(path="lessons/05_types_reasoning/basic_trait_display.rs", language="rust") }}
+
+This eliminates the heap allocations, but there's another catch. What if `NewsArticle` already had another (non-summarizing) `Display` implementation? We would end up in a double-trait-implementation conflict, which is a compile-time error.
+
+We can solve the one-type-one-trait-impl problem by introducing another type just for summarizing. The first attempt could be to use generics in traits:
+
+{{ include_code_sample(path="lessons/05_types_reasoning/trait_generic_type.rs", language="rust") }}
+
+The problem here is that nothing hinders us from implement the trait (with various type parameters) for the same type, which leads to awkward ambiguity when calling the trait's methods (see `main` fn).
+
+The use of generic types in `Summary` trait makes it semantics like this:
+
+> Any type can be summarized with any type supporting it.
+
+When we want the trait to require exactly one possible generic implementation for a given type, we can leverage *associated types*. Example here:
+
+{{ include_code_sample(path="lessons/05_types_reasoning/trait_associated_type.rs", language="rust") }}
+
+The use of associated types in Summary trait makes it semantics like this:
+
+> Any type can be summarized with at most one specific type.
+
+Yet another approach (arguably, the cleanest one) would be to use the `impl trait` syntax in a trait (quite recently stabilized!).
+Example:
+
+{{ include_code_sample(path="lessons/05_types_reasoning/impl_trait.rs", language="rust") }}
 
 # Obligatory reading
 
