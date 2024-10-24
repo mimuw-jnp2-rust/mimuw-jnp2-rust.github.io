@@ -341,7 +341,7 @@ The use of generic types in `Summary` trait makes it semantics like this:
 
 > A type can be summarized with any type supporting it.
 
-When we want the trait to require exactly one possible generic implementation for a given type, we can leverage *associated types*. Example here:
+When we want the trait to require exactly one possible generic implementation for a given type, we can leverage _associated types_. Example here:
 
 {{ include_code_sample(path="lessons/05_types_reasoning/trait_associated_type.rs", language="rust") }}
 
