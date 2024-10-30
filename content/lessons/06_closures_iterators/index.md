@@ -46,9 +46,16 @@ Those traits and the `fn` type form a hierarchy: `fn` ⊆  `Fn` ⊆ `FnMut` ⊆ 
 
 <!--> $$ fn \subseteq Fn \subseteq FnMut \subseteq FnOnce $$ -->
 
-The following code sample demonstrates various ways to capture environment (borrowing or moving) and various 
+The following code sample demonstrates various ways to capture environment (borrowing or moving) and various kinds of closures, based on what they do with their captures:
 
 {{ include_code_sample(path="lessons/06_closures_iterators/closures_capturing.rs", language="rust") }}
+
+### Closures as trait objects (in dynamic dispatch)
+
+The following code sample shows how one can use closures as `dyn Trait` objects, bypassing the problem of them having anonymous types:
+
+{{ include_code_sample(path="lessons/06_closures_iterators/closures_fun.rs", language="rust") }}
+
 
 ## Examples
 

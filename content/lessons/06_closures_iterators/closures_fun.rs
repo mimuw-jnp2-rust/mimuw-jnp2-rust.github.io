@@ -40,6 +40,7 @@ fn main() {
         // So, for FnOnce, we need to be their owners to be able to call them,
         // and we can't have a `dyn` object owned on stack.
         // We will solve this problem soon with smart pointers (e.g., Box).
+        // This will give us `std::function` -like experience.
     }
 
     // Mutable reference to FnMut is required to be able to call it.
