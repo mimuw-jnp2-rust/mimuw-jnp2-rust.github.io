@@ -23,6 +23,7 @@ We will often use `impl` keyword with closure traits (e.g., `impl Fn`) - those t
 ## Closures capture environment
 
 Closures can capture variables from the environment where they are defined. They can do that in two ways:
+
 - Capturing References (borrowing), or
 - Moving Ownership.
 
@@ -40,35 +41,36 @@ Based on **WHAT** a closure does with its captures, it implements closure traits
 - `Fn` - closures that do not mutate their captures (so can be called multiple times through an immutable reference).
 
 For completeness, there is a (concrete) type of function pointers:
+
 - `fn` - functions, closures with no captures.
 
 Those traits and the `fn` type form a hierarchy: `fn` < `Fn` < `FnMut` < `FnOnce`
 
-$$ fn \subseteq Fn \subseteq FnMut \subseteq FnOnce $$ 
+$$ fn \subseteq Fn \subseteq FnMut \subseteq FnOnce $$
 
 ## Examples
 
 We'll go through the examples from [Rust by Example](https://doc.rust-lang.org/rust-by-example/fn/closures.html).
 More examples will be seen when working with iterators.
 
-
 # Iterators
 
 In Rust, there is no hierarchy of types for collections (because there is no inheritance in general).
 Instead, what makes a collection is that it can be iterated over.
 
-A usual way in Rust to perform an iteration over something, be it a range of values or items in a collection, is creating a (lazy) iterator over it and transforming it using *iterator adaptors*. For example, if `T: Iterator`, then `T::map()` creates a `Map<T>` adaptor. Once a final iterator is created, it has to be actually activated, which is most commonly done by:
+A usual way in Rust to perform an iteration over something, be it a range of values or items in a collection, is creating a (lazy) iterator over it and transforming it using _iterator adaptors_. For example, if `T: Iterator`, then `T::map()` creates a `Map<T>` adaptor. Once a final iterator is created, it has to be actually activated, which is most commonly done by:
+
 - exhausting it with the `for` loop,
 - manually iterating over it using `next()` calls,
 - collecting its contents into inferred collection (`collect()`),
-- consuming it with a *consuming adaptor* (e.g., `sum()`, `count`),
+- consuming it with a _consuming adaptor_ (e.g., `sum()`, `count`),
 
 {{ include_code_sample(path="lessons/06_closures_iterators/iterator_exhaustion.rs", language="rust") }}
-
 
 Iterators are highly optimised, so they are high-level code that compiles down to simple and optimised machine code (intended as _zero-cost abstractions_).
 
 We'll go through the official [docs](https://doc.rust-lang.org/stable/std/iter/).
+
 - Most methods are defined in the [Iterator trait](https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html).
 - [IntoIterator](https://doc.rust-lang.org/stable/std/iter/trait.IntoIterator.html) is also worth noting, because it makes types work with the `for` loop.
 - For completeness, there is [FromIterator](https://doc.rust-lang.org/stable/std/iter/trait.FromIterator.html), which is required for `collect()` to work.
