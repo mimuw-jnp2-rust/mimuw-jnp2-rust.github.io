@@ -80,3 +80,9 @@ We'll go through the official [docs](https://doc.rust-lang.org/stable/std/iter/)
 - [The Book, chapter 14](https://doc.rust-lang.org/book/ch14-00-more-about-cargo.html)
 - [The Book, Advanced Functions and Closures](https://doc.rust-lang.org/stable/book/ch19-05-advanced-functions-and-closures.html)
 - [The Book, Advanced Traits](https://doc.rust-lang.org/stable/book/ch19-03-advanced-traits.html)
+
+## Assignment 4 (graded)
+
+[Lazy](https://classroom.github.com/a/9aJix-LK)
+
+Deadline: 06.11.2024 23:59
