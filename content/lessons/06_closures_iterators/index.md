@@ -17,7 +17,7 @@ Closures (Polish: "domknięcia") are anonymous functions that can access variabl
 ## Closures' types
 
 Closures are unnameable types. That is, each closure gets its own unique type from the compiler,
-but we cannot use it. Therefore, closures' types must be inferred.
+but we cannot name it. Therefore, closures' types must be inferred.
 We will often use `impl` keyword with closure traits (e.g., `impl Fn`) - those traits are described below.
 
 ## Closures capture environment
