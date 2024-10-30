@@ -30,8 +30,6 @@ Closures can capture variables from the environment where they are defined. They
 **HOW** closures capture variables is one thing.
 But even more important is **WHAT** closures do with their captures.
 
-{{ include_code_sample(path="lessons/06_closures_iterators/closures_capturing.rs", language="rust") }}
-
 ### Functions & closures hierarchy
 
 Based on **WHAT** a closure does with its captures, it implements closure traits:
@@ -44,9 +42,13 @@ For completeness, there is a (concrete) type of function pointers:
 
 - `fn` - functions, closures with no captures.
 
-Those traits and the `fn` type form a hierarchy: `fn` < `Fn` < `FnMut` < `FnOnce`
+Those traits and the `fn` type form a hierarchy: `fn` ⊆  `Fn` ⊆ `FnMut` ⊆ `FnOnce`
 
-$$ fn \subseteq Fn \subseteq FnMut \subseteq FnOnce $$
+<!--> $$ fn \subseteq Fn \subseteq FnMut \subseteq FnOnce $$ -->
+
+The following code sample demonstrates various ways to capture environment (borrowing or moving) and various 
+
+{{ include_code_sample(path="lessons/06_closures_iterators/closures_capturing.rs", language="rust") }}
 
 ## Examples
 
