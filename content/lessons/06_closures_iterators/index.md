@@ -57,8 +57,21 @@ More examples will be seen when working with iterators.
 In Rust, there is no hierarchy of types for collections (because there is no inheritance in general).
 Instead, what makes a collection is that it can be iterated over.
 
+A usual way in Rust to perform an iteration over something, be it a range of values or items in a collection, is creating a (lazy) iterator over it and transforming it using *iterator adaptors*. For example, if `T: Iterator`, then `T::map()` creates a `Map<T>` adaptor. Once a final iterator is created, it has to be actually activated, which is most commonly done by:
+- exhausting it with the `for` loop,
+- manually iterating over it using `next()` calls,
+- collecting its contents into inferred collection (`collect()`),
+- consuming it with a *consuming adaptor* (e.g., `sum()`, `count`),
+
+{{ include_code_sample(path="lessons/06_closures_iterators/iterator_exhaustion.rs", language="rust") }}
+
+
+Iterators are highly optimised, so they are high-level code that compiles down to simple and optimised machine code (intended as _zero-cost abstractions_).
+
 We'll go through the official [docs](https://doc.rust-lang.org/stable/std/iter/).
-Most methods are defined in the [Iterator trait](https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html).
+- Most methods are defined in the [Iterator trait](https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html).
+- [IntoIterator](https://doc.rust-lang.org/stable/std/iter/trait.IntoIterator.html) is also worth noting, because it makes types work with the `for` loop.
+- For completeness, there is [FromIterator](https://doc.rust-lang.org/stable/std/iter/trait.FromIterator.html), which is required for `collect()` to work.
 
 # Reading
 

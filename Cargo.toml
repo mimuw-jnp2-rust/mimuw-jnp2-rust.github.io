@@ -88,6 +88,9 @@ path = "content/lessons/06_closures_iterators/closures_capturing.rs"
 [[bin]]
 name = "06_closures_fun"
 path = "content/lessons/06_closures_iterators/closures_fun.rs"
+[[bin]]
+name = "06_iterator_exhaustion"
+path = "content/lessons/06_closures_iterators/iterator_exhaustion.rs"
 
 [[bin]]
 name = "07_box"
