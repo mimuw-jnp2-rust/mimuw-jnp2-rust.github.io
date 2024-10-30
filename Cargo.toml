@@ -22,6 +22,7 @@ path = "content/lessons/01_introduction/loops.rs"
 [[bin]]
 name = "01_variables"
 path = "content/lessons/01_introduction/variables.rs"
+
 [[bin]]
 name = "03_data_types"
 path = "content/lessons/03_data_types/data_types.rs"
@@ -37,6 +38,7 @@ path = "content/lessons/03_data_types/pattern_matching.rs"
 [[bin]]
 name = "03_result"
 path = "content/lessons/03_data_types/result.rs"
+
 [[bin]]
 name = "05_basic_traits"
 path = "content/lessons/05_types_reasoning/basic_trait.rs"
@@ -56,7 +58,7 @@ path = "content/lessons/05_types_reasoning/impl_trait.rs"
 name = "05_generic_largest"
 path = "content/lessons/05_types_reasoning/generic_largest.rs"
 [[bin]]
-name = "06_generics"
+name = "05_generics"
 path = "content/lessons/05_types_reasoning/generics.rs"
 [[bin]]
 name = "05_non_generic"
