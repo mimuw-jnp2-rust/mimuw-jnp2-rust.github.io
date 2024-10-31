@@ -25,7 +25,7 @@ fn main() {
         *s = s.replace("b", "aba");
     }
 
-    // This is equivalent code.
+    // This code is equivalent to the `for` above.
     // `for` is usually more idiomatic, but `for_each` is sometimes cleaner and sometimes faster.
     strings
         .iter_mut()

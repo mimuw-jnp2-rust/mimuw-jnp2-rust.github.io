@@ -42,7 +42,7 @@ For completeness, there is a (concrete) type of function pointers:
 
 - `fn` - functions, closures with no captures.
 
-Those traits and the `fn` type form a hierarchy: `fn` ⊆  `Fn` ⊆ `FnMut` ⊆ `FnOnce`
+Those traits and the `fn` type form a hierarchy: `fn` ⊆ `Fn` ⊆ `FnMut` ⊆ `FnOnce`
 
 <!--> $$ fn \subseteq Fn \subseteq FnMut \subseteq FnOnce $$ -->
 
@@ -56,7 +56,6 @@ The following code sample shows how one can use closures as `dyn Trait` objects,
 
 {{ include_code_sample(path="lessons/06_closures_iterators/closures_fun.rs", language="rust") }}
 
-
 ## Examples
 
 We'll go through the examples from [Rust by Example](https://doc.rust-lang.org/rust-by-example/fn/closures.html).
@@ -67,7 +66,7 @@ More examples will be seen when working with iterators.
 In Rust, there is no hierarchy of types for collections (because there is no inheritance in general).
 Instead, what makes a collection is that it can be iterated over.
 
-A usual way in Rust to perform an iteration over something, be it a range of values or items in a collection, is creating a (lazy) iterator over it and transforming it using _iterator adaptors_. For example, if `T: Iterator`, then `T::map()` creates a `Map<T>` adaptor. Once a final iterator is created, it has to be actually activated, which is most commonly done by:
+A usual way in Rust to perform an iteration over something, be it a range of values or items in a collection, is creating a (lazy) iterator over it and transforming it using _iterator adaptors_. For example, if `T: Iterator`, then `T::map()` creates a `Map<T>` adaptor. Once a final iterator is created, it has to be actually activated (iterated over), which is most commonly done by:
 
 - exhausting it with the `for` loop,
 - manually iterating over it using `next()` calls,
