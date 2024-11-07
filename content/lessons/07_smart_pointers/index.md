@@ -63,3 +63,9 @@ Alongisde the `RefCell<T>` type described above, there is an analogous [`Cell<T>
 # Additional reading
 
 - [On wrapped references](https://www.fpcomplete.com/blog/rust-asref-asderef/)
+
+## Assignment 5 (graded)
+
+[Corporations](https://classroom.github.com/a/QlO3aCCP)
+
+Deadline: 13.11.2024 23:59
