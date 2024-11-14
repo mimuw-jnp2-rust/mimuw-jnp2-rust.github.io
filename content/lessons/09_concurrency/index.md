@@ -59,7 +59,7 @@ They are marker traits used to indicate that a type or a reference to it can be 
 
 This makes sense, because `Sync` is about _sharing_ object between threads, and `&` is the _shared_ reference.
 
-There is also a great answer on Rust forum, listing + explaining example types that are `!Send` or `!Sync`: https://users.rust-lang.org/t/example-of-a-type-that-is-not-send/59835/3.
+There is also [a great answer on Rust forum](https://users.rust-lang.org/t/example-of-a-type-that-is-not-send/59835/3), listing + explaining example types that are `!Send` or `!Sync`.
 
 For more convenient analysis, examples are listed here:
 
