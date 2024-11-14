@@ -1,9 +1,9 @@
 +++
 title = "Fearless concurrency"
-date = 2022-11-28
+date = 2024-11-14
 weight = 1
 [extra]
-lesson_date = 2024-11-21
+lesson_date = 2024-11-14
 +++
 
 ## Parallelism vs Concurrency
@@ -12,15 +12,17 @@ Concurrency is when tasks **can make** progress **independently** of each other.
 
 Parallelism is when multiple tasks **make** progress **at the same time**.
 
-## Concurrency models in Rust
+# Concurrency models in Rust
 
-### Threads
+## Threads
 
 Nothing unusual here.
 
 Threads can be created with the `thread::spawn` function [docs - please read them!](https://doc.rust-lang.org/std/thread/fn.spawn.html).
 
 This method returns a `JoinHandle<T>` which can be used to wait for the thread to finish. `T` is the type of the thread's return value.
+
+Another way to spawn threads is using [`scope`](https://doc.rust-lang.org/std/thread/fn.scope.html). Threads created in such way are mandatorily joined at the end of the scope, which guarantees that they will borrow items for no longer that the lifetime of the scope. Hence, they can borrow non-`'static` items!
 
 #### Propagating panics
 
@@ -48,6 +50,36 @@ Normal ownership rules still apply. It means that we cannot mutate the vector in
 
 But what if we need to share some state?
 
+### Send and Sync
+
+They are marker traits used to indicate that a type or a reference to it can be used across threads. See the [nomicon](https://doc.rust-lang.org/nomicon/send-and-sync.html) for more information.
+
+> - A type is `Send` if it is safe to move it (_send_ it) to another thread.
+> - A type is `Sync` if it is safe to share (_sync_) between threads (`T` is `Sync` if and only if `&T` is `Send`).
+
+This makes sense, because `Sync` is about _sharing_ object between threads, and `&` is the _shared_ reference.
+
+There is also a great answer on Rust forum, listing + explaining example types that are `!Send` or `!Sync`: https://users.rust-lang.org/t/example-of-a-type-that-is-not-send/59835/3.
+
+For more convenient analysis, examples are listed here:
+
+#### `Send + !Sync`:
+
+- `UnsafeCell` (=> `Cell`, `RefCell`);
+
+#### `!Send + !Sync`:
+
+- `Rc`
+- `*const T`, `*mut T` (raw pointers)
+
+#### `!Send + Sync`:
+
+- `MutexGuard` (hint: `!Send` for POSIX reasons)
+
+Exercise for the reader: explain reasons for all limitations of the above types.
+
+## Sharing state between threads
+
 ### Message passing
 
 One possible way is to use message passing. We can use a blocking queue (called `mpsc` - ["multi producer single consumer FIFO queue"](https://doc.rust-lang.org/std/sync/mpsc/index.html)) to do it.
@@ -68,11 +100,7 @@ Please read more about them in [the book](https://doc.rust-lang.org/stable/book/
 
 [RwLocks](https://doc.rust-lang.org/std/sync/struct.RwLock.html) are similar to mutexes, but they distinguish between read and write locks.
 
-## Send and Sync
-
-They are marker traits used to indicate that a type or a reference to it can be sent across threads. See the [nomicon](https://doc.rust-lang.org/nomicon/send-and-sync.html) for more information.
-
-## Atomic types
+### Atomic types
 
 Atomic types are described in [the docs](https://doc.rust-lang.org/std/sync/atomic/).
 
@@ -171,7 +199,7 @@ pub fn spawn<F, T>(f: F) -> JoinHandle<T> where
 
 #### Exercise for the reader
 
-Why is it impossible to share a reference to a `Mutex` between threads?
+Why is it impossible to share a reference to a `Mutex` between threads spawned with `std::thread::spawn`?
 
 ## Data parallelism with Rayon
 
@@ -187,3 +215,7 @@ Why do that? Because thread synchronization is hard! [Rust prevents data races](
 
 - [The Book](https://doc.rust-lang.org/book/ch16-00-concurrency.html)
 - [Safely writing code that isn't thread-safe](http://archive.today/WFlZV)
+
+## No assignment this week
+
+Please work on the first iteration of the big project instead.
