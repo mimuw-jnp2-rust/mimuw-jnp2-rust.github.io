@@ -191,6 +191,6 @@ We will follow the [steps](https://rust-lang.github.io/async-book/02_execution/0
 
 ## Assignment 7 (graded)
 
-[Calculator](https://classroom.github.com/a/5g7J3TNh)
+[Back to the futures](https://classroom.github.com/a/5g7J3TNh)
 
 Deadline: 18.12.2024 23:59
