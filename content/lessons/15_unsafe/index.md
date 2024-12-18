@@ -17,7 +17,7 @@ But no respectable, powerful programming language can stand being constrained th
 
 In Rust, `unsafe` keyworld unleashes the hidden superpowers.
 
-### Unsafe superpowers
+## Unsafe code superpowers
 
 Inside a `unsafe { ... }` block, you can (and normally you can't):
 
@@ -28,6 +28,14 @@ Inside a `unsafe { ... }` block, you can (and normally you can't):
 - Access fields of a union.
 
 The first superpower is the most important. (Efficient) implementation of many data structures would be impossible without ability to use raw pointers, as references don't allow circular dependencies, among other limitations.
+
+In the following code sample, we show all superpowers of `unsafe` code:
+
+{{ include_code_sample(path="lessons/15_unsafe/unsafe_superpowers.rs", language="rust") }}
+
+## Safe code guarantees
+
+Safe code may **_never_** cause Undefined Behaviour.
 
 ## Reading
 
