@@ -35,7 +35,9 @@ In the following code sample, we show all superpowers of `unsafe` code:
 
 ## Safe code guarantees
 
-Safe code may **_never_** cause Undefined Behaviour.
+The single fundamental property of Safe Rust, _the soundness property_:
+
+**No matter what, Safe Rust can't cause Undefined Behavior.**
 
 This is a valid _sound_ code, with a safe encapsulation over `unsafe` interior.
 
@@ -75,3 +77,15 @@ But we only changed safe code! This shows that `unsafe` is unfortunately not per
 - [The Rustonomicon](https://doc.rust-lang.org/nomicon/), especially chapter 1 _(Meet Safe and Unsafe)_
 
 - [How unpleasant is Unsafe Rust?](https://www.reddit.com/r/rust/comments/16i8lo2/how_unpleasant_is_unsafe_rust/)
+
+- [RUDRA: Finding Memory Safety Bugs in Rust at the Ecosystem Scale](https://taesoo.kim/pubs/2021/bae:rudra.pdf) - automatic static analyzer to find 3 most frequent subtle bugs in `unsafe` code:
+
+  1. panic (unwind) safety bug (analogous to exception-handling guarantees in C++),
+  2. higher-order safety invariant (assuming certain properties of the type that the generic is instantiated with that are not guaranteed by the type system, e.g., _purity_),
+  3. propagating Send/Sync in Generic Types (implementing Send/Sync unconditionally for T, even if T contains non-Send/non-Sync types inside).
+
+  **RUDRA found 264 previously unknown memory-safety bugs in 145 packages on crates.io!!!**
+
+  Is Rust really a safe language...?
+
+  Only transitively. _Safe Rust_ is sound iff `unsafe` code called by it is sound too.
