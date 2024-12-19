@@ -37,6 +37,37 @@ In the following code sample, we show all superpowers of `unsafe` code:
 
 Safe code may **_never_** cause Undefined Behaviour.
 
+This is a valid _sound_ code, with a safe encapsulation over `unsafe` interior.
+
+```rust
+fn index(idx: usize, arr: &[u8]) -> Option<u8> {
+    if idx < arr.len() {
+        unsafe {
+            Some(*arr.get_unchecked(idx))
+        }
+    } else {
+        None
+    }
+}
+```
+
+_(Un)soundness_ means that there exists a _possibility_ to trigger UB.
+The following code is _unsound_ (why? what has changed?):
+
+```rust
+fn index(idx: usize, arr: &[u8]) -> Option<u8> {
+    if idx <= arr.len() {
+        unsafe {
+            Some(*arr.get_unchecked(idx))
+        }
+    } else {
+        None
+    }
+}
+```
+
+But we only changed safe code! This shows that `unsafe` is unfortunately not perfectly scoped and isolated. We need to be extra careful when writing `unsafe` code.
+
 ## Reading
 
 - [The Book, Chapter 19.1](https://doc.rust-lang.org/book/ch19-01-unsafe-rust.html)
