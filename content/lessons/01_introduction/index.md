@@ -55,12 +55,9 @@ Even if you don't end up using Rust, learning it expands your horizons:
   manager.
 - You will start hating C++.
 
-## Demos
+## Meme
 
 ![Meme](cpp_meme.jpg)
-
-Let's compare the same code written in [C](errors_demo.c), [C++](errors_demo.cpp)
-and [Rust](errors_demo.rs).
 
 ## Installing Rust
 
