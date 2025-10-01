@@ -12,7 +12,7 @@ We will be using [Github Classroom](https://classroom.github.com) for task submi
 
 Our learning/teaching materials are going to be:
 - the content of this site - it contains explanations and questions tailored towards MIMUW students,
-- well-known Rust teaching materials (["The Book"](https://doc.rust-lang.org/stable/book/), ["Rust by Example"](https://doc.rust-lang.org/rust-by-example/index.html)) that complements this site,
+- well-known Rust teaching materials (["The Book"](https://doc.rust-lang.org/stable/book/), ["Rust by Example"](https://doc.rust-lang.org/rust-by-example/index.html)) that complement this site,
 - explanations/deeper insight during class and many examples of Rust code.
 
 ## Grading
