@@ -43,7 +43,7 @@ Even if you don't end up using Rust, learning it expands your horizons:
 
 - It helps especially with the awareness of what you can and can't do in concurrent applications.
 - It helps you understand memory management and learn its good practices.
-- the language is designed to avoid decades-long issues present in other languages.
+- The language is designed to avoid decades-long issues present in other languages.
   It takes [inspiration](https://doc.rust-lang.org/reference/influences.html) from the best parts of other languages
   to avoid the worst parts. Learning them shows what works.
 
