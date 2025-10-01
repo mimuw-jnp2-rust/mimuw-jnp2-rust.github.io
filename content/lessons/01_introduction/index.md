@@ -1,6 +1,6 @@
 +++
 title = "Introduction to Rust"
-date = 2025-10-01
+date = 2025-10-02
 weight = 1
 [extra]
 lesson_date = 2024-10-02
