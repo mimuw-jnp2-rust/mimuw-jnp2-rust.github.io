@@ -1,9 +1,9 @@
 +++
 title = "Reasoning About Types"
-date = 2024-10-24
+date = 2029-01-01
 weight = 1
 [extra]   
-lesson_date = 2024-10-24
+lesson_date = 2029-01-01
 +++
 
 # Type traits
