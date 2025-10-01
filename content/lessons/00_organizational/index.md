@@ -25,7 +25,7 @@ Our learning/teaching materials are going to be:
   - Note: we will have 14 classes in total, so you can expect a task every week or two.
 - 1/2 of the grade is based on a big project. You can choose a topic yourself, but it must be accepted by us. The project has to be split into two parts. It can be done in groups of two (or bigger, if ambitious enough). The grading is as follows:
   1. Usability - 4 points.
-  2. Usage of Rust functionality - 6 points.
+  2. Usage of Rust functionalities - 6 points.
   3. Programming challenges - 5 points.
   4. Size of project - 4 points.
   5. Quality of code - 2 points.
