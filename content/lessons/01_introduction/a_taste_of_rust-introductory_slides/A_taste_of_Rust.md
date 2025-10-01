@@ -193,18 +193,18 @@ public void doSomething(SomeObject obj) {
 ### ~~Null value~~. Lack of value represented as an Option enum.
 
 ```rust
-fn this_returns_something_or_nothing(password: &str) -> Result<i32, String> {
-    if password == "Rust rulez!" {
-        Ok(42)
+fn this_returns_something_or_nothing(key: &str) -> Option<i32> {
+    if key == "Rust rulez!" {
+        Some(42)
     } else {
-        Err("You still have to learn a lot...")
+        None
     }
 }
 
 fn main() {
-    match this_can_fail_or_succeed("Rust is hard...") {
-        Ok(code) => println!("Success! Code: {}", code),
-        Err(msg) => println!("Oops... {}", msg),
+    match this_returns_something_or_nothing("Rust rulez!") {
+        Some(code) => println!("Retrieved secret code: {}", code),
+        None => println!("No code retrieved."),
     };
 }
 ```
@@ -221,13 +221,6 @@ void some_critical_operation(data: VeryFragile) {
     int const res = some_innocent_procedure(data); // BOOOM! Exception thrown.
 
     finalise_critical_operation(res);
-}
-
-fn main() {
-    match this_can_fail_or_succeed("Rust is hard...") {
-        Ok(code) => println!("Success! Code: {}", code),
-        Err(msg) => println!("Oops... {}", msg),
-    };
 }
 ```
 
