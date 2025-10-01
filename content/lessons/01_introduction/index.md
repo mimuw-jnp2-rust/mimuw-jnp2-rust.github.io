@@ -47,7 +47,7 @@ Even if you don't end up using Rust, learning it expands your horizons:
   It takes [inspiration](https://doc.rust-lang.org/reference/influences.html) from the best parts of other languages
   to avoid the worst parts. Learning them shows what works.
 
-## Why not to learn Rust?
+## Why not to learn Rust? ;)
 
 - Some people say Rust is too hard to learn because of the borrow checker and because
   it's irritating to try to compile code while being a beginner.
