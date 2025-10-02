@@ -5,9 +5,6 @@ edition = "2021"
 authors = ["Andrzej Głuszak", "Piotr Wojtczak", "Wojciech Przytuła"]
 
 [[bin]]
-name = "01_errors_demo"
-path = "content/lessons/01_introduction/errors_demo.rs"
-[[bin]]
 name = "01_hello_world"
 path = "content/lessons/01_introduction/hello_world.rs"
 [[bin]]

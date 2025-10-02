@@ -1,9 +1,9 @@
 +++
 title = "Data Types"
-date = 2024-10-17
+date = 2029-01-01
 weight = 1
 [extra]
-lesson_date = 2024-10-17
+lesson_date = 2029-01-01
 +++
 
 ## Aggregating data

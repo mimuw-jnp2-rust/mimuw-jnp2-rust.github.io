@@ -6,6 +6,10 @@ weight = 1
 lesson_date = 2022-10-17
 +++
 
+# List of projects
+
+The list of previous students' big projects is [publicly available](https://github.com/orgs/mimuw-jnp2-rust/repositories).
+
 # (Some) projects from the previous semester
 
 ## Chat App

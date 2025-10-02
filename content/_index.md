@@ -5,7 +5,9 @@ template = "index.html"
 
 This is a website for the [JNP2: Rust](https://usosweb.mimuw.edu.pl/kontroler.php?_action=katalog2%2Fprzedmioty%2FpokazPrzedmiot&kod=1000-2M24RUS&lang=en) course at [MIM UW](https://mimuw.edu.pl/).
 
-The course's instructor is Wojciech Przytuła (GitHub: [wprzytula](https://github.com/wprzytula), e-mail: `wp418383[at]students[dot]mimuw[dot]edu[dot]pl`),
+The course's instructors are:
+- Wojciech Przytuła (GitHub: [wprzytula](https://github.com/wprzytula), e-mail: `wp418383[at]students[dot]mimuw[dot]edu[dot]pl`),
+- Tomasz Nowak (GitHub: [tonowak](https://github.com/tonowak), e-mail: `tonowak[at]mimuw[dot]edu[dot]pl`).
 
 Instructori emeriti:
 
