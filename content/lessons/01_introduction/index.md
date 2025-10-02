@@ -50,7 +50,7 @@ Even if you don't end up using Rust, learning it expands your horizons:
 ## Why not to learn Rust? ;)
 
 - Some people say Rust is too hard to learn because of the borrow checker and because
-  it's irritating to try to compile code while being a beginner.
+  getting your code to compile is frustrating while being a beginner.
 - Once you get to know Cargo you won't ever want to use a language without a built-in package
   manager.
 - You will start hating C++.
