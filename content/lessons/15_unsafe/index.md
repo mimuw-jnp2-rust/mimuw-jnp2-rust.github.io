@@ -79,7 +79,6 @@ But we only changed safe code! This shows that `unsafe` is unfortunately not per
 - [How unpleasant is Unsafe Rust?](https://www.reddit.com/r/rust/comments/16i8lo2/how_unpleasant_is_unsafe_rust/)
 
 - [RUDRA: Finding Memory Safety Bugs in Rust at the Ecosystem Scale](https://taesoo.kim/pubs/2021/bae:rudra.pdf) - automatic static analyzer to find 3 most frequent subtle bugs in `unsafe` code:
-
   1. panic (unwind) safety bug (analogous to exception-handling guarantees in C++),
   2. higher-order safety invariant (assuming certain properties of the type that the generic is instantiated with that are not guaranteed by the type system, e.g., _purity_),
   3. propagating Send/Sync in Generic Types (implementing Send/Sync unconditionally for T, even if T contains non-Send/non-Sync types inside).

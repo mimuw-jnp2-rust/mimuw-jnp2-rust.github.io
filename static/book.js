@@ -13,14 +13,12 @@ function initToggleMenu() {
 function debounce(func, wait) {
   let timeout;
 
-  return () => {
-    const context = this;
-    const args = arguments;
+  return function (...args) {
     clearTimeout(timeout);
 
     timeout = setTimeout(() => {
       timeout = null;
-      func.apply(context, args);
+      func.apply(this, args);
     }, wait);
   };
 }
@@ -137,7 +135,7 @@ function formatSearchResultItem(item, terms) {
   li.innerHTML = `<a href="${item.ref}">${item.doc.title}</a>`;
   li.innerHTML += `<div class="search-results__teaser">${makeTeaser(
     item.doc.body,
-    terms
+    terms,
   )}</div>`;
   return li;
 }
@@ -168,7 +166,7 @@ function initSearch() {
 
   const $searchResults = document.querySelector(".search-results");
   const $searchResultsHeader = document.querySelector(
-    ".search-results__header"
+    ".search-results__header",
   );
   const $searchResultsItems = document.querySelector(".search-results__items");
   const MAX_ITEMS = 10;
@@ -212,10 +210,10 @@ function initSearch() {
         }
 
         $searchResultsItems.appendChild(
-          formatSearchResultItem(results[i], term.split(" "))
+          formatSearchResultItem(results[i], term.split(" ")),
         );
       }
-    }, 150)
+    }, 150),
   );
 }
 
