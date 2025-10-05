@@ -74,8 +74,9 @@
       border-radius: 3px;
       background: #f1f1f1;
       font-size: 0.875em;
-      font-family: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo,
-        "DejaVu Sans Mono", monospace;
+      font-family:
+        "Source Code Pro", Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono",
+        monospace;
     }
 
     pre code {
@@ -145,8 +146,7 @@
     margin: 0;
     max-width: 150px;
     min-width: 90px;
-    justify-content: center;
-    align-content: center;
+    place-content: center center;
     flex-direction: column;
 
     &:hover {

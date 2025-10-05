@@ -11,6 +11,7 @@ lesson_date = 2025-10-02
 We will be using [Github Classroom](https://classroom.github.com) for task submission and [Discord](https://discord.gg/UyvepYkPs9) for discussions.
 
 Our learning/teaching materials are going to be:
+
 - the content of this site - it contains explanations and questions tailored towards MIMUW students,
 - well-known Rust teaching materials (["The Book"](https://doc.rust-lang.org/stable/book/), ["Rust by Example"](https://doc.rust-lang.org/rust-by-example/index.html)) that complement this site,
 - explanations/deeper insight during class and many examples of Rust code.
@@ -32,6 +33,7 @@ Our learning/teaching materials are going to be:
 
 In specific, individual cases, it is possible to raise the grade by doing additional work, but it has to be agreed by us beforehand and it should be not easier than going through the standard path.
 The additional work might be:
+
 - Making a presentation about some advanced topic (const generics, futures, macros, etc.) or about architecture of a selected Rust open-source library.
 - Contributing to a selected Rust open-source library.
 - Contributing to this course's materials.

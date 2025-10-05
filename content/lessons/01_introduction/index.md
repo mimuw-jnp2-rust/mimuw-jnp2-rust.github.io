@@ -6,7 +6,7 @@ weight = 1
 lesson_date = 2024-10-02
 +++
 
-![Logo](https://www.rust-lang.org/logos/rust-logo-blk.svg)
+![Logo](https://raw.githubusercontent.com/rust-lang/rust-artwork/refs/heads/master/logo/rust-logo-blk.svg)
 
 # A language empowering everyone to build reliable and efficient software.
 
