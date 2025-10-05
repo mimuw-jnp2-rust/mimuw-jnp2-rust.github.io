@@ -2,7 +2,7 @@
 name = "lessons"
 version = "0.1.0"
 edition = "2021"
-authors = ["Andrzej Głuszak", "Piotr Wojtczak", "Wojciech Przytuła"]
+authors = ["Andrzej Głuszak", "Piotr Wojtczak", "Wojciech Przytuła", "Tomasz Nowak"]
 
 [[bin]]
 name = "01_hello_world"

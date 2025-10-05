@@ -1,3 +1,11 @@
++++
+title = "Table of content"
+date = 2025-10-05
+weight = 1
+[extra]
+lesson_date = 2025-10-05
++++
+
 # Lessons have the following content & introduced concepts:
 
 1. Introduction:
