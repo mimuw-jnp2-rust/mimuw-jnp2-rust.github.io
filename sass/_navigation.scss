@@ -36,6 +36,28 @@
     ul {
       padding-left: 20px;
     }
+
+    li.upcoming {
+      .upcoming-content {
+        display: block;
+        padding: 10px 15px;
+        color: #55626a;
+      }
+
+      .upcoming-title {
+        display: block;
+        white-space: normal;
+        overflow: visible;
+      }
+
+      .upcoming-note {
+        display: block;
+        margin-top: 4px;
+        font-size: 0.85em;
+        color: #9aa5ab;
+        white-space: normal;
+      }
+    }
   }
 }
 
