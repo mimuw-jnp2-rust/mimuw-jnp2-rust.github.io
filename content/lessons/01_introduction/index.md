@@ -83,6 +83,18 @@ Even if you don't end up using Rust, learning it expands your horizons:
 
 - [online Rust compiler](https://play.rust-lang.org/)
 
+## Slides
+
+<iframe
+  src="a_taste_of_rust-introductory_slides/A_taste_of_Rust.html"
+  title="A Taste of Rust — introductory slides"
+  loading="lazy"
+  style="width: 100%; aspect-ratio: 16 / 9; border: none;"
+></iframe>
+
+- [Open the slides in a new tab (HTML)](a_taste_of_rust-introductory_slides/A_taste_of_Rust.html)
+- [Download the slides as PDF](a_taste_of_rust-introductory_slides/A_taste_of_Rust.pdf)
+
 ## Hello world
 
 {{ include_code_sample(path="lessons/old/2021L/01_introduction/hello_world.rs", language="rust") }}
