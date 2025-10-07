@@ -22,7 +22,7 @@ Our learning/teaching materials are going to be:
   - There will be 8 or 9 tasks.
   - Each task will be graded on a scale of 0 to 3.
   - You can get up to 21 points from the small tasks. It means that it is enough to do 7 tasks with a score of 3 points.
-  - The tasks appear on Thursdays at 14:00 with a deadline until Tuesday 23:59. This means that everyone has exactly 5 days and 10 hours to solve a task.
+  - You can solve the task between the end of the lesson and strictly before the start of the next lesson. The deadline is different for different lab groups.
   - Note: we will have 14 classes in total, so you can expect a task every week or two.
 - 1/2 of the grade is based on a big project. You can choose a topic yourself, but it must be accepted by us. The project has to be split into two parts. It can be done in groups of two (or bigger, if ambitious enough). The grading is as follows:
   1. Usability - 4 points.
