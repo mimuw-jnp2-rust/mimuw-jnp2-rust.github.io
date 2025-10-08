@@ -372,15 +372,17 @@ fn main() {
 }
 ```
 
-### Further reading
+### Obligatory reading
 
-- [The Book, chapter 4](https://doc.rust-lang.org/stable/book/ch04-00-understanding-ownership.html) - obligatory reading
+- [The Book, chapter 4](https://doc.rust-lang.org/stable/book/ch04-00-understanding-ownership.html)
 
-- [Rust by Example, chapter Scoping rules](https://doc.rust-lang.org/stable/rust-by-example/index.html) - obligatory reading
+- [Rust by Example, chapter Scoping rules](https://doc.rust-lang.org/stable/rust-by-example/index.html)
 
-- [Char documentation](https://doc.rust-lang.org/std/primitive.char.html) - additional reading
+### Additional reading
 
-- [Working with strings in Rust](https://fasterthanli.me/articles/working-with-strings-in-rust) - additional reading
+- [Char documentation](https://doc.rust-lang.org/std/primitive.char.html)
+
+- [Working with strings in Rust](https://fasterthanli.me/articles/working-with-strings-in-rust)
 
 ### Assignment 1 (graded)
 
