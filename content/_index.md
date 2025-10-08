@@ -7,13 +7,13 @@ This is a website for the [JNP2: Rust](https://usosweb.mimuw.edu.pl/kontroler.ph
 
 The course's instructors are:
 
-- Wojciech Przytuła, GitHub: [wprzytula](https://github.com/wprzytula), e-mail: `wp418383[at]students[dot]mimuw[dot]edu[dot]pl`,
-- Tomasz Nowak, GitHub: [tonowak](https://github.com/tonowak), e-mail: `tonowak[at]mimuw[dot]edu[dot]pl`.
+- Wojciech Przytuła, GitHub [wprzytula](https://github.com/wprzytula), e-mail `wp418383[at]students[dot]mimuw[dot]edu[dot]pl`,
+- Tomasz Nowak, GitHub [tonowak](https://github.com/tonowak), e-mail `tonowak[at]mimuw[dot]edu[dot]pl`.
 
 Instructori emeriti:
 
-- Piotr Wojtczak, GitHub: [StarostaGit](https://github.com/StarostaGit), e-mail: `pw394980[at]students[dot]mimuw[dot]edu[dot]pl`,
-- Andrzej Głuszak, GitHub: [agluszak](https://github.com/agluszak), e-mail: `agluszak[at]mimuw[dot]edu[dot]pl`.
+- Piotr Wojtczak, GitHub [StarostaGit](https://github.com/StarostaGit), e-mail `pw394980[at]students[dot]mimuw[dot]edu[dot]pl`,
+- Andrzej Głuszak, GitHub [agluszak](https://github.com/agluszak), e-mail `agluszak[at]mimuw[dot]edu[dot]pl`.
 
 You can find lesson scenarios [here](lessons/).
 
