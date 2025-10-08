@@ -300,7 +300,7 @@ The message above suggests specifing a lifetime for the returned string. In Rust
 
 ### Exercise
 
-Our previous solution using `clone()` was pretty inefficient. How should you modify this this code now?
+Our previous solution using `clone()` was pretty inefficient. How should you modify this code now?
 
 ```rust
 fn count_animals(num: u32, animal: String) {
