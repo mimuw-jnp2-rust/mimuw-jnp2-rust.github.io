@@ -20,7 +20,7 @@ Even if you've never seen Rust code before, chances are you still heard the term
 
 ## To discuss during class
 
-- Why often languages with garbage collectors are considered slower? What are different garbage collector mechanisms?
+- Why languages with garbage collectors are often considered slower? What different garbage collector mechanisms are there?
 - Why coding without allocations can avoid using a garbage collector?
 - Besides variable scope, does C++ help in any other way with memory management?
 
