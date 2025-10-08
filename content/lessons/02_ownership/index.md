@@ -83,7 +83,7 @@ let s2 = s;
 println!("And the contents are: {}", s);
 ```
 
-At first glance everything looks great. If we write this code (well, an equivalent of it) in basically any other popular language, it will compile without issues - but it does *not* compile here and there's a good reason why.
+At first glance everything looks great. If we write this code (well, an equivalent of it) in basically any other popular language, it will compile without issues - but it does _not_ compile here and there's a good reason why.
 
 To understand what's happening, we have to consult the rules again, rule 2 in particular. It says that there can only be one owner of any value at a given time. So, `s` and `s2` cannot own the same object. Okay, makes sense, but what is happening in this line then - `let s2 = s;`? Experience probably tells you that `s` just gets copied into `s2`, creating a new String object. That would result in each variable owning its very own instance of the string and each instance having exactly one owner. Sounds like everyone should be happy now, but wait - in that case the last line should work no issue, right? But it doesn't, so can't be a copy. Let's see now what the compiler actually has to say:
 
