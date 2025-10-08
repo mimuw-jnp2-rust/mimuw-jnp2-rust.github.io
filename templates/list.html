@@ -3,12 +3,16 @@
 {% block content %}
 <h1 class="title">{{ section.title }}</h1>
 <ul>
+  {% set today = now() | date(format="%s") | int %}
   {% for page in section.pages %}
-  <li>
-    <a href="{{ page.permalink | safe }}"
-      >[{{ page.extra.lesson_date }}] {{ page.title }} (last edited: {{ page.date }})</a
-    >
-  </li>
+    {% if page.date and (page.date | date(format="%s") | int > today) %}
+      {% continue %}
+    {% endif %}
+    <li>
+      <a href="{{ page.permalink | safe }}"
+        >[{{ page.extra.lesson_date }}] {{ page.title }} (last edited: {{ page.date }})</a
+      >
+    </li>
   {% endfor %}
 </ul>
 {% endblock content %}

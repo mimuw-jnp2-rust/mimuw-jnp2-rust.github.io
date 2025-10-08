@@ -1,9 +1,9 @@
 +++
 title = "Macros"
-date = 2022-06-07 
+date = 2029-01-01
 weight = 1
 [extra]
-lesson_date = 2024-12-12 
+lesson_date = 2029-01-01
 +++
 
 ## Reading

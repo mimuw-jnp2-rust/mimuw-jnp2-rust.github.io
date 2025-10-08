@@ -1,9 +1,9 @@
 +++
 title = "Async: Part 1"
-date = 2024-11-27
+date = 2029-01-01
 weight = 1
 [extra]
-lesson_date = 2024-11-28
+lesson_date = 2029-01-01
 +++
 
 ## Tokio
