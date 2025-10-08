@@ -312,7 +312,7 @@ fn main() {
 
   count_animals(1, s.clone());
   count_animals(2, s.clone());
-  count_animals(3, s); // We previously could've ommitted the clone() here. Why?
+  count_animals(3, s); // We previously could've omitted the clone() here. Why?
 }
 ```
 
