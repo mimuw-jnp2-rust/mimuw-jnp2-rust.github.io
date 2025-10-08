@@ -16,7 +16,7 @@ Even if you've never seen Rust code before, chances are you still heard the term
 
 - **Mind your own memory** - in low-level languages and specific ones like C++, performance comes first so we cannot really afford to run expansive bookkeeping and cleaning algorithms. Most of these languages compile directly to machine code and have no language-specific runtime environment. That means that the only place where memory management can happen is in the produced code. While compilers insert these construction and destruction calls for stack allocated memory, it generally requires a lot of discipline from the programmer to adhere to good practices and patterns to avoid as many memory related issues as possible and one such bug can be quite deadly to the program and a nightmare to find and fix. These languages basically live by the _"your memory, your problem"_ mantra.
 
-  For example, in C++ we get some help through variable scopes, but whenever we write a function, we have to decide ourselves how to pass the values. It's easy by mistake to copy a value, pass an invalid pointer or use some already-freed reference.
+  For example, in C++ we get some help through variable scopes, but whenever we write a function, we have to decide ourselves how to pass the values. It's easy by mistake to copy a value, pass an invalid pointer or use some dangling reference (i.e., one pointing to an already-freed data).
 
 ## To discuss during class
 
