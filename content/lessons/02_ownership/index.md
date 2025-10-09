@@ -392,6 +392,5 @@ Deadline: group-specific.
 
 Grading:
 
-- 1 point for passing tests,
-- 1 point for passing `cargo fmt` and `cargo clippy`,
+- 2 points for passing tests, `cargo fmt` and `cargo clippy`,
 - 1 point for manual code inspection ("code quality").
