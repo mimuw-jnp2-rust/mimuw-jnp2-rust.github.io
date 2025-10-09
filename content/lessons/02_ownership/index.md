@@ -178,7 +178,7 @@ fn main() {
 }
 ```
 
-Thankfully, Rust allows us to access a resource without becoming an owner through the use of references and the `&` operator. This is called a borrow.
+Cloning is pretty excessive here. Imagine recommending a book to your friend and instead of lending it to them for the weekend, you scan it and print an exact copy. Not the best way to go about it, is it? Thankfully, Rust allows us to access a resource without becoming an owner through the use of references and the `&` operator. This is called a borrow.
 
 The adjusted code should look like this:
 
