@@ -412,4 +412,11 @@ fn main() {
 
 ### Assignment 1 (graded)
 
-[ordering in Van Binh](https://classroom.github.com/a/prGDl5Xa)
+[ordering in Van Binh](https://classroom.github.com/a/ih0mIzmM)
+
+Deadline: group-specific.
+
+Grading:
+
+- 2 points for passing tests, `cargo fmt` and `cargo clippy`,
+- 1 point for manual code inspection ("code quality").
