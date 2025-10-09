@@ -1,9 +1,9 @@
 +++
 title = "Ownership Model"
-date = 2029-01-01
+date = 2025-10-08
 weight = 1
 [extra]
-lesson_date = 2029-01-01
+lesson_date = 2025-10-09
 +++
 
 ## Why all the fuss?
@@ -12,15 +12,25 @@ Even if you've never seen Rust code before, chances are you still heard the term
 
 - **Garbage Collection** - in many high-level programming languages, like Java, Haskell or Python, memory management is done fully by the language, relieving the programmer from this burden. This prevents memory leaks and memory related errors (like _use after free_), but does come at a cost - there is a runtime overhead, both memory and performance wise, caused by the constantly running garbage collection algorithms and the programmer usually has very little control over when the garbage collection takes place. Also, garbage collection does not prevent concurrency-related errors, such as data races, in any way.
 
+  There's one language that has a lot of common parts with Rust, but it differs by having a garbage collector: OCaml. In Jane Street, programmers heavily use OCaml as their primary language, and the drawbacks brought by garbage collectors are visible. Their programmers decided to extend the OCaml compiler to be able to write code without any allocations (this approach is quite restrictive) to avoid calling the garbage collector, just so their code runs faster. That's quite a roundabout way!
+
 - **Mind your own memory** - in low-level languages and specific ones like C++, performance comes first so we cannot really afford to run expansive bookkeeping and cleaning algorithms. Most of these languages compile directly to machine code and have no language-specific runtime environment. That means that the only place where memory management can happen is in the produced code. While compilers insert these construction and destruction calls for stack allocated memory, it generally requires a lot of discipline from the programmer to adhere to good practices and patterns to avoid as many memory related issues as possible and one such bug can be quite deadly to the program and a nightmare to find and fix. These languages basically live by the _"your memory, your problem"_ mantra.
+
+  For example, in C++ we get some help through variable scopes, but whenever we write a function, we have to decide ourselves how to pass the values. It's easy by mistake to copy a value, pass an invalid pointer or use some dangling reference (i.e., one pointing to an already-freed data).
+
+## To discuss during class
+
+- Why languages with garbage collectors are often considered slower? What different garbage collector mechanisms are there?
+- Why coding without allocations can avoid using a garbage collector?
+- Besides variable scope, does C++ help in any other way with memory management?
+
+## Start with the basics - ownership
 
 And then we have Rust. Rust is a systems programming language and in many ways it's akin to C++ - it's basically low-level with many high-level additions. But unlike C++, it doesn't exactly fall into either of the categories described above, though it's way closer to the second one. It performs no additional management at runtime, but instead imposes a set of rules on the code, making it easier to reason about and thus check for its safety and correctness at compile time - these rules make up Rust's **ownership model**.
 
 In a way, programming in Rust is like pair-programming with a patient and very experienced partner. Rust's compiler will make sure you follow all the good patterns and practices (by having them ingrained in the language itself) and very often even tell you how to fix the issues it finds.
 
 _**Disclaimer:** when delving deeper into Rust below we will make heavy use of concepts like scopes, moving data, stack and heap, which should have been introduced as part of the C++ course. If you need a refresher of any of these, it's best to do so now, before reading further._
-
-## Start with the basics - ownership
 
 In the paragraph above we mentioned a set of rules that comprise Rust's ownership model. [The book](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#ownership-rules) starts off with the following three as its very foundation:
 
@@ -34,23 +44,26 @@ The third point might make you think about C++ and its automatic storage duratio
 
 ```rust
 {
-    let a: i32 = 5; // allocation on the stack, 'a' becomes an owner
+    // Allocation on the stack, 'a' becomes an owner.
+    let a: i32 = 5;
 
-    // do some stuff with 'a'
+    // Do some stuff with 'a'.
 
-} // 'a', the owner, goes out of scope and the value is dropped
+}
+// 'a', the owner, goes out of scope and the value is dropped.
 ```
 
 So far, so good. Variables are pushed onto the stack when they enter the scope and destroyed during stack unwinding that happens upon leaving their scope. However, allocating and deallocating simple integers doesn't impress anybody. Let's try something more complex:
 
 ```rust
 {
-    let s = String::from("a string"); // 's' is allocated on the stack, while its contents ("a string")
-                                      // are allocated on the heap. 's' is the owner of this String object.
+    // 's' is allocated on the stack, while its contents ("a string")
+    // are allocated on the heap. 's' is the owner of this String object.
+    let s = String::from("a string");
 
     // do some stuff with 's'
-
-} // 's', the owner, goes out of scope and the String is dropped, its heap allocated memory freed
+}
+// 's', the owner, goes out of scope and the String is dropped, its heap allocated memory freed.
 ```
 
 If you recall the RAII (Resource Acquisition Is Initialization) pattern from C++, the above is basically the same thing. We go two for two now in the similarity department, so... is Rust really any different then? There is a part of these examples that we skipped over - actually doing something with the values.
@@ -60,14 +73,17 @@ If you recall the RAII (Resource Acquisition Is Initialization) pattern from C++
 Let's expand on the last example. The scoping is not really important for that one, so we don't include it here.
 
 ```rust
-let s = String::from("a string"); // same thing, 's' is now an owner
+// Same thing, 's' is now an owner.
+let s = String::from("a string");
 
-let s2 = s; // easy, 's2' becomes another owner... right?
+// Easy, 's2' becomes another owner... right?
+let s2 = s;
 
-println!("And the contents are: {}", s); // this doesn't work, can you guess why?
+// This doesn't work, can you guess why?
+println!("And the contents are: {}", s);
 ```
 
-At first glance everything looks great. If we write this code (well, an equivalent of it) in basically any other popular language, it will compile no issue - but it does not here and there's a good reason why.
+At first glance everything looks great. If we write this code (well, an equivalent of it) in basically any other popular language, it will compile without issues - but it does _not_ compile here and there's a good reason why.
 
 To understand what's happening, we have to consult the rules again, rule 2 in particular. It says that there can only be one owner of any value at a given time. So, `s` and `s2` cannot own the same object. Okay, makes sense, but what is happening in this line then - `let s2 = s;`? Experience probably tells you that `s` just gets copied into `s2`, creating a new String object. That would result in each variable owning its very own instance of the string and each instance having exactly one owner. Sounds like everyone should be happy now, but wait - in that case the last line should work no issue, right? But it doesn't, so can't be a copy. Let's see now what the compiler actually has to say:
 
@@ -88,11 +104,11 @@ error[E0382]: borrow of moved value: `s`
 _"value moved here"_ - gotcha! So `s` is being moved to `s2`, which also means that `s2` now becomes the new owner of the string being moved and `s` cannot be used anymore. In Rust, the default method of passing values around is by move, not by copy. While it may sound a bit odd at first, it actually has some very interesting implications. But before we get to them, let's fix our code, so it compiles now. To do so, we have to explicitly tell Rust to make a copy by invoking the `clone` method:
 
 ```rust
-let s = String::from("a string"); // 's' is an owner
+let s = String::from("a string"); // 's' is an owner.
 
-let s2 = s.clone(); // 's2' now contains its own copy
+let s2 = s.clone(); // 's2' now contains its own copy.
 
-println!("And the contents are: {}", s); // success!
+println!("And the contents are: {}", s); // Success!
 ```
 
 The compiler is happy now and so are we. The implicit move takes some getting used to, but the compiler is here to help us. Now, let's put the good, old C++ on the table again and compare the two lines:
@@ -123,7 +139,7 @@ It says that `s` was moved because the `String` type doesn't have the `Copy` tra
 
 ### Exercise
 
-How to fix that code?
+How to fix that code? Don't worry about efficiency yet.
 
 ```rust
 fn count_animals(num: u32, animal: String) {
@@ -139,9 +155,14 @@ fn main() {
 }
 ```
 
+## To discuss during class
+
+- How does `std::move` work in C++? When can l-value references (`&`) be used, and when r-value references (`&&`)?
+- What exactly are the performance benefits in copying primitives?
+
 ## Let's borrow some books
 
-We now know how to move things around and how to clone them if moving is not possible. But what if making a copy is unnecessary - maybe we just want to let someone look at our resource and keep on holding onto it once they're done. Consider the following example:
+We now know how to move things around and how to clone them if moving is not possible. But what if making a copy is unnecessary - maybe we just want to let someone look at our resource while still holding that value after they're finished. Kind of like references in C++ (but with some major differences). Consider the following example:
 
 ```rust
 fn read_book(book: String) {
@@ -183,12 +204,12 @@ fn sign_book(book: &mut String) {
 }
 
 fn main() {
-  // note that the book has to be marked as mutable in the first place
+  // Note that the book has to be marked as mutable in the first place.
   let mut book = String::from("Merry lived in a big old house. The end.");
 
-  sign_book(&mut book); // it's always clear when a parameter might get modified
+  sign_book(&mut book); // It's always clear when a parameter might get modified.
 
-  println!("{}", book); // book is now signed
+  println!("{}", book); // Book is now signed.
 }
 ```
 
@@ -206,12 +227,12 @@ fn read_book(book: &String) {
 fn main() {
   let mut book = String::from("Merry lived in a big old house. The end.");
 
-  let r = &book; // an immutable borrow
+  let r = &book; // An immutable borrow.
 
-  erase_book(&mut book); // a mutable borrow
+  erase_book(&mut book); // A mutable borrow.
 
-  read_book(r); // would be pretty sad to open a blank book when it was not
-                // what we borrowed initially
+  read_book(r); // Would be pretty sad to open a blank book when it was not
+                // what we borrowed initially.
 
   println!("{}", book);
 }
@@ -223,13 +244,13 @@ Fortunately for us (and our poor friend just wanting to read), the compiler step
 error[E0502]: cannot borrow `book` as mutable because it is also borrowed as immutable
   --> src/main.rs:14:14
    |
-12 |   let r = &book; // an immutable borrow
+12 |   let r = &book; // An immutable borrow.
    |           ----- immutable borrow occurs here
 13 |
-14 |   erase_book(&mut book); // a mutable borrow
+14 |   erase_book(&mut book); // A mutable borrow.
    |              ^^^^^^^^^ mutable borrow occurs here
 15 |
-16 |   read_book(r); // would be pretty sad to open a blank book when it was not
+16 |   read_book(r); // Would be pretty sad to open a blank book when it was not
    |             - immutable borrow later used here
 ```
 
@@ -239,7 +260,9 @@ This is where the famous borrow checker comes in. To keep things super safe, Rus
 
 - There is any number of immutable references and no mutable ones.
 
-You may notice a parallel to the _readers - writers_ problem from concurrent programming. In fact, the way Rust's borrow checker is designed lends itself incredibly well to preventing data race related issues.
+Those rules are the core of the borrow checker. Be sure that you understand it.
+
+You may notice a parallel to the _readers - writers_ problem from concurrent programming. Because of that, the way Rust's borrow checker is designed lends itself incredibly well to preventing data race related issues.
 
 ### Dangling references
 
@@ -277,7 +300,7 @@ The message above suggests specifing a lifetime for the returned string. In Rust
 
 ### Exercise
 
-Our previous solution using `clone()` was pretty inefficient. How should this code look now?
+Our previous solution using `clone()` was pretty inefficient. How should you modify this code now?
 
 ```rust
 fn count_animals(num: u32, animal: String) {
@@ -289,7 +312,7 @@ fn main() {
 
   count_animals(1, s.clone());
   count_animals(2, s.clone());
-  count_animals(3, s); // we could've ommitted the clone() here. Why?
+  count_animals(3, s); // We previously could've omitted the clone() here. Why?
 }
 ```
 
@@ -302,16 +325,17 @@ _**Note:** for the purposes of these examples we assume we are working with ASCI
 To create a string slice from the `String` object `s`, we can simply write:
 
 ```rust
-let slice = &s[1..3]; // creates a slice of length 2, starting with the character at index 1
+// Creates a slice of length 2, starting with the character at index 1.
+let slice = &s[1..3];
 ```
 
-This makes use of the `&` operator and Rust's range notation to specify the beginning and end of the slice. Thus, we can also write:
+This makes use of the `&` operator and Rust's range notation (analogous to Python's notation) to specify the beginning and end of the slice. Thus, we can also write:
 
 ```rust
-let slice = &s[2..];    // everything from index 2 till the end
-let slice = &s[..1];    // only the first byte
-let slice = &s[..];     // the whole string as a slice
-let slice = s.as_str(); // also the whole string
+let slice = &s[2..];    // Everything from index 2 till the end.
+let slice = &s[..1];    // From beginning to first byte (so, only the first byte).
+let slice = &s[..];     // The whole string as a slice.
+let slice = s.as_str(); // Also the whole string.
 ```
 
 You might have noticed that we always built `String` values using the `from()` method and never actually used the string literals directly. What type is a string literal then? Turns out it's the new string slice we just learned about!
@@ -325,13 +349,13 @@ In fact, it makes a lot sense - string literals, after all, are not allocated on
 Slices can also be taken from arrays:
 
 ```rust
-let array: [i32; 4] = [42, 10, 5, 2]; // creates an array of four 32 bit integers
-let slice: &[i32] = &array[1..3];     // results in a slice [10, 5]
+let array: [i32; 4] = [42, 10, 5, 2]; // Creates an array of four 32 bit integers.
+let slice: &[i32] = &array[1..3];     // Results in a slice [10, 5].
 ```
 
 ### Exercise
 
-Can this code still be improved from the previous version utilizing references? Think about the signature of `count_animals`.
+Can this code be further modified utilizing references? Think about the signature of `count_animals`, can we make it also accept string literals?
 
 ```rust
 fn count_animals(num: u32, animal: &String) {
@@ -344,19 +368,22 @@ fn main() {
   count_animals(1, &s);
   count_animals(2, &s);
   count_animals(3, &s);
+  count_animals(4, "goat"); // In this version of the code it doesn't compile.
 }
 ```
 
-### Further reading
+### Obligatory reading
+
+- [The Book, chapter 4](https://doc.rust-lang.org/stable/book/ch04-00-understanding-ownership.html)
+
+- [Rust by Example, chapter Scoping rules](https://doc.rust-lang.org/stable/rust-by-example/index.html)
+
+### Additional reading
 
 - [Char documentation](https://doc.rust-lang.org/std/primitive.char.html)
 
 - [Working with strings in Rust](https://fasterthanli.me/articles/working-with-strings-in-rust)
 
-- [The Book, chapter 4](https://doc.rust-lang.org/stable/book/ch04-00-understanding-ownership.html)
-
 ### Assignment 1 (graded)
 
 [ordering in Van Binh](https://classroom.github.com/a/prGDl5Xa)
-
-Deadline: 16.10.2024 23:59
