@@ -357,6 +357,12 @@ fn main() {
 
 ### Assignment 1 (graded)
 
-[ordering in Van Binh](https://classroom.github.com/a/prGDl5Xa)
+[ordering in Van Binh](https://classroom.github.com/a/ih0mIzmM)
 
-Deadline: 16.10.2024 23:59
+Deadline: group-specific.
+
+Grading:
+
+- 1 point for passing tests,
+- 1 point for passing `cargo fmt` and `cargo clippy`,
+- 1 point for manual code inspection ("code quality").
