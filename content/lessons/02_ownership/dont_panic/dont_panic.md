@@ -13,7 +13,7 @@ style: |
   },
 
   code {
-      background-color: black; 
+      background-color: black;
   }
 ---
 
@@ -143,7 +143,7 @@ fn main() {
 
 ### But wait, we ended up with an `unwrap()` anyway. Did we then improve at all?
 
-Actually, yes. Now, the function (here: `div()`) with some (possibly complex) logic **only accepts** (so that the compiler verifies that in compile-time) valid arguments. This way, the function's code can be simpler (no invalid-input-related error handling). Also, it's easier to convince yourself that your number is nonzero that to make sure that it upholds all guarantees required in the docs of the function containing logic.
+Actually, yes. Now, the function (here: `div()`) with some (possibly complex) logic **only accepts** (so that the compiler verifies that in compile-time) valid arguments. This way, the function's code can be simpler (no invalid-input-related error handling). Also, it's easier to convince yourself that your number is nonzero than to make sure that it upholds all guarantees required in the docs of the function containing logic.
 
 ---
 
