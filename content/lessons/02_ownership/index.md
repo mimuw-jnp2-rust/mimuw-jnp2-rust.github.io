@@ -24,6 +24,32 @@ Even if you've never seen Rust code before, chances are you still heard the term
 - Why coding without allocations can avoid using a garbage collector?
 - Besides variable scope, does C++ help in any other way with memory management?
 
+## Slides
+
+### Don't panic
+
+<iframe
+  src="dont_panic/dont_panic.html"
+  title="Don't panic slides"
+  loading="lazy"
+  style="width: 100%; aspect-ratio: 16 / 9; border: none;"
+></iframe>
+
+- [Open the slides in a new tab (HTML)](dont_panic/dont_panic.html)
+- [Download the slides as PDF](dont_panic/dont_panic.pdf)
+
+### String formatting
+
+<iframe
+  src="string_formatting/string_formatting.html"
+  title="String formatting slides"
+  loading="lazy"
+  style="width: 100%; aspect-ratio: 16 / 9; border: none;"
+></iframe>
+
+- [Open the slides in a new tab (HTML)](string_formatting/string_formatting.html)
+- [Download the slides as PDF](string_formatting/string_formatting.pdf)
+
 ## Start with the basics - ownership
 
 And then we have Rust. Rust is a systems programming language and in many ways it's akin to C++ - it's basically low-level with many high-level additions. But unlike C++, it doesn't exactly fall into either of the categories described above, though it's way closer to the second one. It performs no additional management at runtime, but instead imposes a set of rules on the code, making it easier to reason about and thus check for its safety and correctness at compile time - these rules make up Rust's **ownership model**.
