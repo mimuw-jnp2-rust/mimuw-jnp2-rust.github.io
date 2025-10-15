@@ -149,4 +149,4 @@ So how do we handle situations which can fail? That's where the `Result` type co
 
 [Communications](https://classroom.github.com/a/s7wihiAa)
 
-Deadline: 23.10.2024 23:59
+Deadline: per-group.
