@@ -26,7 +26,7 @@ impl Hero {
 
 // We can have multiple `impl` blocks for one struct.
 impl Hero {
-    // Instance method, the first argument (self) is the calling instance,
+    // Instance method. The first argument (self) is the calling instance,
     // just like `self` in Python and `this` in C++.
     fn distance(&self, pos: Position) -> u32 {
         // For convenience, we don't have to type the argument as `self: &Self`.
