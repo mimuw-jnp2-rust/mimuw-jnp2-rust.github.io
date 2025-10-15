@@ -1,5 +1,5 @@
 #[derive(Clone, Copy, Debug, Eq, PartialEq)]
-struct Position(i32, i32); // tuple struct
+struct Position(i32, i32); // This is a "tuple struct".
 
 // Could Hero derive the Copy trait?
 #[derive(Clone, Debug, Eq, PartialEq)]
@@ -10,9 +10,10 @@ struct Hero {
     position: Position,
 }
 
-// we can add methods to structs using the 'impl' keyword
+// We can add methods to structs using the 'impl' keyword.
 impl Hero {
-    // static method (in Rust nomenclature: "associated function")
+    // Static method (in Rust nomenclature: "associated function").
+    // It can then be called as follows: `Hero::new(String::from("Ferris"))`.
     fn new(name: String) -> Hero {
         Hero {
             name,
@@ -23,38 +24,39 @@ impl Hero {
     }
 }
 
-// multiple impl blocks are possible for one struct
+// We can have multiple `impl` blocks for one struct.
 impl Hero {
-    // instance method, first argument (self) is the calling instance
+    // Instance method, the first argument (self) is the calling instance,
+    // just like `self` in Python and `this` in C++.
     fn distance(&self, pos: Position) -> u32 {
-        // shorthand to: `self: &Self`
-        // field `i` of a tuple or a tuple struct can be accessed through 'tuple.i'
+        // For convenience, we don't have to type the argument as `self: &Self`.
+        // The i-th field of a tuple or a tuple struct can be accessed through 'tuple.i'.
         (pos.0 - self.position.0).unsigned_abs() + (pos.1 - self.position.1).unsigned_abs()
     }
 
-    // mutable borrow of self allows to change instance fields
+    // Mutable borrow of self allows to change instance fields.
     fn level_up(&mut self) {
-        // shorthand to: `self: &mut Self`
+        // Again, we don't have to type the argument as `self: &mut Self`.
         self.experience = 0;
         self.level += 1;
     }
 
-    // 'self' is not borrowed here and will be moved into the method
+    // 'self' is not borrowed here and will be moved into the method.
     fn die(self) {
-        // shorthand to: `self: Self`
         println!(
             "Here lies {}, a hero who reached level {}. RIP.",
             self.name, self.level
         );
+        // The `self: Self` is now dropped.
     }
 }
 
 fn main() {
     // Calling associated functions requires scope (`::`) operator.
     let mut hero: Hero = Hero::new(String::from("Ferris"));
-    hero.level_up(); // 'self' is always passed implicitly
+    hero.level_up(); // 'self' is always passed implicitly as the first argument.
 
-    // fields other than 'name' will be the same as in 'hero'
+    // Thanks to `..hero`, fields other than 'name' will be the same as in 'hero' (copy).
     let steve = Hero {
         name: String::from("Steve The Normal Guy"),
         ..hero
@@ -64,25 +66,26 @@ fn main() {
 
     let mut twin = hero.clone();
 
-    // we can compare Hero objects because it derives the PartialEq trait
+    // We can compare `Hero` objects because it derives the `PartialEq` trait.
     assert_eq!(hero, twin);
     twin.level_up();
     assert_ne!(hero, twin);
     hero.level_up();
     assert_eq!(hero, twin);
 
-    // we can print out a the struct's debug string with '{:?}'
+    // we can print out the struct's debug string
+    // (which is implemented thanks to `Debug` trait) with '{:?}'.
     println!("print to stdout: {:?}", hero);
 
-    hero.die(); // 'hero' is not usable after this invocation, see the method's definiton
+    hero.die(); // 'hero' is not usable after this invocation, see the method's definiton.
 
-    // the dbg! macro prints debug strings to stderr along with file and line number
-    // dbg! takes its arguments by value, so better borrow them not to have them
-    // moved into dbg! and consumed.
+    // The `dbg!` macro prints debug strings to stderr along with file and line number.
+    // `dbg!` takes its arguments by value, so it's better to borrow them to not have them
+    // moved into `dbg!` and consumed.
     dbg!("print to stderr: {}", &twin);
 
     let pos = Position(42, 0);
-    let dist = steve.distance(pos); // no clone here as Position derives the Copy trait
+    let dist = steve.distance(pos); // No clone here as `Position` derives the `Copy` trait.
     println!("{:?}", pos);
     assert_eq!(dist, 42);
 }

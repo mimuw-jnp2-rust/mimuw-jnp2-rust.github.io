@@ -20,20 +20,22 @@ fn main() {
     let color = Color::Lime;
     match color {
         Color::Pink => println!("My favorite color!"),
-        _ => println!("Not my favorite color!"), // _ is a wildcard
-                                                 // Rust will statically check that we covered all cases or included a default case.
+        // _ is a wildcard. We could similarly use a variable (`color => println!(...)`),
+        // but we can explicitly tell that we won't use its content by "naming" it `_`).
+        // Rust will statically check that we covered all cases or that included a default case.
+        _ => println!("Not my favorite color!"),
     }
 
     // We can also use pattern matching to match on multiple values.
+    // This is not special syntax, we're just pattern matching tuples.
     match (color, number % 7) {
         (Color::Pink, 0) => println!("My favorite color and number!"),
         (Color::Pink, _) => println!("My favorite color!"),
         (_, 0) => println!("My favorite number!"),
         (_, _) => println!("Not my favorite color or number!"),
     }
-    // (This is not special syntax, we're just pattern matching tuples.)
 
-    // But we can also *destructure* the value
+    // But we can also *destructure* the value.
     struct Human {
         age: u8,
         favorite_color: Color,
@@ -57,18 +59,17 @@ fn main() {
     }
 
     // Note two things:
-    // 1. Color is *not* Eq, so we can't use == to compare it, but pattern matching is fine.
-    // 2. We *borrowed* the value, so we can use it after the match.
-
+    // 1. `Color` is *not* `Eq`, so we can't use `==` to compare it, but pattern matching is fine.
+    // 2. We *borrowed* the value in the `match`, so we can use it after the `match`:
     println!("John is {} years old and still kicking!", john.age);
 
-    // To save some time, we can use `if let` to match against only one thing
-    // We could also use `while let ... {}` in the same way
+    // To save some time, we can use `if let` to match against only one thing.
+    // We could also use `while let ... {}` in the same way.
     if let Color::Pink = &john.favorite_color {
         println!("He's also a man of great taste");
     }
 
-    // We can match ranges...
+    // We can match ranges.
     match john.age {
         0..=12 => println!("John is a kid!"),
         13..=19 => println!("John is a teenager!"),
@@ -95,31 +96,33 @@ fn main() {
         _ => println!("John is normal"),
     }
 
-    // Finally, let's look at some references now
+    // Finally, let's look at some references now.
     let reference: &i32 = &4;
 
     match reference {
+        // What type is `val` in the `println!`?
+        // Does it work when the type doesn't have `Copy` trait?
         &val => println!("Value under reference is: {}", val),
     }
 
-    // `ref` can be used to create a reference when destructuring
+    // `ref` can be used to create a reference when destructuring.
     let Human {
         age,
         ref favorite_color,
     } = john;
-    // `john` is still valid, because we borrowed using `ref`
+    // The variable `john` can still be used, because we borrowed using `ref`.
     if let Color::Pink = &john.favorite_color {
         println!("John still has his color - {:?}!", favorite_color);
     }
 
     let mut john = john;
 
-    // `ref mut` borrows mutably
+    // `ref mut` borrows mutably.
     let Human {
         age,
         ref mut favorite_color,
     } = john;
-    // We use `*` to dereference
+    // We use `*` to dereference.
     *favorite_color = Color::Brown;
     println!(
         "Tastes do change with time and John likes {:?} now.",
