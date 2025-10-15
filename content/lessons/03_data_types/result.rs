@@ -14,6 +14,7 @@ fn first_try() -> io::Result<String> {
             // We got a file!
             let mut buffer = vec![0; 128];
             // Matching each result quickly become tedious...
+            // Later in this file there's syntactic sugar to make it cleaner.
             match file.read_exact(&mut buffer) {
                 Ok(_) => {
                     let gibberish = String::from_utf8_lossy(&buffer);
@@ -23,13 +24,15 @@ fn first_try() -> io::Result<String> {
             }
         }
         Err(error) => {
-            Err(error) // This is needed in order to change the type from `io::Result<File>` to `io::Result<()>`
+            // This is needed in order to change the type from
+            // `io::Result<File>` to `io::Result<()>`.
+            Err(error)
         }
     }
 }
 
 // The '?' operator allows us to return early in case of an error
-// (it automatically converts the error type)
+// (it automatically converts the error type).
 fn second_try(filename: &'static str) -> io::Result<String> {
     let mut file = File::open(filename)?;
     let mut buffer = vec![0; 128];

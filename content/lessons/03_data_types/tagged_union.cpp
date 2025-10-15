@@ -2,8 +2,9 @@
 
 // Taken from: https://en.cppreference.com/w/cpp/language/union
 
-// S has one non-static data member (tag), three enumerator members (CHAR, INT, DOUBLE),
-// and three variant members (c, i, d)
+// S has one non-static data member (tag),
+// three enumerator members (CHAR, INT, DOUBLE),
+// and three variant members (c, i, d).
 struct S
 {
     enum{CHAR, INT, DOUBLE} tag;
