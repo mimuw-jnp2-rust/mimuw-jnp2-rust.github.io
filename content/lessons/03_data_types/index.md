@@ -147,6 +147,6 @@ So how do we handle situations which can fail? That's where the `Result` type co
 
 ## Assignment 2 (graded)
 
-[Communications](https://classroom.github.com/a/gDraT0lo)
+[Communications](https://classroom.github.com/a/s7wihiAa)
 
 Deadline: 23.10.2024 23:59
