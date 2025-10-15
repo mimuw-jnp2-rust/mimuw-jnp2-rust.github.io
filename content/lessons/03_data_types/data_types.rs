@@ -58,7 +58,9 @@ fn main() {
     let mut hero: Hero = Hero::new(String::from("Ferris"));
     hero.level_up(); // 'self' is always passed implicitly as the first argument.
 
-    // Thanks to `..hero`, fields other than 'name' will be the same as in 'hero' (copy).
+    // Thanks to `..hero`, fields other than 'name' will be the same as in 'hero'.
+    // In general, they are moved. Here, they are copied, because all missing fields
+    // implement the `Copy` trait.
     let steve = Hero {
         name: String::from("Steve The Normal Guy"),
         ..hero
