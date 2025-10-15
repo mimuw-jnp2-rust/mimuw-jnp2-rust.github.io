@@ -75,7 +75,7 @@ fn main() {
     hero.level_up();
     assert_eq!(hero, twin);
 
-    // we can print out the struct's debug string
+    // We can print out the struct's debug string
     // (which is implemented thanks to `Debug` trait) with '{:?}'.
     println!("print to stdout: {:?}", hero);
 
