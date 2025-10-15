@@ -33,7 +33,7 @@ impl Hero {
         // The i-th field of a tuple or a tuple struct can be accessed through 'tuple.i'.
         // Do not abuse this syntax, though; it's often cleaner to perform
         // pattern matching to decompose the tuple.
-(pos.0 - self.position.0).unsigned_abs() + (pos.1 - self.position.1).unsigned_abs()
+        (pos.0 - self.position.0).unsigned_abs() + (pos.1 - self.position.1).unsigned_abs()
     }
 
     // Mutable borrow of self allows to change instance fields.
