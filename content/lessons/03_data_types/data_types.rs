@@ -31,7 +31,9 @@ impl Hero {
     fn distance(&self, pos: Position) -> u32 {
         // For convenience, we don't have to type the argument as `self: &Self`.
         // The i-th field of a tuple or a tuple struct can be accessed through 'tuple.i'.
-        (pos.0 - self.position.0).unsigned_abs() + (pos.1 - self.position.1).unsigned_abs()
+        // Do not abuse this syntax, though; it's often cleaner to perform
+        // pattern matching to decompose the tuple.
+(pos.0 - self.position.0).unsigned_abs() + (pos.1 - self.position.1).unsigned_abs()
     }
 
     // Mutable borrow of self allows to change instance fields.
