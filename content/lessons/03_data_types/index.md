@@ -1,9 +1,9 @@
 +++
 title = "Data Types"
-date = 2029-01-01
+date = 2025-10-15
 weight = 1
 [extra]
-lesson_date = 2029-01-01
+lesson_date = 2025-10-16
 +++
 
 ## Aggregating data
@@ -123,6 +123,18 @@ So how do we handle situations which can fail? That's where the `Result` type co
   - [README.md](https://github.com/serde-rs/json) with examples of the interface of JSON serialization/deserialization library,
   - [Documentation](https://doc.rust-lang.org/std/path/struct.Path.html) of filesystem path handling from the standard library,
   - [Implementation](https://github.com/BurntSushi/ripgrep/blob/master/crates/grep/examples/simplegrep.rs) of a third-party well-liked app [`ripgrep`](https://github.com/BurntSushi/ripgrep) written in Rust.
+
+## Slides
+
+<iframe
+  src="module_system/module_system.html"
+  title="Module system"
+  loading="lazy"
+  style="width: 100%; aspect-ratio: 16 / 9; border: none;"
+></iframe>
+
+- [Open the slides in a new tab (HTML)](module_system/module_system.html)
+- [Download the slides as PDF](module_system/module_system.pdf)
 
 ## Obligatory reading
 
