@@ -21,7 +21,7 @@ impl Display for Bar {
 
 impl Default for Bar {
     fn default() -> Self {
-        Bar // well, we have no other choice
+        Bar // Well, we have no other choice.
     }
 }
 
@@ -30,6 +30,9 @@ impl DefaultishablyPrintable<i32> for Foo {}
 impl DefaultishablyPrintable<Bar> for Foo {}
 
 fn main() {
+    // By typing `Foo as DefaultishablyPrintable<i32>`,
+    // we tell the compiler to treat this `Foo` struct as
+    // only a `DefaultishablyPrintable<i32>` trait.
     <Foo as DefaultishablyPrintable<i32>>::defaultish_print();
     <Foo as DefaultishablyPrintable<Bar>>::defaultish_print();
 }

@@ -1,9 +1,9 @@
 +++
 title = "Reasoning About Types"
-date = 2029-01-01
+date = 2025-10-20
 weight = 1
-[extra]   
-lesson_date = 2029-01-01
+[extra]
+lesson_date = 2025-10-22
 +++
 
 # Type traits
@@ -22,9 +22,11 @@ Trait definitions can also be provided with default implementations of behaviors
 
 ## What about _derive_?
 
-There is a trait-related thing we have used quite extensively and not explained yet, namely the `#[derive]` attribute. What it does is generate items (in our case a trait implementation) based on the given data definition (here a struct). Below you can find a list of derivable traits from the standard library. Writing derivation rules for user defined traits is also possible, but goes out of the scope of this lesson.
+There is a trait-related feature we have used quite extensively but not explained yet, namely the `#[derive]` attribute. When placed above a struct or enum, it tells the compiler to generate an implementation of certain traits automatically. For example, `#[derive(Debug)]` will cause the compiler to create the necessary `impl Debug for YourType { ... }` code behind the scenes, so that your type can be printed with `{:?}` in `println!`.
 
-Derivable traits:
+We'll learn about how to make it work with our own traits in the next lessons. For now, you can think of `derive` as a kind of code generator built into the compiler, which is especially useful when the implementation of a trait can be generalized for any type.
+
+Below you can find a list of derivable traits from the standard library.
 
 - Equality traits: `Eq`, `PartialEq` and comparison traits: `Ord` and `PartialOrd`. The `Partial-` versions exist because there are types which don't fulfill the reflexivity requirement of equality (`NaN != NaN`) or do not form a total order (` NaN < 0.0 == false` and `NaN >= 0.0 == false`).
 
@@ -34,7 +36,7 @@ Derivable traits:
 
 - `Default` - provides a zero-arg constructor function
 
-- `Debug` - provides a formatting of the value which can be used in debugging context. It should _NOT_ be implemented manually. In general, if it's possible to derive the `Debug`, there are no reasons against doing it.
+- `Debug` - provides a formatting of the value which can be used in debugging context. Because the `derive` attribute automatically implements a pretty way of formatting, it is discouraged to implement this trait manually. In general, if it's possible to derive the `Debug`, there are no reasons against doing it.
 
 ### When is it possible to derive a trait?
 
@@ -42,7 +44,7 @@ When all fields of a struct/variants of an enum implement that trait.
 
 ### Should all traits always be derived if it is possible?
 
-No. Although it may be tempting to just slap `#[derive(Clone, Copy)]` everywhere, it would be counter-effective. For example, at some later point you might add a non-Copy field to the struct and your (or, what's worse, someone else's!) code would break. Another example: it makes little sense to use containers as keys in hashmaps or to compare tweets.
+No. Although it may be tempting to just slap `#[derive(Clone, Copy)]` everywhere, it would be counter-effective. For example, at some later point you might add a non-`Copy` field to the struct and your (or, what's worse, someone else's!) code would break. Another example: it makes little sense to use containers as keys in hashmaps or to compare tweets.
 
 # Generics
 
@@ -52,7 +54,7 @@ Suppose we want to find the largest element in a sequence and return it. Very mu
 
 Perfect, it works! Now only twenty more types to go...
 
-Fortunately, Rust gives us a way to avoid all this code duplication and generalize the types we're working on.
+Of course, Rust gives us a way to avoid all this code duplication and generalize the types we're working on.
 
 ```rust
 fn largest<T>(list: &[T]) -> T {
@@ -85,7 +87,7 @@ help: consider restricting type parameter `T`
   |             ++++++++++++++++++++++
 ```
 
-Since `T` can be of absolutely any type now, the compiler cannot be sure that operator `>` is defined. This aligns with what we wanted, as without comparing elements we don't have a notion of the largest one either. As always, the compiler comes to our aid:
+Since `T` can be of absolutely any type now, the compiler cannot be sure that operator `>` is defined. This aligns with what we wanted, as without comparing elements we don't have a notion of the largest one either. As always, the compiler messages comes to our aid:
 
 ```rust
 fn largest<T: PartialOrd>(list: &[T]) -> T {
@@ -135,7 +137,7 @@ There's a lot more that we can do with generics:
 
 {{ include_code_sample(path="lessons/05_types_reasoning/generics.rs", language="rust") }}
 
-A bit more involved example:
+An example where we can specify which generic trait implementation we want to call:
 
 {{ include_code_sample(path="lessons/05_types_reasoning/generics_fun.rs", language="rust") }}
 
@@ -145,6 +147,7 @@ A bit more involved example:
 
 # Lifetimes
 
+Let's go into a completely different topic now.
 Going back to the lesson about ownership, if we try to compile the following code:
 
 ```rust
@@ -281,7 +284,7 @@ error[E0597]: `string2` does not live long enough
 
 ## Lifetime elision
 
-We now know how to explicitly write lifetime parameters, but you might recall that we don't always have to that. Indeed, Rust will first try to figure out the lifetimes itself, applying a set of predefined rules. We call this _lifetime elision_.
+We now know how to explicitly write lifetime parameters, but you might recall that we don't always have to do that. Indeed, Rust will first try to figure out the lifetimes itself, applying a set of predefined rules. We call this _lifetime elision_.
 
 {{ include_code_sample(path="lessons/05_types_reasoning/lifetimes_elision.rs", language="rust") }}
 
@@ -321,38 +324,89 @@ There exists one special lifetime called `'static`, which means that a reference
 let s: &'static str = "I have a static lifetime.";
 ```
 
-# Trait + lifetimes - a challenging tandem
+# Using `Display` trait
 
-Let's go back to our `basic_trait.rs` example. The `Summary` trait was really wasteful: it always allocated the `String`s on heap, even though we only needed to display the formatted string, and we could do that without allocations. How? By using `Display` trait, of course.
+Let's look again into our `summarize` function from the beginning of the lesson. We can use it to print the summary by doing `println!("1 new article: {}", news_article.summarize());`.
 
-The simplest possible optimisation would be like this:
+But because we have implemented it in this way:
 
-{{ include_code_sample(path="lessons/05_types_reasoning/basic_trait_display.rs", language="rust") }}
+```rust
+impl Summary for NewsArticle {
+    fn summarize(&self) -> String {
+        format!("{}, by {} ({})", self.headline, self.author, self.location)
+    }
+}
+```
 
-This eliminates the heap allocations, but there's another catch. What if `NewsArticle` already had another (non-summarizing) `Display` implementation? We would end up in a double-trait-implementation conflict, which is a compile-time error.
+we can see that we do one unnecessary heap allocation that we can optimize. Instead of creating a `String` (which does the heap allocation) that we then pass to `format!`, we can just use `format!` directly:
 
-We can solve the one-type-one-trait-impl problem by introducing another type just for summarizing. The first attempt could be to use generics in traits:
+```rust
+impl Display for NewsArticle {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(
+            f,
+            "{}, by {} ({})",
+            self.headline, self.author, self.location
+        )
+    }
+}
+```
 
-{{ include_code_sample(path="lessons/05_types_reasoning/trait_generic_type.rs", language="rust") }}
+then we can simply call `println!("1 new article: {}", news_article);`. This is quite simple after we get acclimated to the interface of the `Display` trait.
 
-The problem here is that nothing hinders us from implement the trait (with various type parameters) for the same type, which leads to awkward ambiguity when calling the trait's methods (see `main` fn).
+### To discuss during class:
 
-The use of generic types in `Summary` trait makes it semantics like this:
+- But what if we want to be able to display the article in two ways, as a summary or with its full content? How to solve this issue in Python and in C++?
+- How to solve it in Rust? Discuss multiple approaches.
 
-> A type can be summarized with any type supporting it.
 
-When we want the trait to require exactly one possible generic implementation for a given type, we can leverage _associated types_. Example here:
+## Associated types vs `impl Trait`
 
-{{ include_code_sample(path="lessons/05_types_reasoning/trait_associated_type.rs", language="rust") }}
+Rust offers two complementary tools for expressing "some type that implements a trait":
 
-The use of associated types in Summary trait makes it semantics like this:
+- **Associated types** belong to a trait definition. Each implementer fills in the concrete type once, driving a consistent contract across all of the trait's methods. Use them when the trait itself needs to name a type (for example, an iterator's `Item` or a parser's `Output`). They shine when multiple methods must agree on the exact type, or when a caller should be able to refer to it explicitly (`MyIterator::Item`).
 
-> A type can be summarized with at most one specific type.
+```rust
+trait Parser {
+    type Output;
 
-Yet another approach (arguably, the cleanest one) would be to use the `impl trait` syntax in a trait (quite recently stabilized!).
-Example:
+    fn parse(&self, input: &str) -> Self::Output;
+}
 
-{{ include_code_sample(path="lessons/05_types_reasoning/impl_trait.rs", language="rust") }}
+struct BoolParser;
+
+impl Parser for BoolParser {
+    type Output = bool;
+
+    fn parse(&self, input: &str) -> bool {
+        input.eq_ignore_ascii_case("true")
+    }
+}
+
+fn collect_truths<P: Parser<Output = bool>>(parser: P, inputs: &[&str]) -> Vec<bool> {
+    inputs.iter().map(|line| parser.parse(line)).collect()
+}
+```
+
+The trait owns the `Output` type name, so every helper that works with `Parser` can refer to `Parser::Output` without re-listing the concrete type parameter everywhere.
+
+- **`impl Trait`** appears in function signatures. It hides a concrete type from callers while promising that "this value implements trait `T`". Reach for it when returning helper types (iterators, closures) or when you want a lightweight way to accept any type satisfying a bound without introducing a type parameter at the call site. Remember that a single function returning `impl Trait` must always produce the same concrete type on every path.
+
+```rust
+fn doubled_evens<'a>(values: &'a [i32]) -> impl Iterator<Item = i32> + 'a {
+    values.iter().copied().filter(|n| n % 2 == 0).map(|n| n * 2)
+}
+
+fn show_evens(values: &[i32]) {
+    for value in doubled_evens(values) {
+        println!("{value}");
+    }
+}
+```
+
+Here the caller only cares that the iterator implements `Iterator<Item = i32>`, not about the exact adapter stack we built. As long as every branch returns the same iterator type, the function can keep its helper type private.
+
+In short: if the abstraction lives in a trait and needs a name the implementer controls, choose an associated type; if you are exposing a function and simply want to promise trait behavior without leaking the concrete type, reach for `impl Trait`.
 
 # Obligatory reading
 
@@ -362,6 +416,6 @@ Example:
 
 ## Assignment 3 (graded)
 
-[Passage Pathing](https://classroom.github.com/a/VTyPdlC2)
+[Passage Pathing TODO CHANGE LINK](https://classroom.github.com/a/VTyPdlC2)
 
-Deadline: 30.10.2024 23:59
+Deadline: per-group.

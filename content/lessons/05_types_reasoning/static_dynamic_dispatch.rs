@@ -6,7 +6,7 @@ struct Dog;
 
 impl Speak for Dog {
     fn speak(&self) -> &'static str {
-        "Hau hau" // it's a Polish dog!
+        "Hau hau" // It's a Polish dog!
     }
 }
 
@@ -18,14 +18,14 @@ impl Speak for Human {
     }
 }
 
-// It works like templates in C++
-// A different function will be generated for each T during compilation
-// This process is called "monomorphization"
+// It works like templates in C++.
+// A different function will be generated for each T during compilation.
+// This process is called "monomorphization".
 fn static_dispatch<T: Speak>(speaking: &T) {
     println!("{}!", speaking.speak());
 }
 
-// Only one copy of that function will exist in the compiled binary
+// Only one copy of that function will exist in the compiled binary.
 fn dynamic_dispatch(speaking: &dyn Speak) {
     println!("{}!", speaking.speak());
 }
@@ -40,7 +40,7 @@ fn main() {
     dynamic_dispatch(&dog);
     dynamic_dispatch(&human);
 
-    // The observable behavior is identical
+    // The observable behavior is identical.
     // Static dispatch in general is a bit faster,
     // because there is no need to perform a "vtable lookup".
     // But it can also result in bigger binary sizes.
