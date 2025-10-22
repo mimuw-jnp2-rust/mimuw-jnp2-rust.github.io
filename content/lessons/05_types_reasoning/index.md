@@ -87,7 +87,7 @@ help: consider restricting type parameter `T`
   |             ++++++++++++++++++++++
 ```
 
-Since `T` can be of absolutely any type now, the compiler cannot be sure that operator `>` is defined. This aligns with what we wanted, as without comparing elements we don't have a notion of the largest one either. As always, the compiler messages comes to our aid:
+Since `T` can be of absolutely any type now, the compiler cannot be sure that operator `>` is defined. This aligns with what we wanted, as without comparing elements we don't have a notion of the largest one either. As always, the compiler messages come to our aid:
 
 ```rust
 fn largest<T: PartialOrd>(list: &[T]) -> T {
