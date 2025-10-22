@@ -363,6 +363,10 @@ Example:
 
 - [Polymorphism in Rust](https://oswalt.dev/2021/06/polymorphism-in-rust/)
 
+# Optional reading
+
+- [Rust Blog - Precise capturing `use<..>` syntax](https://blog.rust-lang.org/2024/10/17/Rust-1.82.0/#precise-capturing-use-syntax)
+
 ## Assignment 3 (graded)
 
 [Passage Pathing](https://classroom.github.com/a/XVoSKs94)
