@@ -3,7 +3,7 @@ title = "Reasoning About Types"
 date = 2025-10-20
 weight = 1
 [extra]
-lesson_date = 2025-10-22
+lesson_date = 2025-10-23
 +++
 
 # Type traits
