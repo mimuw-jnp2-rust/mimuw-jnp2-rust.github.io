@@ -365,6 +365,6 @@ Example:
 
 ## Assignment 3 (graded)
 
-[Passage Pathing TODO CHANGE LINK](https://classroom.github.com/a/VTyPdlC2)
+[Passage Pathing](https://classroom.github.com/a/XVoSKs94)
 
 Deadline: per-group.
