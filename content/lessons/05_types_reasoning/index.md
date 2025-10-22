@@ -1,9 +1,9 @@
 +++
 title = "Reasoning About Types"
-date = 2029-01-01
+date = 2025-10-20
 weight = 1
-[extra]   
-lesson_date = 2029-01-01
+[extra]
+lesson_date = 2025-10-23
 +++
 
 # Type traits
@@ -22,9 +22,11 @@ Trait definitions can also be provided with default implementations of behaviors
 
 ## What about _derive_?
 
-There is a trait-related thing we have used quite extensively and not explained yet, namely the `#[derive]` attribute. What it does is generate items (in our case a trait implementation) based on the given data definition (here a struct). Below you can find a list of derivable traits from the standard library. Writing derivation rules for user defined traits is also possible, but goes out of the scope of this lesson.
+There is a trait-related feature we have used quite extensively but not explained yet, namely the `#[derive]` attribute. When placed above a struct or enum, it tells the compiler to generate an implementation of certain traits automatically. For example, `#[derive(Debug)]` will cause the compiler to create the necessary `impl Debug for YourType { ... }` code behind the scenes, so that your type can be printed with `{:?}` in `println!`.
 
-Derivable traits:
+We'll learn about how to make it work with our own traits in the next lessons. For now, you can think of `derive` as a kind of code generator built into the compiler, which is especially useful when the implementation of a trait can be generalized for any type.
+
+Below you can find a list of derivable traits from the standard library.
 
 - Equality traits: `Eq`, `PartialEq` and comparison traits: `Ord` and `PartialOrd`. The `Partial-` versions exist because there are types which don't fulfill the reflexivity requirement of equality (`NaN != NaN`) or do not form a total order (` NaN < 0.0 == false` and `NaN >= 0.0 == false`).
 
@@ -34,7 +36,7 @@ Derivable traits:
 
 - `Default` - provides a zero-arg constructor function
 
-- `Debug` - provides a formatting of the value which can be used in debugging context. It should _NOT_ be implemented manually. In general, if it's possible to derive the `Debug`, there are no reasons against doing it.
+- `Debug` - provides a formatting of the value which can be used in debugging context. Because the `derive` attribute automatically implements a pretty way of formatting, it is discouraged to implement this trait manually. In general, if it's possible to derive the `Debug`, there are no reasons against doing it.
 
 ### When is it possible to derive a trait?
 
@@ -42,7 +44,7 @@ When all fields of a struct/variants of an enum implement that trait.
 
 ### Should all traits always be derived if it is possible?
 
-No. Although it may be tempting to just slap `#[derive(Clone, Copy)]` everywhere, it would be counter-effective. For example, at some later point you might add a non-Copy field to the struct and your (or, what's worse, someone else's!) code would break. Another example: it makes little sense to use containers as keys in hashmaps or to compare tweets.
+No. Although it may be tempting to just slap `#[derive(Clone, Copy)]` everywhere, it would be counter-effective. For example, at some later point you might add a non-`Copy` field to the struct and your (or, what's worse, someone else's!) code would break. Another example: it makes little sense to use containers as keys in hashmaps or to compare tweets.
 
 # Generics
 
@@ -52,7 +54,7 @@ Suppose we want to find the largest element in a sequence and return it. Very mu
 
 Perfect, it works! Now only twenty more types to go...
 
-Fortunately, Rust gives us a way to avoid all this code duplication and generalize the types we're working on.
+Of course, Rust gives us a way to avoid all this code duplication and generalize the types we're working on.
 
 ```rust
 fn largest<T>(list: &[T]) -> T {
@@ -85,7 +87,7 @@ help: consider restricting type parameter `T`
   |             ++++++++++++++++++++++
 ```
 
-Since `T` can be of absolutely any type now, the compiler cannot be sure that operator `>` is defined. This aligns with what we wanted, as without comparing elements we don't have a notion of the largest one either. As always, the compiler comes to our aid:
+Since `T` can be of absolutely any type now, the compiler cannot be sure that operator `>` is defined. This aligns with what we wanted, as without comparing elements we don't have a notion of the largest one either. As always, the compiler messages come to our aid:
 
 ```rust
 fn largest<T: PartialOrd>(list: &[T]) -> T {
@@ -135,7 +137,7 @@ There's a lot more that we can do with generics:
 
 {{ include_code_sample(path="lessons/05_types_reasoning/generics.rs", language="rust") }}
 
-A bit more involved example:
+An example where we can specify which generic trait implementation we want to call:
 
 {{ include_code_sample(path="lessons/05_types_reasoning/generics_fun.rs", language="rust") }}
 
@@ -145,6 +147,7 @@ A bit more involved example:
 
 # Lifetimes
 
+Let's go into a completely different topic now.
 Going back to the lesson about ownership, if we try to compile the following code:
 
 ```rust
@@ -281,7 +284,7 @@ error[E0597]: `string2` does not live long enough
 
 ## Lifetime elision
 
-We now know how to explicitly write lifetime parameters, but you might recall that we don't always have to that. Indeed, Rust will first try to figure out the lifetimes itself, applying a set of predefined rules. We call this _lifetime elision_.
+We now know how to explicitly write lifetime parameters, but you might recall that we don't always have to do that. Indeed, Rust will first try to figure out the lifetimes itself, applying a set of predefined rules. We call this _lifetime elision_.
 
 {{ include_code_sample(path="lessons/05_types_reasoning/lifetimes_elision.rs", language="rust") }}
 
@@ -360,8 +363,12 @@ Example:
 
 - [Polymorphism in Rust](https://oswalt.dev/2021/06/polymorphism-in-rust/)
 
+# Optional reading
+
+- [Rust Blog - Precise capturing `use<..>` syntax](https://blog.rust-lang.org/2024/10/17/Rust-1.82.0/#precise-capturing-use-syntax)
+
 ## Assignment 3 (graded)
 
-[Passage Pathing](https://classroom.github.com/a/VTyPdlC2)
+[Passage Pathing](https://classroom.github.com/a/XVoSKs94)
 
-Deadline: 30.10.2024 23:59
+Deadline: per-group.

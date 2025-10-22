@@ -2,19 +2,19 @@
 
 use std::fmt::Debug;
 
-// generic enums
+// Generic enums.
 enum OurOption<T> {
     Some(T),
     None,
 }
 
-// generic structs
+// Generic structs.
 struct Tuple2<T, U> {
     x: T,
     y: U,
 }
 
-// generic implementation
+// Generic implementation.
 impl<T, U> Tuple2<T, U> {
     fn new(x: T, y: U) -> Self {
         Self { x, y }
@@ -26,7 +26,7 @@ struct Pair<T> {
     y: T,
 }
 
-// conditional implementation
+// Conditional implementation.
 impl<T: PartialOrd + Copy> Pair<T> {
     fn largest(&self) -> T {
         if self.x > self.y {
@@ -37,7 +37,7 @@ impl<T: PartialOrd + Copy> Pair<T> {
     }
 }
 
-// alternative syntax
+// Alternative syntax.
 impl<T> Pair<T>
 where
     T: PartialOrd + Copy,
@@ -51,19 +51,24 @@ where
     }
 }
 
-// Here information about the concrete underlying type is preserved.
+// The information about the concrete underlying type is preserved.
+// If I call it with a `String`, then I get back a `String`.
 fn cloning_machine<T: Clone + Debug>(item: &T) -> T {
     item.clone()
 }
 
-// Here information about the concrete underlying type is erased.
+// The information about the concrete underlying type is erased.
 // We can only either format or clone the result.
-fn erasing_cloning_machine1(item: &(impl Clone + Debug)) -> impl Clone + Debug {
+// If I call it with a `String`, then I'll only know that the return type
+// implements `Clone + Debug`.
+fn erasing_cloning_machine2<T: Clone + Debug>(item: &T) -> impl Clone + Debug {
     item.clone()
 }
 
-// Ditto.
-fn erasing_cloning_machine2<T: Clone + Debug>(item: &T) -> impl Clone + Debug {
+// The returned type behaves exactly the same as above (it's the same type, after all)
+// and the function has the same requirements for the `item` argument.
+// But inside the implementation of the function, we can't use `T` (it's not defined anywhere).
+fn erasing_cloning_machine1(item: &(impl Clone + Debug)) -> impl Clone + Debug {
     item.clone()
 }
 
