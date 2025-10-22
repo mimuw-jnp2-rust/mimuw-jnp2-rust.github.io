@@ -324,89 +324,38 @@ There exists one special lifetime called `'static`, which means that a reference
 let s: &'static str = "I have a static lifetime.";
 ```
 
-# Using `Display` trait
+# Trait + lifetimes - a challenging tandem
 
-Let's look again into our `summarize` function from the beginning of the lesson. We can use it to print the summary by doing `println!("1 new article: {}", news_article.summarize());`.
+Let's go back to our `basic_trait.rs` example. The `Summary` trait was really wasteful: it always allocated the `String`s on heap, even though we only needed to display the formatted string, and we could do that without allocations. How? By using `Display` trait, of course.
 
-But because we have implemented it in this way:
+The simplest possible optimisation would be like this:
 
-```rust
-impl Summary for NewsArticle {
-    fn summarize(&self) -> String {
-        format!("{}, by {} ({})", self.headline, self.author, self.location)
-    }
-}
-```
+{{ include_code_sample(path="lessons/05_types_reasoning/basic_trait_display.rs", language="rust") }}
 
-we can see that we do one unnecessary heap allocation that we can optimize. Instead of creating a `String` (which does the heap allocation) that we then pass to `format!`, we can just use `format!` directly:
+This eliminates the heap allocations, but there's another catch. What if `NewsArticle` already had another (non-summarizing) `Display` implementation? We would end up in a double-trait-implementation conflict, which is a compile-time error.
 
-```rust
-impl Display for NewsArticle {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(
-            f,
-            "{}, by {} ({})",
-            self.headline, self.author, self.location
-        )
-    }
-}
-```
+We can solve the one-type-one-trait-impl problem by introducing another type just for summarizing. The first attempt could be to use generics in traits:
 
-then we can simply call `println!("1 new article: {}", news_article);`. This is quite simple after we get acclimated to the interface of the `Display` trait.
+{{ include_code_sample(path="lessons/05_types_reasoning/trait_generic_type.rs", language="rust") }}
 
-### To discuss during class:
+The problem here is that nothing hinders us from implement the trait (with various type parameters) for the same type, which leads to awkward ambiguity when calling the trait's methods (see `main` fn).
 
-- But what if we want to be able to display the article in two ways, as a summary or with its full content? How to solve this issue in Python and in C++?
-- How to solve it in Rust? Discuss multiple approaches.
+The use of generic types in `Summary` trait makes it semantics like this:
 
+> A type can be summarized with any type supporting it.
 
-## Associated types vs `impl Trait`
+When we want the trait to require exactly one possible generic implementation for a given type, we can leverage _associated types_. Example here:
 
-Rust offers two complementary tools for expressing "some type that implements a trait":
+{{ include_code_sample(path="lessons/05_types_reasoning/trait_associated_type.rs", language="rust") }}
 
-- **Associated types** belong to a trait definition. Each implementer fills in the concrete type once, driving a consistent contract across all of the trait's methods. Use them when the trait itself needs to name a type (for example, an iterator's `Item` or a parser's `Output`). They shine when multiple methods must agree on the exact type, or when a caller should be able to refer to it explicitly (`MyIterator::Item`).
+The use of associated types in Summary trait makes it semantics like this:
 
-```rust
-trait Parser {
-    type Output;
+> A type can be summarized with at most one specific type.
 
-    fn parse(&self, input: &str) -> Self::Output;
-}
+Yet another approach (arguably, the cleanest one) would be to use the `impl trait` syntax in a trait (quite recently stabilized!).
+Example:
 
-struct BoolParser;
-
-impl Parser for BoolParser {
-    type Output = bool;
-
-    fn parse(&self, input: &str) -> bool {
-        input.eq_ignore_ascii_case("true")
-    }
-}
-
-fn collect_truths<P: Parser<Output = bool>>(parser: P, inputs: &[&str]) -> Vec<bool> {
-    inputs.iter().map(|line| parser.parse(line)).collect()
-}
-```
-
-The trait owns the `Output` type name, so every helper that works with `Parser` can refer to `Parser::Output` without re-listing the concrete type parameter everywhere.
-
-- **`impl Trait`** appears in function signatures. It hides a concrete type from callers while promising that "this value implements trait `T`". Reach for it when returning helper types (iterators, closures) or when you want a lightweight way to accept any type satisfying a bound without introducing a type parameter at the call site. Remember that a single function returning `impl Trait` must always produce the same concrete type on every path.
-
-```rust
-fn doubled_evens<'a>(values: &'a [i32]) -> impl Iterator<Item = i32> + 'a {
-    values.iter().copied().filter(|n| n % 2 == 0).map(|n| n * 2)
-}
-
-fn show_evens(values: &[i32]) {
-    for value in doubled_evens(values) {
-        println!("{value}");
-    }
-}
-```
-
-Here the caller only cares that the iterator implements `Iterator<Item = i32>`, not about the exact adapter stack we built. As long as every branch returns the same iterator type, the function can keep its helper type private.
-
-In short: if the abstraction lives in a trait and needs a name the implementer controls, choose an associated type; if you are exposing a function and simply want to promise trait behavior without leaking the concrete type, reach for `impl Trait`.
+{{ include_code_sample(path="lessons/05_types_reasoning/impl_trait.rs", language="rust") }}
 
 # Obligatory reading
 
