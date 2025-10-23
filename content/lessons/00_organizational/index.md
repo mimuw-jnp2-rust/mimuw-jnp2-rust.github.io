@@ -8,7 +8,7 @@ lesson_date = 2025-10-02
 
 # Rust course
 
-We will be using [Github Classroom](https://classroom.github.com) for task submission and [Discord](https://discord.gg/K9HSdsnr) for discussions.
+We will be using [Github Classroom](https://classroom.github.com) for task submission and [Discord](https://discord.gg/R5PMsBmtNh) for discussions.
 
 Our learning/teaching materials are going to be:
 
