@@ -93,6 +93,6 @@ We'll go through the official [docs](https://doc.rust-lang.org/stable/std/iter/)
 
 ## Assignment 4 (graded)
 
-[Lazy](https://classroom.github.com/a/9aJix-LK)
+[Lazy](https://classroom.github.com/a/dU8ig4tA)
 
-Deadline: 06.11.2024 23:59
+Deadline: per-group.
