@@ -8,7 +8,7 @@ lesson_date = 2022-10-17
 
 # List of projects
 
-The list of previous students' big projects is [publicly available](https://github.com/orgs/mimuw-jnp2-rust/repositories).
+The list of previous students' big projects is [publicly available](https://github.com/orgs/mimuw-jnp2-rust/repositories?q=visibility%3Apublic+archived%3Afalse+project-).
 
 # (Some) projects from the previous semester
 
