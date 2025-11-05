@@ -73,6 +73,6 @@ When storing an object on a heap, however, we can use it as a `dyn` object seaml
 
 ## Assignment 5 (graded)
 
-[Corporations](https://classroom.github.com/a/QlO3aCCP)
+[Corporations](https://classroom.github.com/a/AhZZWwGD)
 
-Deadline: 13.11.2024 23:59
+Deadline: per-group.
