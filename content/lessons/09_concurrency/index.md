@@ -216,6 +216,9 @@ Why do that? Because thread synchronization is hard! [Rust prevents data races](
 - [The Book](https://doc.rust-lang.org/book/ch16-00-concurrency.html)
 - [Safely writing code that isn't thread-safe](http://archive.today/WFlZV)
 
-## No assignment this week
+# Assignment
 
-Please work on the first iteration of the big project instead.
+[This week's assignment](https://classroom.github.com/a/O2IG8iaI) is to write a "distributed" calculator.
+You should base your solution on the [final project from the book](https://doc.rust-lang.org/stable/book/ch21-00-final-project-a-web-server.html)
+
+NOTE: You have two weeks for this assignment. There isn't any new assignment next week.
