@@ -24,7 +24,8 @@ You can read more about it [here](http://cliffle.com/blog/rust-typestate/).
 
 [Serde](https://serde.rs/) is the most popular serialization library for Rust.
 
-## Assignment
+## No new assignments this week
 
-This week's assignment is to write a "distributed" calculator.
-You should base your solution on the [final project from the book](https://doc.rust-lang.org/stable/book/ch20-00-final-project-a-web-server.html).
+Please work on the first iteration of the big project instead.
+
+NOTE: Remember that last week's project has a two week deadline, so you should submit it before the **next** lesson.
