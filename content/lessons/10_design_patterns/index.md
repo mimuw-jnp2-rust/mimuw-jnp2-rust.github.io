@@ -1,16 +1,16 @@
 +++
 title = "Design patterns"
-date = 2029-01-01
+date = 2025-11-25
 weight = 1
 [extra]
-lesson_date = 2029-01-01
+lesson_date = 2025-11-16
 +++
 
 ## Object-oriented programming and Rust
 
 The book has [a chapter dedicated to it](https://doc.rust-lang.org/stable/book/ch17-01-what-is-oo.html).
 Especially the ["typestate"](https://doc.rust-lang.org/stable/book/ch17-03-oo-design-patterns.html#encoding-states-and-behavior-as-types) pattern is very interesting.
-You can read more about it [here](http://cliffle.com/blog/rust-typestate/).
+Read more about it [here](http://cliffle.com/blog/rust-typestate/).
 
 ## How to build a good library
 
@@ -23,6 +23,12 @@ You can read more about it [here](http://cliffle.com/blog/rust-typestate/).
 ## Serde
 
 [Serde](https://serde.rs/) is the most popular serialization library for Rust.
+It contains a lot of serializable/deserializable data formats
+See the [README.md of serde_json](https://github.com/serde-rs/json) to get a feel of the API for those formats.
+
+## Clap
+
+For a lot of apps, it's convenient to use the polished [clap](https://docs.rs/clap/latest/clap/) library to handle the CLI.
 
 ## No new assignments this week
 
