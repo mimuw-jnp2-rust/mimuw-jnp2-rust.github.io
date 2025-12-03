@@ -16,12 +16,6 @@ lesson_date = 2029-01-01
 5. What happens with the [stack in coroutines](https://dev.to/leapcell/concurrency-in-go-vs-rustc-goroutines-vs-coroutines-27f5).
 6. [Common Rust lifetime misconceptions](https://github.com/pretzelhammer/rust-blog/blob/master/posts/common-rust-lifetime-misconceptions.md).
 
-## Common Rust Lifetime Misconceptions
+## No new assignments this week
 
-Please read [this blogpost](https://github.com/pretzelhammer/rust-blog/blob/master/posts/common-rust-lifetime-misconceptions.md).
-
-## Assignment 6 (graded)
-
-[Calculator](https://classroom.github.com/a/O2IG8iaI)
-
-Deadline: per-group.
+Please work on the first iteration of the big project instead.
