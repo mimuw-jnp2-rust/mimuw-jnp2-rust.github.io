@@ -1,9 +1,9 @@
 +++
 title = "Async: Part 2"
-date = 2029-01-01
+date = 2025-12-09
 weight = 1
 [extra]
-lesson_date = 2029-01-01
+lesson_date = 2025-12-10
 +++
 
 ## Reinventing futures
@@ -191,6 +191,6 @@ We will follow the [steps](https://rust-lang.github.io/async-book/02_execution/0
 
 ## Assignment 7 (graded)
 
-[Back to the futures](https://classroom.github.com/a/5g7J3TNh)
+[Back to the futures](https://classroom.github.com/a/k_qN1vep)
 
-Deadline: 18.12.2024 23:59
+Deadline: per-group.
