@@ -16,7 +16,7 @@ Our learning/teaching materials are going to be:
 - well-known Rust teaching materials (["The Book"](https://doc.rust-lang.org/stable/book/), ["Rust by Example"](https://doc.rust-lang.org/rust-by-example/index.html)) that complement this site,
 - explanations/deeper insight during class and many examples of Rust code.
 
-## Big project grading
+## Final grade
 
 - 1/2 of the grade is based on small tasks.
   - There will be 8 or 9 tasks.
