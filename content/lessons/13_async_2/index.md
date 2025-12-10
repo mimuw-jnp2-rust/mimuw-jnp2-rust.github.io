@@ -178,7 +178,7 @@ We will follow the [steps](https://rust-lang.github.io/async-book/02_execution/0
 
 ## Obligatory reading
 
-- [Pinning in detail](https://rust-lang.github.io/async-book/04_pinning/01_chapter.html)
+- [Pinning in detail](https://rust-lang.github.io/async-book/part-reference/pinning.html)
 - [Pinning in even more detail](https://doc.rust-lang.org/nightly/std/pin/index.html)
 - [Async in depth](https://tokio.rs/tokio/tutorial/async)
 
