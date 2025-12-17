@@ -16,4 +16,3 @@ lesson_date = 2026-01-07
 [Macros](https://classroom.github.com/a/jeN5tNYf)
 
 Deadline: per-group.
-
