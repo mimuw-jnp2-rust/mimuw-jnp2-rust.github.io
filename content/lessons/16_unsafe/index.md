@@ -3,7 +3,7 @@ title = "Unsafe Rust"
 date = 2029-01-01
 weight = 1
 [extra]
-lesson_date = 2029-01-01
+lesson_date = 2026-01-14
 +++
 
 # Unsafe Rust Alter Ego
@@ -31,7 +31,7 @@ The first superpower is the most important. (Efficient) implementation of many d
 
 In the following code sample, we show all superpowers of `unsafe` code:
 
-{{ include_code_sample(path="lessons/15_unsafe/unsafe_superpowers.rs", language="rust") }}
+{{ include_code_sample(path="lessons/16_unsafe/unsafe_superpowers.rs", language="rust") }}
 
 ## Safe code guarantees
 
