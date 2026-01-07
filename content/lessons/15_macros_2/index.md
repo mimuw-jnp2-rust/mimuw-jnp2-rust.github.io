@@ -10,7 +10,7 @@ lesson_date = 2026-01-07
 
 - [The Book, Chapter 20.5](https://doc.rust-lang.org/book/ch20-05-macros.html#procedural-macros-for-generating-code-from-attributes)
   to get a first impression of procedural macros and to see a `#derive(...)` example,
-- [Procedural macros - The Rust Referenc](https://doc.rust-lang.org/reference/procedural-macros.html)
+- [Procedural macros - The Rust Reference](https://doc.rust-lang.org/reference/procedural-macros.html)
   to learn the exact syntax of each of the procedural macros,
 - Docs of [quote!](https://docs.rs/quote/latest/quote/macro.quote.html) and [syn](https://docs.rs/syn/1.0.98/syn/#)
   to see the capabilities of the standard necessary utils when implementing macros,
