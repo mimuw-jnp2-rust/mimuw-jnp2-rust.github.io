@@ -1,9 +1,9 @@
 +++
 title = "Unsafe Rust"
-date = 2029-01-01
+date = 2026-01-15
 weight = 1
 [extra]
-lesson_date = 2026-01-14
+lesson_date = 2026-01-15
 +++
 
 # Unsafe Rust Alter Ego
@@ -73,6 +73,8 @@ But we only changed safe code! This shows that `unsafe` is unfortunately not per
 ## Reading
 
 - [The Book, Chapter 19.1](https://doc.rust-lang.org/book/ch19-01-unsafe-rust.html)
+
+- [Effective Rust - avoid writing unsafe code](https://effective-rust.com/unsafe.html) - reminds that most of the "necessary" `unsafe` code is already implemented.
 
 - [The Rustonomicon](https://doc.rust-lang.org/nomicon/), especially chapter 1 _(Meet Safe and Unsafe)_
 
