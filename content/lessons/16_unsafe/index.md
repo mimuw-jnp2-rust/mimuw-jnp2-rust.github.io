@@ -1,9 +1,9 @@
 +++
 title = "Unsafe Rust"
-date = 2026-01-15
+date = 2026-01-14
 weight = 1
 [extra]
-lesson_date = 2026-01-15
+lesson_date = 2026-01-14
 +++
 
 # Unsafe Rust Alter Ego
