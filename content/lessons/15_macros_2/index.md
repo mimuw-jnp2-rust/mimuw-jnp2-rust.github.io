@@ -19,6 +19,8 @@ lesson_date = 2026-01-07
 
 ## Assignment 8 (graded)
 
-[Macros](https://classroom.github.com/a/jeN5tNYf)
+[Macros](https://classroom.github.com/a/OqrysIv1)
+
+**NOTE**: the assignment link has been updated. If you have already accepted the assignment, you need to accept the new one and push your changes there.
 
 Deadline: per-group.
