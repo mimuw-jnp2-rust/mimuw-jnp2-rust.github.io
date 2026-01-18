@@ -24,6 +24,7 @@ Our learning/teaching materials are going to be:
   - You can get up to 21 points from the small tasks. It means that it is enough to do 7 tasks with a score of 3 points.
   - You can solve the task between the end of the lesson and strictly before the start of the next lesson. The deadline is different for different lab groups.
   - Note: we will have 14 classes in total, so you can expect a task every week or two.
+  - See the `Small task grading` lesson for the detailed rules, examples and penalties we apply when evaluating solutions.
 - 1/2 of the grade is based on a big project. You can choose a topic yourself, but it must be accepted by us. The project has to be split into two parts. It can be done in groups of two (or bigger, if ambitious enough). The grading is as follows:
   1. Usability - 4 points.
   2. Usage of Rust functionalities - 6 points.
@@ -48,4 +49,3 @@ If you have a class on Wednesday at 12:15 and the project deadline is 2025-11-05
 3. 2025-12-10 - 2025-12-11: Deadline for submitting the first part of the project.
 4. 2026-01-07 - 2026-01-08: Deadline for submitting the second and final part of the project.
 
-> See the "Small task grading" lesson for the detailed rules, examples and penalties we apply when evaluating submissions.
