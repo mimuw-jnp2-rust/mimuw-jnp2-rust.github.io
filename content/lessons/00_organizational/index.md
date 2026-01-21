@@ -24,6 +24,7 @@ Our learning/teaching materials are going to be:
   - You can get up to 21 points from the small tasks. It means that it is enough to do 7 tasks with a score of 3 points.
   - You can solve the task between the end of the lesson and strictly before the start of the next lesson. The deadline is different for different lab groups.
   - Note: we will have 14 classes in total, so you can expect a task every week or two.
+  - See the `Small task grading` lesson for the detailed rules, examples and penalties we apply when evaluating solutions.
 - 1/2 of the grade is based on a big project. You can choose a topic yourself, but it must be accepted by us. The project has to be split into two parts. It can be done in groups of two (or bigger, if ambitious enough). The grading is as follows:
   1. Usability - 4 points.
   2. Usage of Rust functionalities - 6 points.
@@ -49,15 +50,3 @@ If you have a class on Wednesday at 12:15 and the project deadline is 2025-11-05
 2. 2025-11-12 - 2025-11-13: Final project ideas should be accepted by now.
 3. 2025-12-10 - 2025-12-11: Deadline for submitting the first part of the project.
 4. 2026-01-07 - 2026-01-08: Deadline for submitting the second and final part of the project.
-
-## Small tasks grading
-
-- By default, as long as the solution makes sense and passes all the tests, you get the maximum number of points, which then gets reduced based on the number of review comments we gave. There is no fixed convention, but usually tiny review comments give just a tiny penalty (multiples of 0.1 point).
-- The solutions shouldn't have any unnecessary files or code. As long as they satisfy the task requirements, they are fine.
-- As memory management is a big part of the Rust language, to learn how to do it optimally, the solutions should minimize the used memory (while still doing it safely). When possible, prefer to avoid allocations.
-- Algorithmic complexity and the constant behind the solutions matters too. For example, prefer using single operations on `HashMap` instead of multiple operations, and prefer to use data structures that minimize lookup time.
-- As the functional programming approach is also a big part of the Rust language, prefer to use it over imperative programming. Especially whenever you do operations on containers. Finding the cleanest (and usually safest) approach is left to you.
-- Error handling should be done consistently, as per lessons' guidelines. Be sure that you understand when to use `unwrap`, `expect`, `?`, `Result`. Design the code to minimize the number of assumptions and `unwrap`s.
-- During lessons we do not dive into the documentation to learn all available functions from the standard library. It is your job to explore the documentation and find functions that solve whatever specific issue you have. We might give review comments whenever there's some cleaner approach using the standard library.
-- We can also give review comments related to general code quality, not strictly related to the Rust language. In particular, please avoid copy-pasting, writing non-meaningful comments, overcomplicating the approach, using unoptimal data types. The approach and readability of the code also matters.
-- Lastly, of course the solutions should adhere to guidelines that are in the lessons (both in the provided text and spoken during classes).
