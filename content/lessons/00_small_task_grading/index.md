@@ -68,7 +68,7 @@ Each entry below states a general rule (what we check when grading small tasks) 
 
 - Algorithmic complexity and the constant behind the solutions matters too. For example, prefer using single operations on `HashMap` instead of multiple operations, and prefer to use data structures that minimize lookup time.
 
-  _Example._ 
+  _Example._
 
   ```rust
   // Wrong: two lookups plus an unnecessary clone.
@@ -98,7 +98,7 @@ Each entry below states a general rule (what we check when grading small tasks) 
 
 - As the functional programming approach is also a big part of the Rust language, prefer to use it over imperative programming. Especially whenever you do operations on containers. Finding the cleanest (and usually safest) approach is left to you.
 
-  _Example._ 
+  _Example._
 
   ```rust
   // Wrong: manual loops, mutable counters, and temporary Vecs.

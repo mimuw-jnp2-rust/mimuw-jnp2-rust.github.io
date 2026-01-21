@@ -48,4 +48,3 @@ If you have a class on Wednesday at 12:15 and the project deadline is 2025-11-05
 2. 2025-11-12 - 2025-11-13: Final project ideas should be accepted by now.
 3. 2025-12-10 - 2025-12-11: Deadline for submitting the first part of the project.
 4. 2026-01-07 - 2026-01-08: Deadline for submitting the second and final part of the project.
-
