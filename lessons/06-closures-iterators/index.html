@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Rust course</title>
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://mimuw-jnp2-rust.github.io/book.css">
+  
+
+  
+  
+</head>
+
+<body>
+<div class="menu">
+  
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="https://mimuw-jnp2-rust.github.io">Home</a></li>
+      
+        
+        
+        
+          
+          <li >
+            
+            <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;">
+              
+              List of lessons
+            </a>
+            
+              <ul>
+                
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;00-organizational&#x2F;">
+                        [2025-10-02]
+                        
+                        Organizational lesson
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;01-introduction&#x2F;">
+                        [2024-10-02]
+                        
+                        Introduction to Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;02-ownership&#x2F;">
+                        [2025-10-09]
+                        
+                        Ownership Model
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;03-data-types&#x2F;">
+                        [2025-10-16]
+                        
+                        Data Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2022-10-31]
+                          
+                          Feedback #1
+                        </span>
+                        <span class="upcoming-note">Available 2022-10-31</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;05-types-reasoning&#x2F;">
+                        [2025-10-23]
+                        
+                        Reasoning About Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li  class="active" >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;06-closures-iterators&#x2F;">
+                        [2025-10-30]
+                        
+                        Closures and Iterators
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;07-smart-pointers&#x2F;">
+                        [2025-11-06]
+                        
+                        Smart Pointers
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Feedback #2
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;09-concurrency&#x2F;">
+                        [2025-11-19]
+                        
+                        Fearless concurrency
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;10-design-patterns&#x2F;">
+                        [2025-11-26]
+                        
+                        Design patterns
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;11-async-1&#x2F;">
+                        [2025-12-03]
+                        
+                        Async: Part 1
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Project feedback
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;13-async-2&#x2F;">
+                        [2025-12-10]
+                        
+                        Async: Part 2
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;14-macros-1&#x2F;">
+                        [2025-12-17]
+                        
+                        Macros: Part 1 (declarative)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;15-macros-2&#x2F;">
+                        [2026-01-07]
+                        
+                        Macros: Part 2 (procedural)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;16-unsafe&#x2F;">
+                        [2026-01-14]
+                        
+                        Unsafe Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;project-showcase&#x2F;">
+                        [2022-10-17]
+                        
+                        2021L Project showcase
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;table-of-contents&#x2F;">
+                        [2025-10-05]
+                        
+                        Table of content
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  
+  
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+      <span class="search-icon">🔎</span>
+    
+  </div>
+
+  <div class="page__content">
+    
+      <div class="search-container">
+        <input id="search" type="search" placeholder="Search..">
+        <div class="search-results">
+          <div class="search-results__header"></div>
+          <ul class="search-results__items"></ul>
+        </div>
+      </div>
+    
+    <div class="book-content">
+      
+<h1 class="title">Closures and Iterators</h1>
+<p class="subtitle">
+  <strong>2025-10-30</strong> (last edit: 2025-10-30)
+</p>
+<h1 id="closures">Closures</h1>
+<p>Closures (Polish: "domknięcia") are anonymous functions that can access variables from the scope in which they were defined.</p>
+<h2 id="closure-syntax">Closure syntax</h2>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    #[</span><span style="color:#c82829;">rustfmt</span><span>::</span><span style="color:#c82829;">skip</span><span>]
+</span><span>    {
+</span><span>        </span><span style="color:#999999;">// This is formatted so that without rust-analyzer it renders as well-aligned.
+</span><span>
+</span><span>        </span><span style="color:#8959a8;">fn  </span><span style="color:#4271ae;">add_one_v1   </span><span>(</span><span style="color:#f5871f;">x</span><span>: </span><span style="color:#8959a8;">u32</span><span>) -&gt; </span><span style="color:#8959a8;">u32 </span><span>{ x </span><span style="color:#3e999f;">+ </span><span style="color:#f5871f;">1 </span><span>}  </span><span style="color:#999999;">// This is an ordinary function.
+</span><span>        </span><span style="color:#8959a8;">let </span><span style="color:#4271ae;">add_one_v2 </span><span style="color:#3e999f;">= </span><span>|</span><span style="color:#f5871f;">x</span><span>: </span><span style="color:#8959a8;">u32</span><span>| -&gt; </span><span style="color:#8959a8;">u32 </span><span>{ x </span><span style="color:#3e999f;">+ </span><span style="color:#f5871f;">1 </span><span>}; </span><span style="color:#999999;">// Closures use pipes instead of parentheses.
+</span><span>        </span><span style="color:#8959a8;">let </span><span style="color:#4271ae;">add_one_v3 </span><span style="color:#3e999f;">= </span><span>|</span><span style="color:#f5871f;">x</span><span>|             { x </span><span style="color:#3e999f;">+ </span><span style="color:#f5871f;">1 </span><span>}; </span><span style="color:#999999;">// Both parameters and return value can have their types inferred.
+</span><span>        </span><span style="color:#8959a8;">let </span><span style="color:#4271ae;">add_one_v4 </span><span style="color:#3e999f;">= </span><span>|</span><span style="color:#f5871f;">x</span><span>|               x </span><span style="color:#3e999f;">+ </span><span style="color:#f5871f;">1  </span><span>; </span><span style="color:#999999;">// If the body is a single expression, braces can be omitted.
+</span><span>
+</span><span>        </span><span style="color:#8959a8;">let</span><span> _res </span><span style="color:#3e999f;">= </span><span style="color:#4271ae;">add_one_v1</span><span>(</span><span style="color:#f5871f;">0_</span><span style="color:#8959a8;">u32</span><span>);
+</span><span>        </span><span style="color:#8959a8;">let</span><span> _res </span><span style="color:#3e999f;">= </span><span style="color:#4271ae;">add_one_v2</span><span>(</span><span style="color:#f5871f;">0_</span><span style="color:#8959a8;">u32</span><span>);
+</span><span>        </span><span style="color:#8959a8;">let</span><span> _res </span><span style="color:#3e999f;">= </span><span style="color:#4271ae;">add_one_v3</span><span>(</span><span style="color:#f5871f;">0_</span><span style="color:#8959a8;">u32</span><span>);
+</span><span>        </span><span style="color:#8959a8;">let</span><span> _res </span><span style="color:#3e999f;">= </span><span style="color:#4271ae;">add_one_v4</span><span>(</span><span style="color:#f5871f;">0_</span><span style="color:#8959a8;">u32</span><span>);
+</span><span>        
+</span><span>        </span><span style="color:#999999;">// This does not compile, because closures are not generic.
+</span><span>        </span><span style="color:#999999;">// Their type is inferred once and stays the same.
+</span><span>        </span><span style="color:#999999;">// let _res = add_one_v4(0_i32);
+</span><span>    };
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/06-closures-iterators/closures_syntax.rs">closures_syntax.rs</a>)</sub></p>
+<h2 id="closures-types">Closures' types</h2>
+<p>Closures are unnameable types. That is, each closure gets its own unique type from the compiler,
+but we cannot name it. Therefore, closures' types must be inferred.
+We will often use <code>impl</code> keyword with closure traits (e.g., <code>impl Fn</code>) - those traits are described below.</p>
+<h2 id="closures-capture-environment">Closures capture environment</h2>
+<p>Closures can capture variables from the environment where they are defined. They can do that in two ways:</p>
+<ul>
+<li>Capturing References (borrowing), or</li>
+<li>Moving Ownership.</li>
+</ul>
+<p><strong>HOW</strong> closures capture variables is one thing.
+But even more important is <strong>WHAT</strong> closures do with their captures.</p>
+<h3 id="functions-closures-hierarchy">Functions &amp; closures hierarchy</h3>
+<p>Based on <strong>WHAT</strong> a closure does with its captures, it implements closure traits:</p>
+<ul>
+<li><code>FnOnce</code> - closures that may move out of their captures environment (and thus called once).</li>
+<li><code>FnMut</code> - closures that may mutate their captures, but don't move out of their captures environment (so can be called multiple times, but require a mutable reference);</li>
+<li><code>Fn</code> - closures that do not mutate their captures (so can be called multiple times through an immutable reference).</li>
+</ul>
+<p>For completeness, there is a (concrete) type of function pointers:</p>
+<ul>
+<li><code>fn</code> - functions, closures with no captures.</li>
+</ul>
+<p>Those traits and the <code>fn</code> type form a hierarchy: <code>fn</code> ⊆ <code>Fn</code> ⊆ <code>FnMut</code> ⊆ <code>FnOnce</code></p>
+<!--> $$ fn \subseteq Fn \subseteq FnMut \subseteq FnOnce $$ -->
+<p>The following code sample demonstrates various ways to capture environment (borrowing or moving) and various kinds of closures, based on what they do with their captures:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#4271ae;">borrowing_immutably_closure</span><span>();
+</span><span>    </span><span style="color:#4271ae;">borrowing_mutably_closure</span><span>();
+</span><span>    </span><span style="color:#4271ae;">moving_in_nonmutating_closure</span><span>();
+</span><span>    </span><span style="color:#4271ae;">moving_in_mutating_closure</span><span>();
+</span><span>    </span><span style="color:#4271ae;">moving_in_moving_out_closure</span><span>();
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">borrowing_immutably_closure</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> list </span><span style="color:#3e999f;">= </span><span>vec![</span><span style="color:#f5871f;">1</span><span>, </span><span style="color:#f5871f;">2</span><span>, </span><span style="color:#f5871f;">3</span><span>];
+</span><span>    println!(</span><span style="color:#718c00;">&quot;Before defining closure: </span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">&quot;</span><span>, list);
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let </span><span style="color:#4271ae;">only_borrows </span><span style="color:#3e999f;">= </span><span>|| println!(</span><span style="color:#718c00;">&quot;From closure: </span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">&quot;</span><span>, list);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// This would not really only borrow... (it needs Vec by value).
+</span><span>    </span><span style="color:#999999;">// let only_borrows = || std::mem::drop::&lt;Vec&lt;_&gt;&gt;(list);
+</span><span>
+</span><span>    println!(</span><span style="color:#718c00;">&quot;Before calling closure: </span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">&quot;</span><span>, list);
+</span><span>    </span><span style="color:#4271ae;">only_borrows</span><span>();
+</span><span>    println!(</span><span style="color:#718c00;">&quot;After calling closure: </span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">&quot;</span><span>, list);
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">borrowing_mutably_closure</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> list </span><span style="color:#3e999f;">= </span><span>vec![</span><span style="color:#f5871f;">1</span><span>, </span><span style="color:#f5871f;">2</span><span>, </span><span style="color:#f5871f;">3</span><span>];
+</span><span>    println!(</span><span style="color:#718c00;">&quot;Before defining closure: </span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">&quot;</span><span>, list);
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let mut </span><span style="color:#4271ae;">borrows_mutably </span><span style="color:#3e999f;">= </span><span>|| list.</span><span style="color:#4271ae;">push</span><span>(</span><span style="color:#f5871f;">7</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// println!(&quot;Before calling closure: {:?}&quot;, list);
+</span><span>    </span><span style="color:#4271ae;">borrows_mutably</span><span>();
+</span><span>    println!(</span><span style="color:#718c00;">&quot;After calling closure: </span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">&quot;</span><span>, list);
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">moving_in_nonmutating_closure</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> list </span><span style="color:#3e999f;">= </span><span>vec![</span><span style="color:#f5871f;">1</span><span>, </span><span style="color:#f5871f;">2</span><span>, </span><span style="color:#f5871f;">3</span><span>];
+</span><span>    println!(</span><span style="color:#718c00;">&quot;Before defining closure: </span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">&quot;</span><span>, list);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// This closure would just borrow the list, because it only prints it.
+</span><span>    </span><span style="color:#999999;">// However, as spawning threads require passing `impl FnOnce + &#39;static`,
+</span><span>    </span><span style="color:#999999;">// we need to use `move` keyword to force the closure to move `list`
+</span><span>    </span><span style="color:#999999;">// into its captured environment.
+</span><span>    std::thread::spawn(</span><span style="color:#8959a8;">move </span><span style="color:#3e999f;">|| </span><span>println!(</span><span style="color:#718c00;">&quot;From thread: </span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">&quot;</span><span>, list))
+</span><span>        .</span><span style="color:#4271ae;">join</span><span>()
+</span><span>        .</span><span style="color:#4271ae;">unwrap</span><span>();
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">moving_in_mutating_closure</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">append_42</span><span>(</span><span style="color:#8959a8;">mut </span><span style="color:#f5871f;">appender</span><span>: impl FnMut(</span><span style="color:#f5871f;">i32</span><span>)) {
+</span><span>        </span><span style="color:#4271ae;">appender</span><span>(</span><span style="color:#f5871f;">42</span><span>);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> appender </span><span style="color:#3e999f;">= </span><span>{
+</span><span>        </span><span style="color:#8959a8;">let mut</span><span> list </span><span style="color:#3e999f;">= </span><span>vec![</span><span style="color:#f5871f;">1</span><span>, </span><span style="color:#f5871f;">2</span><span>, </span><span style="color:#f5871f;">3</span><span>];
+</span><span>        println!(</span><span style="color:#718c00;">&quot;Before defining closure: </span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">&quot;</span><span>, list);
+</span><span>
+</span><span>        </span><span style="color:#999999;">// The `move` keyword is necessary to prevent dangling reference to `list`.
+</span><span>        </span><span style="color:#999999;">// Of course, the borrow checker protects us from compiling code without `move`.
+</span><span>        </span><span style="color:#8959a8;">move </span><span style="color:#3e999f;">|</span><span>num</span><span style="color:#3e999f;">|</span><span> list.</span><span style="color:#4271ae;">push</span><span>(num)
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#4271ae;">append_42</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut</span><span> appender);
+</span><span>    </span><span style="color:#4271ae;">append_42</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut</span><span> appender);
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">moving_in_moving_out_closure</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">append_multiple_times</span><span>(</span><span style="color:#f5871f;">appender</span><span>: impl FnOnce(&amp;</span><span style="color:#f5871f;">mut Vec</span><span>&lt;</span><span style="color:#f5871f;">String</span><span>&gt;) + Clone) {
+</span><span>        </span><span style="color:#8959a8;">let mut</span><span> list </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">Vec</span><span>::new();
+</span><span>
+</span><span>        </span><span style="color:#999999;">// We can clone this `FnOnce`, because we additionally require `Clone`.
+</span><span>        </span><span style="color:#999999;">// If we didn&#39;t clone it, we couldn&#39;t call it more than *once*.
+</span><span>        appender.</span><span style="color:#4271ae;">clone</span><span>()(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut</span><span> list);
+</span><span>        </span><span style="color:#4271ae;">appender</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut</span><span> list);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let</span><span> appender </span><span style="color:#3e999f;">= </span><span>{
+</span><span>        </span><span style="color:#8959a8;">let</span><span> string </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;Ala&quot;</span><span>);
+</span><span>        println!(</span><span style="color:#718c00;">&quot;Before defining closure: </span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">&quot;</span><span>, string);
+</span><span>
+</span><span>        </span><span style="color:#999999;">// The `move` keyword is necessary to prevent dangling reference to `list`.
+</span><span>        </span><span style="color:#999999;">// Of course, the borrow checker protects us from compiling code without `move`.
+</span><span>        </span><span style="color:#8959a8;">move </span><span style="color:#3e999f;">|</span><span>list: </span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut </span><span style="color:#c99e00;">Vec</span><span>&lt;</span><span style="color:#c99e00;">String</span><span>&gt;</span><span style="color:#3e999f;">|</span><span> list.</span><span style="color:#4271ae;">push</span><span>(string)
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#999999;">// As `appender` is only `FnOnce`, we need to clone before we consume it by calling it.
+</span><span>    </span><span style="color:#4271ae;">append_multiple_times</span><span>(appender.</span><span style="color:#4271ae;">clone</span><span>());
+</span><span>    </span><span style="color:#4271ae;">append_multiple_times</span><span>(appender);
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/06-closures-iterators/closures_capturing.rs">closures_capturing.rs</a>)</sub></p>
+<h3 id="closures-as-trait-objects-in-dynamic-dispatch">Closures as trait objects (in dynamic dispatch)</h3>
+<p>The following code sample shows how one can use closures as <code>dyn Trait</code> objects, bypassing the problem of them having anonymous types:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">some_function</span><span>() -&gt; String {
+</span><span>        </span><span style="color:#c99e00;">String</span><span>::new()
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let</span><span> v1 </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;v1&quot;</span><span>);
+</span><span>    </span><span style="color:#8959a8;">let mut </span><span style="color:#4271ae;">borrowing_immutably_closure </span><span style="color:#3e999f;">= </span><span>|| v1.</span><span style="color:#4271ae;">clone</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> v2 </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;v2&quot;</span><span>);
+</span><span>    </span><span style="color:#8959a8;">let mut </span><span style="color:#4271ae;">borrowing_mutably_closure </span><span style="color:#3e999f;">= </span><span>|| {
+</span><span>        v2.</span><span style="color:#4271ae;">push</span><span>(</span><span style="color:#718c00;">&#39;.&#39;</span><span>);
+</span><span>        v2.</span><span style="color:#4271ae;">clone</span><span>()
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let</span><span> v3 </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;v3&quot;</span><span>);
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> moving_in_nonmutating_closure </span><span style="color:#3e999f;">= </span><span style="color:#8959a8;">move </span><span style="color:#3e999f;">||</span><span> v3.</span><span style="color:#4271ae;">clone</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> v4 </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;v4&quot;</span><span>);
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> moving_in_mutating_closure </span><span style="color:#3e999f;">= </span><span style="color:#8959a8;">move </span><span style="color:#3e999f;">|| </span><span>{
+</span><span>        v4.</span><span style="color:#4271ae;">push</span><span>(</span><span style="color:#718c00;">&#39;.&#39;</span><span>);
+</span><span>        v4.</span><span style="color:#4271ae;">clone</span><span>()
+</span><span>    };
+</span><span>    </span><span style="color:#8959a8;">let</span><span> v5 </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;v5&quot;</span><span>);
+</span><span>    </span><span style="color:#8959a8;">let </span><span style="color:#4271ae;">moving_in_moving_out_closure </span><span style="color:#3e999f;">= </span><span>|| v5;
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let</span><span> fn_once_callables: [</span><span style="color:#3e999f;">&amp;</span><span>dyn </span><span style="color:#c99e00;">FnOnce</span><span>() -&gt; String; </span><span style="color:#f5871f;">5</span><span>] </span><span style="color:#3e999f;">= </span><span>[
+</span><span>        </span><span style="color:#3e999f;">&amp;</span><span>some_function,
+</span><span>        </span><span style="color:#3e999f;">&amp;</span><span>borrowing_immutably_closure,
+</span><span>        </span><span style="color:#3e999f;">&amp;</span><span>borrowing_mutably_closure,
+</span><span>        </span><span style="color:#3e999f;">&amp;</span><span>moving_in_nonmutating_closure,
+</span><span>        </span><span style="color:#3e999f;">&amp;</span><span>moving_in_moving_out_closure,
+</span><span>    ];
+</span><span>
+</span><span>    #[</span><span style="color:#c82829;">allow</span><span>(unused_variables)]
+</span><span>    </span><span style="color:#8959a8;">for</span><span> fn_once_callable </span><span style="color:#3e999f;">in</span><span> fn_once_callables {
+</span><span>        </span><span style="color:#999999;">// Cannot move a value of type `dyn FnOnce() -&gt; String`.
+</span><span>        </span><span style="color:#999999;">// The size of `dyn FnOnce() -&gt; String` cannot be statically determined.
+</span><span>        </span><span style="color:#999999;">// println!(&quot;{}&quot;, fn_once_callable());
+</span><span>
+</span><span>        </span><span style="color:#999999;">// So, for FnOnce, we need to be their owners to be able to call them,
+</span><span>        </span><span style="color:#999999;">// and we can&#39;t have a `dyn` object owned on stack.
+</span><span>        </span><span style="color:#999999;">// We will solve this problem soon with smart pointers (e.g., Box).
+</span><span>        </span><span style="color:#999999;">// This will give us `std::function` -like experience.
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Mutable reference to FnMut is required to be able to call it.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> fn_mut_callables: [</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut</span><span> dyn </span><span style="color:#c99e00;">FnMut</span><span>() -&gt; String; </span><span style="color:#f5871f;">4</span><span>] </span><span style="color:#3e999f;">= </span><span>[
+</span><span>        </span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut</span><span> borrowing_immutably_closure,
+</span><span>        </span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut</span><span> borrowing_mutably_closure,
+</span><span>        </span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut</span><span> moving_in_nonmutating_closure,
+</span><span>        </span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut</span><span> moving_in_mutating_closure,
+</span><span>    ];
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">for</span><span> fn_mut_callable </span><span style="color:#3e999f;">in</span><span> fn_mut_callables {
+</span><span>        println!(</span><span style="color:#718c00;">&quot;</span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, </span><span style="color:#4271ae;">fn_mut_callable</span><span>());
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let</span><span> fn_callables: </span><span style="color:#3e999f;">&amp;</span><span>[</span><span style="color:#3e999f;">&amp;</span><span>dyn </span><span style="color:#c99e00;">Fn</span><span>() -&gt; String] </span><span style="color:#3e999f;">=
+</span><span>        </span><span style="color:#3e999f;">&amp;</span><span>[</span><span style="color:#3e999f;">&amp;</span><span>borrowing_immutably_closure, </span><span style="color:#3e999f;">&amp;</span><span>moving_in_nonmutating_closure];
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">for</span><span> fn_callable </span><span style="color:#3e999f;">in</span><span> fn_callables {
+</span><span>        println!(</span><span style="color:#718c00;">&quot;</span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, </span><span style="color:#4271ae;">fn_callable</span><span>());
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/06-closures-iterators/closures_fun.rs">closures_fun.rs</a>)</sub></p>
+<h2 id="examples">Examples</h2>
+<p>We'll go through the examples from <a href="https://doc.rust-lang.org/rust-by-example/fn/closures.html">Rust by Example</a>.
+More examples will be seen when working with iterators.</p>
+<h1 id="iterators">Iterators</h1>
+<p>In Rust, there is no hierarchy of types for collections (because there is no inheritance in general).
+Instead, what makes a collection is that it can be iterated over.</p>
+<p>A usual way in Rust to perform an iteration over something, be it a range of values or items in a collection, is creating a (lazy) iterator over it and transforming it using <em>iterator adaptors</em>. For example, if <code>T: Iterator</code>, then <code>T::map()</code> creates a <code>Map&lt;T&gt;</code> adaptor. Once a final iterator is created, it has to be actually activated (iterated over), which is most commonly done by:</p>
+<ul>
+<li>exhausting it with the <code>for</code> loop,</li>
+<li>manually iterating over it using <code>next()</code> calls,</li>
+<li>collecting its contents into inferred collection (<code>collect()</code>),</li>
+<li>consuming it with a <em>consuming adaptor</em> (e.g., <code>sum()</code>, <code>count</code>),</li>
+</ul>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">use </span><span>std::collections::HashSet;
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#999999;">// Various ways to create a String.
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> strings </span><span style="color:#3e999f;">= </span><span>[
+</span><span>        </span><span style="color:#c99e00;">String</span><span>::new(),
+</span><span>        </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;a&quot;</span><span>),
+</span><span>        </span><span style="color:#718c00;">&quot;b&quot;</span><span>.</span><span style="color:#4271ae;">into</span><span>(),
+</span><span>        </span><span style="color:#718c00;">&quot;c&quot;</span><span>.</span><span style="color:#4271ae;">to_owned</span><span>(),
+</span><span>        </span><span style="color:#718c00;">&quot;d&quot;</span><span>.</span><span style="color:#4271ae;">to_string</span><span>(),
+</span><span>        </span><span style="color:#718c00;">&quot;e&quot;</span><span>.</span><span style="color:#4271ae;">chars</span><span>().</span><span style="color:#4271ae;">collect</span><span>(),
+</span><span>    ];
+</span><span>
+</span><span>    </span><span style="color:#999999;">// `iter()` is a usual method that creates an iterator over immutable references to the collection&#39;s items.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> _all_len_0_or_1 </span><span style="color:#3e999f;">=</span><span> strings
+</span><span>        .</span><span style="color:#4271ae;">iter</span><span>()
+</span><span>        .</span><span style="color:#4271ae;">filter</span><span>(|</span><span style="color:#f5871f;">s</span><span>| </span><span style="color:#3e999f;">!</span><span>s.</span><span style="color:#4271ae;">is_empty</span><span>())
+</span><span>        .</span><span style="color:#4271ae;">all</span><span>(|</span><span style="color:#f5871f;">s</span><span>| s.</span><span style="color:#4271ae;">len</span><span>() </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">1</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// `iter_mut()` is a usual method that creates an iterator over mutable references to the collection&#39;s items.
+</span><span>    </span><span style="color:#8959a8;">for</span><span> s </span><span style="color:#3e999f;">in</span><span> strings.</span><span style="color:#4271ae;">iter_mut</span><span>().</span><span style="color:#4271ae;">map_while</span><span>(|</span><span style="color:#f5871f;">s</span><span>| </span><span style="color:#8959a8;">match</span><span> s.</span><span style="color:#4271ae;">as_str</span><span>() {
+</span><span>        </span><span style="color:#718c00;">&quot;c&quot; </span><span style="color:#3e999f;">=&gt; </span><span style="color:#c99e00;">None</span><span>,
+</span><span>        </span><span style="color:#3e999f;">_ =&gt; </span><span style="color:#c99e00;">Some</span><span>(s),
+</span><span>    }) {
+</span><span>        </span><span style="color:#3e999f;">*</span><span>s </span><span style="color:#3e999f;">=</span><span> s.</span><span style="color:#4271ae;">replace</span><span>(</span><span style="color:#718c00;">&quot;b&quot;</span><span>, </span><span style="color:#718c00;">&quot;aba&quot;</span><span>);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// This code is equivalent to the `for` above.
+</span><span>    </span><span style="color:#999999;">// `for` is usually more idiomatic, but `for_each` is sometimes cleaner and sometimes faster.
+</span><span>    strings
+</span><span>        .</span><span style="color:#4271ae;">iter_mut</span><span>()
+</span><span>        .</span><span style="color:#4271ae;">map_while</span><span>(|</span><span style="color:#f5871f;">s</span><span>| </span><span style="color:#8959a8;">match</span><span> s.</span><span style="color:#4271ae;">as_str</span><span>() {
+</span><span>            </span><span style="color:#718c00;">&quot;c&quot; </span><span style="color:#3e999f;">=&gt; </span><span style="color:#c99e00;">None</span><span>,
+</span><span>            </span><span style="color:#3e999f;">_ =&gt; </span><span style="color:#c99e00;">Some</span><span>(s),
+</span><span>        })
+</span><span>        .</span><span style="color:#4271ae;">for_each</span><span>(|</span><span style="color:#f5871f;">s</span><span>| </span><span style="color:#3e999f;">*</span><span>s </span><span style="color:#3e999f;">=</span><span> s.</span><span style="color:#4271ae;">replace</span><span>(</span><span style="color:#718c00;">&quot;b&quot;</span><span>, </span><span style="color:#718c00;">&quot;aba&quot;</span><span>));
+</span><span>
+</span><span>    </span><span style="color:#999999;">// `into_iter()` is a method from `IntoIterator` trait that converts a collection to an iterator
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> empty_strings_iter </span><span style="color:#3e999f;">=</span><span> strings.</span><span style="color:#4271ae;">into_iter</span><span>().</span><span style="color:#4271ae;">map</span><span>(|</span><span style="color:#8959a8;">mut </span><span style="color:#f5871f;">s</span><span>| {
+</span><span>        s.</span><span style="color:#4271ae;">clear</span><span>();
+</span><span>        s
+</span><span>    });
+</span><span>
+</span><span>    </span><span style="color:#999999;">// This is a set of empty Strings...
+</span><span>    </span><span style="color:#8959a8;">let</span><span> empty_strings_set </span><span style="color:#3e999f;">=</span><span> empty_strings_iter.</span><span style="color:#4271ae;">clone</span><span>().collect::&lt;HashSet&lt;</span><span style="color:#3e999f;">_</span><span>&gt;&gt;();
+</span><span>
+</span><span>    </span><span style="color:#999999;">// And this is a Vec of immutable references to empty Strings.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> empty_string_refs_vec </span><span style="color:#3e999f;">=</span><span> empty_strings_set.</span><span style="color:#4271ae;">iter</span><span>().collect::&lt;</span><span style="color:#c99e00;">Vec</span><span>&lt;</span><span style="color:#3e999f;">_</span><span>&gt;&gt;();
+</span><span>
+</span><span>    </span><span style="color:#999999;">// equivalent to `empty_string_refs_vec.into_iter()`
+</span><span>    </span><span style="color:#8959a8;">for</span><span> s </span><span style="color:#3e999f;">in</span><span> empty_string_refs_vec {
+</span><span>        println!(</span><span style="color:#718c00;">&quot;</span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, s)
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">while let </span><span style="color:#c99e00;">Some</span><span>(s) </span><span style="color:#3e999f;">=</span><span> empty_strings_iter.</span><span style="color:#4271ae;">next_back</span><span>() {
+</span><span>        assert!(s.</span><span style="color:#4271ae;">is_empty</span><span>());
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/06-closures-iterators/iterator_exhaustion.rs">iterator_exhaustion.rs</a>)</sub></p>
+<p>Iterators are highly optimised, so they are high-level code that compiles down to simple and optimised machine code (intended as <em>zero-cost abstractions</em>).</p>
+<p>We'll go through the official <a href="https://doc.rust-lang.org/stable/std/iter/">docs</a>.</p>
+<ul>
+<li>Most methods are defined in the <a href="https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html">Iterator trait</a>.</li>
+<li><a href="https://doc.rust-lang.org/stable/std/iter/trait.IntoIterator.html">IntoIterator</a> is also worth noting, because it makes types work with the <code>for</code> loop.</li>
+<li>For completeness, there is <a href="https://doc.rust-lang.org/stable/std/iter/trait.FromIterator.html">FromIterator</a>, which is required for <code>collect()</code> to work.</li>
+</ul>
+<h1 id="reading">Reading</h1>
+<ul>
+<li><a href="https://doc.rust-lang.org/book/ch12-00-an-io-project.html">The Book, chapter 12 (that's a project!)</a></li>
+<li><a href="https://doc.rust-lang.org/book/ch13-00-functional-features.html">The Book, chapter 13</a></li>
+<li><a href="https://doc.rust-lang.org/book/ch14-00-more-about-cargo.html">The Book, chapter 14</a></li>
+<li><a href="https://doc.rust-lang.org/stable/book/ch19-05-advanced-functions-and-closures.html">The Book, Advanced Functions and Closures</a></li>
+<li><a href="https://doc.rust-lang.org/stable/book/ch19-03-advanced-traits.html">The Book, Advanced Traits</a></li>
+</ul>
+<h2 id="assignment-4-graded">Assignment 4 (graded)</h2>
+<p><a href="https://classroom.github.com/a/dU8ig4tA">Lazy</a></p>
+<p>Deadline: per-group.</p>
+
+
+    </div>
+  </div>
+
+  <div class="prev-link">
+    
+    
+  </div>
+
+  <div class="next-link">
+    
+    
+  </div>
+</div>
+
+
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/elasticlunr.min.js"></script>
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/search_index.en.js"></script>
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/book.js"></script>
+
+</body>
+
+</html>

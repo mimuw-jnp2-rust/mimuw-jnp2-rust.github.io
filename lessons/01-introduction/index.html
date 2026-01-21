@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Rust course</title>
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://mimuw-jnp2-rust.github.io/book.css">
+  
+
+  
+  
+</head>
+
+<body>
+<div class="menu">
+  
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="https://mimuw-jnp2-rust.github.io">Home</a></li>
+      
+        
+        
+        
+          
+          <li >
+            
+            <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;">
+              
+              List of lessons
+            </a>
+            
+              <ul>
+                
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;00-organizational&#x2F;">
+                        [2025-10-02]
+                        
+                        Organizational lesson
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li  class="active" >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;01-introduction&#x2F;">
+                        [2024-10-02]
+                        
+                        Introduction to Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;02-ownership&#x2F;">
+                        [2025-10-09]
+                        
+                        Ownership Model
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;03-data-types&#x2F;">
+                        [2025-10-16]
+                        
+                        Data Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2022-10-31]
+                          
+                          Feedback #1
+                        </span>
+                        <span class="upcoming-note">Available 2022-10-31</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;05-types-reasoning&#x2F;">
+                        [2025-10-23]
+                        
+                        Reasoning About Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;06-closures-iterators&#x2F;">
+                        [2025-10-30]
+                        
+                        Closures and Iterators
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;07-smart-pointers&#x2F;">
+                        [2025-11-06]
+                        
+                        Smart Pointers
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Feedback #2
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;09-concurrency&#x2F;">
+                        [2025-11-19]
+                        
+                        Fearless concurrency
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;10-design-patterns&#x2F;">
+                        [2025-11-26]
+                        
+                        Design patterns
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;11-async-1&#x2F;">
+                        [2025-12-03]
+                        
+                        Async: Part 1
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Project feedback
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;13-async-2&#x2F;">
+                        [2025-12-10]
+                        
+                        Async: Part 2
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;14-macros-1&#x2F;">
+                        [2025-12-17]
+                        
+                        Macros: Part 1 (declarative)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;15-macros-2&#x2F;">
+                        [2026-01-07]
+                        
+                        Macros: Part 2 (procedural)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;16-unsafe&#x2F;">
+                        [2026-01-14]
+                        
+                        Unsafe Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;project-showcase&#x2F;">
+                        [2022-10-17]
+                        
+                        2021L Project showcase
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;table-of-contents&#x2F;">
+                        [2025-10-05]
+                        
+                        Table of content
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  
+  
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+      <span class="search-icon">🔎</span>
+    
+  </div>
+
+  <div class="page__content">
+    
+      <div class="search-container">
+        <input id="search" type="search" placeholder="Search..">
+        <div class="search-results">
+          <div class="search-results__header"></div>
+          <ul class="search-results__items"></ul>
+        </div>
+      </div>
+    
+    <div class="book-content">
+      
+<h1 class="title">Introduction to Rust</h1>
+<p class="subtitle">
+  <strong>2024-10-02</strong> (last edit: 2025-10-02)
+</p>
+<p><img src="https://raw.githubusercontent.com/rust-lang/rust-artwork/refs/heads/master/logo/rust-logo-blk.svg" alt="Logo" /></p>
+<h1 id="a-language-empowering-everyone-to-build-reliable-and-efficient-software">A language empowering everyone to build reliable and efficient software.</h1>
+<p>(<a href="https://rustacean.net/">There's also an unofficial "rustacean" logo.</a>)</p>
+<h2 id="why-use-rust">Why use Rust?</h2>
+<ul>
+<li>It is <strong>safe</strong> (compared to C++ for example, as we will see in a minute)</li>
+<li>It is <strong>fast</strong> (because it is compiled to machine code)</li>
+<li>It is ergonomic and pleasant to use (static typing, expressive type system, helpful compiler
+warnings)</li>
+<li>It
+is <a href="https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-programming-scripting-and-markup-languages">loved by programmers</a></li>
+<li>It provides excellent tooling</li>
+</ul>
+<h2 id="to-discuss-during-class">To discuss during class:</h2>
+<ul>
+<li>Assuming that someone knows quite a few languages and one wants to implement a new project,
+what is important when deciding which language to pick?
+Find a few criteria where C++ and Python differ. Compare those criteria with Rust (even though our knowledge of Rust is quite limited for now).</li>
+<li>What does it mean that a language is "fast"? Is Python fast (tricky question)?
+Is Java fast? How to compare how "fast" is Rust next to C++?</li>
+<li>What does it mean that a language is "safe"? Is typing enough? What are non-trivial
+ways to make a bug, in C++ and in Python?</li>
+<li>Look into the examples of the source code of the Rust compiler:
+<ul>
+<li><a href="https://github.com/rust-lang/rust/blob/master/compiler/rustc_borrowck/src/path_utils.rs">a few helper functions</a> with short implementations,</li>
+<li>the <a href="https://doc.rust-lang.org/stable/nightly-rustc/rustc_borrowck/index.html">docs</a> of this crate,</li>
+<li>some more complicated code: <a href="https://github.com/rust-lang/rust/blob/master/compiler/rustc_pattern_analysis/src/usefulness.rs">match exhaustiveness</a>,</li>
+<li><a href="https://github.com/rust-lang/rust/issues/83104">example PR</a> that fixes an error suggestion.</li>
+</ul>
+</li>
+</ul>
+<h2 id="why-learn-rust">Why learn Rust?</h2>
+<p>Even if you don't end up using Rust, learning it expands your horizons:</p>
+<ul>
+<li>It helps especially with the awareness of what you can and can't do in concurrent applications.</li>
+<li>It helps you understand memory management and learn its good practices.</li>
+<li>The language is designed to avoid decades-long issues present in other languages.
+It takes <a href="https://doc.rust-lang.org/reference/influences.html">inspiration</a> from the best parts of other languages
+to avoid the worst parts. Learning those parts show how to have better code design.</li>
+</ul>
+<h2 id="why-not-to-learn-rust">Why not to learn Rust? ;)</h2>
+<ul>
+<li>Some people say Rust is too hard to learn because of the borrow checker and because
+getting your code to compile is frustrating while being a beginner.</li>
+<li>Once you get to know Cargo you won't ever want to use a language without a built-in package
+manager.</li>
+<li>You will start hating C++.</li>
+</ul>
+<h2 id="meme">Meme</h2>
+<p><img src="https://mimuw-jnp2-rust.github.io/lessons/01-introduction/cpp_meme.jpg" alt="Meme" /></p>
+<h2 id="installing-rust">Installing Rust</h2>
+<ul>
+<li><a href="https://rustup.rs/">Rustup</a></li>
+<li>Setup an IDE
+<ul>
+<li><a href="https://www.jetbrains.com/clion/">CLion</a> (you can get
+it <a href="https://www.jetbrains.com/community/education/">for free</a>)
+and <a href="https://intellij-rust.github.io/">RustRover</a></li>
+<li><a href="https://code.visualstudio.com/">VSCode</a>
+and <a href="https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer">rust-analyzer</a></li>
+<li>rust-analyzer also works
+with <a href="https://rust-analyzer.github.io/manual.html#installation">other IDEs</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="useful-tools">Useful tools</h2>
+<p><img src="https://mimuw-jnp2-rust.github.io/lessons/01-introduction/clippy.jpg" alt="Clippy" /></p>
+<ul>
+<li><code>cargo clippy</code> (for static analysis)</li>
+<li>there's also <code>cargo check</code>, but it's less powerful than clippy</li>
+<li><code>cargo fmt</code> (for code formatting)</li>
+</ul>
+<h3 id="rust-playground">Rust Playground</h3>
+<ul>
+<li><a href="https://play.rust-lang.org/">online Rust compiler</a></li>
+</ul>
+<h2 id="slides">Slides</h2>
+<iframe
+  src="a_taste_of_rust-introductory_slides/A_taste_of_Rust.html"
+  title="A Taste of Rust — introductory slides"
+  loading="lazy"
+  style="width: 100%; aspect-ratio: 16 / 9; border: none;"
+></iframe>
+<ul>
+<li><a href="https://mimuw-jnp2-rust.github.io/lessons/01-introduction/a_taste_of_rust-introductory_slides/A_taste_of_Rust.html">Open the slides in a new tab (HTML)</a></li>
+<li><a href="https://mimuw-jnp2-rust.github.io/lessons/01-introduction/a_taste_of_rust-introductory_slides/A_taste_of_Rust.pdf">Download the slides as PDF</a></li>
+</ul>
+<h2 id="hello-world">Hello world</h2>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> name </span><span style="color:#3e999f;">= </span><span style="color:#718c00;">&quot;World&quot;</span><span>;
+</span><span>    println!(</span><span style="color:#718c00;">&quot;Hello, </span><span style="color:#666969;">{}</span><span style="color:#718c00;">!&quot;</span><span>, name); </span><span style="color:#999999;">// using the println! macro
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/01-introduction/hello_world.rs">hello_world.rs</a>)</sub></p>
+<h3 id="variables">Variables</h3>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#![</span><span style="color:#c82829;">allow</span><span>(unused_variables)]
+</span><span>#![</span><span style="color:#c82829;">allow</span><span>(unused_assignments)]
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> x </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">40</span><span>; </span><span style="color:#999999;">// inferred type
+</span><span>    </span><span style="color:#8959a8;">let</span><span> y: </span><span style="color:#8959a8;">i32 </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">100</span><span>; </span><span style="color:#999999;">// specified type
+</span><span>
+</span><span>    {
+</span><span>        </span><span style="color:#8959a8;">let</span><span> x </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">40 </span><span style="color:#3e999f;">+ </span><span style="color:#f5871f;">2</span><span>; </span><span style="color:#999999;">// shadowing
+</span><span>        println!(</span><span style="color:#718c00;">&quot;x is </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, x); </span><span style="color:#999999;">// prints 42
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// x = 0; // compilation error, variables are by default immutable
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> x </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">40</span><span>; </span><span style="color:#999999;">// declare as mutable
+</span><span>    x </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>; </span><span style="color:#999999;">// now we can reassign
+</span><span>
+</span><span>    x </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>; </span><span style="color:#999999;">// x = x + 1
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/01-introduction/variables.rs">variables.rs</a>)</sub></p>
+<h3 id="conditionals">Conditionals</h3>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#![</span><span style="color:#c82829;">allow</span><span>(unused_variables)]
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> x </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">42</span><span>;
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">if</span><span> x </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">42 </span><span>{
+</span><span>        println!(</span><span style="color:#718c00;">&quot;x is 42&quot;</span><span>);
+</span><span>    } </span><span style="color:#8959a8;">else if</span><span> x </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">43 </span><span>{
+</span><span>        println!(</span><span style="color:#718c00;">&quot;x is 43&quot;</span><span>);
+</span><span>    } </span><span style="color:#8959a8;">else </span><span>{
+</span><span>        println!(</span><span style="color:#718c00;">&quot;x is not 42 or 43&quot;</span><span>);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// we can also use ifs as expressions
+</span><span>    </span><span style="color:#8959a8;">let</span><span> a_or_b </span><span style="color:#3e999f;">= </span><span style="color:#8959a8;">if</span><span> x </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">0 </span><span>{
+</span><span>        </span><span style="color:#718c00;">&quot;a&quot; </span><span style="color:#999999;">// notice no semicolon at the end
+</span><span>    } </span><span style="color:#8959a8;">else </span><span>{
+</span><span>        </span><span style="color:#718c00;">&quot;b&quot;
+</span><span>    };
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/01-introduction/conditionals.rs">conditionals.rs</a>)</sub></p>
+<h3 id="loops">Loops</h3>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#![</span><span style="color:#c82829;">allow</span><span>(unused_variables)]
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">for</span><span> i </span><span style="color:#3e999f;">in </span><span style="color:#f5871f;">0</span><span style="color:#3e999f;">..</span><span style="color:#f5871f;">10 </span><span>{
+</span><span>        println!(</span><span style="color:#718c00;">&quot;i is </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, i); </span><span style="color:#999999;">// i in [0, 10)
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> x </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>;
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">while</span><span> x </span><span style="color:#3e999f;">&lt; </span><span style="color:#f5871f;">50 </span><span>{
+</span><span>        x </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> y </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>;
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> iterations </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>;
+</span><span>    </span><span style="color:#8959a8;">loop </span><span>{
+</span><span>        iterations </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>        </span><span style="color:#8959a8;">if</span><span> iterations </span><span style="color:#3e999f;">% </span><span style="color:#f5871f;">2 </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">0 </span><span>{
+</span><span>            </span><span style="color:#8959a8;">continue</span><span>;
+</span><span>        }
+</span><span>        y </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>        </span><span style="color:#8959a8;">if</span><span> y </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">10 </span><span>{
+</span><span>            </span><span style="color:#8959a8;">break</span><span>;
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// we can use labels to refer to a specific loop
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> count </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>;
+</span><span>    &#39;counting_up: </span><span style="color:#8959a8;">loop </span><span>{
+</span><span>        </span><span style="color:#8959a8;">let mut</span><span> remaining </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">10</span><span>;
+</span><span>
+</span><span>        </span><span style="color:#8959a8;">loop </span><span>{
+</span><span>            </span><span style="color:#8959a8;">if</span><span> remaining </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">9 </span><span>{
+</span><span>                </span><span style="color:#8959a8;">break</span><span>;
+</span><span>            }
+</span><span>            </span><span style="color:#8959a8;">if</span><span> count </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">2 </span><span>{
+</span><span>                </span><span style="color:#8959a8;">break &#39;counting_up</span><span>; </span><span style="color:#999999;">// ends the outer loop
+</span><span>            }
+</span><span>            remaining </span><span style="color:#3e999f;">-= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>        }
+</span><span>
+</span><span>        count </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// We can use break with a value.
+</span><span>    </span><span style="color:#999999;">// Because loops are expressions too,
+</span><span>    </span><span style="color:#999999;">// the value we break with will be returned from the functions
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> counter </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>;
+</span><span>    </span><span style="color:#8959a8;">let</span><span> value </span><span style="color:#3e999f;">= </span><span style="color:#8959a8;">loop </span><span>{
+</span><span>        counter </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>        </span><span style="color:#8959a8;">if</span><span> counter </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">10 </span><span>{
+</span><span>            </span><span style="color:#8959a8;">break </span><span style="color:#f5871f;">32</span><span>;
+</span><span>        }
+</span><span>    };
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/01-introduction/loops.rs">loops.rs</a>)</sub></p>
+<h3 id="functions">Functions</h3>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">get_5</span><span>() -&gt; </span><span style="color:#8959a8;">u32 </span><span>{
+</span><span>    </span><span style="color:#f5871f;">5 </span><span style="color:#999999;">// we could also write &quot;return 5;&quot;
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">print_sum</span><span>(</span><span style="color:#f5871f;">a</span><span>: </span><span style="color:#8959a8;">u32</span><span>, </span><span style="color:#f5871f;">b</span><span>: </span><span style="color:#8959a8;">u32</span><span>) {
+</span><span>    println!(</span><span style="color:#718c00;">&quot;a + b = </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, a </span><span style="color:#3e999f;">+</span><span> b);
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> a </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">100</span><span>;
+</span><span>    </span><span style="color:#4271ae;">print_sum</span><span>(a, </span><span style="color:#4271ae;">get_5</span><span>());
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/01-introduction/functions.rs">functions.rs</a>)</sub></p>
+<h2 id="test-assignment-not-graded">Test assignment (not graded)</h2>
+<p>Click <a href="https://classroom.github.com/a/l3iF_TJU">here</a></p>
+<h2 id="obligatory-reading">Obligatory reading</h2>
+<ul>
+<li><a href="https://doc.rust-lang.org/stable/book/">The Book, chapters 1-3</a></li>
+</ul>
+<h2 id="additional-reading">Additional reading</h2>
+<ul>
+<li><a href="https://doc.rust-lang.org/stable/rust-by-example/">Rust By Example</a></li>
+</ul>
+
+
+    </div>
+  </div>
+
+  <div class="prev-link">
+    
+    
+  </div>
+
+  <div class="next-link">
+    
+    
+  </div>
+</div>
+
+
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/elasticlunr.min.js"></script>
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/search_index.en.js"></script>
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/book.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Rust course</title>
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://mimuw-jnp2-rust.github.io/book.css">
+  
+
+  
+  
+</head>
+
+<body>
+<div class="menu">
+  
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="https://mimuw-jnp2-rust.github.io">Home</a></li>
+      
+        
+        
+        
+          
+          <li >
+            
+            <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;">
+              
+              List of lessons
+            </a>
+            
+              <ul>
+                
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;00-organizational&#x2F;">
+                        [2025-10-02]
+                        
+                        Organizational lesson
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;01-introduction&#x2F;">
+                        [2024-10-02]
+                        
+                        Introduction to Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;02-ownership&#x2F;">
+                        [2025-10-09]
+                        
+                        Ownership Model
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;03-data-types&#x2F;">
+                        [2025-10-16]
+                        
+                        Data Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2022-10-31]
+                          
+                          Feedback #1
+                        </span>
+                        <span class="upcoming-note">Available 2022-10-31</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;05-types-reasoning&#x2F;">
+                        [2025-10-23]
+                        
+                        Reasoning About Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;06-closures-iterators&#x2F;">
+                        [2025-10-30]
+                        
+                        Closures and Iterators
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;07-smart-pointers&#x2F;">
+                        [2025-11-06]
+                        
+                        Smart Pointers
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Feedback #2
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;09-concurrency&#x2F;">
+                        [2025-11-19]
+                        
+                        Fearless concurrency
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;10-design-patterns&#x2F;">
+                        [2025-11-26]
+                        
+                        Design patterns
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;11-async-1&#x2F;">
+                        [2025-12-03]
+                        
+                        Async: Part 1
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Project feedback
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;13-async-2&#x2F;">
+                        [2025-12-10]
+                        
+                        Async: Part 2
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;14-macros-1&#x2F;">
+                        [2025-12-17]
+                        
+                        Macros: Part 1 (declarative)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;15-macros-2&#x2F;">
+                        [2026-01-07]
+                        
+                        Macros: Part 2 (procedural)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;16-unsafe&#x2F;">
+                        [2026-01-14]
+                        
+                        Unsafe Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;project-showcase&#x2F;">
+                        [2022-10-17]
+                        
+                        2021L Project showcase
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;table-of-contents&#x2F;">
+                        [2025-10-05]
+                        
+                        Table of content
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  
+  
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+      <span class="search-icon">🔎</span>
+    
+  </div>
+
+  <div class="page__content">
+    
+      <div class="search-container">
+        <input id="search" type="search" placeholder="Search..">
+        <div class="search-results">
+          <div class="search-results__header"></div>
+          <ul class="search-results__items"></ul>
+        </div>
+      </div>
+    
+    <div class="book-content">
+      
+<h1 class="title">Project feedback</h1>
+<p class="subtitle">
+  <strong>2029-01-01</strong> (last edit: 2029-01-01)
+</p>
+<h1 id="project-feedback">Project feedback</h1>
+<h2 id="unwrapping-options-results">Unwrapping options/results</h2>
+<p>Always ask yourself twice if you really need to unwrap. In most cases, you don't have to. Use pattern matching instead,
+as it provides a static guarantee that the value is present.</p>
+<p>Pattern matching prevents you from writing code like this:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> x: </span><span style="color:#c99e00;">Option</span><span>&lt;</span><span style="color:#8959a8;">i32</span><span>&gt; </span><span style="color:#3e999f;">= </span><span style="color:#4271ae;">some_function</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">if</span><span> x.</span><span style="color:#4271ae;">is_some</span><span>() {
+</span><span>        println!(</span><span style="color:#718c00;">&quot;x is </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, x.</span><span style="color:#4271ae;">unwrap</span><span>());
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Let&#39;s say this line was added later and/or you forgot to put it in the if statement.
+</span><span>    </span><span style="color:#4271ae;">do_something</span><span>(x.</span><span style="color:#4271ae;">unwrap</span><span>()); </span><span style="color:#999999;">// this will blow up if x == None!
+</span><span>}
+</span></code></pre>
+<p>Instead, you can write:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> x: </span><span style="color:#c99e00;">Option</span><span>&lt;</span><span style="color:#8959a8;">i32</span><span>&gt; </span><span style="color:#3e999f;">= </span><span style="color:#4271ae;">some_function</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">if let </span><span style="color:#c99e00;">Some</span><span>(x) </span><span style="color:#3e999f;">=</span><span> x {
+</span><span>        println!(</span><span style="color:#718c00;">&quot;x is </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, x);
+</span><span>        </span><span style="color:#4271ae;">do_something</span><span>(x);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="question-mark-operator">Question mark operator</h2>
+<p>In methods that return <code>Result</code> or <code>Option</code>, you can use the question mark operator to return early if the value is <code>None</code> or <code>Err</code>.
+See: <a href="https://doc.rust-lang.org/rust-by-example/std/result/question_mark.html">https://doc.rust-lang.org/rust-by-example/std/result/question_mark.html</a></p>
+<h2 id="logging">Logging</h2>
+<p>You can use the <a href="https://crates.io/crates/log">log</a> crate to log messages. It's better than <code>println!</code> because it
+can be easily turned off. It also allows you to use different severity levels (e.g. <code>info</code>, <code>warn</code>, <code>error</code>) and only
+log messages above a certain level.</p>
+<h2 id="string-vs-str">&amp;String vs &amp;str</h2>
+<p>See <a href="https://doc.rust-lang.org/book/ch04-03-slices.html#string-slices-as-parameters">https://doc.rust-lang.org/book/ch04-03-slices.html#string-slices-as-parameters</a>
+In general, if you want to pass a reference to a string, use <code>&amp;str</code> instead of <code>&amp;String</code>.</p>
+<h2 id="use-current-versions-of-dependencies">Use current versions of dependencies</h2>
+<p>You can use <a href="https://crates.io/crates/cargo-upgrades">cargo upgrades</a> to check for outdated dependencies.</p>
+<h2 id="if-your-project-has-separate-binaries-use-multiple-binaries-or-a-workspace">If your project has separate binaries, use multiple binaries or a workspace</h2>
+<p>You can have multiple binaries in a single cargo project. Simply place them in the <code>src/bin</code> directory.
+You can run them with <code>cargo run --bin &lt;name&gt;</code>. Alternatively, you can setup a
+<a href="https://doc.rust-lang.org/book/ch14-03-cargo-workspaces.html">workspace</a>.</p>
+<h2 id="run-clippy-cargo-fmt">Run clippy &amp; cargo fmt</h2>
+<p>This should have become a habit by now. You can disable clippy warnings for a single item with <code>#[allow(clippy::...)]</code>,
+but in most cases you shouldn't do that.</p>
+<h2 id="if-you-need-to-escape-characters-in-a-string-use-raw-strings">If you need to escape characters in a string, use raw strings</h2>
+<p>See <a href="https://doc.rust-lang.org/reference/tokens.html#raw-string-literals">https://doc.rust-lang.org/reference/tokens.html#raw-string-literals</a></p>
+<h2 id="how-to-handle-errors">How to handle errors?</h2>
+<p>Short: <a href="https://kerkour.com/rust-error-handling">https://kerkour.com/rust-error-handling</a></p>
+<p>Long: <a href="https://www.lpalmieri.com/posts/error-handling-rust/">https://www.lpalmieri.com/posts/error-handling-rust/</a></p>
+<h2 id="don-t-pass-around-locked-mutex-s-contents">Don't pass around locked mutex's contents</h2>
+<p>If you have a mutex, you can use <code>lock()</code> to get a guard that will unlock the mutex when it goes out of scope.
+But don't pass the contents of the guard to functions that can block (unless the mutex <em>must</em> be locked for
+the entire duration of the function).
+Instead of:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">use </span><span>std::sync::Mutex;
+</span><span style="color:#8959a8;">use </span><span>std::thread;
+</span><span style="color:#8959a8;">use </span><span>std::time::Duration;
+</span><span style="color:#8959a8;">use </span><span>std::time::Instant;
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">handle_function</span><span>(</span><span style="color:#f5871f;">counter</span><span>: </span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut i32</span><span>) {
+</span><span>    thread::sleep(Duration::from_secs(</span><span style="color:#f5871f;">1</span><span>));
+</span><span>    </span><span style="color:#3e999f;">*</span><span>counter </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>    thread::sleep(Duration::from_secs(</span><span style="color:#f5871f;">1</span><span>));
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> counter </span><span style="color:#3e999f;">= </span><span>Mutex::new(</span><span style="color:#f5871f;">1</span><span>);
+</span><span>
+</span><span>    thread::scope(|</span><span style="color:#f5871f;">s</span><span>| {
+</span><span>        </span><span style="color:#8959a8;">for</span><span> i </span><span style="color:#3e999f;">in </span><span style="color:#f5871f;">0</span><span style="color:#3e999f;">..</span><span style="color:#f5871f;">10 </span><span>{
+</span><span>            </span><span style="color:#8959a8;">let</span><span> counter </span><span style="color:#3e999f;">= &amp;</span><span>counter;
+</span><span>            s.</span><span style="color:#4271ae;">spawn</span><span>(</span><span style="color:#8959a8;">move </span><span style="color:#3e999f;">|| </span><span>{
+</span><span>                println!(</span><span style="color:#718c00;">&quot;Thread </span><span style="color:#666969;">{i}</span><span style="color:#718c00;"> started&quot;</span><span>);
+</span><span>                </span><span style="color:#8959a8;">let</span><span> now </span><span style="color:#3e999f;">= </span><span>Instant::now();
+</span><span>                </span><span style="color:#8959a8;">let mut</span><span> counter </span><span style="color:#3e999f;">=</span><span> counter.</span><span style="color:#4271ae;">lock</span><span>().</span><span style="color:#4271ae;">unwrap</span><span>();
+</span><span>                </span><span style="color:#4271ae;">handle_function</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut</span><span> counter); </span><span style="color:#999999;">// lock is held for 2 seconds
+</span><span>                println!(</span><span style="color:#718c00;">&quot;Thread </span><span style="color:#666969;">{i}</span><span style="color:#718c00;"> finished after </span><span style="color:#666969;">{}</span><span style="color:#718c00;">s&quot;</span><span>, now.</span><span style="color:#4271ae;">elapsed</span><span>().</span><span style="color:#4271ae;">as_secs</span><span>());
+</span><span>            });
+</span><span>        }
+</span><span>    })
+</span><span>}
+</span></code></pre>
+<p>You should do this:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">use </span><span>std::sync::Mutex;
+</span><span style="color:#8959a8;">use </span><span>std::thread;
+</span><span style="color:#8959a8;">use </span><span>std::time::Duration;
+</span><span style="color:#8959a8;">use </span><span>std::time::Instant;
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">handle_function</span><span>(</span><span style="color:#f5871f;">counter</span><span>: </span><span style="color:#3e999f;">&amp;</span><span>Mutex&lt;</span><span style="color:#8959a8;">i32</span><span>&gt;) { </span><span style="color:#999999;">// &lt;-- changed
+</span><span>    thread::sleep(Duration::from_secs(</span><span style="color:#f5871f;">1</span><span>));
+</span><span>    {
+</span><span>        </span><span style="color:#8959a8;">let mut</span><span> counter </span><span style="color:#3e999f;">=</span><span> counter.</span><span style="color:#4271ae;">lock</span><span>().</span><span style="color:#4271ae;">unwrap</span><span>(); </span><span style="color:#999999;">// &lt;-- changed
+</span><span>        </span><span style="color:#3e999f;">*</span><span>counter </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>        </span><span style="color:#999999;">// lock is held only for the duration of the block
+</span><span>        </span><span style="color:#999999;">// it is important to create a new scope here, otherwise the lock would be held for another second
+</span><span>    }
+</span><span>    thread::sleep(Duration::from_secs(</span><span style="color:#f5871f;">1</span><span>));
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> counter </span><span style="color:#3e999f;">= </span><span>Mutex::new(</span><span style="color:#f5871f;">1</span><span>);
+</span><span>
+</span><span>    thread::scope(|</span><span style="color:#f5871f;">s</span><span>| {
+</span><span>        </span><span style="color:#8959a8;">for</span><span> i </span><span style="color:#3e999f;">in </span><span style="color:#f5871f;">0</span><span style="color:#3e999f;">..</span><span style="color:#f5871f;">10 </span><span>{
+</span><span>            </span><span style="color:#8959a8;">let</span><span> counter </span><span style="color:#3e999f;">= &amp;</span><span>counter;
+</span><span>            s.</span><span style="color:#4271ae;">spawn</span><span>(</span><span style="color:#8959a8;">move </span><span style="color:#3e999f;">|| </span><span>{
+</span><span>                println!(</span><span style="color:#718c00;">&quot;Thread </span><span style="color:#666969;">{i}</span><span style="color:#718c00;"> started&quot;</span><span>);
+</span><span>                </span><span style="color:#8959a8;">let</span><span> now </span><span style="color:#3e999f;">= </span><span>Instant::now();
+</span><span>                </span><span style="color:#4271ae;">handle_function</span><span>(counter); </span><span style="color:#999999;">// &lt;-- changed! we don&#39;t lock here
+</span><span>                println!(</span><span style="color:#718c00;">&quot;Thread </span><span style="color:#666969;">{i}</span><span style="color:#718c00;"> finished after </span><span style="color:#666969;">{}</span><span style="color:#718c00;">s&quot;</span><span>, now.</span><span style="color:#4271ae;">elapsed</span><span>().</span><span style="color:#4271ae;">as_secs</span><span>());
+</span><span>            });
+</span><span>        }
+</span><span>    })
+</span><span>}
+</span><span>
+</span></code></pre>
+<p>Compare the output of the two programs. The first one will take 20 seconds to finish, while the second one will take 2 seconds.</p>
+<p>First one:</p>
+<pre style="background-color:#ffffff;color:#4d4d4c;"><code><span>Thread 1 started
+</span><span>Thread 0 started
+</span><span>Thread 2 started
+</span><span>Thread 3 started
+</span><span>Thread 4 started
+</span><span>Thread 5 started
+</span><span>Thread 6 started
+</span><span>Thread 7 started
+</span><span>Thread 8 started
+</span><span>Thread 9 started
+</span><span>Thread 1 finished after 2s
+</span><span>Thread 0 finished after 4s
+</span><span>Thread 2 finished after 6s
+</span><span>Thread 3 finished after 8s
+</span><span>Thread 4 finished after 10s
+</span><span>Thread 5 finished after 12s
+</span><span>Thread 6 finished after 14s
+</span><span>Thread 7 finished after 16s
+</span><span>Thread 8 finished after 18s
+</span><span>Thread 9 finished after 20s
+</span><span>
+</span></code></pre>
+<p>Second one:</p>
+<pre style="background-color:#ffffff;color:#4d4d4c;"><code><span>Thread 0 started
+</span><span>Thread 2 started
+</span><span>Thread 1 started
+</span><span>Thread 3 started
+</span><span>Thread 4 started
+</span><span>Thread 5 started
+</span><span>Thread 6 started
+</span><span>Thread 7 started
+</span><span>Thread 8 started
+</span><span>Thread 9 started
+</span><span>Thread 1 finished after 2s
+</span><span>Thread 2 finished after 2s
+</span><span>Thread 0 finished after 2s
+</span><span>Thread 3 finished after 2s
+</span><span>Thread 4 finished after 2s
+</span><span>Thread 5 finished after 2s
+</span><span>Thread 6 finished after 2s
+</span><span>Thread 7 finished after 2s
+</span><span>Thread 8 finished after 2s
+</span><span>Thread 9 finished after 2s
+</span></code></pre>
+
+
+    </div>
+  </div>
+
+  <div class="prev-link">
+    
+    
+  </div>
+
+  <div class="next-link">
+    
+    
+  </div>
+</div>
+
+
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/elasticlunr.min.js"></script>
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/search_index.en.js"></script>
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/book.js"></script>
+
+</body>
+
+</html>

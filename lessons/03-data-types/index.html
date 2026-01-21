@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Rust course</title>
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://mimuw-jnp2-rust.github.io/book.css">
+  
+
+  
+  
+</head>
+
+<body>
+<div class="menu">
+  
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="https://mimuw-jnp2-rust.github.io">Home</a></li>
+      
+        
+        
+        
+          
+          <li >
+            
+            <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;">
+              
+              List of lessons
+            </a>
+            
+              <ul>
+                
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;00-organizational&#x2F;">
+                        [2025-10-02]
+                        
+                        Organizational lesson
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;01-introduction&#x2F;">
+                        [2024-10-02]
+                        
+                        Introduction to Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;02-ownership&#x2F;">
+                        [2025-10-09]
+                        
+                        Ownership Model
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li  class="active" >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;03-data-types&#x2F;">
+                        [2025-10-16]
+                        
+                        Data Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2022-10-31]
+                          
+                          Feedback #1
+                        </span>
+                        <span class="upcoming-note">Available 2022-10-31</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;05-types-reasoning&#x2F;">
+                        [2025-10-23]
+                        
+                        Reasoning About Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;06-closures-iterators&#x2F;">
+                        [2025-10-30]
+                        
+                        Closures and Iterators
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;07-smart-pointers&#x2F;">
+                        [2025-11-06]
+                        
+                        Smart Pointers
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Feedback #2
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;09-concurrency&#x2F;">
+                        [2025-11-19]
+                        
+                        Fearless concurrency
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;10-design-patterns&#x2F;">
+                        [2025-11-26]
+                        
+                        Design patterns
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;11-async-1&#x2F;">
+                        [2025-12-03]
+                        
+                        Async: Part 1
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Project feedback
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;13-async-2&#x2F;">
+                        [2025-12-10]
+                        
+                        Async: Part 2
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;14-macros-1&#x2F;">
+                        [2025-12-17]
+                        
+                        Macros: Part 1 (declarative)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;15-macros-2&#x2F;">
+                        [2026-01-07]
+                        
+                        Macros: Part 2 (procedural)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;16-unsafe&#x2F;">
+                        [2026-01-14]
+                        
+                        Unsafe Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;project-showcase&#x2F;">
+                        [2022-10-17]
+                        
+                        2021L Project showcase
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;table-of-contents&#x2F;">
+                        [2025-10-05]
+                        
+                        Table of content
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  
+  
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+      <span class="search-icon">🔎</span>
+    
+  </div>
+
+  <div class="page__content">
+    
+      <div class="search-container">
+        <input id="search" type="search" placeholder="Search..">
+        <div class="search-results">
+          <div class="search-results__header"></div>
+          <ul class="search-results__items"></ul>
+        </div>
+      </div>
+    
+    <div class="book-content">
+      
+<h1 class="title">Data Types</h1>
+<p class="subtitle">
+  <strong>2025-10-16</strong> (last edit: 2025-10-15)
+</p>
+<h2 id="aggregating-data">Aggregating data</h2>
+<p>Below is a compact overview of Rust's structs.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#c82829;">derive</span><span>(Clone, Copy, Debug, Eq, PartialEq)]
+</span><span style="color:#8959a8;">struct </span><span>Position(</span><span style="color:#8959a8;">i32</span><span>, </span><span style="color:#8959a8;">i32</span><span>); </span><span style="color:#999999;">// This is a &quot;tuple struct&quot;.
+</span><span>
+</span><span style="color:#999999;">// Could Hero derive the Copy trait?
+</span><span>#[</span><span style="color:#c82829;">derive</span><span>(Clone, Debug, Eq, PartialEq)]
+</span><span style="color:#8959a8;">struct </span><span>Hero {
+</span><span>    </span><span style="color:#c82829;">name</span><span>: String,
+</span><span>    </span><span style="color:#c82829;">level</span><span>: </span><span style="color:#8959a8;">u32</span><span>,
+</span><span>    </span><span style="color:#c82829;">experience</span><span>: </span><span style="color:#8959a8;">u32</span><span>,
+</span><span>    </span><span style="color:#c82829;">position</span><span>: Position,
+</span><span>}
+</span><span>
+</span><span style="color:#999999;">// We can add methods to structs using the &#39;impl&#39; keyword.
+</span><span style="color:#8959a8;">impl </span><span>Hero {
+</span><span>    </span><span style="color:#999999;">// Static method (in Rust nomenclature: &quot;associated function&quot;).
+</span><span>    </span><span style="color:#999999;">// It can then be called as follows: `Hero::new(String::from(&quot;Ferris&quot;))`.
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">new</span><span>(</span><span style="color:#f5871f;">name</span><span>: String) -&gt; Hero {
+</span><span>        Hero {
+</span><span>            name,
+</span><span>            level: </span><span style="color:#f5871f;">1</span><span>,
+</span><span>            experience: </span><span style="color:#f5871f;">0</span><span>,
+</span><span>            position: Position(</span><span style="color:#f5871f;">0</span><span>, </span><span style="color:#f5871f;">0</span><span>),
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#999999;">// We can have multiple `impl` blocks for one struct.
+</span><span style="color:#8959a8;">impl </span><span>Hero {
+</span><span>    </span><span style="color:#999999;">// Instance method. The first argument (self) is the calling instance,
+</span><span>    </span><span style="color:#999999;">// just like `self` in Python and `this` in C++.
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">distance</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#f5871f;">self</span><span>, </span><span style="color:#f5871f;">pos</span><span>: Position) -&gt; </span><span style="color:#8959a8;">u32 </span><span>{
+</span><span>        </span><span style="color:#999999;">// For convenience, we don&#39;t have to type the argument as `self: &amp;Self`.
+</span><span>        </span><span style="color:#999999;">// The i-th field of a tuple or a tuple struct can be accessed through &#39;tuple.i&#39;.
+</span><span>        </span><span style="color:#999999;">// Do not abuse this syntax, though; it&#39;s often cleaner to perform
+</span><span>        </span><span style="color:#999999;">// pattern matching to decompose the tuple.
+</span><span>        (pos.</span><span style="color:#f5871f;">0 </span><span style="color:#3e999f;">- </span><span style="color:#c82829;">self</span><span>.position.</span><span style="color:#f5871f;">0</span><span>).</span><span style="color:#4271ae;">unsigned_abs</span><span>() </span><span style="color:#3e999f;">+ </span><span>(pos.</span><span style="color:#f5871f;">1 </span><span style="color:#3e999f;">- </span><span style="color:#c82829;">self</span><span>.position.</span><span style="color:#f5871f;">1</span><span>).</span><span style="color:#4271ae;">unsigned_abs</span><span>()
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Mutable borrow of self allows to change instance fields.
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">level_up</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut </span><span style="color:#f5871f;">self</span><span>) {
+</span><span>        </span><span style="color:#999999;">// Again, we don&#39;t have to type the argument as `self: &amp;mut Self`.
+</span><span>        </span><span style="color:#c82829;">self</span><span>.experience </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>;
+</span><span>        </span><span style="color:#c82829;">self</span><span>.level </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// &#39;self&#39; is not borrowed here and will be moved into the method.
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">die</span><span>(</span><span style="color:#f5871f;">self</span><span>) {
+</span><span>        println!(
+</span><span>            </span><span style="color:#718c00;">&quot;Here lies </span><span style="color:#666969;">{}</span><span style="color:#718c00;">, a hero who reached level </span><span style="color:#666969;">{}</span><span style="color:#718c00;">. RIP.&quot;</span><span>,
+</span><span>            </span><span style="color:#c82829;">self</span><span>.name, </span><span style="color:#c82829;">self</span><span>.level
+</span><span>        );
+</span><span>        </span><span style="color:#999999;">// The `self: Self` is now dropped.
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#999999;">// Calling associated functions requires scope (`::`) operator.
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> hero: Hero </span><span style="color:#3e999f;">= </span><span>Hero::new(</span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;Ferris&quot;</span><span>));
+</span><span>    hero.</span><span style="color:#4271ae;">level_up</span><span>(); </span><span style="color:#999999;">// &#39;self&#39; is always passed implicitly as the first argument.
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Thanks to `..hero`, fields other than &#39;name&#39; will be the same as in &#39;hero&#39;.
+</span><span>    </span><span style="color:#999999;">// In general, they are moved. Here, they are copied, because all missing fields
+</span><span>    </span><span style="color:#999999;">// implement the `Copy` trait.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> steve </span><span style="color:#3e999f;">=</span><span> Hero {
+</span><span>        name: </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;Steve The Normal Guy&quot;</span><span>),
+</span><span>        </span><span style="color:#3e999f;">..</span><span>hero
+</span><span>    };
+</span><span>
+</span><span>    assert_eq!(hero.level, steve.level);
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> twin </span><span style="color:#3e999f;">=</span><span> hero.</span><span style="color:#4271ae;">clone</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#999999;">// We can compare `Hero` objects because it derives the `PartialEq` trait.
+</span><span>    assert_eq!(hero, twin);
+</span><span>    twin.</span><span style="color:#4271ae;">level_up</span><span>();
+</span><span>    assert_ne!(hero, twin);
+</span><span>    hero.</span><span style="color:#4271ae;">level_up</span><span>();
+</span><span>    assert_eq!(hero, twin);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// We can print out the struct&#39;s debug string
+</span><span>    </span><span style="color:#999999;">// (which is implemented thanks to `Debug` trait) with &#39;{:?}&#39;.
+</span><span>    println!(</span><span style="color:#718c00;">&quot;print to stdout: </span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">&quot;</span><span>, hero);
+</span><span>
+</span><span>    hero.</span><span style="color:#4271ae;">die</span><span>(); </span><span style="color:#999999;">// &#39;hero&#39; is not usable after this invocation, see the method&#39;s definiton.
+</span><span>
+</span><span>    </span><span style="color:#999999;">// The `dbg!` macro prints debug strings to stderr along with file and line number.
+</span><span>    </span><span style="color:#999999;">// `dbg!` takes its arguments by value, so it&#39;s better to borrow them to not have them
+</span><span>    </span><span style="color:#999999;">// moved into `dbg!` and consumed.
+</span><span>    dbg!(</span><span style="color:#718c00;">&quot;print to stderr: {}&quot;</span><span>, </span><span style="color:#3e999f;">&amp;</span><span>twin);
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let</span><span> pos </span><span style="color:#3e999f;">=</span><span> Position(</span><span style="color:#f5871f;">42</span><span>, </span><span style="color:#f5871f;">0</span><span>);
+</span><span>    </span><span style="color:#8959a8;">let</span><span> dist </span><span style="color:#3e999f;">=</span><span> steve.</span><span style="color:#4271ae;">distance</span><span>(pos); </span><span style="color:#999999;">// No clone here as `Position` derives the `Copy` trait.
+</span><span>    println!(</span><span style="color:#718c00;">&quot;</span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">&quot;</span><span>, pos);
+</span><span>    assert_eq!(dist, </span><span style="color:#f5871f;">42</span><span>);
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/03-data-types/data_types.rs">data_types.rs</a>)</sub></p>
+<h2 id="enums">Enums</h2>
+<p>It is often the case that we want to define a variable that can only take
+a certain set of values and the values are known up front.
+Just like the below code shows, in C you can use an <code>enum</code> for this.</p>
+<pre data-lang="c" style="background-color:#ffffff;color:#4d4d4c;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#8959a8;">#include </span><span style="color:#718c00;">&lt;stdio.h&gt;
+</span><span>
+</span><span style="color:#8959a8;">enum </span><span>shirt_size {
+</span><span>    small,
+</span><span>    medium,
+</span><span>    large,
+</span><span>    xlarge
+</span><span>};
+</span><span>
+</span><span style="color:#8959a8;">void </span><span style="color:#4271ae;">print_size</span><span>(</span><span style="color:#8959a8;">enum</span><span> shirt_size </span><span style="color:#f5871f;">size</span><span>) {
+</span><span>    </span><span style="color:#4271ae;">printf(</span><span style="color:#718c00;">&quot;my size is &quot;</span><span style="color:#4271ae;">)</span><span>;
+</span><span>    </span><span style="color:#8959a8;">switch </span><span>(size) {
+</span><span>        </span><span style="color:#8959a8;">case</span><span> small:
+</span><span>            </span><span style="color:#4271ae;">printf(</span><span style="color:#718c00;">&quot;small&quot;</span><span style="color:#4271ae;">)</span><span>;
+</span><span>            </span><span style="color:#8959a8;">break</span><span>;
+</span><span>        </span><span style="color:#8959a8;">case</span><span> medium:
+</span><span>            </span><span style="color:#4271ae;">printf(</span><span style="color:#718c00;">&quot;medium&quot;</span><span style="color:#4271ae;">)</span><span>;
+</span><span>            </span><span style="color:#8959a8;">break</span><span>;
+</span><span>        </span><span style="color:#8959a8;">case</span><span> large:
+</span><span>            </span><span style="color:#4271ae;">printf(</span><span style="color:#718c00;">&quot;large&quot;</span><span style="color:#4271ae;">)</span><span>;
+</span><span>            </span><span style="color:#8959a8;">break</span><span>;
+</span><span>        </span><span style="color:#8959a8;">case</span><span> xlarge:
+</span><span>            </span><span style="color:#4271ae;">printf(</span><span style="color:#718c00;">&quot;xlarge&quot;</span><span style="color:#4271ae;">)</span><span>;
+</span><span>            </span><span style="color:#8959a8;">break</span><span>;
+</span><span>        </span><span style="color:#8959a8;">default</span><span>:
+</span><span>            </span><span style="color:#4271ae;">printf(</span><span style="color:#718c00;">&quot;unknown&quot;</span><span style="color:#4271ae;">)</span><span>;
+</span><span>            </span><span style="color:#8959a8;">break</span><span>;
+</span><span>    }
+</span><span>    </span><span style="color:#4271ae;">printf(</span><span style="color:#718c00;">&quot;</span><span style="color:#f5871f;">\n</span><span style="color:#718c00;">&quot;</span><span style="color:#4271ae;">)</span><span>;
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">int </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">enum</span><span> shirt_size my_size </span><span style="color:#3e999f;">=</span><span> medium;
+</span><span>    </span><span style="color:#c82829;">print_size</span><span style="color:#4271ae;">(my_size)</span><span>;
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/03-data-types/enums.c">enums.c</a>)</sub></p>
+<p>However, in C enums are just integers. Nothing prevents us from writing</p>
+<pre data-lang="c" style="background-color:#ffffff;color:#4d4d4c;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#8959a8;">int </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">enum</span><span> shirt_size my_size </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">666</span><span>;
+</span><span>    </span><span style="color:#c82829;">print_size</span><span style="color:#4271ae;">(my_size)</span><span>;
+</span><span>}
+</span></code></pre>
+<p>C++ introduces enum classes which are type-safe. Legacy enums are also somewhat safer than in C (same code as above):</p>
+<pre style="background-color:#ffffff;color:#4d4d4c;"><code><span>&lt;source&gt;:27:31: error: invalid conversion from &#39;int&#39; to &#39;shirt_size&#39; [-fpermissive]
+</span><span>   27 |     enum shirt_size my_size = 666;
+</span><span>      |                               ^~~
+</span><span>      |                               |
+</span><span>      |                               int
+</span></code></pre>
+<p>Even though in this case we got an error, we can still write code that somehow casts the integer to the enum.</p>
+<h2 id="algebraic-data-types">Algebraic data types</h2>
+<p>Some programming languages (especially functional ones) allow programmers to define
+enums which carry additional information. Such types are usually called <code>tagged unions</code>
+or <code>algebraic data types</code>. This name can be new to you, but there's a chance that you
+already used it (or something similar). It's pretty easy to understand it.</p>
+<p>In C++ we can use <code>union</code> with an <code>enum</code> tag to define it:</p>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#4d4d4c;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#8959a8;">#include </span><span style="color:#718c00;">&lt;iostream&gt;
+</span><span>
+</span><span style="color:#999999;">// Taken from: https://en.cppreference.com/w/cpp/language/union
+</span><span>
+</span><span style="color:#999999;">// S has one non-static data member (tag),
+</span><span style="color:#999999;">// three enumerator members (CHAR, INT, DOUBLE),
+</span><span style="color:#999999;">// and three variant members (c, i, d).
+</span><span style="color:#8959a8;">struct </span><span>S
+</span><span>{
+</span><span>    </span><span style="color:#8959a8;">enum</span><span>{</span><span style="color:#c99e00;">CHAR</span><span>, </span><span style="color:#c99e00;">INT</span><span>, DOUBLE} tag;
+</span><span>    </span><span style="color:#8959a8;">union
+</span><span>    {
+</span><span>        </span><span style="color:#8959a8;">char</span><span> c;
+</span><span>        </span><span style="color:#8959a8;">int</span><span> i;
+</span><span>        </span><span style="color:#8959a8;">double</span><span> d;
+</span><span>    };
+</span><span>};
+</span><span>
+</span><span style="color:#8959a8;">void </span><span style="color:#4271ae;">print_s</span><span>(</span><span style="color:#8959a8;">const</span><span> S</span><span style="color:#3e999f;">&amp; </span><span style="color:#f5871f;">s</span><span>)
+</span><span>{
+</span><span>    </span><span style="color:#8959a8;">switch</span><span>(s.</span><span style="color:#c82829;">tag</span><span>)
+</span><span>    {
+</span><span>        </span><span style="color:#8959a8;">case</span><span> S::</span><span style="color:#c99e00;">CHAR</span><span>: std::cout </span><span style="color:#3e999f;">&lt;&lt;</span><span> s.</span><span style="color:#c82829;">c </span><span style="color:#3e999f;">&lt;&lt; </span><span style="color:#718c00;">&#39;</span><span style="color:#f5871f;">\n</span><span style="color:#718c00;">&#39;</span><span>; </span><span style="color:#8959a8;">break</span><span>;
+</span><span>        </span><span style="color:#8959a8;">case</span><span> S::</span><span style="color:#c99e00;">INT</span><span>: std::cout </span><span style="color:#3e999f;">&lt;&lt;</span><span> s.</span><span style="color:#c82829;">i </span><span style="color:#3e999f;">&lt;&lt; </span><span style="color:#718c00;">&#39;</span><span style="color:#f5871f;">\n</span><span style="color:#718c00;">&#39;</span><span>; </span><span style="color:#8959a8;">break</span><span>;
+</span><span>        </span><span style="color:#8959a8;">case</span><span> S::DOUBLE: std::cout </span><span style="color:#3e999f;">&lt;&lt;</span><span> s.</span><span style="color:#c82829;">d </span><span style="color:#3e999f;">&lt;&lt; </span><span style="color:#718c00;">&#39;</span><span style="color:#f5871f;">\n</span><span style="color:#718c00;">&#39;</span><span>; </span><span style="color:#8959a8;">break</span><span>;
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">int </span><span style="color:#4271ae;">main</span><span>()
+</span><span>{
+</span><span>    S s </span><span style="color:#3e999f;">= </span><span>{S::</span><span style="color:#c99e00;">CHAR</span><span>, </span><span style="color:#718c00;">&#39;a&#39;</span><span>};
+</span><span>    </span><span style="color:#c82829;">print_s</span><span style="color:#4271ae;">(s)</span><span>;
+</span><span>    s.</span><span style="color:#c82829;">tag </span><span style="color:#3e999f;">=</span><span> S::</span><span style="color:#c99e00;">INT</span><span>;
+</span><span>    s.</span><span style="color:#c82829;">i </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">123</span><span>;
+</span><span>    </span><span style="color:#c82829;">print_s</span><span style="color:#4271ae;">(s)</span><span>;
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/03-data-types/tagged_union.cpp">tagged_union.cpp</a>)</sub></p>
+<p>C++17 introduced a new feature called <code>variant</code> which generalizes this concept.
+You can read more about it <a href="https://en.cppreference.com/w/cpp/utility/variant">here</a>.</p>
+<p>Java has a more or less analogous feature called <code>sealed classes</code>
+since <a href="https://docs.oracle.com/en/java/javase/17/language/sealed-classes-and-interfaces.html.">version 17</a>.</p>
+<p>In Python, this is quite clean starting from Python 3.10.</p>
+<pre data-lang="py" style="background-color:#ffffff;color:#4d4d4c;" class="language-py "><code class="language-py" data-lang="py"><span style="color:#8959a8;">from </span><span>typing </span><span style="color:#8959a8;">import </span><span>Union
+</span><span>
+</span><span style="color:#8959a8;">def </span><span style="color:#4271ae;">print_s</span><span>(</span><span style="color:#f5871f;">s</span><span>: Union[</span><span style="color:#c99e00;">str</span><span>, </span><span style="color:#c99e00;">int</span><span>, </span><span style="color:#c99e00;">float</span><span>]):
+</span><span>    match s:
+</span><span>        case </span><span style="color:#c99e00;">str</span><span style="color:#4271ae;">(c)</span><span>:
+</span><span>            </span><span style="color:#4271ae;">print(c)
+</span><span>        case </span><span style="color:#c99e00;">int</span><span style="color:#4271ae;">(i)</span><span>:
+</span><span>            </span><span style="color:#4271ae;">print(i)
+</span><span>        case </span><span style="color:#c99e00;">float</span><span style="color:#4271ae;">(d)</span><span>:
+</span><span>            </span><span style="color:#4271ae;">print(d)
+</span><span>        case </span><span style="color:#c82829;">_</span><span>:
+</span><span>            </span><span style="color:#999999;"># Bonus question: how to change the code
+</span><span>            </span><span style="color:#999999;"># so that the Python type checkers (e.g. `mypy`)
+</span><span>            </span><span style="color:#999999;"># will complain when we&#39;ll extend the `s` type
+</span><span>            </span><span style="color:#999999;"># without adding a new `case`?
+</span><span>            </span><span style="color:#8959a8;">raise </span><span style="color:#c99e00;">ValueError</span><span style="color:#4271ae;">(</span><span style="color:#718c00;">&quot;Unsupported type&quot;</span><span style="color:#4271ae;">)
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/03-data-types/variant.py">variant.py</a>)</sub></p>
+<h2 id="enums-in-rust">Enums in Rust</h2>
+<p>Let's see how they are defined in Rust.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#![</span><span style="color:#c82829;">allow</span><span>(unused_assignments)]
+</span><span>#![</span><span style="color:#c82829;">allow</span><span>(unused_variables)]
+</span><span>#![</span><span style="color:#c82829;">allow</span><span>(dead_code)]
+</span><span>
+</span><span>#[</span><span style="color:#c82829;">derive</span><span>(Debug)]
+</span><span style="color:#8959a8;">enum </span><span>NamedSize {
+</span><span>    Small,
+</span><span>    Medium,
+</span><span>    Large,
+</span><span>    </span><span style="color:#666969;">XL</span><span>,
+</span><span>}
+</span><span>
+</span><span>#[</span><span style="color:#c82829;">derive</span><span>(Debug)]
+</span><span style="color:#8959a8;">enum </span><span>ShirtSize {
+</span><span>    Named(NamedSize),
+</span><span>    Numeric(</span><span style="color:#8959a8;">u32</span><span>),
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    println!(
+</span><span>        </span><span style="color:#718c00;">&quot;Isn&#39;t it strange that some clothes&#39; sizes are adjectives like </span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">,&quot;</span><span>,
+</span><span>        ShirtSize::Named(NamedSize::Small)
+</span><span>    );
+</span><span>    println!(
+</span><span>        </span><span style="color:#718c00;">&quot;but sometimes they are numbers like </span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">?&quot;</span><span>,
+</span><span>        ShirtSize::Numeric(</span><span style="color:#f5871f;">42</span><span>)
+</span><span>    );
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/03-data-types/enums.rs">enums.rs</a>)</sub></p>
+<p>In Rust, enums are a core feature of the language.
+You may have heard that one of Rust's defining characteristics is
+the absence of <a href="https://en.wikipedia.org/wiki/Tony_Hoare#Apologies_and_retractions">"the billion dollar mistake"</a>.
+So what can we do to say that a value is missing if there is no <code>null</code>?</p>
+<p>In Rust, we can use the <code>Option</code> type to represent the absence of a value.</p>
+<p>Option is defined as:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">enum </span><span>Option&lt;T&gt; {
+</span><span>    </span><span style="color:#c99e00;">Some</span><span>(T),
+</span><span>    </span><span style="color:#c99e00;">None</span><span>,
+</span><span>}
+</span></code></pre>
+<p>The <code>&lt;T&gt;</code> part is called the "type parameter" and it causes Option to be generic.
+We won't go deeper into this for now.</p>
+<p>The fact that variables which could be <code>null</code> in other languages have a different type in Rust is
+the solution to the billion dollar mistake!</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#![</span><span style="color:#c82829;">allow</span><span>(unused_assignments)]
+</span><span>#![</span><span style="color:#c82829;">allow</span><span>(unused_variables)]
+</span><span>#![</span><span style="color:#c82829;">allow</span><span>(dead_code)]
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> not_null: </span><span style="color:#8959a8;">i32 </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">42</span><span>;
+</span><span>    not_null </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">43</span><span>;
+</span><span>    </span><span style="color:#999999;">// not_null = None; // This won&#39;t compile because it&#39;s a different type!
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> nullable: </span><span style="color:#c99e00;">Option</span><span>&lt;</span><span style="color:#8959a8;">i32</span><span>&gt; </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#f5871f;">42</span><span>);
+</span><span>    nullable </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">None</span><span>;
+</span><span>    nullable </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#f5871f;">43</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Such construction is rare, but possible.
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> double_nullable: </span><span style="color:#c99e00;">Option</span><span>&lt;</span><span style="color:#c99e00;">Option</span><span>&lt;</span><span style="color:#8959a8;">i32</span><span>&gt;&gt; </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#f5871f;">42</span><span>));
+</span><span>    </span><span style="color:#999999;">// This won&#39;t even compile because it&#39;s a different type.
+</span><span>    </span><span style="color:#999999;">// assert_ne!(double_nullable, Some(42));
+</span><span>    double_nullable </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">None</span><span>;
+</span><span>    double_nullable </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#c99e00;">None</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// `None` and `Some(None)` are different.
+</span><span>    </span><span style="color:#999999;">// Why? How are enums represented in memory?
+</span><span>    assert_ne!(double_nullable, </span><span style="color:#c99e00;">None</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Now recall that division by 0 *panics*.
+</span><span>    </span><span style="color:#999999;">// A panic is an unrecoverable error.
+</span><span>    </span><span style="color:#999999;">// It is not an exception!
+</span><span>    </span><span style="color:#999999;">// And in Rust there are no exceptions, so there are no try/catch blocks.
+</span><span>    </span><span style="color:#999999;">// Now let&#39;s imagine that we want to divide one number by another:
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">divide</span><span>(</span><span style="color:#f5871f;">dividend</span><span>: </span><span style="color:#8959a8;">i32</span><span>, </span><span style="color:#f5871f;">divisor</span><span>: </span><span style="color:#8959a8;">i32</span><span>) -&gt; </span><span style="color:#8959a8;">i32 </span><span>{
+</span><span>        dividend </span><span style="color:#3e999f;">/</span><span> divisor
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// We get the divisor from the user, so it can be 0.
+</span><span>    </span><span style="color:#999999;">// We want to handle this situation gracefully,
+</span><span>    </span><span style="color:#999999;">// as we don&#39;t want to crash the program.
+</span><span>    </span><span style="color:#999999;">// We can do this by using the `Option&lt;T&gt;` type.
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">safe_divide</span><span>(</span><span style="color:#f5871f;">dividend</span><span>: </span><span style="color:#8959a8;">i32</span><span>, </span><span style="color:#f5871f;">divisor</span><span>: </span><span style="color:#8959a8;">i32</span><span>) -&gt; </span><span style="color:#c99e00;">Option</span><span>&lt;</span><span style="color:#8959a8;">i32</span><span>&gt; {
+</span><span>        </span><span style="color:#8959a8;">if</span><span> divisor </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">0 </span><span>{
+</span><span>            </span><span style="color:#c99e00;">None
+</span><span>        } </span><span style="color:#8959a8;">else </span><span>{
+</span><span>            </span><span style="color:#c99e00;">Some</span><span>(dividend </span><span style="color:#3e999f;">/</span><span> divisor)
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Fortunately, such a function is already included in the standard library.
+</span><span>    </span><span style="color:#999999;">// We need to specify the type of `number` explicitly,
+</span><span>    </span><span style="color:#999999;">// because `checked_div` is implemented for all integer types
+</span><span>    </span><span style="color:#999999;">// and Rust won&#39;t know which type we want to use.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> number: </span><span style="color:#8959a8;">i32 </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">42</span><span>;
+</span><span>    assert_eq!(number.</span><span style="color:#4271ae;">checked_div</span><span>(</span><span style="color:#f5871f;">2</span><span>), </span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#f5871f;">21</span><span>));
+</span><span>    assert_eq!(number.</span><span style="color:#4271ae;">checked_div</span><span>(</span><span style="color:#f5871f;">0</span><span>), </span><span style="color:#c99e00;">None</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Now let&#39;s imagine we search for a value in an array.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> numbers </span><span style="color:#3e999f;">= </span><span>[</span><span style="color:#f5871f;">1</span><span>, </span><span style="color:#f5871f;">2</span><span>, </span><span style="color:#f5871f;">3</span><span>, </span><span style="color:#f5871f;">4</span><span>, </span><span style="color:#f5871f;">5</span><span>];
+</span><span>    </span><span style="color:#8959a8;">let</span><span> three </span><span style="color:#3e999f;">=</span><span> numbers.</span><span style="color:#4271ae;">iter</span><span>().</span><span style="color:#4271ae;">copied</span><span>().</span><span style="color:#4271ae;">find</span><span>(|</span><span style="color:#3e999f;">&amp;</span><span style="color:#f5871f;">x</span><span>| x </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">3</span><span>);
+</span><span>    assert_eq!(three, </span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#f5871f;">3</span><span>));
+</span><span>    </span><span style="color:#8959a8;">let</span><span> seven </span><span style="color:#3e999f;">=</span><span> numbers.</span><span style="color:#4271ae;">iter</span><span>().</span><span style="color:#4271ae;">copied</span><span>().</span><span style="color:#4271ae;">find</span><span>(|</span><span style="color:#3e999f;">&amp;</span><span style="color:#f5871f;">x</span><span>| x </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">7</span><span>);
+</span><span>    assert_eq!(seven, </span><span style="color:#c99e00;">None</span><span>);
+</span><span>    </span><span style="color:#999999;">// We won&#39;t delve deeper into the details of how iterators work for now,
+</span><span>    </span><span style="color:#999999;">// but the key takeaway is that there are no sentinel
+</span><span>    </span><span style="color:#999999;">// or special values like `nullptr`/`std::iterator` in Rust.
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Usually there are two kinds of methods:
+</span><span>    </span><span style="color:#999999;">// - ones that will panic if the argument is incorrect,
+</span><span>    </span><span style="color:#999999;">//   like: `numbers[8];` (this will panic),
+</span><span>    </span><span style="color:#999999;">// - and `checked` ones that return an `Option`.
+</span><span>    assert_eq!(numbers.</span><span style="color:#4271ae;">get</span><span>(</span><span style="color:#f5871f;">8</span><span>), </span><span style="color:#c99e00;">None</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// We can use `unwrap` to get the value out of an `Option`,
+</span><span>    </span><span style="color:#999999;">// but we must be absolutely sure that the `Option` is `Some`,
+</span><span>    </span><span style="color:#999999;">// otherwise we&#39;ll get a panic,
+</span><span>    </span><span style="color:#999999;">// like: `numbers.get(8).unwrap();` (this will panic).
+</span><span>    </span><span style="color:#999999;">// Or we can provide a default value:
+</span><span>    assert_eq!(numbers.</span><span style="color:#4271ae;">get</span><span>(</span><span style="color:#f5871f;">8</span><span>).</span><span style="color:#4271ae;">copied</span><span>().</span><span style="color:#4271ae;">unwrap_or</span><span>(</span><span style="color:#f5871f;">0</span><span>), </span><span style="color:#f5871f;">0</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Usually instead of unwrapping we use pattern matching,
+</span><span>    </span><span style="color:#999999;">// we&#39;ll get to this in a minute,
+</span><span>    </span><span style="color:#999999;">// but first let&#39;s see what else we can do with an option.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> number: </span><span style="color:#c99e00;">Option</span><span>&lt;</span><span style="color:#8959a8;">i32</span><span>&gt; </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#f5871f;">42</span><span>);
+</span><span>    </span><span style="color:#999999;">// We can use `map` to transform the value inside an `Option`.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> doubled </span><span style="color:#3e999f;">=</span><span> number.</span><span style="color:#4271ae;">map</span><span>(|</span><span style="color:#f5871f;">x</span><span>| x </span><span style="color:#3e999f;">* </span><span style="color:#f5871f;">2</span><span>);
+</span><span>    assert_eq!(doubled, </span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#f5871f;">84</span><span>));
+</span><span>    </span><span style="color:#999999;">// We can use `flatten` to reduce one level of nesting.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> nested </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#f5871f;">42</span><span>));
+</span><span>    assert_eq!(nested.</span><span style="color:#4271ae;">flatten</span><span>(), </span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#f5871f;">42</span><span>));
+</span><span>    </span><span style="color:#999999;">// We can use `and_then` to chain multiple options.
+</span><span>    </span><span style="color:#999999;">// This operation is called `flatmap` in some languages.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> chained </span><span style="color:#3e999f;">=</span><span> number
+</span><span>        .</span><span style="color:#4271ae;">and_then</span><span>(|</span><span style="color:#f5871f;">x</span><span>| x.</span><span style="color:#4271ae;">checked_div</span><span>(</span><span style="color:#f5871f;">0</span><span>))
+</span><span>        .</span><span style="color:#4271ae;">and_then</span><span>(|</span><span style="color:#f5871f;">x</span><span>| x.</span><span style="color:#4271ae;">checked_div</span><span>(</span><span style="color:#f5871f;">2</span><span>));
+</span><span>    assert_eq!(chained, </span><span style="color:#c99e00;">None</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// The last two things we&#39;ll cover here are `take` and `replace`.
+</span><span>    </span><span style="color:#999999;">// They are important when dealing with non-`Copy` types.
+</span><span>    </span><span style="color:#999999;">// The `take` will return the value inside an `Option`
+</span><span>    </span><span style="color:#999999;">// and leave a `None` in its place.
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> option: </span><span style="color:#c99e00;">Option</span><span>&lt;</span><span style="color:#8959a8;">i32</span><span>&gt; </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">None</span><span>;
+</span><span>    </span><span style="color:#999999;">// Again, we need to specify the type.
+</span><span>    </span><span style="color:#999999;">// Even though we want to say that there is no value inside the `Option`,
+</span><span>    </span><span style="color:#999999;">// this absent value must have a concrete type!
+</span><span>    assert_eq!(option.</span><span style="color:#4271ae;">take</span><span>(), </span><span style="color:#c99e00;">None</span><span>);
+</span><span>    assert_eq!(option, </span><span style="color:#c99e00;">None</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> x </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#f5871f;">2</span><span>);
+</span><span>    </span><span style="color:#8959a8;">let</span><span> y </span><span style="color:#3e999f;">=</span><span> x.</span><span style="color:#4271ae;">take</span><span>();
+</span><span>    assert_eq!(x, </span><span style="color:#c99e00;">None</span><span>);
+</span><span>    assert_eq!(y, </span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#f5871f;">2</span><span>));
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Also `replace` can be used to swap the value inside an `Option`.
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> x </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#f5871f;">2</span><span>);
+</span><span>    </span><span style="color:#8959a8;">let</span><span> old </span><span style="color:#3e999f;">=</span><span> x.</span><span style="color:#4271ae;">replace</span><span>(</span><span style="color:#f5871f;">5</span><span>);
+</span><span>    assert_eq!(x, </span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#f5871f;">5</span><span>));
+</span><span>    assert_eq!(old, </span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#f5871f;">2</span><span>));
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> x </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">None</span><span>;
+</span><span>    </span><span style="color:#8959a8;">let</span><span> old </span><span style="color:#3e999f;">=</span><span> x.</span><span style="color:#4271ae;">replace</span><span>(</span><span style="color:#f5871f;">3</span><span>);
+</span><span>    assert_eq!(x, </span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#f5871f;">3</span><span>));
+</span><span>    assert_eq!(old, </span><span style="color:#c99e00;">None</span><span>);
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/03-data-types/option.rs">option.rs</a>)</sub></p>
+<h2 id="to-discuss-during-class">To discuss during class</h2>
+<ul>
+<li>Why <code>enum</code> is considered a core feature of the language?</li>
+<li>How Rust <code>enum</code>s could save us during standard project refactors/library usages, which wouldn't be as safe in some other languages?</li>
+<li>People find Rust <code>enum</code>s convenient, to the degree where they miss this feature in other languages. What makes them so convenient?</li>
+<li>Let's see an example of a file with a big enum. Is the file readable? How is that balanced versus type safety?
+<ul>
+<li><a href="https://github.com/rust-lang/rust/blob/master/compiler/rustc_const_eval/src/interpret/step.rs">Implementation</a> of doing a single step in calculations of const values in the compiler.</li>
+</ul>
+</li>
+</ul>
+<h2 id="pattern-matching">Pattern matching</h2>
+<p>Pattern matching is a powerful feature of Rust and many functional languages, but it's slowly making
+its way into imperative languages like Java and Python as well.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#![</span><span style="color:#c82829;">allow</span><span>(dead_code)]
+</span><span>#![</span><span style="color:#c82829;">allow</span><span>(unused_variables)]
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#999999;">// Pattern matching is basically a switch on steroids.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> number </span><span style="color:#3e999f;">= </span><span>rand::random::&lt;</span><span style="color:#8959a8;">i32</span><span>&gt;();
+</span><span>    </span><span style="color:#8959a8;">match</span><span> number </span><span style="color:#3e999f;">% </span><span style="color:#f5871f;">7 </span><span>{
+</span><span>        </span><span style="color:#f5871f;">0 </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;</span><span style="color:#666969;">{number}</span><span style="color:#718c00;"> is divisible by 7&quot;</span><span>),
+</span><span>        </span><span style="color:#f5871f;">1 </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;</span><span style="color:#666969;">{number}</span><span style="color:#718c00;"> is *almost* divisible by 7&quot;</span><span>),
+</span><span>        </span><span style="color:#3e999f;">_ =&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;</span><span style="color:#666969;">{number}</span><span style="color:#718c00;"> is not divisible by 7&quot;</span><span>),
+</span><span>    }
+</span><span>
+</span><span>    #[</span><span style="color:#c82829;">derive</span><span>(Debug)]
+</span><span>    </span><span style="color:#8959a8;">enum </span><span>Color {
+</span><span>        Pink,
+</span><span>        Brown,
+</span><span>        Lime,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let</span><span> color </span><span style="color:#3e999f;">= </span><span>Color::Lime;
+</span><span>    </span><span style="color:#8959a8;">match</span><span> color {
+</span><span>        Color::Pink </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;My favorite color!&quot;</span><span>),
+</span><span>        </span><span style="color:#999999;">// _ is a wildcard. We could similarly use a variable (`color =&gt; println!(...)`),
+</span><span>        </span><span style="color:#999999;">// but we can explicitly tell that we won&#39;t use its content by &quot;naming&quot; it `_`).
+</span><span>        </span><span style="color:#999999;">// Rust will statically check that we covered all cases or that included a default case.
+</span><span>        </span><span style="color:#3e999f;">_ =&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;Not my favorite color!&quot;</span><span>),
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// We can also use pattern matching to match on multiple values.
+</span><span>    </span><span style="color:#999999;">// This is not special syntax, we&#39;re just pattern matching tuples.
+</span><span>    </span><span style="color:#8959a8;">match </span><span>(color, number </span><span style="color:#3e999f;">% </span><span style="color:#f5871f;">7</span><span>) {
+</span><span>        (Color::Pink, </span><span style="color:#f5871f;">0</span><span>) </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;My favorite color and number!&quot;</span><span>),
+</span><span>        (Color::Pink, </span><span style="color:#3e999f;">_</span><span>) </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;My favorite color!&quot;</span><span>),
+</span><span>        (</span><span style="color:#3e999f;">_</span><span>, </span><span style="color:#f5871f;">0</span><span>) </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;My favorite number!&quot;</span><span>),
+</span><span>        (</span><span style="color:#3e999f;">_</span><span>, </span><span style="color:#3e999f;">_</span><span>) </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;Not my favorite color or number!&quot;</span><span>),
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// But we can also *destructure* the value.
+</span><span>    </span><span style="color:#8959a8;">struct </span><span>Human {
+</span><span>        </span><span style="color:#c82829;">age</span><span>: </span><span style="color:#8959a8;">u8</span><span>,
+</span><span>        </span><span style="color:#c82829;">favorite_color</span><span>: Color,
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let</span><span> john </span><span style="color:#3e999f;">=</span><span> Human {
+</span><span>        age: </span><span style="color:#f5871f;">42</span><span>,
+</span><span>        favorite_color: Color::Pink,
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">match </span><span style="color:#3e999f;">&amp;</span><span>john {
+</span><span>        Human {
+</span><span>            age: </span><span style="color:#f5871f;">42</span><span>,
+</span><span>            favorite_color: Color::Pink,
+</span><span>        } </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;Okay, that&#39;s John!&quot;</span><span>),
+</span><span>        Human {
+</span><span>            favorite_color: Color::Pink,
+</span><span>            </span><span style="color:#3e999f;">..
+</span><span>        } </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;Not John, but still his favorite color!&quot;</span><span>),
+</span><span>        </span><span style="color:#3e999f;">_ =&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;Somebody else?&quot;</span><span>),
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Note two things:
+</span><span>    </span><span style="color:#999999;">// 1. `Color` is *not* `Eq`, so we can&#39;t use `==` to compare it, but pattern matching is fine.
+</span><span>    </span><span style="color:#999999;">// 2. We *borrowed* the value in the `match`, so we can use it after the `match`:
+</span><span>    println!(</span><span style="color:#718c00;">&quot;John is </span><span style="color:#666969;">{}</span><span style="color:#718c00;"> years old and still kicking!&quot;</span><span>, john.age);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// To save some time, we can use `if let` to match against only one thing.
+</span><span>    </span><span style="color:#999999;">// We could also use `while let ... {}` in the same way.
+</span><span>    </span><span style="color:#8959a8;">if let </span><span>Color::Pink </span><span style="color:#3e999f;">= &amp;</span><span>john.favorite_color {
+</span><span>        println!(</span><span style="color:#718c00;">&quot;He&#39;s also a man of great taste&quot;</span><span>);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// We can match ranges.
+</span><span>    </span><span style="color:#8959a8;">match</span><span> john.age {
+</span><span>        </span><span style="color:#f5871f;">0</span><span style="color:#3e999f;">..=</span><span style="color:#f5871f;">12 </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;John is a kid!&quot;</span><span>),
+</span><span>        </span><span style="color:#f5871f;">13</span><span style="color:#3e999f;">..=</span><span style="color:#f5871f;">19 </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;John is a teenager!&quot;</span><span>),
+</span><span>        </span><span style="color:#f5871f;">20</span><span style="color:#3e999f;">..=</span><span style="color:#f5871f;">29 </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;John is a young adult!&quot;</span><span>),
+</span><span>        </span><span style="color:#f5871f;">30</span><span style="color:#3e999f;">..=</span><span style="color:#f5871f;">49 </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;John is an adult!&quot;</span><span>),
+</span><span>        </span><span style="color:#f5871f;">50</span><span style="color:#3e999f;">..=</span><span style="color:#f5871f;">69 </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;John is mature!&quot;</span><span>),
+</span><span>        </span><span style="color:#3e999f;">_ =&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;John is old!&quot;</span><span>),
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// We can use match and capture the value at the same time.
+</span><span>    </span><span style="color:#8959a8;">match</span><span> john.age {
+</span><span>        age </span><span style="color:#3e999f;">@ </span><span style="color:#f5871f;">0</span><span style="color:#3e999f;">..=</span><span style="color:#f5871f;">12 </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;John is a kid, age </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, age),
+</span><span>        age </span><span style="color:#3e999f;">@ </span><span style="color:#f5871f;">13</span><span style="color:#3e999f;">..=</span><span style="color:#f5871f;">19 </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;John is a teenager, age </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, age),
+</span><span>        age </span><span style="color:#3e999f;">@ </span><span style="color:#f5871f;">20</span><span style="color:#3e999f;">..=</span><span style="color:#f5871f;">29 </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;John is a young adult, age </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, age),
+</span><span>        age </span><span style="color:#3e999f;">@ </span><span style="color:#f5871f;">30</span><span style="color:#3e999f;">..=</span><span style="color:#f5871f;">49 </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;John is an adult, age </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, age),
+</span><span>        age </span><span style="color:#3e999f;">@ </span><span style="color:#f5871f;">50</span><span style="color:#3e999f;">..=</span><span style="color:#f5871f;">69 </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;John is mature, age </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, age),
+</span><span>        age </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;John is old, age </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, age),
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// We can use guards to check for multiple conditions.
+</span><span>    </span><span style="color:#8959a8;">match</span><span> john.age {
+</span><span>        age </span><span style="color:#3e999f;">@ </span><span style="color:#f5871f;">12</span><span style="color:#3e999f;">..=</span><span style="color:#f5871f;">19 </span><span style="color:#8959a8;">if</span><span> age </span><span style="color:#3e999f;">% </span><span style="color:#f5871f;">2 </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">1 </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;John is an *odd* teenager, age </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, age),
+</span><span>        age </span><span style="color:#8959a8;">if</span><span> age </span><span style="color:#3e999f;">% </span><span style="color:#f5871f;">2 </span><span style="color:#3e999f;">== </span><span style="color:#f5871f;">0 </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;John is an *even* man, age </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, age),
+</span><span>        </span><span style="color:#3e999f;">_ =&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;John is normal&quot;</span><span>),
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Finally, let&#39;s look at some references now.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> reference: </span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">i32 </span><span style="color:#3e999f;">= &amp;</span><span style="color:#f5871f;">4</span><span>;
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">match</span><span> reference {
+</span><span>        </span><span style="color:#999999;">// What type is `val` in the `println!`?
+</span><span>        </span><span style="color:#999999;">// Does it work when the type doesn&#39;t have `Copy` trait?
+</span><span>        </span><span style="color:#3e999f;">&amp;</span><span>val </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;Value under reference is: </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, val),
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#999999;">// `ref` can be used to create a reference when destructuring.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> Human {
+</span><span>        age,
+</span><span>        </span><span style="color:#8959a8;">ref</span><span> favorite_color,
+</span><span>    } </span><span style="color:#3e999f;">=</span><span> john;
+</span><span>    </span><span style="color:#999999;">// The variable `john` can still be used, because we borrowed using `ref`.
+</span><span>    </span><span style="color:#8959a8;">if let </span><span>Color::Pink </span><span style="color:#3e999f;">= &amp;</span><span>john.favorite_color {
+</span><span>        println!(</span><span style="color:#718c00;">&quot;John still has his color - </span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">!&quot;</span><span>, favorite_color);
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> john </span><span style="color:#3e999f;">=</span><span> john;
+</span><span>
+</span><span>    </span><span style="color:#999999;">// `ref mut` borrows mutably.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> Human {
+</span><span>        age,
+</span><span>        </span><span style="color:#8959a8;">ref mut</span><span> favorite_color,
+</span><span>    } </span><span style="color:#3e999f;">=</span><span> john;
+</span><span>    </span><span style="color:#999999;">// We use `*` to dereference.
+</span><span>    </span><span style="color:#3e999f;">*</span><span>favorite_color </span><span style="color:#3e999f;">= </span><span>Color::Brown;
+</span><span>    println!(
+</span><span>        </span><span style="color:#718c00;">&quot;Tastes do change with time and John likes </span><span style="color:#666969;">{:?}</span><span style="color:#718c00;"> now.&quot;</span><span>,
+</span><span>        john.favorite_color
+</span><span>    );
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/03-data-types/pattern_matching.rs">pattern_matching.rs</a>)</sub></p>
+<h2 id="result">Result</h2>
+<p>We said there are no exceptions in Rust and panics mean errors which cannot be caught.
+So how do we handle situations which can fail? That's where the <code>Result</code> type comes in.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#![</span><span style="color:#c82829;">allow</span><span>(dead_code)]
+</span><span>#![</span><span style="color:#c82829;">allow</span><span>(unused_variables)]
+</span><span>
+</span><span style="color:#8959a8;">use </span><span>std::fs::File;
+</span><span style="color:#8959a8;">use </span><span>std::io;
+</span><span style="color:#8959a8;">use </span><span>std::io::Read;
+</span><span>
+</span><span style="color:#999999;">// Let&#39;s try reading from a file.
+</span><span style="color:#999999;">// Obviously this can fail.
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">first_try</span><span>() -&gt; io::</span><span style="color:#c99e00;">Result</span><span>&lt;</span><span style="color:#c99e00;">String</span><span>&gt; {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> file </span><span style="color:#3e999f;">= </span><span>File::open(</span><span style="color:#718c00;">&quot;/dev/random&quot;</span><span>);
+</span><span>    </span><span style="color:#8959a8;">match</span><span> file {
+</span><span>        </span><span style="color:#c99e00;">Ok</span><span>(</span><span style="color:#8959a8;">mut</span><span> file) </span><span style="color:#3e999f;">=&gt; </span><span>{
+</span><span>            </span><span style="color:#999999;">// We got a file!
+</span><span>            </span><span style="color:#8959a8;">let mut</span><span> buffer </span><span style="color:#3e999f;">= </span><span>vec![</span><span style="color:#f5871f;">0</span><span>; </span><span style="color:#f5871f;">128</span><span>];
+</span><span>            </span><span style="color:#999999;">// Matching each result quickly become tedious...
+</span><span>            </span><span style="color:#999999;">// Later in this file there&#39;s syntactic sugar to make it cleaner.
+</span><span>            </span><span style="color:#8959a8;">match</span><span> file.</span><span style="color:#4271ae;">read_exact</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut</span><span> buffer) {
+</span><span>                </span><span style="color:#c99e00;">Ok</span><span>(</span><span style="color:#3e999f;">_</span><span>) </span><span style="color:#3e999f;">=&gt; </span><span>{
+</span><span>                    </span><span style="color:#8959a8;">let</span><span> gibberish </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from_utf8_lossy(</span><span style="color:#3e999f;">&amp;</span><span>buffer);
+</span><span>                    </span><span style="color:#c99e00;">Ok</span><span>(gibberish.</span><span style="color:#4271ae;">to_string</span><span>())
+</span><span>                }
+</span><span>                </span><span style="color:#c99e00;">Err</span><span>(error) </span><span style="color:#3e999f;">=&gt; </span><span style="color:#c99e00;">Err</span><span>(error),
+</span><span>            }
+</span><span>        }
+</span><span>        </span><span style="color:#c99e00;">Err</span><span>(error) </span><span style="color:#3e999f;">=&gt; </span><span>{
+</span><span>            </span><span style="color:#999999;">// This is needed in order to change the type from
+</span><span>            </span><span style="color:#999999;">// `io::Result&lt;File&gt;` to `io::Result&lt;()&gt;`.
+</span><span>            </span><span style="color:#c99e00;">Err</span><span>(error)
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#999999;">// The &#39;?&#39; operator allows us to return early in case of an error
+</span><span style="color:#999999;">// (it automatically converts the error type).
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">second_try</span><span>(</span><span style="color:#f5871f;">filename</span><span>: </span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">&#39;static str</span><span>) -&gt; io::</span><span style="color:#c99e00;">Result</span><span>&lt;</span><span style="color:#c99e00;">String</span><span>&gt; {
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> file </span><span style="color:#3e999f;">= </span><span>File::open(filename)</span><span style="color:#3e999f;">?</span><span>;
+</span><span>    </span><span style="color:#8959a8;">let mut</span><span> buffer </span><span style="color:#3e999f;">= </span><span>vec![</span><span style="color:#f5871f;">0</span><span>; </span><span style="color:#f5871f;">128</span><span>];
+</span><span>    file.</span><span style="color:#4271ae;">read_exact</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut</span><span> buffer)</span><span style="color:#3e999f;">?</span><span>;
+</span><span>    </span><span style="color:#8959a8;">let</span><span> gibberish </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from_utf8_lossy(</span><span style="color:#3e999f;">&amp;</span><span>buffer);
+</span><span>    </span><span style="color:#c99e00;">Ok</span><span>(gibberish.</span><span style="color:#4271ae;">to_string</span><span>())
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> filenames </span><span style="color:#3e999f;">= </span><span>[
+</span><span>        </span><span style="color:#718c00;">&quot;/dev/random&quot;</span><span>,
+</span><span>        </span><span style="color:#718c00;">&quot;/dev/null&quot;</span><span>,
+</span><span>        </span><span style="color:#718c00;">&quot;/dev/cpu&quot;</span><span>,
+</span><span>        </span><span style="color:#718c00;">&quot;/dev/fuse&quot;</span><span>,
+</span><span>        </span><span style="color:#718c00;">&quot;there_certainly_is_no_such_file&quot;</span><span>,
+</span><span>    ];
+</span><span>    </span><span style="color:#8959a8;">for</span><span> filename </span><span style="color:#3e999f;">in</span><span> filenames {
+</span><span>        println!(</span><span style="color:#718c00;">&quot;Trying to read from &#39;</span><span style="color:#666969;">{}</span><span style="color:#718c00;">&#39;&quot;</span><span>, filename);
+</span><span>        </span><span style="color:#8959a8;">match </span><span style="color:#4271ae;">second_try</span><span>(filename) {
+</span><span>            </span><span style="color:#c99e00;">Ok</span><span>(gibberish) </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;</span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, gibberish),
+</span><span>            </span><span style="color:#c99e00;">Err</span><span>(error) </span><span style="color:#3e999f;">=&gt; </span><span>println!(</span><span style="color:#718c00;">&quot;Error: </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, error),
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/03-data-types/result.rs">result.rs</a>)</sub></p>
+<h2 id="to-discuss-during-class-1">To discuss during class</h2>
+<ul>
+<li>So, why would the approach with <code>Result</code> be any cleaner than exceptions?</li>
+<li>Are there any other benefits of using this approach rather than exceptions?</li>
+<li>Look into the following libraries, are those interfaces convenient? How is that balanced versus type safety?
+<ul>
+<li><a href="https://github.com/clap-rs/clap/tree/master/examples/tutorial_derive">Examples of CLI parsing</a> from <code>clap</code> repository,</li>
+<li><a href="https://github.com/serde-rs/json">README.md</a> with examples of the interface of JSON serialization/deserialization library,</li>
+<li><a href="https://doc.rust-lang.org/std/path/struct.Path.html">Documentation</a> of filesystem path handling from the standard library,</li>
+<li><a href="https://github.com/BurntSushi/ripgrep/blob/master/crates/grep/examples/simplegrep.rs">Implementation</a> of a third-party well-liked app <a href="https://github.com/BurntSushi/ripgrep"><code>ripgrep</code></a> written in Rust.</li>
+</ul>
+</li>
+</ul>
+<h2 id="slides">Slides</h2>
+<iframe
+  src="module_system/module_system.html"
+  title="Module system"
+  loading="lazy"
+  style="width: 100%; aspect-ratio: 16 / 9; border: none;"
+></iframe>
+<ul>
+<li><a href="https://mimuw-jnp2-rust.github.io/lessons/03-data-types/module_system/module_system.html">Open the slides in a new tab (HTML)</a></li>
+<li><a href="https://mimuw-jnp2-rust.github.io/lessons/03-data-types/module_system/module_system.pdf">Download the slides as PDF</a></li>
+</ul>
+<h2 id="obligatory-reading">Obligatory reading</h2>
+<ul>
+<li>The Book, chapters <a href="https://doc.rust-lang.org/book/ch05-00-structs.html">5</a>,
+<a href="https://doc.rust-lang.org/stable/book/ch06-00-enums.html">6</a>,
+<a href="https://doc.rust-lang.org/stable/book/ch08-00-common-collections.html">8</a>
+and <a href="https://doc.rust-lang.org/stable/book/ch09-00-error-handling.html">9</a></li>
+<li><a href="https://doc.rust-lang.org/std/option/">Option docs</a></li>
+<li><a href="https://doc.rust-lang.org/std/result/">Result docs</a></li>
+</ul>
+<h2 id="assignment-2-graded">Assignment 2 (graded)</h2>
+<p><a href="https://classroom.github.com/a/s7wihiAa">Communications</a></p>
+<p>Deadline: per-group.</p>
+
+
+    </div>
+  </div>
+
+  <div class="prev-link">
+    
+    
+  </div>
+
+  <div class="next-link">
+    
+    
+  </div>
+</div>
+
+
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/elasticlunr.min.js"></script>
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/search_index.en.js"></script>
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/book.js"></script>
+
+</body>
+
+</html>

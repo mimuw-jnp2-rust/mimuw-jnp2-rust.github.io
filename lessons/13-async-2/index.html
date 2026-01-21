@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Rust course</title>
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://mimuw-jnp2-rust.github.io/book.css">
+  
+
+  
+  
+</head>
+
+<body>
+<div class="menu">
+  
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="https://mimuw-jnp2-rust.github.io">Home</a></li>
+      
+        
+        
+        
+          
+          <li >
+            
+            <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;">
+              
+              List of lessons
+            </a>
+            
+              <ul>
+                
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;00-organizational&#x2F;">
+                        [2025-10-02]
+                        
+                        Organizational lesson
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;01-introduction&#x2F;">
+                        [2024-10-02]
+                        
+                        Introduction to Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;02-ownership&#x2F;">
+                        [2025-10-09]
+                        
+                        Ownership Model
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;03-data-types&#x2F;">
+                        [2025-10-16]
+                        
+                        Data Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2022-10-31]
+                          
+                          Feedback #1
+                        </span>
+                        <span class="upcoming-note">Available 2022-10-31</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;05-types-reasoning&#x2F;">
+                        [2025-10-23]
+                        
+                        Reasoning About Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;06-closures-iterators&#x2F;">
+                        [2025-10-30]
+                        
+                        Closures and Iterators
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;07-smart-pointers&#x2F;">
+                        [2025-11-06]
+                        
+                        Smart Pointers
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Feedback #2
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;09-concurrency&#x2F;">
+                        [2025-11-19]
+                        
+                        Fearless concurrency
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;10-design-patterns&#x2F;">
+                        [2025-11-26]
+                        
+                        Design patterns
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;11-async-1&#x2F;">
+                        [2025-12-03]
+                        
+                        Async: Part 1
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Project feedback
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li  class="active" >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;13-async-2&#x2F;">
+                        [2025-12-10]
+                        
+                        Async: Part 2
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;14-macros-1&#x2F;">
+                        [2025-12-17]
+                        
+                        Macros: Part 1 (declarative)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;15-macros-2&#x2F;">
+                        [2026-01-07]
+                        
+                        Macros: Part 2 (procedural)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;16-unsafe&#x2F;">
+                        [2026-01-14]
+                        
+                        Unsafe Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;project-showcase&#x2F;">
+                        [2022-10-17]
+                        
+                        2021L Project showcase
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;table-of-contents&#x2F;">
+                        [2025-10-05]
+                        
+                        Table of content
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  
+  
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+      <span class="search-icon">🔎</span>
+    
+  </div>
+
+  <div class="page__content">
+    
+      <div class="search-container">
+        <input id="search" type="search" placeholder="Search..">
+        <div class="search-results">
+          <div class="search-results__header"></div>
+          <ul class="search-results__items"></ul>
+        </div>
+      </div>
+    
+    <div class="book-content">
+      
+<h1 class="title">Async: Part 2</h1>
+<p class="subtitle">
+  <strong>2025-12-10</strong> (last edit: 2025-12-09)
+</p>
+<h2 id="reinventing-futures">Reinventing futures</h2>
+<p>We recently got our feet wet with the async/await functionality of Rust by using the Tokio library. With this basic understanding of what we expect out of <code>futures</code>, let's try to come up with their details ourselves.</p>
+<p>We know that, when asked, a future can either give us a ready value or still be waiting for it. Asking about the future's result is called <em>polling</em>. Our future could look something like this:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">trait </span><span>SimpleFuture {
+</span><span>    </span><span style="color:#8959a8;">type </span><span>Output;
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">poll</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut </span><span style="color:#f5871f;">self</span><span>) -&gt; Poll&lt;</span><span style="color:#8959a8;">Self::</span><span>Output&gt;;
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">enum </span><span>Poll&lt;T&gt; {
+</span><span>    Ready(T),
+</span><span>    Pending,
+</span><span>}
+</span></code></pre>
+<p>The <code>poll</code> method can be called to check for the result of the future. There is a flaw in this however - whatever is coordinating our future-based computations will have to constantly poll each of them in hope they are ready to do some work.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">trait </span><span>SimpleFuture {
+</span><span>    </span><span style="color:#8959a8;">type </span><span>Output;
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">poll</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut </span><span style="color:#f5871f;">self</span><span>, </span><span style="color:#f5871f;">wake</span><span>: </span><span style="color:#8959a8;">fn</span><span>()) -&gt; Poll&lt;</span><span style="color:#8959a8;">Self::</span><span>Output&gt;;
+</span><span>}
+</span><span>
+</span></code></pre>
+<p>We can solve this by attaching a callback to our polling. The <code>wake</code> function passed to <code>poll</code> can be used to notify whoever issued the poll that the future is ready to make some progress and should be polled.</p>
+<p>Let's picture a quick example of how our <code>SimpleFuture</code> could be used.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">pub struct </span><span>SocketRead&lt;</span><span style="color:#8959a8;">&#39;a</span><span>&gt; {
+</span><span>    </span><span style="color:#c82829;">socket</span><span>: </span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">&#39;a</span><span> Socket,
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">impl </span><span>SimpleFuture </span><span style="color:#8959a8;">for </span><span>SocketRead&lt;&#39;</span><span style="color:#3e999f;">_</span><span>&gt; {
+</span><span>    </span><span style="color:#8959a8;">type </span><span>Output </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">Vec</span><span>&lt;</span><span style="color:#8959a8;">u8</span><span>&gt;;
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">poll</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut </span><span style="color:#f5871f;">self</span><span>, </span><span style="color:#f5871f;">wake</span><span>: </span><span style="color:#8959a8;">fn</span><span>()) -&gt; Poll&lt;</span><span style="color:#8959a8;">Self::</span><span>Output&gt; {
+</span><span>        </span><span style="color:#8959a8;">if </span><span style="color:#c82829;">self</span><span>.socket.</span><span style="color:#4271ae;">has_data_to_read</span><span>() {
+</span><span>            </span><span style="color:#999999;">// The socket has data -- read it into a buffer and return it.
+</span><span>            Poll::Ready(</span><span style="color:#c82829;">self</span><span>.socket.</span><span style="color:#4271ae;">read_buf</span><span>())
+</span><span>        } </span><span style="color:#8959a8;">else </span><span>{
+</span><span>            </span><span style="color:#999999;">// The socket does not yet have data.
+</span><span>            </span><span style="color:#999999;">//
+</span><span>            </span><span style="color:#999999;">// Arrange for `wake` to be called once data is available.
+</span><span>            </span><span style="color:#999999;">// When data becomes available, `wake` will be called, and the
+</span><span>            </span><span style="color:#999999;">// user of this `Future` will know to call `poll` again and
+</span><span>            </span><span style="color:#999999;">// receive data.
+</span><span>            </span><span style="color:#c82829;">self</span><span>.socket.</span><span style="color:#4271ae;">set_readable_callback</span><span>(wake);
+</span><span>            Poll::Pending
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="combining-futures">Combining futures</h3>
+<p>With the <code>SimpleFuture</code> at our disposal we can easily model more advanced concurrent computations.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#999999;">/// Concurrency is achieved via the fact that calls to `poll` each future
+</span><span style="color:#999999;">/// may be interleaved, allowing each future to advance itself at its own pace.
+</span><span style="color:#8959a8;">pub struct </span><span>Join&lt;FutureA, FutureB&gt; {
+</span><span>    </span><span style="color:#999999;">// Each field may contain a future that should be run to completion.
+</span><span>    </span><span style="color:#999999;">// If the future has already completed, the field is set to `None`.
+</span><span>    </span><span style="color:#999999;">// This prevents us from polling a future after it has completed, which
+</span><span>    </span><span style="color:#999999;">// would violate the contract of the `Future` trait.
+</span><span>    </span><span style="color:#c82829;">a</span><span>: </span><span style="color:#c99e00;">Option</span><span>&lt;FutureA&gt;,
+</span><span>    </span><span style="color:#c82829;">b</span><span>: </span><span style="color:#c99e00;">Option</span><span>&lt;FutureB&gt;,
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">impl</span><span>&lt;FutureA, FutureB&gt; SimpleFuture </span><span style="color:#8959a8;">for </span><span>Join&lt;FutureA, FutureB&gt;
+</span><span style="color:#8959a8;">where
+</span><span>    FutureA: SimpleFuture&lt;Output = ()&gt;,
+</span><span>    FutureB: SimpleFuture&lt;Output = ()&gt;,
+</span><span>{
+</span><span>    </span><span style="color:#8959a8;">type </span><span>Output </span><span style="color:#3e999f;">= </span><span>();
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">poll</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut </span><span style="color:#f5871f;">self</span><span>, </span><span style="color:#f5871f;">wake</span><span>: </span><span style="color:#8959a8;">fn</span><span>()) -&gt; Poll&lt;</span><span style="color:#8959a8;">Self::</span><span>Output&gt; {
+</span><span>        </span><span style="color:#999999;">// Attempt to complete future `a`.
+</span><span>        </span><span style="color:#8959a8;">if let </span><span style="color:#c99e00;">Some</span><span>(a) </span><span style="color:#3e999f;">= &amp;</span><span style="color:#8959a8;">mut </span><span style="color:#c82829;">self</span><span>.a {
+</span><span>            </span><span style="color:#8959a8;">if let </span><span>Poll::Ready(()) </span><span style="color:#3e999f;">=</span><span> a.</span><span style="color:#4271ae;">poll</span><span>(wake) {
+</span><span>                </span><span style="color:#c82829;">self</span><span>.a.</span><span style="color:#4271ae;">take</span><span>();
+</span><span>            }
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#999999;">// Attempt to complete future `b`.
+</span><span>        </span><span style="color:#8959a8;">if let </span><span style="color:#c99e00;">Some</span><span>(b) </span><span style="color:#3e999f;">= &amp;</span><span style="color:#8959a8;">mut </span><span style="color:#c82829;">self</span><span>.b {
+</span><span>            </span><span style="color:#8959a8;">if let </span><span>Poll::Ready(()) </span><span style="color:#3e999f;">=</span><span> b.</span><span style="color:#4271ae;">poll</span><span>(wake) {
+</span><span>                </span><span style="color:#c82829;">self</span><span>.b.</span><span style="color:#4271ae;">take</span><span>();
+</span><span>            }
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#8959a8;">if </span><span style="color:#c82829;">self</span><span>.a.</span><span style="color:#4271ae;">is_none</span><span>() </span><span style="color:#3e999f;">&amp;&amp; </span><span style="color:#c82829;">self</span><span>.b.</span><span style="color:#4271ae;">is_none</span><span>() {
+</span><span>            </span><span style="color:#999999;">// Both futures have completed -- we can return successfully
+</span><span>            Poll::Ready(())
+</span><span>        } </span><span style="color:#8959a8;">else </span><span>{
+</span><span>            </span><span style="color:#999999;">// One or both futures returned `Poll::Pending` and still have
+</span><span>            </span><span style="color:#999999;">// work to do. They will call `wake()` when progress can be made.
+</span><span>            Poll::Pending
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>We can also queue futures like this:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">pub struct </span><span>AndThenFut&lt;FutureA, FutureB&gt; {
+</span><span>    </span><span style="color:#c82829;">first</span><span>: </span><span style="color:#c99e00;">Option</span><span>&lt;FutureA&gt;,
+</span><span>    </span><span style="color:#c82829;">second</span><span>: FutureB,
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">impl</span><span>&lt;FutureA, FutureB&gt; SimpleFuture </span><span style="color:#8959a8;">for </span><span>AndThenFut&lt;FutureA, FutureB&gt;
+</span><span style="color:#8959a8;">where
+</span><span>    FutureA: SimpleFuture&lt;Output = ()&gt;,
+</span><span>    FutureB: SimpleFuture&lt;Output = ()&gt;,
+</span><span>{
+</span><span>    </span><span style="color:#8959a8;">type </span><span>Output </span><span style="color:#3e999f;">= </span><span>();
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">poll</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut </span><span style="color:#f5871f;">self</span><span>, </span><span style="color:#f5871f;">wake</span><span>: </span><span style="color:#8959a8;">fn</span><span>()) -&gt; Poll&lt;</span><span style="color:#8959a8;">Self::</span><span>Output&gt; {
+</span><span>        </span><span style="color:#8959a8;">if let </span><span style="color:#c99e00;">Some</span><span>(first) </span><span style="color:#3e999f;">= &amp;</span><span style="color:#8959a8;">mut </span><span style="color:#c82829;">self</span><span>.first {
+</span><span>            </span><span style="color:#8959a8;">match</span><span> first.</span><span style="color:#4271ae;">poll</span><span>(wake) {
+</span><span>                </span><span style="color:#999999;">// We&#39;ve completed the first future -- remove it and start on
+</span><span>                </span><span style="color:#999999;">// the second!
+</span><span>                Poll::Ready(()) </span><span style="color:#3e999f;">=&gt; </span><span style="color:#c82829;">self</span><span>.first.</span><span style="color:#4271ae;">take</span><span>(),
+</span><span>                </span><span style="color:#999999;">// We couldn&#39;t yet complete the first future.
+</span><span>                Poll::Pending </span><span style="color:#3e999f;">=&gt; </span><span style="color:#8959a8;">return </span><span>Poll::Pending,
+</span><span>            };
+</span><span>        }
+</span><span>        </span><span style="color:#999999;">// Now that the first future is done, attempt to complete the second.
+</span><span>        </span><span style="color:#c82829;">self</span><span>.second.</span><span style="color:#4271ae;">poll</span><span>(wake)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="exercise">Exercise</h3>
+<p>The last example assumes that both futures are already constructed. In practice, however, we often want to chain futures that use the results of their predecessors, like this - <code>get_breakfast().and_then(|food| eat(food));</code>. Try implementing this behavior by adding a new method to the <code>SimpleFuture</code> trait called <code>and_then</code> and something that models this sequential computation (like the previous <code>AndThenFut</code> future).</p>
+<h3 id="the-real-deal">The real deal</h3>
+<p>We weren't far from the actual way Rust's futures are structured. The <code>Future</code> trait looks as follows:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">trait </span><span>Future {
+</span><span>    </span><span style="color:#8959a8;">type </span><span>Output;
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">poll</span><span>(
+</span><span>        </span><span style="color:#999999;">// Note the change from `&amp;mut self` to `Pin&lt;&amp;mut Self&gt;`:
+</span><span>        </span><span style="color:#f5871f;">self</span><span>: Pin&lt;</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut Self</span><span>&gt;,
+</span><span>        </span><span style="color:#999999;">// and the change from `wake: fn()` to `cx: &amp;mut Context&lt;&#39;_&gt;`:
+</span><span>        </span><span style="color:#f5871f;">cx</span><span>: </span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut </span><span>Context&lt;&#39;</span><span style="color:#3e999f;">_</span><span>&gt;,
+</span><span>    ) -&gt; Poll&lt;</span><span style="color:#8959a8;">Self::</span><span>Output&gt;;
+</span><span>}
+</span></code></pre>
+<p>There are two differences here. Firstly, we use a context instead of a standalone <code>wake</code> method. Since this callback was just a simple function pointer, there was no way for it to hold any data pertaining to which future called it.
+Secondly, we take <code>self</code> as a <code>Pin&lt;&gt;</code>. This enables us to create immovable futures - we will go into it later.</p>
+<h2 id="coordinating-futures-waker-executor">Coordinating futures - waker &amp; executor</h2>
+<h3 id="using-wakers-and-context">Using wakers and context</h3>
+<p>We will follow the <a href="https://rust-lang.github.io/async-book/02_execution/03_wakeups.html">steps</a> in the book to make a future that runs a separate thread that sleeps for a given duration and only then returns a result.</p>
+<h3 id="executor">Executor</h3>
+<p>We will follow the <a href="https://rust-lang.github.io/async-book/02_execution/04_executor.html">steps</a> in the book to create our own executor to run our futures on.</p>
+<h2 id="obligatory-reading">Obligatory reading</h2>
+<ul>
+<li><a href="https://rust-lang.github.io/async-book/part-reference/pinning.html">Pinning in detail</a></li>
+<li><a href="https://doc.rust-lang.org/nightly/std/pin/index.html">Pinning in even more detail</a></li>
+<li><a href="https://tokio.rs/tokio/tutorial/async">Async in depth</a></li>
+</ul>
+<h2 id="additional-reading">Additional reading</h2>
+<ul>
+<li><a href="https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/">What color is your function</a></li>
+<li><a href="https://fasterthanli.me/articles/pin-and-suffering">Pin and suffering</a></li>
+<li><a href="https://fasterthanli.me/articles/understanding-rust-futures-by-going-way-too-deep">Understanding Rust futures by going way too deep</a></li>
+<li><a href="https://eventhelix.com/rust/rust-to-assembly-async-await/">Desugaring and assembly of Rust async/await</a></li>
+</ul>
+<h2 id="assignment-7-graded">Assignment 7 (graded)</h2>
+<p><a href="https://classroom.github.com/a/k_qN1vep">Back to the futures</a></p>
+<p>Deadline: per-group.</p>
+
+
+    </div>
+  </div>
+
+  <div class="prev-link">
+    
+    
+  </div>
+
+  <div class="next-link">
+    
+    
+  </div>
+</div>
+
+
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/elasticlunr.min.js"></script>
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/search_index.en.js"></script>
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/book.js"></script>
+
+</body>
+
+</html>

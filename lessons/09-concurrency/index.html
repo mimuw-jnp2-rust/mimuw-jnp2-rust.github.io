@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Rust course</title>
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://mimuw-jnp2-rust.github.io/book.css">
+  
+
+  
+  
+</head>
+
+<body>
+<div class="menu">
+  
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="https://mimuw-jnp2-rust.github.io">Home</a></li>
+      
+        
+        
+        
+          
+          <li >
+            
+            <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;">
+              
+              List of lessons
+            </a>
+            
+              <ul>
+                
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;00-organizational&#x2F;">
+                        [2025-10-02]
+                        
+                        Organizational lesson
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;01-introduction&#x2F;">
+                        [2024-10-02]
+                        
+                        Introduction to Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;02-ownership&#x2F;">
+                        [2025-10-09]
+                        
+                        Ownership Model
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;03-data-types&#x2F;">
+                        [2025-10-16]
+                        
+                        Data Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2022-10-31]
+                          
+                          Feedback #1
+                        </span>
+                        <span class="upcoming-note">Available 2022-10-31</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;05-types-reasoning&#x2F;">
+                        [2025-10-23]
+                        
+                        Reasoning About Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;06-closures-iterators&#x2F;">
+                        [2025-10-30]
+                        
+                        Closures and Iterators
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;07-smart-pointers&#x2F;">
+                        [2025-11-06]
+                        
+                        Smart Pointers
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Feedback #2
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li  class="active" >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;09-concurrency&#x2F;">
+                        [2025-11-19]
+                        
+                        Fearless concurrency
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;10-design-patterns&#x2F;">
+                        [2025-11-26]
+                        
+                        Design patterns
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;11-async-1&#x2F;">
+                        [2025-12-03]
+                        
+                        Async: Part 1
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Project feedback
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;13-async-2&#x2F;">
+                        [2025-12-10]
+                        
+                        Async: Part 2
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;14-macros-1&#x2F;">
+                        [2025-12-17]
+                        
+                        Macros: Part 1 (declarative)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;15-macros-2&#x2F;">
+                        [2026-01-07]
+                        
+                        Macros: Part 2 (procedural)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;16-unsafe&#x2F;">
+                        [2026-01-14]
+                        
+                        Unsafe Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;project-showcase&#x2F;">
+                        [2022-10-17]
+                        
+                        2021L Project showcase
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;table-of-contents&#x2F;">
+                        [2025-10-05]
+                        
+                        Table of content
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  
+  
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+      <span class="search-icon">🔎</span>
+    
+  </div>
+
+  <div class="page__content">
+    
+      <div class="search-container">
+        <input id="search" type="search" placeholder="Search..">
+        <div class="search-results">
+          <div class="search-results__header"></div>
+          <ul class="search-results__items"></ul>
+        </div>
+      </div>
+    
+    <div class="book-content">
+      
+<h1 class="title">Fearless concurrency</h1>
+<p class="subtitle">
+  <strong>2025-11-19</strong> (last edit: 2025-11-19)
+</p>
+<h2 id="parallelism-vs-concurrency">Parallelism vs Concurrency</h2>
+<p>Concurrency is when tasks <strong>can make</strong> progress <strong>independently</strong> of each other.</p>
+<p>Parallelism is when multiple tasks <strong>make</strong> progress <strong>at the same time</strong>.</p>
+<h1 id="concurrency-models-in-rust">Concurrency models in Rust</h1>
+<h2 id="threads">Threads</h2>
+<p>Nothing unusual here.</p>
+<p>Threads can be created with the <code>thread::spawn</code> function <a href="https://doc.rust-lang.org/std/thread/fn.spawn.html">docs - please read them!</a>.</p>
+<p>This method returns a <code>JoinHandle&lt;T&gt;</code> which can be used to wait for the thread to finish. <code>T</code> is the type of the thread's return value.</p>
+<p>Another way to spawn threads is using <a href="https://doc.rust-lang.org/std/thread/fn.scope.html"><code>scope</code></a>. Threads created in such way are mandatorily joined at the end of the scope, which guarantees that they will borrow items for no longer that the lifetime of the scope. Hence, they can borrow non-<code>'static</code> items!</p>
+<h4 id="propagating-panics">Propagating panics</h4>
+<p>In Rust a panic of one thread doesn't affect the other threads (similar to how Java handles exceptions in threads).</p>
+<h4 id="closures">Closures</h4>
+<p>Closures which are used to create threads must take ownership of any values they use. It can be forced with the <code>move</code> keyword.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">use </span><span>std::thread;
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> v </span><span style="color:#3e999f;">= </span><span>vec![</span><span style="color:#f5871f;">1</span><span>, </span><span style="color:#f5871f;">2</span><span>, </span><span style="color:#f5871f;">3</span><span>];
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let</span><span> handle </span><span style="color:#3e999f;">= </span><span>thread::spawn(</span><span style="color:#8959a8;">move </span><span style="color:#3e999f;">|| </span><span>{
+</span><span>        println!(</span><span style="color:#718c00;">&quot;Here&#39;s a vector: </span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">&quot;</span><span>, v);
+</span><span>    });
+</span><span>
+</span><span>    handle.</span><span style="color:#4271ae;">join</span><span>().</span><span style="color:#4271ae;">unwrap</span><span>();
+</span><span>}
+</span></code></pre>
+<p>Normal ownership rules still apply. It means that we cannot mutate the vector in the spawned thread from the main thread!</p>
+<p>But what if we need to share some state?</p>
+<h3 id="send-and-sync">Send and Sync</h3>
+<p>They are marker traits used to indicate that a type or a reference to it can be used across threads. See the <a href="https://doc.rust-lang.org/nomicon/send-and-sync.html">nomicon</a> for more information.</p>
+<blockquote>
+<ul>
+<li>A type is <code>Send</code> if it is safe to move it (<em>send</em> it) to another thread.</li>
+<li>A type is <code>Sync</code> if it is safe to share (<em>sync</em>) between threads (<code>T</code> is <code>Sync</code> if and only if <code>&amp;T</code> is <code>Send</code>).</li>
+</ul>
+</blockquote>
+<p>This makes sense, because <code>Sync</code> is about <em>sharing</em> object between threads, and <code>&amp;</code> is the <em>shared</em> reference.</p>
+<p>There is also <a href="https://users.rust-lang.org/t/example-of-a-type-that-is-not-send/59835/3">a great answer on Rust forum</a>, listing + explaining example types that are <code>!Send</code> or <code>!Sync</code>.</p>
+<p>For more convenient analysis, examples are listed here:</p>
+<h4 id="send-sync"><code>Send + !Sync</code>:</h4>
+<ul>
+<li><code>UnsafeCell</code> (=&gt; <code>Cell</code>, <code>RefCell</code>);</li>
+</ul>
+<h4 id="send-sync-1"><code>!Send + !Sync</code>:</h4>
+<ul>
+<li><code>Rc</code></li>
+<li><code>*const T</code>, <code>*mut T</code> (raw pointers)</li>
+</ul>
+<h4 id="send-sync-2"><code>!Send + Sync</code>:</h4>
+<ul>
+<li><code>MutexGuard</code> (hint: <code>!Send</code> for POSIX reasons)</li>
+</ul>
+<p>Exercise for the reader: explain reasons for all limitations of the above types.</p>
+<h2 id="sharing-state-between-threads">Sharing state between threads</h2>
+<h3 id="message-passing">Message passing</h3>
+<p>One possible way is to use message passing. We can use a blocking queue (called <code>mpsc</code> - <a href="https://doc.rust-lang.org/std/sync/mpsc/index.html">"multi producer single consumer FIFO queue"</a>) to do it.
+We talked about blocking queues in the Concurrent programming class. In Rust, they are strongly-typed. Sending and receiving ends have different types.</p>
+<h3 id="mutexes">Mutexes</h3>
+<p>In Rust, a mutex <em>wraps</em> a value and makes it thread-safe.
+Because it becomes a part of the type, it's impossible to access the underlying value in an unsynchronized manner. It is conceptually similar to the <code>RefCell</code> type.</p>
+<p><code>Arc</code> is a smart pointer like <code>Rc</code> but it can be shared between threads.</p>
+<p>Please read more about them in <a href="https://doc.rust-lang.org/stable/book/ch16-03-shared-state.html">the book</a>.</p>
+<p><a href="https://doc.rust-lang.org/std/sync/struct.Mutex.html">The docs</a> also mention <code>poisoning</code>.</p>
+<h3 id="rwlocks">RwLocks</h3>
+<p><a href="https://doc.rust-lang.org/std/sync/struct.RwLock.html">RwLocks</a> are similar to mutexes, but they distinguish between read and write locks.</p>
+<h3 id="atomic-types">Atomic types</h3>
+<p>Atomic types are described in <a href="https://doc.rust-lang.org/std/sync/atomic/">the docs</a>.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">use </span><span>std::sync::Arc;
+</span><span style="color:#8959a8;">use </span><span>std::sync::atomic::{AtomicUsize, Ordering};
+</span><span style="color:#8959a8;">use </span><span>std::{hint, thread};
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> spinlock </span><span style="color:#3e999f;">= </span><span>Arc::new(AtomicUsize::new(</span><span style="color:#f5871f;">1</span><span>));
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let</span><span> spinlock_clone </span><span style="color:#3e999f;">= </span><span>Arc::clone(</span><span style="color:#3e999f;">&amp;</span><span>spinlock);
+</span><span>    </span><span style="color:#8959a8;">let</span><span> thread </span><span style="color:#3e999f;">= </span><span>thread::spawn(</span><span style="color:#8959a8;">move</span><span style="color:#3e999f;">|| </span><span>{
+</span><span>        spinlock_clone.</span><span style="color:#4271ae;">store</span><span>(</span><span style="color:#f5871f;">0</span><span>, Ordering::SeqCst);
+</span><span>    });
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Wait for the other thread to release the lock
+</span><span>    </span><span style="color:#8959a8;">while</span><span> spinlock.</span><span style="color:#4271ae;">load</span><span>(Ordering::SeqCst) </span><span style="color:#3e999f;">!= </span><span style="color:#f5871f;">0 </span><span>{
+</span><span>        hint::spin_loop();
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">if let </span><span style="color:#c99e00;">Err</span><span>(panic) </span><span style="color:#3e999f;">=</span><span> thread.</span><span style="color:#4271ae;">join</span><span>() {
+</span><span>        println!(</span><span style="color:#718c00;">&quot;Thread had an error: </span><span style="color:#666969;">{:?}</span><span style="color:#718c00;">&quot;</span><span>, panic);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>Note that <code>atomic</code> values don't have to be wrapped in a mutex when shared across threads.</p>
+<h3 id="wait">Wait...</h3>
+<p>If most types are <code>Sync + Send</code>, then what stops us from using a standard, non-atomic integer in the example above?</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">let</span><span> spinlock </span><span style="color:#3e999f;">= </span><span>Arc::new(</span><span style="color:#f5871f;">1</span><span>);
+</span><span>
+</span><span style="color:#8959a8;">let</span><span> spinlock_clone </span><span style="color:#3e999f;">= </span><span>Arc::clone(</span><span style="color:#3e999f;">&amp;</span><span>spinlock);
+</span><span style="color:#8959a8;">let</span><span> thread </span><span style="color:#3e999f;">= </span><span>thread::spawn(</span><span style="color:#8959a8;">move</span><span style="color:#3e999f;">|| </span><span>{
+</span><span>    </span><span style="color:#3e999f;">*</span><span>spinlock_clone </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>});
+</span><span>
+</span><span style="color:#8959a8;">while </span><span style="color:#3e999f;">*</span><span>spinlock </span><span style="color:#3e999f;">!= </span><span style="color:#f5871f;">0 </span><span>{
+</span><span>    hint::spin_loop();
+</span><span>}
+</span></code></pre>
+<pre style="background-color:#ffffff;color:#4d4d4c;"><code><span>error[E0594]: cannot assign to data in an `Arc`
+</span><span> --&gt; src/main.rs:9:9
+</span><span>  |
+</span><span>9 |         *spinlock_clone += 1;
+</span><span>  |         ^^^^^^^^^^^^^^^^^^^^ cannot assign
+</span><span>  |
+</span><span>  = help: trait `DerefMut` is required to modify through a dereference, but it is not implemented for `Arc&lt;i32&gt;`
+</span></code></pre>
+<p>...so we would have to use a <code>RefCell</code> to be able to modify the value through a shared reference...</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">let</span><span> spinlock </span><span style="color:#3e999f;">= </span><span>Arc::new(RefCell::new(</span><span style="color:#f5871f;">1</span><span>));
+</span><span>
+</span><span style="color:#8959a8;">let</span><span> spinlock_clone </span><span style="color:#3e999f;">= </span><span>Arc::clone(</span><span style="color:#3e999f;">&amp;</span><span>spinlock);
+</span><span style="color:#8959a8;">let</span><span> thread </span><span style="color:#3e999f;">= </span><span>thread::spawn(</span><span style="color:#8959a8;">move</span><span style="color:#3e999f;">|| </span><span>{
+</span><span>    </span><span style="color:#3e999f;">*</span><span>spinlock_clone.</span><span style="color:#4271ae;">borrow_mut</span><span>() </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>});
+</span><span>
+</span><span style="color:#999999;">// Wait for the other thread to release the lock
+</span><span style="color:#8959a8;">while </span><span style="color:#3e999f;">*</span><span>spinlock.</span><span style="color:#4271ae;">borrow</span><span>() </span><span style="color:#3e999f;">!= </span><span style="color:#f5871f;">0 </span><span>{
+</span><span>    hint::spin_loop();
+</span><span>}
+</span></code></pre>
+<p>...but <code>RefCell</code> isn't <code>Sync</code>:</p>
+<pre style="background-color:#ffffff;color:#4d4d4c;"><code><span>error[E0277]: `RefCell&lt;i32&gt;` cannot be shared between threads safely
+</span><span>   --&gt; src/main.rs:9:18
+</span><span>    |
+</span><span>9   |     let thread = thread::spawn(move|| {
+</span><span>    |                  ^^^^^^^^^^^^^ `RefCell&lt;i32&gt;` cannot be shared between threads safely
+</span><span>    |
+</span><span>    = help: the trait `Sync` is not implemented for `RefCell&lt;i32&gt;`
+</span><span>    = note: required because of the requirements on the impl of `Send` for `Arc&lt;RefCell&lt;i32&gt;&gt;`
+</span><span>    = note: required because it appears within the type `[closure@src/main.rs:9:32: 11:6]`
+</span><span>note: required by a bound in `spawn`
+</span></code></pre>
+<p>And that bound mentioned in the last line looks like this:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">pub fn </span><span style="color:#4271ae;">spawn</span><span>&lt;F, T&gt;(</span><span style="color:#f5871f;">f</span><span>: F) -&gt; JoinHandle&lt;T&gt; </span><span style="color:#8959a8;">where
+</span><span>    F: FnOnce() -&gt; T,
+</span><span>    F: Send + </span><span style="color:#8959a8;">&#39;static</span><span>,
+</span><span>    T: Send + </span><span style="color:#8959a8;">&#39;static</span><span>,
+</span></code></pre>
+<h4 id="exercise-for-the-reader">Exercise for the reader</h4>
+<p>Why is it impossible to share a reference to a <code>Mutex</code> between threads spawned with <code>std::thread::spawn</code>?</p>
+<h2 id="data-parallelism-with-rayon">Data parallelism with Rayon</h2>
+<p><a href="https://docs.rs/rayon/latest/rayon/">Rayon</a> is a library for parallelization of data processing.
+It can be used to parallelize the execution of functions over a collection of data by switching the standard <code>Iterator</code> to a <code>ParallelIterator</code>.
+It works very similar to <a href="https://docs.oracle.com/javase/tutorial/collections/streams/parallelism.html#executing_streams_in_parallel">Java's parallel streams</a>.</p>
+<p>Why do that? Because thread synchronization is hard! <a href="https://doc.rust-lang.org/nomicon/races.html">Rust prevents data races</a>, but <a href="https://users.rust-lang.org/t/deadlock-is-it-a-bug-or-is-it-intentional/1544">logical races and deadlocks are impossible to prevent!</a>!</p>
+<p><a href="https://github.com/rayon-rs/rayon/blob/master/FAQ.md">Rayon's FAQ</a> is worth reading.</p>
+<h2 id="reading">Reading</h2>
+<ul>
+<li><a href="https://doc.rust-lang.org/book/ch16-00-concurrency.html">The Book</a></li>
+<li><a href="http://archive.today/WFlZV">Safely writing code that isn't thread-safe</a></li>
+</ul>
+<h1 id="assignment">Assignment</h1>
+<p><a href="https://classroom.github.com/a/O2IG8iaI">This week's assignment</a> is to write a "distributed" calculator.
+You should base your solution on the <a href="https://doc.rust-lang.org/stable/book/ch21-00-final-project-a-web-server.html">final project from the book</a></p>
+<p>NOTE: You have two weeks for this assignment. There isn't any new assignment next week.</p>
+
+
+    </div>
+  </div>
+
+  <div class="prev-link">
+    
+    
+  </div>
+
+  <div class="next-link">
+    
+    
+  </div>
+</div>
+
+
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/elasticlunr.min.js"></script>
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/search_index.en.js"></script>
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/book.js"></script>
+
+</body>
+
+</html>

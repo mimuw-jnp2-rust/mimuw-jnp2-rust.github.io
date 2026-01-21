@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Rust course</title>
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://mimuw-jnp2-rust.github.io/book.css">
+  
+
+  
+  
+</head>
+
+<body>
+<div class="menu">
+  
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="https://mimuw-jnp2-rust.github.io">Home</a></li>
+      
+        
+        
+        
+          
+          <li >
+            
+            <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;">
+              
+              List of lessons
+            </a>
+            
+              <ul>
+                
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;00-organizational&#x2F;">
+                        [2025-10-02]
+                        
+                        Organizational lesson
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;01-introduction&#x2F;">
+                        [2024-10-02]
+                        
+                        Introduction to Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li  class="active" >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;02-ownership&#x2F;">
+                        [2025-10-09]
+                        
+                        Ownership Model
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;03-data-types&#x2F;">
+                        [2025-10-16]
+                        
+                        Data Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2022-10-31]
+                          
+                          Feedback #1
+                        </span>
+                        <span class="upcoming-note">Available 2022-10-31</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;05-types-reasoning&#x2F;">
+                        [2025-10-23]
+                        
+                        Reasoning About Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;06-closures-iterators&#x2F;">
+                        [2025-10-30]
+                        
+                        Closures and Iterators
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;07-smart-pointers&#x2F;">
+                        [2025-11-06]
+                        
+                        Smart Pointers
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Feedback #2
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;09-concurrency&#x2F;">
+                        [2025-11-19]
+                        
+                        Fearless concurrency
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;10-design-patterns&#x2F;">
+                        [2025-11-26]
+                        
+                        Design patterns
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;11-async-1&#x2F;">
+                        [2025-12-03]
+                        
+                        Async: Part 1
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Project feedback
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;13-async-2&#x2F;">
+                        [2025-12-10]
+                        
+                        Async: Part 2
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;14-macros-1&#x2F;">
+                        [2025-12-17]
+                        
+                        Macros: Part 1 (declarative)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;15-macros-2&#x2F;">
+                        [2026-01-07]
+                        
+                        Macros: Part 2 (procedural)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;16-unsafe&#x2F;">
+                        [2026-01-14]
+                        
+                        Unsafe Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;project-showcase&#x2F;">
+                        [2022-10-17]
+                        
+                        2021L Project showcase
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;table-of-contents&#x2F;">
+                        [2025-10-05]
+                        
+                        Table of content
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  
+  
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+      <span class="search-icon">🔎</span>
+    
+  </div>
+
+  <div class="page__content">
+    
+      <div class="search-container">
+        <input id="search" type="search" placeholder="Search..">
+        <div class="search-results">
+          <div class="search-results__header"></div>
+          <ul class="search-results__items"></ul>
+        </div>
+      </div>
+    
+    <div class="book-content">
+      
+<h1 class="title">Ownership Model</h1>
+<p class="subtitle">
+  <strong>2025-10-09</strong> (last edit: 2025-10-08)
+</p>
+<h2 id="why-all-the-fuss">Why all the fuss?</h2>
+<p>Even if you've never seen Rust code before, chances are you still heard the term <em>borrow checker</em> or something about Rust's ownership. Indeed, Rust's ownership model lies at the very core of its uniqueness. But to fully understand it and appreciate it, let's first take a look at how memory management is handled in most popular languages.</p>
+<ul>
+<li>
+<p><strong>Garbage Collection</strong> - in many high-level programming languages, like Java, Haskell or Python, memory management is done fully by the language, relieving the programmer from this burden. This prevents memory leaks and memory related errors (like <em>use after free</em>), but does come at a cost - there is a runtime overhead, both memory and performance wise, caused by the constantly running garbage collection algorithms and the programmer usually has very little control over when the garbage collection takes place. Also, garbage collection does not prevent concurrency-related errors, such as data races, in any way.</p>
+<p>There's one language that has a lot of common parts with Rust, but it differs by having a garbage collector: OCaml. In Jane Street, programmers heavily use OCaml as their primary language, and the drawbacks brought by garbage collectors are visible. Their programmers decided to extend the OCaml compiler to be able to write code without any allocations (this approach is quite restrictive) to avoid calling the garbage collector, just so their code runs faster. That's quite a roundabout way!</p>
+</li>
+<li>
+<p><strong>Mind your own memory</strong> - in low-level languages and specific ones like C++, performance comes first so we cannot really afford to run expansive bookkeeping and cleaning algorithms. Most of these languages compile directly to machine code and have no language-specific runtime environment. That means that the only place where memory management can happen is in the produced code. While compilers insert these construction and destruction calls for stack allocated memory, it generally requires a lot of discipline from the programmer to adhere to good practices and patterns to avoid as many memory related issues as possible and one such bug can be quite deadly to the program and a nightmare to find and fix. These languages basically live by the <em>"your memory, your problem"</em> mantra.</p>
+<p>For example, in C++ we get some help through variable scopes, but whenever we write a function, we have to decide ourselves how to pass the values. It's easy by mistake to copy a value, pass an invalid pointer or use some dangling reference (i.e., one pointing to an already-freed data).</p>
+</li>
+</ul>
+<h2 id="to-discuss-during-class">To discuss during class</h2>
+<ul>
+<li>Why languages with garbage collectors are often considered slower? What different garbage collector mechanisms are there?</li>
+<li>Why coding without allocations can avoid using a garbage collector?</li>
+<li>Besides variable scope, does C++ help in any other way with memory management?</li>
+</ul>
+<h2 id="slides">Slides</h2>
+<h3 id="don-t-panic">Don't panic</h3>
+<iframe
+  src="dont_panic/dont_panic.html"
+  title="Don't panic slides"
+  loading="lazy"
+  style="width: 100%; aspect-ratio: 16 / 9; border: none;"
+></iframe>
+<ul>
+<li><a href="https://mimuw-jnp2-rust.github.io/lessons/02-ownership/dont_panic/dont_panic.html">Open the slides in a new tab (HTML)</a></li>
+<li><a href="https://mimuw-jnp2-rust.github.io/lessons/02-ownership/dont_panic/dont_panic.pdf">Download the slides as PDF</a></li>
+</ul>
+<h3 id="string-formatting">String formatting</h3>
+<iframe
+  src="string_formatting/string_formatting.html"
+  title="String formatting slides"
+  loading="lazy"
+  style="width: 100%; aspect-ratio: 16 / 9; border: none;"
+></iframe>
+<ul>
+<li><a href="https://mimuw-jnp2-rust.github.io/lessons/02-ownership/string_formatting/string_formatting.html">Open the slides in a new tab (HTML)</a></li>
+<li><a href="https://mimuw-jnp2-rust.github.io/lessons/02-ownership/string_formatting/string_formatting.pdf">Download the slides as PDF</a></li>
+</ul>
+<h2 id="start-with-the-basics-ownership">Start with the basics - ownership</h2>
+<p>And then we have Rust. Rust is a systems programming language and in many ways it's akin to C++ - it's basically low-level with many high-level additions. But unlike C++, it doesn't exactly fall into either of the categories described above, though it's way closer to the second one. It performs no additional management at runtime, but instead imposes a set of rules on the code, making it easier to reason about and thus check for its safety and correctness at compile time - these rules make up Rust's <strong>ownership model</strong>.</p>
+<p>In a way, programming in Rust is like pair-programming with a patient and very experienced partner. Rust's compiler will make sure you follow all the good patterns and practices (by having them ingrained in the language itself) and very often even tell you how to fix the issues it finds.</p>
+<p><em><strong>Disclaimer:</strong> when delving deeper into Rust below we will make heavy use of concepts like scopes, moving data, stack and heap, which should have been introduced as part of the C++ course. If you need a refresher of any of these, it's best to do so now, before reading further.</em></p>
+<p>In the paragraph above we mentioned a set of rules that comprise Rust's ownership model. <a href="https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#ownership-rules">The book</a> starts off with the following three as its very foundation:</p>
+<ol>
+<li>
+<p>Each value in Rust is tied to a specific variable - we call that variable its <strong>owner</strong>.</p>
+</li>
+<li>
+<p>There can only be one owner at a time.</p>
+</li>
+<li>
+<p>When the owner goes out of scope, the value will be destroyed (or in Rust terms - <em>dropped</em>).</p>
+</li>
+</ol>
+<p>The third point might make you think about C++ and its automatic storage duration. We will later see that, while very similar at first, Rust expands on these mechanics quite a bit. The following code illustrates the basic version of this:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span>{
+</span><span>    </span><span style="color:#999999;">// Allocation on the stack, &#39;a&#39; becomes an owner.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> a: </span><span style="color:#8959a8;">i32 </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">5</span><span>;
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Do some stuff with &#39;a&#39;.
+</span><span>
+</span><span>}
+</span><span style="color:#999999;">// &#39;a&#39;, the owner, goes out of scope and the value is dropped.
+</span></code></pre>
+<p>So far, so good. Variables are pushed onto the stack when they enter the scope and destroyed during stack unwinding that happens upon leaving their scope. However, allocating and deallocating simple integers doesn't impress anybody. Let's try something more complex:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span>{
+</span><span>    </span><span style="color:#999999;">// &#39;s&#39; is allocated on the stack, while its contents (&quot;a string&quot;)
+</span><span>    </span><span style="color:#999999;">// are allocated on the heap. &#39;s&#39; is the owner of this String object.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> s </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;a string&quot;</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// do some stuff with &#39;s&#39;
+</span><span>}
+</span><span style="color:#999999;">// &#39;s&#39;, the owner, goes out of scope and the String is dropped, its heap allocated memory freed.
+</span></code></pre>
+<p>If you recall the RAII (Resource Acquisition Is Initialization) pattern from C++, the above is basically the same thing. We go two for two now in the similarity department, so... is Rust really any different then? There is a part of these examples that we skipped over - actually doing something with the values.</p>
+<h2 id="moving-around-is-fun">Moving around is fun</h2>
+<p>Let's expand on the last example. The scoping is not really important for that one, so we don't include it here.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#999999;">// Same thing, &#39;s&#39; is now an owner.
+</span><span style="color:#8959a8;">let</span><span> s </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;a string&quot;</span><span>);
+</span><span>
+</span><span style="color:#999999;">// Easy, &#39;s2&#39; becomes another owner... right?
+</span><span style="color:#8959a8;">let</span><span> s2 </span><span style="color:#3e999f;">=</span><span> s;
+</span><span>
+</span><span style="color:#999999;">// This doesn&#39;t work, can you guess why?
+</span><span>println!(</span><span style="color:#718c00;">&quot;And the contents are: </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, s);
+</span></code></pre>
+<p>At first glance everything looks great. If we write this code (well, an equivalent of it) in basically any other popular language, it will compile without issues - but it does <em>not</em> compile here and there's a good reason why.</p>
+<p>To understand what's happening, we have to consult the rules again, rule 2 in particular. It says that there can only be one owner of any value at a given time. So, <code>s</code> and <code>s2</code> cannot own the same object. Okay, makes sense, but what is happening in this line then - <code>let s2 = s;</code>? Experience probably tells you that <code>s</code> just gets copied into <code>s2</code>, creating a new String object. That would result in each variable owning its very own instance of the string and each instance having exactly one owner. Sounds like everyone should be happy now, but wait - in that case the last line should work no issue, right? But it doesn't, so can't be a copy. Let's see now what the compiler actually has to say:</p>
+<pre style="background-color:#ffffff;color:#4d4d4c;"><code><span>error[E0382]: borrow of moved value: `s`
+</span><span> --&gt; src/main.rs:6:42
+</span><span>  |
+</span><span>2 |     let s = String::from(&quot;a string&quot;);
+</span><span>  |         - move occurs because `s` has type `String`, which does not implement the `Copy` trait
+</span><span>3 |
+</span><span>4 |     let s2 = s;
+</span><span>  |              - value moved here
+</span><span>5 |
+</span><span>6 |     println!(&quot;And the contents are: {}&quot;, s);
+</span><span>  |                                          ^ value borrowed here after move
+</span></code></pre>
+<p><em>"value moved here"</em> - gotcha! So <code>s</code> is being moved to <code>s2</code>, which also means that <code>s2</code> now becomes the new owner of the string being moved and <code>s</code> cannot be used anymore. In Rust, the default method of passing values around is by move, not by copy. While it may sound a bit odd at first, it actually has some very interesting implications. But before we get to them, let's fix our code, so it compiles now. To do so, we have to explicitly tell Rust to make a copy by invoking the <code>clone</code> method:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">let</span><span> s </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;a string&quot;</span><span>); </span><span style="color:#999999;">// &#39;s&#39; is an owner.
+</span><span>
+</span><span style="color:#8959a8;">let</span><span> s2 </span><span style="color:#3e999f;">=</span><span> s.</span><span style="color:#4271ae;">clone</span><span>(); </span><span style="color:#999999;">// &#39;s2&#39; now contains its own copy.
+</span><span>
+</span><span>println!(</span><span style="color:#718c00;">&quot;And the contents are: </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, s); </span><span style="color:#999999;">// Success!
+</span></code></pre>
+<p>The compiler is happy now and so are we. The implicit move takes some getting used to, but the compiler is here to help us. Now, let's put the good, old C++ on the table again and compare the two lines:</p>
+<div style="text-align: center">
+<p><code>let s2 = s;</code> is equivalent to <code>auto s2 = std::move(s);</code></p>
+<p><code>let s2 = s.clone()</code> is equivalent to <code>auto s2 = s</code></p>
+</div>
+<p>There are a few important things to note here:</p>
+<ul>
+<li>
+<p>Making a copy is oftentimes not cheap. Memory needs to be allocated and copied, and a call to the system has to be made. We should prefer to move things as much as possible to avoid this cost - in C++ we have a myriad of language features like <code>std::move</code> and <em>r-references</em> to achieve this. Every programmer worth their salt needs to be well versed in all of them to write efficient C++ code and simply forgetting one move can lead to significant performance loss (and this happens to even the most senior devs ever existing, let's not pretend). On the contrary, in Rust you need to make an effort to make a copy and that makes you very aware of the cost you're paying - something that we'll see quite a lot of in the language. Also, if you forget a clone there's no harm done - it just won't compile!</p>
+</li>
+<li>
+<p>Hidden in all of this is another nice thing Rust gives us. In C++, nothing prevents you from using variables after they've been moved from, leading to unexpected errors in a more complex code. In Rust, that variable (in our case <code>s</code>) simply becomes invalid and the compiler gives us a nice error about it.</p>
+</li>
+</ul>
+<h3 id="but-what-about-ints">But what about ints?</h3>
+<p>A good question to ask. Copying primitives is cheap. And it's not convenient for the programmer to have to always write <code>.clone()</code> after every primitive. If we take a look at the error from the previous example:</p>
+<pre style="background-color:#ffffff;color:#4d4d4c;"><code><span>move occurs because `s` has type `String`, which does not implement the `Copy` trait`
+</span></code></pre>
+<p>It says that <code>s</code> was moved because the <code>String</code> type doesn't have the <code>Copy</code> trait. We will talk about traits more in depth in the future lessons, but what this basically means is that <code>String</code> is not specified to be copied by default. All primitive types (<code>i32</code>, <code>bool</code>, <code>f64</code>, <code>char</code>, etc.) and tuples consisting only of primitive types implement the <code>Copy</code> trait.</p>
+<h3 id="exercise">Exercise</h3>
+<p>How to fix that code? Don't worry about efficiency yet.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">count_animals</span><span>(</span><span style="color:#f5871f;">num</span><span>: </span><span style="color:#8959a8;">u32</span><span>, </span><span style="color:#f5871f;">animal</span><span>: String) {
+</span><span>    println!(</span><span style="color:#718c00;">&quot;</span><span style="color:#666969;">{} {}</span><span style="color:#718c00;"> ...&quot;</span><span>, num, animal);
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>  </span><span style="color:#8959a8;">let</span><span> s </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;sheep&quot;</span><span>);
+</span><span>
+</span><span>  </span><span style="color:#4271ae;">count_animals</span><span>(</span><span style="color:#f5871f;">1</span><span>, s);
+</span><span>  </span><span style="color:#4271ae;">count_animals</span><span>(</span><span style="color:#f5871f;">2</span><span>, s);
+</span><span>  </span><span style="color:#4271ae;">count_animals</span><span>(</span><span style="color:#f5871f;">3</span><span>, s);
+</span><span>}
+</span></code></pre>
+<h2 id="to-discuss-during-class-1">To discuss during class</h2>
+<ul>
+<li>How does <code>std::move</code> work in C++? When can l-value references (<code>&amp;</code>) be used, and when r-value references (<code>&amp;&amp;</code>)?</li>
+<li>What exactly are the performance benefits in copying primitives?</li>
+</ul>
+<h2 id="let-s-borrow-some-books">Let's borrow some books</h2>
+<p>We now know how to move things around and how to clone them if moving is not possible. But what if making a copy is unnecessary - maybe we just want to let someone look at our resource while still holding that value after they're finished. Kind of like references in C++ (but with some major differences). Consider the following example:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">read_book</span><span>(</span><span style="color:#f5871f;">book</span><span>: String) {
+</span><span>    println!(</span><span style="color:#718c00;">&quot;[Reading] </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, book);
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>  </span><span style="color:#8959a8;">let</span><span> book </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;Merry lived in a big old house. The end.&quot;</span><span>);
+</span><span>
+</span><span>  </span><span style="color:#4271ae;">read_book</span><span>(book.</span><span style="color:#4271ae;">clone</span><span>());
+</span><span>
+</span><span>  println!(</span><span style="color:#718c00;">&quot;Book is still there: </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, book);
+</span><span>}
+</span></code></pre>
+<p>Cloning is pretty excessive here. Imagine recommending a book to your friend and instead of lending it to them for the weekend, you scan it and print an exact copy. Not the best way to go about it, is it? Thankfully, Rust allows us to access a resource without becoming an owner through the use of references and the <code>&amp;</code> operator. This is called a borrow.</p>
+<p>The adjusted code should look like this:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">read_book</span><span>(</span><span style="color:#f5871f;">book</span><span>: </span><span style="color:#3e999f;">&amp;</span><span>String) {
+</span><span>    println!(</span><span style="color:#718c00;">&quot;[Reading] </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, book);
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>  </span><span style="color:#8959a8;">let</span><span> book </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;Merry lived in a big old house. The end.&quot;</span><span>);
+</span><span>
+</span><span>  </span><span style="color:#4271ae;">read_book</span><span>(</span><span style="color:#3e999f;">&amp;</span><span>book);
+</span><span>
+</span><span>  println!(</span><span style="color:#718c00;">&quot;Book is still there: </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, book);
+</span><span>}
+</span></code></pre>
+<p>As with everything, references are too, by default, immutable, which means that the <code>read_book</code> function is not able to modify that book passed into it. We can also borrow something mutably by specifying it both in the receiving function signature and the place it gets called. Maybe you want to have your book signed by its author?</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">sign_book</span><span>(</span><span style="color:#f5871f;">book</span><span>: </span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut</span><span> String) {
+</span><span>    book.</span><span style="color:#4271ae;">push_str</span><span>(</span><span style="color:#718c00;">&quot; ~ Arthur Author&quot;</span><span>);
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>  </span><span style="color:#999999;">// Note that the book has to be marked as mutable in the first place.
+</span><span>  </span><span style="color:#8959a8;">let mut</span><span> book </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;Merry lived in a big old house. The end.&quot;</span><span>);
+</span><span>
+</span><span>  </span><span style="color:#4271ae;">sign_book</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut</span><span> book); </span><span style="color:#999999;">// It&#39;s always clear when a parameter might get modified.
+</span><span>
+</span><span>  println!(</span><span style="color:#718c00;">&quot;</span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, book); </span><span style="color:#999999;">// Book is now signed.
+</span><span>}
+</span></code></pre>
+<p>Pretty neat, but doesn't seem that safe right now. Let's try to surprise our friend:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">erase_book</span><span>(</span><span style="color:#f5871f;">book</span><span>: </span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut</span><span> String) {
+</span><span>    book.</span><span style="color:#4271ae;">clear</span><span>();
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">read_book</span><span>(</span><span style="color:#f5871f;">book</span><span>: </span><span style="color:#3e999f;">&amp;</span><span>String) {
+</span><span>    println!(</span><span style="color:#718c00;">&quot;[Reading] </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, book);
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>  </span><span style="color:#8959a8;">let mut</span><span> book </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;Merry lived in a big old house. The end.&quot;</span><span>);
+</span><span>
+</span><span>  </span><span style="color:#8959a8;">let</span><span> r </span><span style="color:#3e999f;">= &amp;</span><span>book; </span><span style="color:#999999;">// An immutable borrow.
+</span><span>
+</span><span>  </span><span style="color:#4271ae;">erase_book</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut</span><span> book); </span><span style="color:#999999;">// A mutable borrow.
+</span><span>
+</span><span>  </span><span style="color:#4271ae;">read_book</span><span>(r); </span><span style="color:#999999;">// Would be pretty sad to open a blank book when it was not
+</span><span>                </span><span style="color:#999999;">// what we borrowed initially.
+</span><span>
+</span><span>  println!(</span><span style="color:#718c00;">&quot;</span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, book);
+</span><span>}
+</span></code></pre>
+<p>Fortunately for us (and our poor friend just wanting to read), the compiler steps in and doesn't let us do that, printing the following message:</p>
+<pre style="background-color:#ffffff;color:#4d4d4c;"><code><span>error[E0502]: cannot borrow `book` as mutable because it is also borrowed as immutable
+</span><span>  --&gt; src/main.rs:14:14
+</span><span>   |
+</span><span>12 |   let r = &amp;book; // An immutable borrow.
+</span><span>   |           ----- immutable borrow occurs here
+</span><span>13 |
+</span><span>14 |   erase_book(&amp;mut book); // A mutable borrow.
+</span><span>   |              ^^^^^^^^^ mutable borrow occurs here
+</span><span>15 |
+</span><span>16 |   read_book(r); // Would be pretty sad to open a blank book when it was not
+</span><span>   |             - immutable borrow later used here
+</span></code></pre>
+<p>This is where the famous borrow checker comes in. To keep things super safe, Rust clearly states what can and cannot be done with references and tracks their lifetimes. Exactly one of the following is always true for references to a given resource:</p>
+<ul>
+<li>
+<p>There exists only one mutable reference and no immutable references, <strong>or</strong></p>
+</li>
+<li>
+<p>There is any number of immutable references and no mutable ones.</p>
+</li>
+</ul>
+<p>Those rules are the core of the borrow checker. Be sure that you understand it.</p>
+<p>You may notice a parallel to the <em>readers - writers</em> problem from concurrent programming. Because of that, the way Rust's borrow checker is designed lends itself incredibly well to preventing data race related issues.</p>
+<h3 id="dangling-references">Dangling references</h3>
+<p>Rust also checks for dangling references. If we try to compile the following code:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> reference_to_nothing </span><span style="color:#3e999f;">= </span><span style="color:#4271ae;">dangle</span><span>();
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">dangle</span><span>() -&gt; </span><span style="color:#3e999f;">&amp;</span><span>String {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> s </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;hello&quot;</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#3e999f;">&amp;</span><span>s
+</span><span>}
+</span></code></pre>
+<p>we will get an adequate error:</p>
+<pre style="background-color:#ffffff;color:#4d4d4c;"><code><span>error[E0106]: missing lifetime specifier
+</span><span> --&gt; src/main.rs:5:16
+</span><span>  |
+</span><span>5 | fn dangle() -&gt; &amp;String {
+</span><span>  |                ^ expected named lifetime parameter
+</span><span>  |
+</span><span>  = help: this function&#39;s return type contains a borrowed value, but there is no value for it to be borrowed from
+</span><span>help: consider using the `&#39;static` lifetime
+</span><span>  |
+</span><span>5 | fn dangle() -&gt; &amp;&#39;static String {
+</span><span>  |                ^^^^^^^^
+</span></code></pre>
+<p>The message above suggests specifing a lifetime for the returned string. In Rust, the lifetime of each variable is also a part of its type, but we will talk more about it later.</p>
+<h3 id="exercise-1">Exercise</h3>
+<p>Our previous solution using <code>clone()</code> was pretty inefficient. How should you modify this code now?</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">count_animals</span><span>(</span><span style="color:#f5871f;">num</span><span>: </span><span style="color:#8959a8;">u32</span><span>, </span><span style="color:#f5871f;">animal</span><span>: String) {
+</span><span>    println!(</span><span style="color:#718c00;">&quot;</span><span style="color:#666969;">{} {}</span><span style="color:#718c00;"> ...&quot;</span><span>, num, animal);
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>  </span><span style="color:#8959a8;">let</span><span> s </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;sheep&quot;</span><span>);
+</span><span>
+</span><span>  </span><span style="color:#4271ae;">count_animals</span><span>(</span><span style="color:#f5871f;">1</span><span>, s.</span><span style="color:#4271ae;">clone</span><span>());
+</span><span>  </span><span style="color:#4271ae;">count_animals</span><span>(</span><span style="color:#f5871f;">2</span><span>, s.</span><span style="color:#4271ae;">clone</span><span>());
+</span><span>  </span><span style="color:#4271ae;">count_animals</span><span>(</span><span style="color:#f5871f;">3</span><span>, s); </span><span style="color:#999999;">// We previously could&#39;ve omitted the clone() here. Why?
+</span><span>}
+</span></code></pre>
+<h2 id="everyone-gets-a-slice">Everyone gets a slice</h2>
+<p>The last part of working with references that we will cover in this lesson are slices. A <em>slice</em> in Rust is a view over continuous data. Let us start with a string slice - the <code>&amp;str</code> type.</p>
+<p><em><strong>Note:</strong> for the purposes of these examples we assume we are working with ASCII strings. More comprehensive articles on handling strings are linked at the end of this lesson.</em></p>
+<p>To create a string slice from the <code>String</code> object <code>s</code>, we can simply write:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#999999;">// Creates a slice of length 2, starting with the character at index 1.
+</span><span style="color:#8959a8;">let</span><span> slice </span><span style="color:#3e999f;">= &amp;</span><span>s[</span><span style="color:#f5871f;">1</span><span style="color:#3e999f;">..</span><span style="color:#f5871f;">3</span><span>];
+</span></code></pre>
+<p>This makes use of the <code>&amp;</code> operator and Rust's range notation (analogous to Python's notation) to specify the beginning and end of the slice. Thus, we can also write:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">let</span><span> slice </span><span style="color:#3e999f;">= &amp;</span><span>s[</span><span style="color:#f5871f;">2</span><span style="color:#3e999f;">..</span><span>];    </span><span style="color:#999999;">// Everything from index 2 till the end.
+</span><span style="color:#8959a8;">let</span><span> slice </span><span style="color:#3e999f;">= &amp;</span><span>s[</span><span style="color:#3e999f;">..</span><span style="color:#f5871f;">1</span><span>];    </span><span style="color:#999999;">// From beginning to first byte (so, only the first byte).
+</span><span style="color:#8959a8;">let</span><span> slice </span><span style="color:#3e999f;">= &amp;</span><span>s[</span><span style="color:#3e999f;">..</span><span>];     </span><span style="color:#999999;">// The whole string as a slice.
+</span><span style="color:#8959a8;">let</span><span> slice </span><span style="color:#3e999f;">=</span><span> s.</span><span style="color:#4271ae;">as_str</span><span>(); </span><span style="color:#999999;">// Also the whole string.
+</span></code></pre>
+<p>You might have noticed that we always built <code>String</code> values using the <code>from()</code> method and never actually used the string literals directly. What type is a string literal then? Turns out it's the new string slice we just learned about!</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">let</span><span> slice: </span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">str </span><span style="color:#3e999f;">= </span><span style="color:#718c00;">&quot;string literal&quot;</span><span>;
+</span></code></pre>
+<p>In fact, it makes a lot sense - string literals, after all, are not allocated on the heap, but rather placed in a special section of the resulting binary. It's only natural we just reference that place with a slice.</p>
+<p>Slices can also be taken from arrays:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">let</span><span> array: [</span><span style="color:#8959a8;">i32</span><span>; </span><span style="color:#f5871f;">4</span><span>] </span><span style="color:#3e999f;">= </span><span>[</span><span style="color:#f5871f;">42</span><span>, </span><span style="color:#f5871f;">10</span><span>, </span><span style="color:#f5871f;">5</span><span>, </span><span style="color:#f5871f;">2</span><span>]; </span><span style="color:#999999;">// Creates an array of four 32 bit integers.
+</span><span style="color:#8959a8;">let</span><span> slice: </span><span style="color:#3e999f;">&amp;</span><span>[</span><span style="color:#8959a8;">i32</span><span>] </span><span style="color:#3e999f;">= &amp;</span><span>array[</span><span style="color:#f5871f;">1</span><span style="color:#3e999f;">..</span><span style="color:#f5871f;">3</span><span>];     </span><span style="color:#999999;">// Results in a slice [10, 5].
+</span></code></pre>
+<h3 id="exercise-2">Exercise</h3>
+<p>Can this code be further modified utilizing references? Think about the signature of <code>count_animals</code>, can we make it also accept string literals?</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">count_animals</span><span>(</span><span style="color:#f5871f;">num</span><span>: </span><span style="color:#8959a8;">u32</span><span>, </span><span style="color:#f5871f;">animal</span><span>: </span><span style="color:#3e999f;">&amp;</span><span>String) {
+</span><span>    println!(</span><span style="color:#718c00;">&quot;</span><span style="color:#666969;">{} {}</span><span style="color:#718c00;"> ...&quot;</span><span>, num, animal);
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>  </span><span style="color:#8959a8;">let</span><span> s </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;sheep&quot;</span><span>);
+</span><span>
+</span><span>  </span><span style="color:#4271ae;">count_animals</span><span>(</span><span style="color:#f5871f;">1</span><span>, </span><span style="color:#3e999f;">&amp;</span><span>s);
+</span><span>  </span><span style="color:#4271ae;">count_animals</span><span>(</span><span style="color:#f5871f;">2</span><span>, </span><span style="color:#3e999f;">&amp;</span><span>s);
+</span><span>  </span><span style="color:#4271ae;">count_animals</span><span>(</span><span style="color:#f5871f;">3</span><span>, </span><span style="color:#3e999f;">&amp;</span><span>s);
+</span><span>  </span><span style="color:#4271ae;">count_animals</span><span>(</span><span style="color:#f5871f;">4</span><span>, </span><span style="color:#718c00;">&quot;goat&quot;</span><span>); </span><span style="color:#999999;">// In this version of the code it doesn&#39;t compile.
+</span><span>}
+</span></code></pre>
+<h3 id="obligatory-reading">Obligatory reading</h3>
+<ul>
+<li>
+<p><a href="https://doc.rust-lang.org/stable/book/ch04-00-understanding-ownership.html">The Book, chapter 4</a></p>
+</li>
+<li>
+<p><a href="https://doc.rust-lang.org/stable/rust-by-example/index.html">Rust by Example, chapter Scoping rules</a></p>
+</li>
+</ul>
+<h3 id="additional-reading">Additional reading</h3>
+<ul>
+<li>
+<p><a href="https://doc.rust-lang.org/std/primitive.char.html">Char documentation</a></p>
+</li>
+<li>
+<p><a href="https://fasterthanli.me/articles/working-with-strings-in-rust">Working with strings in Rust</a></p>
+</li>
+</ul>
+<h3 id="assignment-1-graded">Assignment 1 (graded)</h3>
+<p><a href="https://classroom.github.com/a/ih0mIzmM">ordering in Van Binh</a></p>
+<p>Deadline: group-specific.</p>
+<p>Grading:</p>
+<ul>
+<li>2 points for passing tests, <code>cargo fmt</code> and <code>cargo clippy</code>,</li>
+<li>1 point for manual code inspection ("code quality").</li>
+</ul>
+
+
+    </div>
+  </div>
+
+  <div class="prev-link">
+    
+    
+  </div>
+
+  <div class="next-link">
+    
+    
+  </div>
+</div>
+
+
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/elasticlunr.min.js"></script>
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/search_index.en.js"></script>
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/book.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Rust course</title>
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://mimuw-jnp2-rust.github.io/book.css">
+  
+
+  
+  
+</head>
+
+<body>
+<div class="menu">
+  
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="https://mimuw-jnp2-rust.github.io">Home</a></li>
+      
+        
+        
+        
+          
+          <li >
+            
+            <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;">
+              
+              List of lessons
+            </a>
+            
+              <ul>
+                
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li  class="active" >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;00-organizational&#x2F;">
+                        [2025-10-02]
+                        
+                        Organizational lesson
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;01-introduction&#x2F;">
+                        [2024-10-02]
+                        
+                        Introduction to Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;02-ownership&#x2F;">
+                        [2025-10-09]
+                        
+                        Ownership Model
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;03-data-types&#x2F;">
+                        [2025-10-16]
+                        
+                        Data Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2022-10-31]
+                          
+                          Feedback #1
+                        </span>
+                        <span class="upcoming-note">Available 2022-10-31</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;05-types-reasoning&#x2F;">
+                        [2025-10-23]
+                        
+                        Reasoning About Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;06-closures-iterators&#x2F;">
+                        [2025-10-30]
+                        
+                        Closures and Iterators
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;07-smart-pointers&#x2F;">
+                        [2025-11-06]
+                        
+                        Smart Pointers
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Feedback #2
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;09-concurrency&#x2F;">
+                        [2025-11-19]
+                        
+                        Fearless concurrency
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;10-design-patterns&#x2F;">
+                        [2025-11-26]
+                        
+                        Design patterns
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;11-async-1&#x2F;">
+                        [2025-12-03]
+                        
+                        Async: Part 1
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Project feedback
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;13-async-2&#x2F;">
+                        [2025-12-10]
+                        
+                        Async: Part 2
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;14-macros-1&#x2F;">
+                        [2025-12-17]
+                        
+                        Macros: Part 1 (declarative)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;15-macros-2&#x2F;">
+                        [2026-01-07]
+                        
+                        Macros: Part 2 (procedural)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;16-unsafe&#x2F;">
+                        [2026-01-14]
+                        
+                        Unsafe Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;project-showcase&#x2F;">
+                        [2022-10-17]
+                        
+                        2021L Project showcase
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;table-of-contents&#x2F;">
+                        [2025-10-05]
+                        
+                        Table of content
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  
+  
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+      <span class="search-icon">🔎</span>
+    
+  </div>
+
+  <div class="page__content">
+    
+      <div class="search-container">
+        <input id="search" type="search" placeholder="Search..">
+        <div class="search-results">
+          <div class="search-results__header"></div>
+          <ul class="search-results__items"></ul>
+        </div>
+      </div>
+    
+    <div class="book-content">
+      
+<h1 class="title">Organizational lesson</h1>
+<p class="subtitle">
+  <strong>2025-10-02</strong> (last edit: 2025-10-02)
+</p>
+<h1 id="rust-course">Rust course</h1>
+<p>We will be using <a href="https://classroom.github.com">Github Classroom</a> for task submission and <a href="https://discord.gg/R5PMsBmtNh">Discord</a> for discussions.</p>
+<p>Our learning/teaching materials are going to be:</p>
+<ul>
+<li>the content of this site - it contains explanations and questions tailored towards MIMUW students,</li>
+<li>well-known Rust teaching materials (<a href="https://doc.rust-lang.org/stable/book/">"The Book"</a>, <a href="https://doc.rust-lang.org/rust-by-example/index.html">"Rust by Example"</a>) that complement this site,</li>
+<li>explanations/deeper insight during class and many examples of Rust code.</li>
+</ul>
+<h2 id="final-grade">Final grade</h2>
+<ul>
+<li>
+<p>1/2 of the grade is based on small tasks.</p>
+<ul>
+<li>There will be 8 or 9 tasks.</li>
+<li>Each task will be graded on a scale of 0 to 3.</li>
+<li>You can get up to 21 points from the small tasks. It means that it is enough to do 7 tasks with a score of 3 points.</li>
+<li>You can solve the task between the end of the lesson and strictly before the start of the next lesson. The deadline is different for different lab groups.</li>
+<li>Note: we will have 14 classes in total, so you can expect a task every week or two.</li>
+</ul>
+</li>
+<li>
+<p>1/2 of the grade is based on a big project. You can choose a topic yourself, but it must be accepted by us. The project has to be split into two parts. It can be done in groups of two (or bigger, if ambitious enough). The grading is as follows:</p>
+<ol>
+<li>Usability - 4 points.</li>
+<li>Usage of Rust functionalities - 6 points.</li>
+<li>Programming challenges - 5 points.</li>
+<li>Size of project - 4 points.</li>
+<li>Quality of code - 2 points.</li>
+</ol>
+<p>To score high on <code>Usability</code>, there shouldn't be any issues with running the project (be sure that all commands are running and that we will precisely know when and what to execute to test the project, if needed also try to give some reproduceable environment, e.g. docker). The <code>Usage of Rust functionalities</code> forces you to use harder features/bigger Rust libraries (async, wasm, gui, testing, macros, etc). The <code>Programming challenges</code> just means whether it was straightforward code that is simple to write, or something that required effort/thought/debugging. The <code>Size of project</code> just means how much features there are in the project, and how much meaningful code there is. If we don't have much comments about design of the code and there isn't any issues with readability, then <code>Quality of code</code> will be high.</p>
+</li>
+</ul>
+<p>In specific, individual cases, it is possible to raise the grade by doing additional work, but it has to be agreed by us beforehand and it should be not easier than going through the standard path.
+The additional work might be:</p>
+<ul>
+<li>Making a presentation about some advanced topic (const generics, futures, macros, etc.) or about architecture of a selected Rust open-source library.</li>
+<li>Contributing to a selected Rust open-source library.</li>
+<li>Contributing to this course's materials.</li>
+</ul>
+<h2 id="big-project-deadlines">Big project deadlines</h2>
+<p>The deadlines for the big project (not to be confused with separate deadlines for the small projects) are set to the start of your class.
+If you have a class on Wednesday at 12:15 and the project deadline is 2025-11-05 - 2025-11-06, then your deadline is 2025-11-05, 12:15.</p>
+<ol>
+<li>2025-11-05 - 2025-11-06: Project ideas should be presented to us for further refining. If you wish to pair up with someone, tell us before the deadline.</li>
+<li>2025-11-12 - 2025-11-13: Final project ideas should be accepted by now.</li>
+<li>2025-12-10 - 2025-12-11: Deadline for submitting the first part of the project.</li>
+<li>2026-01-07 - 2026-01-08: Deadline for submitting the second and final part of the project.</li>
+</ol>
+<h2 id="small-tasks-grading">Small tasks grading</h2>
+<ul>
+<li>By default, as long as the solution makes sense and passes all the tests, you get the maximum number of points, which then gets reduced based on the number of review comments we gave. There is no fixed convention, but usually tiny review comments give just a tiny penalty (multiples of 0.1 point).</li>
+<li>The solutions shouldn't have any unnecessary files or code. As long as they satisfy the task requirements, they are fine.</li>
+<li>As memory management is a big part of the Rust language, to learn how to do it optimally, the solutions should minimize the used memory (while still doing it safely). When possible, prefer to avoid allocations.</li>
+<li>Algorithmic complexity and the constant behind the solutions matters too. For example, prefer using single operations on <code>HashMap</code> instead of multiple operations, and prefer to use data structures that minimize lookup time.</li>
+<li>As the functional programming approach is also a big part of the Rust language, prefer to use it over imperative programming. Especially whenever you do operations on containers. Finding the cleanest (and usually safest) approach is left to you.</li>
+<li>Error handling should be done consistently, as per lessons' guidelines. Be sure that you understand when to use <code>unwrap</code>, <code>expect</code>, <code>?</code>, <code>Result</code>. Design the code to minimize the number of assumptions and <code>unwrap</code>s.</li>
+<li>During lessons we do not dive into the documentation to learn all available functions from the standard library. It is your job to explore the documentation and find functions that solve whatever specific issue you have. We might give review comments whenever there's some cleaner approach using the standard library.</li>
+<li>We can also give review comments related to general code quality, not strictly related to the Rust language. In particular, please avoid copy-pasting, writing non-meaningful comments, overcomplicating the approach, using unoptimal data types. The approach and readability of the code also matters.</li>
+<li>Lastly, of course the solutions should adhere to guidelines that are in the lessons (both in the provided text and spoken during classes).</li>
+</ul>
+
+
+    </div>
+  </div>
+
+  <div class="prev-link">
+    
+    
+  </div>
+
+  <div class="next-link">
+    
+    
+  </div>
+</div>
+
+
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/elasticlunr.min.js"></script>
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/search_index.en.js"></script>
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/book.js"></script>
+
+</body>
+
+</html>

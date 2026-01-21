@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Rust course</title>
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://mimuw-jnp2-rust.github.io/book.css">
+  
+
+  
+  
+</head>
+
+<body>
+<div class="menu">
+  
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="https://mimuw-jnp2-rust.github.io">Home</a></li>
+      
+        
+        
+        
+          
+          <li >
+            
+            <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;">
+              
+              List of lessons
+            </a>
+            
+              <ul>
+                
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;00-organizational&#x2F;">
+                        [2025-10-02]
+                        
+                        Organizational lesson
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;01-introduction&#x2F;">
+                        [2024-10-02]
+                        
+                        Introduction to Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;02-ownership&#x2F;">
+                        [2025-10-09]
+                        
+                        Ownership Model
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;03-data-types&#x2F;">
+                        [2025-10-16]
+                        
+                        Data Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2022-10-31]
+                          
+                          Feedback #1
+                        </span>
+                        <span class="upcoming-note">Available 2022-10-31</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;05-types-reasoning&#x2F;">
+                        [2025-10-23]
+                        
+                        Reasoning About Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;06-closures-iterators&#x2F;">
+                        [2025-10-30]
+                        
+                        Closures and Iterators
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li  class="active" >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;07-smart-pointers&#x2F;">
+                        [2025-11-06]
+                        
+                        Smart Pointers
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Feedback #2
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;09-concurrency&#x2F;">
+                        [2025-11-19]
+                        
+                        Fearless concurrency
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;10-design-patterns&#x2F;">
+                        [2025-11-26]
+                        
+                        Design patterns
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;11-async-1&#x2F;">
+                        [2025-12-03]
+                        
+                        Async: Part 1
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Project feedback
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;13-async-2&#x2F;">
+                        [2025-12-10]
+                        
+                        Async: Part 2
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;14-macros-1&#x2F;">
+                        [2025-12-17]
+                        
+                        Macros: Part 1 (declarative)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;15-macros-2&#x2F;">
+                        [2026-01-07]
+                        
+                        Macros: Part 2 (procedural)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;16-unsafe&#x2F;">
+                        [2026-01-14]
+                        
+                        Unsafe Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;project-showcase&#x2F;">
+                        [2022-10-17]
+                        
+                        2021L Project showcase
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;table-of-contents&#x2F;">
+                        [2025-10-05]
+                        
+                        Table of content
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  
+  
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+      <span class="search-icon">🔎</span>
+    
+  </div>
+
+  <div class="page__content">
+    
+      <div class="search-container">
+        <input id="search" type="search" placeholder="Search..">
+        <div class="search-results">
+          <div class="search-results__header"></div>
+          <ul class="search-results__items"></ul>
+        </div>
+      </div>
+    
+    <div class="book-content">
+      
+<h1 class="title">Smart Pointers</h1>
+<p class="subtitle">
+  <strong>2025-11-06</strong> (last edit: 2025-11-06)
+</p>
+<h1 id="working-with-the-heap">Working with the heap</h1>
+<p>So far we've only used heap allocated memory indirectly by working with containers such as vectors, maps or the <code>String</code> type, otherwise allocating our variables on the stack. We didn't really have to be aware of the fact that these collections used the heap, as all that memory management details were hidden away from us. In this lesson we'll take a closer look at what is really happening there and how we can do that ourselves.</p>
+<p>To work with heap-allocated memory, Rust features <em>smart pointers</em>. You should have already heard this term as it is a very important feature in C++ and the concept is virtually the same here - they are wrappers around raw allocated memory that provide additional, safety-ensuring mechanism. What defines a smart pointer in Rust is generally the implementation of two traits: <code>Drop</code> and <code>Deref</code>.</p>
+<p>The <code>Drop</code> trait is pretty straightforward as it consists of one method - <code>fn drop(&amp;mut self)</code> - that is, basically, the destructor, invoked during stack unwinding.</p>
+<p>The <code>Deref</code> trait allows us to overload the dereference (<code>*</code>) operator.</p>
+<h2 id="deref-coercion">Deref coercion</h2>
+<p>Apart from enabling access to the underlying value, implementing the <code>Deref</code> trait enables Rust to perform <em>deref coercion</em> on the pointer - trying to remove as many levels of indirection as it can. What it means in practice is that we will be able to use it with any code working on plain references.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">use </span><span>std::ops::Deref;
+</span><span>
+</span><span style="color:#8959a8;">struct </span><span>MyBox&lt;T&gt;(T);
+</span><span>
+</span><span style="color:#999999;">// We won&#39;t be allocating anything on the heap here as it is not important here.
+</span><span style="color:#999999;">// We&#39;re only focusing on the dereference mechanisms.
+</span><span style="color:#8959a8;">impl</span><span>&lt;T&gt; MyBox&lt;T&gt; {
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">new</span><span>(</span><span style="color:#f5871f;">x</span><span>: T) -&gt; MyBox&lt;T&gt; {
+</span><span>        MyBox(x)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">impl</span><span>&lt;T&gt; Deref </span><span style="color:#8959a8;">for </span><span>MyBox&lt;T&gt; {
+</span><span>    </span><span style="color:#8959a8;">type </span><span>Target </span><span style="color:#3e999f;">=</span><span> T;
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">deref</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#f5871f;">self</span><span>) -&gt; </span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">Self::</span><span>Target {
+</span><span>        </span><span style="color:#3e999f;">&amp;</span><span style="color:#c82829;">self</span><span>.</span><span style="color:#f5871f;">0
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">hello</span><span>(</span><span style="color:#f5871f;">name</span><span>: </span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">str</span><span>) {
+</span><span>    println!(</span><span style="color:#718c00;">&quot;Hello, </span><span style="color:#666969;">{}</span><span style="color:#718c00;">!&quot;</span><span>, name);
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> x </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">5</span><span>;
+</span><span>    </span><span style="color:#8959a8;">let</span><span> int_box </span><span style="color:#3e999f;">= </span><span>MyBox::new(x);
+</span><span>
+</span><span>    assert_eq!(</span><span style="color:#f5871f;">5</span><span>, </span><span style="color:#3e999f;">*</span><span>int_box);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// String also implements the `Deref` trait.
+</span><span>    </span><span style="color:#999999;">// In fact, String actually is a smart pointer.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> s </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;I&#39;m a smart pointer too&quot;</span><span>);
+</span><span>    </span><span style="color:#4271ae;">hello</span><span>(</span><span style="color:#3e999f;">&amp;</span><span>s);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Deref coercion can deal with multiple levels of indirection.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> str_box </span><span style="color:#3e999f;">= </span><span>MyBox::new(</span><span style="color:#c99e00;">String</span><span>::from(</span><span style="color:#718c00;">&quot;Rust&quot;</span><span>));
+</span><span>    </span><span style="color:#4271ae;">hello</span><span>(</span><span style="color:#3e999f;">&amp;</span><span>str_box);
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/07-smart-pointers/deref_coercion.rs">deref_coercion.rs</a>)</sub></p>
+<p>In general, there are three possible coercions that Rust can perform:</p>
+<ul>
+<li>
+<p>From <code>&amp;T</code> to <code>&amp;U</code> when <code>T: Deref&lt;Target=U&gt;</code></p>
+</li>
+<li>
+<p>From <code>&amp;mut T</code> to <code>&amp;mut U</code> when <code>T: DerefMut&lt;Target=U&gt;</code></p>
+</li>
+<li>
+<p>From <code>&amp;mut T</code> to <code>&amp;U</code> when <code>T: Deref&lt;Target=U&gt;</code></p>
+</li>
+</ul>
+<p>While the first two coercions are straightforward, the third one is possible because treating a mutable reference as an immutable one does not break the rules of ownership.</p>
+<h1 id="box-simple-wrapper"><code>Box</code> - simple wrapper</h1>
+<p>The <code>Box&lt;T&gt;</code> type is the most basic out of Rust's smart pointers, equivalent to C++'s <code>std::unique_ptr&lt;T&gt;</code>. It's a simple wrapper that makes sure the underlying memory gets allocated and freed properly.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">box_simple</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> b </span><span style="color:#3e999f;">= </span><span style="color:#c99e00;">Box</span><span>::new(</span><span style="color:#f5871f;">5</span><span>);
+</span><span>    println!(</span><span style="color:#718c00;">&quot;b = </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, b);
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">let</span><span> _x </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">10 </span><span style="color:#3e999f;">+ *</span><span>b;
+</span><span>}
+</span><span>
+</span><span style="color:#999999;">// `Box` gives us the indirection required to define
+</span><span style="color:#999999;">// recursive types
+</span><span>#[</span><span style="color:#c82829;">allow</span><span>(dead_code)]
+</span><span style="color:#8959a8;">enum </span><span>List {
+</span><span>    Cons(</span><span style="color:#8959a8;">i32</span><span>, </span><span style="color:#c99e00;">Box</span><span>&lt;List&gt;),
+</span><span>    Nil,
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#4271ae;">box_simple</span><span>();
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/07-smart-pointers/box.rs">box.rs</a>)</sub></p>
+<h1 id="reference-counting">Reference counting</h1>
+<p>The <code>Rc&lt;T&gt;</code> type is the equivalent of <code>std::shared_ptr&lt;T&gt;</code> from C++. There is one caveat to this though - because we're creating multiple references to the same object, those references have to be immutable in accordance with the ownership rules.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">use </span><span>std::rc::Rc;
+</span><span>
+</span><span style="color:#8959a8;">struct </span><span>LoudInt(</span><span style="color:#8959a8;">i32</span><span>);
+</span><span>
+</span><span style="color:#8959a8;">impl </span><span>Drop </span><span style="color:#8959a8;">for </span><span>LoudInt {
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">drop</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut </span><span style="color:#f5871f;">self</span><span>) {
+</span><span>        println!(</span><span style="color:#718c00;">&quot;[</span><span style="color:#666969;">{}</span><span style="color:#718c00;">] Farewell!&quot;</span><span>, </span><span style="color:#c82829;">self</span><span>.</span><span style="color:#f5871f;">0</span><span>);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    {
+</span><span>        </span><span style="color:#8959a8;">let</span><span> outer_ref;
+</span><span>
+</span><span>        {
+</span><span>            </span><span style="color:#8959a8;">let</span><span> inner_ref </span><span style="color:#3e999f;">= </span><span>Rc::new(LoudInt(</span><span style="color:#f5871f;">5</span><span>));
+</span><span>
+</span><span>            </span><span style="color:#999999;">// strong_count represents the number of owning references pointing
+</span><span>            </span><span style="color:#999999;">// to data
+</span><span>            assert_eq!(Rc::strong_count(</span><span style="color:#3e999f;">&amp;</span><span>inner_ref), </span><span style="color:#f5871f;">1</span><span>);
+</span><span>
+</span><span>            outer_ref </span><span style="color:#3e999f;">= </span><span>Rc::clone(</span><span style="color:#3e999f;">&amp;</span><span>inner_ref);
+</span><span>
+</span><span>            assert_eq!(Rc::strong_count(</span><span style="color:#3e999f;">&amp;</span><span>inner_ref), Rc::strong_count(</span><span style="color:#3e999f;">&amp;</span><span>outer_ref));
+</span><span>            assert_eq!(Rc::strong_count(</span><span style="color:#3e999f;">&amp;</span><span>inner_ref), </span><span style="color:#f5871f;">2</span><span>);
+</span><span>        }
+</span><span>
+</span><span>        println!(</span><span style="color:#718c00;">&quot;The </span><span style="color:#666969;">{}</span><span style="color:#718c00;"> still lives!&quot;</span><span>, outer_ref.</span><span style="color:#f5871f;">0</span><span>);
+</span><span>        assert_eq!(Rc::strong_count(</span><span style="color:#3e999f;">&amp;</span><span>outer_ref), </span><span style="color:#f5871f;">1</span><span>);
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/07-smart-pointers/ref_count.rs">ref_count.rs</a>)</sub></p>
+<p>Rust also provides a non-owning pointer in the form of <code>Weak&lt;T&gt;</code> (equivalent to <code>std::weak_ptr&lt;T&gt;</code>) that can be obtained from an instance of <code>Rc&lt;T&gt;</code>.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">use </span><span>std::rc::Rc;
+</span><span>
+</span><span style="color:#8959a8;">struct </span><span>LoudInt(</span><span style="color:#8959a8;">i32</span><span>);
+</span><span>
+</span><span style="color:#8959a8;">impl </span><span>Drop </span><span style="color:#8959a8;">for </span><span>LoudInt {
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">drop</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#8959a8;">mut </span><span style="color:#f5871f;">self</span><span>) {
+</span><span>        println!(</span><span style="color:#718c00;">&quot;[</span><span style="color:#666969;">{}</span><span style="color:#718c00;">] Farewell!&quot;</span><span>, </span><span style="color:#c82829;">self</span><span>.</span><span style="color:#f5871f;">0</span><span>);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> weak_ref;
+</span><span>
+</span><span>    {
+</span><span>        </span><span style="color:#8959a8;">let</span><span> shared_ref </span><span style="color:#3e999f;">= </span><span>Rc::new(LoudInt(</span><span style="color:#f5871f;">5</span><span>));
+</span><span>
+</span><span>        </span><span style="color:#999999;">// weak_count keeps track of the non-owning reference to the data
+</span><span>        assert_eq!(Rc::weak_count(</span><span style="color:#3e999f;">&amp;</span><span>shared_ref), </span><span style="color:#f5871f;">0</span><span>);
+</span><span>
+</span><span>        </span><span style="color:#999999;">// `downgrade()` obtains a weak pointer to Rc&#39;s data
+</span><span>        weak_ref </span><span style="color:#3e999f;">= </span><span>Rc::downgrade(</span><span style="color:#3e999f;">&amp;</span><span>shared_ref);
+</span><span>
+</span><span>        assert_eq!(Rc::weak_count(</span><span style="color:#3e999f;">&amp;</span><span>shared_ref), </span><span style="color:#f5871f;">1</span><span>);
+</span><span>        assert_eq!(Rc::strong_count(</span><span style="color:#3e999f;">&amp;</span><span>shared_ref), </span><span style="color:#f5871f;">1</span><span>);
+</span><span>
+</span><span>        </span><span style="color:#999999;">// In order to use the the data underneath the weak pointer
+</span><span>        </span><span style="color:#999999;">// we need to obtain a new shared pointer from it.
+</span><span>        </span><span style="color:#999999;">// The `upgrade()` method returns `Option&lt;Rc&lt;T&gt;&gt;`.
+</span><span>        </span><span style="color:#8959a8;">let</span><span> temp </span><span style="color:#3e999f;">=</span><span> weak_ref.</span><span style="color:#4271ae;">upgrade</span><span>();
+</span><span>        assert_eq!(Rc::strong_count(</span><span style="color:#3e999f;">&amp;</span><span>shared_ref), </span><span style="color:#f5871f;">2</span><span>);
+</span><span>        println!(</span><span style="color:#718c00;">&quot;The value is </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, temp.</span><span style="color:#4271ae;">unwrap</span><span>().</span><span style="color:#f5871f;">0</span><span>);
+</span><span>    }
+</span><span>
+</span><span>    println!(</span><span style="color:#718c00;">&quot;The value should be deallocated by now.&quot;</span><span>);
+</span><span>    assert!(weak_ref.</span><span style="color:#4271ae;">upgrade</span><span>().</span><span style="color:#4271ae;">is_none</span><span>());
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/07-smart-pointers/weak_ref.rs">weak_ref.rs</a>)</sub></p>
+<h1 id="mutating-the-immutable">Mutating the immutable</h1>
+<p>Good examples and explanation of the interior mutability pattern and runtime borrow checking can be found in the <a href="https://doc.rust-lang.org/book/ch15-05-interior-mutability.html">book</a>.</p>
+<p>Alongside the <code>RefCell&lt;T&gt;</code> type described above, there is an analogous <a href="https://doc.rust-lang.org/std/cell/struct.Cell.html"><code>Cell&lt;T&gt;</code></a> type that operates on values instead of references.</p>
+<h1 id="convenient-handling-of-dyn-objects">Convenient handling of <code>dyn</code> objects</h1>
+<p>In previous labs you learned about dynamic dispatch and its strengths. The largest drawback you noticed is most likely that they are <em>unsized</em> (<code>!Sized</code>, where <code>!</code> being syntax signifying lack of trait implementation).</p>
+<p>When storing an object on a heap, however, we can use it as a <code>dyn</code> object seamlessly.</p>
+<h1 id="obligatory-reading">Obligatory reading</h1>
+<ul>
+<li>
+<p><a href="https://doc.rust-lang.org/book/ch15-00-smart-pointers.html">The Book, chapter 15</a></p>
+</li>
+<li>
+<p><a href="https://doc.rust-lang.org/std/borrow/enum.Cow.html">std::borrow::Cow</a>, a versatile copy-on-write smart pointer</p>
+</li>
+</ul>
+<h1 id="additional-reading">Additional reading</h1>
+<ul>
+<li><a href="https://www.fpcomplete.com/blog/rust-asref-asderef/">On wrapped references</a></li>
+<li><a href="https://dev.to/zhanghandong/rust-concept-clarification-deref-vs-asref-vs-borrow-vs-cow-13g6"><code>Deref</code> vs <code>AsRef</code> vs <code>Borrow</code></a></li>
+</ul>
+<h2 id="assignment-5-graded">Assignment 5 (graded)</h2>
+<p><a href="https://classroom.github.com/a/AhZZWwGD">Corporations</a></p>
+<p>Deadline: per-group.</p>
+
+
+    </div>
+  </div>
+
+  <div class="prev-link">
+    
+    
+  </div>
+
+  <div class="next-link">
+    
+    
+  </div>
+</div>
+
+
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/elasticlunr.min.js"></script>
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/search_index.en.js"></script>
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/book.js"></script>
+
+</body>
+
+</html>

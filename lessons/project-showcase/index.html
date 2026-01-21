@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Rust course</title>
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://mimuw-jnp2-rust.github.io/book.css">
+  
+
+  
+  
+</head>
+
+<body>
+<div class="menu">
+  
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="https://mimuw-jnp2-rust.github.io">Home</a></li>
+      
+        
+        
+        
+          
+          <li >
+            
+            <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;">
+              
+              List of lessons
+            </a>
+            
+              <ul>
+                
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;00-organizational&#x2F;">
+                        [2025-10-02]
+                        
+                        Organizational lesson
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;01-introduction&#x2F;">
+                        [2024-10-02]
+                        
+                        Introduction to Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;02-ownership&#x2F;">
+                        [2025-10-09]
+                        
+                        Ownership Model
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;03-data-types&#x2F;">
+                        [2025-10-16]
+                        
+                        Data Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2022-10-31]
+                          
+                          Feedback #1
+                        </span>
+                        <span class="upcoming-note">Available 2022-10-31</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;05-types-reasoning&#x2F;">
+                        [2025-10-23]
+                        
+                        Reasoning About Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;06-closures-iterators&#x2F;">
+                        [2025-10-30]
+                        
+                        Closures and Iterators
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;07-smart-pointers&#x2F;">
+                        [2025-11-06]
+                        
+                        Smart Pointers
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Feedback #2
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;09-concurrency&#x2F;">
+                        [2025-11-19]
+                        
+                        Fearless concurrency
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;10-design-patterns&#x2F;">
+                        [2025-11-26]
+                        
+                        Design patterns
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;11-async-1&#x2F;">
+                        [2025-12-03]
+                        
+                        Async: Part 1
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Project feedback
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;13-async-2&#x2F;">
+                        [2025-12-10]
+                        
+                        Async: Part 2
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;14-macros-1&#x2F;">
+                        [2025-12-17]
+                        
+                        Macros: Part 1 (declarative)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;15-macros-2&#x2F;">
+                        [2026-01-07]
+                        
+                        Macros: Part 2 (procedural)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;16-unsafe&#x2F;">
+                        [2026-01-14]
+                        
+                        Unsafe Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li  class="active" >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;project-showcase&#x2F;">
+                        [2022-10-17]
+                        
+                        2021L Project showcase
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;table-of-contents&#x2F;">
+                        [2025-10-05]
+                        
+                        Table of content
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  
+  
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+      <span class="search-icon">🔎</span>
+    
+  </div>
+
+  <div class="page__content">
+    
+      <div class="search-container">
+        <input id="search" type="search" placeholder="Search..">
+        <div class="search-results">
+          <div class="search-results__header"></div>
+          <ul class="search-results__items"></ul>
+        </div>
+      </div>
+    
+    <div class="book-content">
+      
+<h1 class="title">2021L Project showcase</h1>
+<p class="subtitle">
+  <strong>2022-10-17</strong> (last edit: 2022-10-17)
+</p>
+<h1 id="list-of-projects">List of projects</h1>
+<p>The list of previous students' big projects is <a href="https://github.com/orgs/mimuw-jnp2-rust/repositories?q=visibility%3Apublic+archived%3Afalse+project-">publicly available</a>.</p>
+<h1 id="some-projects-from-the-previous-semester">(Some) projects from the previous semester</h1>
+<h2 id="chat-app">Chat App</h2>
+<p><a href="https://github.com/barteksad/Chat-App">GitHub</a></p>
+<p>Bartłomiej Sadlej (GitHub: @barteksad email: sadlejbartek@gmail.com)</p>
+<p>"Chat app written in Rust with Postgress db. Allows users to create new accounts and channels and communicate within channel. All unseed messages from last login are delivered once logged in again.</p>
+<p>By default server stats with one user named ADMIN with password ADMIN"</p>
+<p>tokio, serde, anyhow, thiserror, dashmap</p>
+<h2 id="algorithm-visualizer">Algorithm Visualizer</h2>
+<p><a href="https://github.com/algorithm-visualzier/algorithm-visualizer">GitHub</a></p>
+<p>Mikołaj Piróg (mikolajpirog@gmail.com, GitHub: @aetn23), Mikołaj Wasiak (wasiak.mikolaj1@gmail.com, GitHub: @RudyMis)</p>
+<p>Graph editor with algorithms visualization. Create and modify the graph using GUI, move it around using WSAD. To see an algorithm being run, simply click on a node, and select the desired algorithm. See video and/or GitHub page for further details.</p>
+<p>Petgraph, egui-tetra, dyn_partial_eq</p>
+<video src="/lessons/project-showcase/graph_vis_demo.h264" controls width="320" height="240">
+</video>
+<h2 id="rustal-combat">Rustal Combat</h2>
+<p><a href="https://github.com/Emilo77/RUSTAL-COMBAT">GitHub</a></p>
+<p>Kamil Bugała (GiHub: @Emilo77)</p>
+<p>Simple game in the style of Mortal Combat. Two players fight each other by using dashes. It is the 1 v 1 version, so far it is possible to play on a one computer.</p>
+<p>Bevy</p>
+<h2 id="rusty-dungeon">Rusty dungeon</h2>
+<p><a href="https://github.com/Rusty-Studios/rusty-dungeon">GitHub</a></p>
+<p>Barbara Rosiak (GitHub: @barosiak, email basiarosiak.7@gmail.com), Tomasz Kubica (GitHub: @Tomasz-Kubica, email: tomaszkubica4@gmail.com), Dawid Mędrek (GitHub: @dawidmd)</p>
+<p>A 2D game written using Rust and Bevy Game Engine, in which the player has to shoot and defeat enemies on their way to the final boss, inspired by the Binding of Isaac.</p>
+<p>Bevy</p>
+<p><img src="https://mimuw-jnp2-rust.github.io/lessons/project-showcase/rusty-dungeon.png" alt="" /></p>
+<h2 id="mariomim">MarioMIM</h2>
+<p><a href="https://github.com/KatKlo/rust-MarioMIM">GitHub</a></p>
+<p>Katarzyna Kloc (GitHub: @KatKlo, email: kk429317@students.mimuw.edu.pl, linkedin: https://www.linkedin.com/in/katarzyna-kloc-7a7503209/),
+Patryk Bundyra (GitHub: PBundyra, email: pb429159@students.mimuw.edu.pl, linkedin: https://www.linkedin.com/in/pbundyra/)</p>
+<p>Since the moment CLion has shown us the first segfaults, we wanted to create a computer game inspired by the student’s adventure of pursuing a Computer Science degree. MarioMIM is a platform game whose main goal is to... get a degree. We’ve implemented a game inspired by Super Mario Bros, but in the special University of Warsaw edition. In order to overcome bugs, the student can strengthen himself by drinking coffee or learning the best programming language in the world - Rust.</p>
+<p>Bevy, Rapier, Kira</p>
+<p><img src="https://mimuw-jnp2-rust.github.io/lessons/project-showcase/fail-menu.png" alt="" />
+<img src="https://mimuw-jnp2-rust.github.io/lessons/project-showcase/game.png" alt="" /></p>
+<h2 id="sendino">Sendino</h2>
+<p><a href="https://github.com/grzenow4/project-sendino">GitHub</a></p>
+<p>Grzegorz Nowakowski (Github: @grzenow4, email: g.nowakowski@student.uw.edu.pl) with @izmael7 on Github</p>
+<p>One room chat application with client-server model of communication. Many users can communicate at one time.</p>
+<p>Tokio, serde, crossterm</p>
+<h2 id="chatter">Chatter</h2>
+<p><a href="https://github.com/kfernandez31/JNP2-Chatter">GitHub</a></p>
+<p>Kacper Kramarz-Fernandez (GitHub: @kfernandez31, email: kacper.fernandez@gmail.com),
+Jan Zembowicz (GitHub: @JWZ1996, email: janzembowicz@gmail.com)</p>
+<p>Chatter is a simple multi-room command-line chat application that uses a two-protocol (HTTP + WS) communication style for high-efficiency.</p>
+<p>Tokio, Warp, Serde, Hyper, among others</p>
+
+
+    </div>
+  </div>
+
+  <div class="prev-link">
+    
+    
+  </div>
+
+  <div class="next-link">
+    
+    
+  </div>
+</div>
+
+
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/elasticlunr.min.js"></script>
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/search_index.en.js"></script>
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/book.js"></script>
+
+</body>
+
+</html>

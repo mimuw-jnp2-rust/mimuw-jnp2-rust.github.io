@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Rust course</title>
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://mimuw-jnp2-rust.github.io/book.css">
+  
+
+  
+  
+</head>
+
+<body>
+<div class="menu">
+  
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="https://mimuw-jnp2-rust.github.io">Home</a></li>
+      
+        
+        
+        
+          
+          <li >
+            
+            <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;">
+              
+              List of lessons
+            </a>
+            
+              <ul>
+                
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;00-organizational&#x2F;">
+                        [2025-10-02]
+                        
+                        Organizational lesson
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;01-introduction&#x2F;">
+                        [2024-10-02]
+                        
+                        Introduction to Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;02-ownership&#x2F;">
+                        [2025-10-09]
+                        
+                        Ownership Model
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;03-data-types&#x2F;">
+                        [2025-10-16]
+                        
+                        Data Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2022-10-31]
+                          
+                          Feedback #1
+                        </span>
+                        <span class="upcoming-note">Available 2022-10-31</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;05-types-reasoning&#x2F;">
+                        [2025-10-23]
+                        
+                        Reasoning About Types
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;06-closures-iterators&#x2F;">
+                        [2025-10-30]
+                        
+                        Closures and Iterators
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;07-smart-pointers&#x2F;">
+                        [2025-11-06]
+                        
+                        Smart Pointers
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Feedback #2
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;09-concurrency&#x2F;">
+                        [2025-11-19]
+                        
+                        Fearless concurrency
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;10-design-patterns&#x2F;">
+                        [2025-11-26]
+                        
+                        Design patterns
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;11-async-1&#x2F;">
+                        [2025-12-03]
+                        
+                        Async: Part 1
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                      
+                    
+                  
+                  
+                    <li class="upcoming">
+                      <span class="upcoming-content">
+                        <span class="upcoming-title">
+                          [2029-01-01]
+                          
+                          Project feedback
+                        </span>
+                        <span class="upcoming-note">Available 2029-01-01</span>
+                      </span>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;13-async-2&#x2F;">
+                        [2025-12-10]
+                        
+                        Async: Part 2
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;14-macros-1&#x2F;">
+                        [2025-12-17]
+                        
+                        Macros: Part 1 (declarative)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;15-macros-2&#x2F;">
+                        [2026-01-07]
+                        
+                        Macros: Part 2 (procedural)
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li  class="active" >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;16-unsafe&#x2F;">
+                        [2026-01-14]
+                        
+                        Unsafe Rust
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;project-showcase&#x2F;">
+                        [2022-10-17]
+                        
+                        2021L Project showcase
+                      </a>
+                    </li>
+                  
+                
+                  
+                  
+                  
+                    
+                    
+                  
+                  
+                    <li >
+                      <a href="https:&#x2F;&#x2F;mimuw-jnp2-rust.github.io&#x2F;lessons&#x2F;table-of-contents&#x2F;">
+                        [2025-10-05]
+                        
+                        Table of content
+                      </a>
+                    </li>
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  
+  
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+      <span class="search-icon">🔎</span>
+    
+  </div>
+
+  <div class="page__content">
+    
+      <div class="search-container">
+        <input id="search" type="search" placeholder="Search..">
+        <div class="search-results">
+          <div class="search-results__header"></div>
+          <ul class="search-results__items"></ul>
+        </div>
+      </div>
+    
+    <div class="book-content">
+      
+<h1 class="title">Unsafe Rust</h1>
+<p class="subtitle">
+  <strong>2026-01-14</strong> (last edit: 2026-01-14)
+</p>
+<h1 id="unsafe-rust-alter-ego">Unsafe Rust Alter Ego</h1>
+<p>So far, no operation in Rust that we performed could trigger UB (Undefined Behaviour):</p>
+<ul>
+<li>data races were prevented by <em>sharing XOR mutability</em> borrow checker rule;</li>
+<li>use-after-free, dangling references, etc. were prevented by lifetimes &amp; ownership.</li>
+</ul>
+<p>But no respectable, powerful programming language can stand being constrained that much, in such a cage!</p>
+<p>In Rust, <code>unsafe</code> keyworld unleashes the hidden superpowers.</p>
+<h2 id="unsafe-code-superpowers">Unsafe code superpowers</h2>
+<p>Inside a <code>unsafe { ... }</code> block, you can (and normally you can't):</p>
+<ul>
+<li><strong>Dereference a raw pointer,</strong></li>
+<li><strong>Call an unsafe function or method,</strong></li>
+<li>Access or modify a mutable static variable,</li>
+<li>Implement an unsafe trait,</li>
+<li>Access fields of a union.</li>
+</ul>
+<p>The first superpower is the most important. (Efficient) implementation of many data structures would be impossible without ability to use raw pointers, as references don't allow circular dependencies, among other limitations.</p>
+<p>In the following code sample, we show all superpowers of <code>unsafe</code> code:</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#![</span><span style="color:#c82829;">allow</span><span>(unused_assignments)]
+</span><span>#![</span><span style="color:#c82829;">allow</span><span>(unused_variables)]
+</span><span>#![</span><span style="color:#c82829;">allow</span><span>(dead_code)]
+</span><span>
+</span><span style="color:#999999;">/* unsafe superpower 1: dereferencing pointers. */
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">superpower_1</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> x </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">42</span><span>;
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Implicit &amp;T -&gt; *const T conversion.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> raw_ptr: </span><span style="color:#8959a8;">*const i32 </span><span style="color:#3e999f;">= &amp;</span><span>x;
+</span><span>
+</span><span>    </span><span style="color:#999999;">// An old way to directly create a pointer.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> raw_ptr: </span><span style="color:#8959a8;">*const i32 </span><span style="color:#3e999f;">= </span><span>std::ptr::addr_of</span><span style="color:#3e999f;">!</span><span>(x);
+</span><span>
+</span><span>    </span><span style="color:#999999;">// The new way to directly create a pointer.
+</span><span>    </span><span style="color:#8959a8;">let</span><span> raw_ptr: </span><span style="color:#8959a8;">*const i32 </span><span style="color:#3e999f;">= &amp;</span><span>raw </span><span style="color:#8959a8;">const</span><span> x;
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Dereferencing a raw pointer requires an `unsafe` block.
+</span><span>    println!(</span><span style="color:#718c00;">&quot;Value: </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, </span><span style="color:#8959a8;">unsafe </span><span>{ </span><span style="color:#3e999f;">*</span><span>raw_ptr });
+</span><span>}
+</span><span>
+</span><span style="color:#999999;">/* unsafe superpower 2: calling an unsafe function. */
+</span><span style="color:#8959a8;">unsafe fn </span><span style="color:#4271ae;">unsafe_function</span><span>() {
+</span><span>    println!(</span><span style="color:#718c00;">&quot;This is an unsafe function!&quot;</span><span>);
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">superpower_2</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">unsafe </span><span>{
+</span><span>        </span><span style="color:#999999;">// Calling an unsafe function.
+</span><span>        </span><span style="color:#4271ae;">unsafe_function</span><span>();
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#999999;">/* unsafe superpower 3: Accessing or modifying mutable static variable.
+</span><span style="color:#999999;"> * It is unsafe because it can lead to data races if accessed concurrently.
+</span><span style="color:#999999;"> * */
+</span><span>
+</span><span style="color:#8959a8;">static mut </span><span style="color:#666969;">COUNTER</span><span>: </span><span style="color:#8959a8;">i32 </span><span style="color:#3e999f;">= </span><span style="color:#f5871f;">0</span><span>;
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">increment_counter</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">unsafe </span><span>{
+</span><span>        </span><span style="color:#999999;">// Accessing and modifying a mutable static variable
+</span><span>        </span><span style="color:#666969;">COUNTER </span><span style="color:#3e999f;">+= </span><span style="color:#f5871f;">1</span><span>;
+</span><span>        println!(</span><span style="color:#718c00;">&quot;Counter: </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, </span><span style="color:#666969;">COUNTER</span><span>);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">superpower_3</span><span>() {
+</span><span>    </span><span style="color:#999999;">// This would cause UB: a data race.
+</span><span>    </span><span style="color:#999999;">// std::thread::spawn(increment_counter);
+</span><span>    </span><span style="color:#4271ae;">increment_counter</span><span>();
+</span><span>}
+</span><span>
+</span><span style="color:#999999;">/* unsafe superpower 4: Implementing unsafe traits.
+</span><span style="color:#999999;"> * It is unsafe because safe code is permitted to cause UB if an unsafe trait
+</span><span style="color:#999999;"> * is implemented for a type that should not implement it (think Send/Sync).
+</span><span style="color:#999999;"> * */
+</span><span>
+</span><span style="color:#8959a8;">unsafe trait </span><span>CanBeAtomic {
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">safe_method_of_unsafe_trait</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#f5871f;">self</span><span>);
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">struct </span><span>MyStruct {
+</span><span>    </span><span style="color:#c82829;">i</span><span>: </span><span style="color:#8959a8;">i32</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">unsafe impl </span><span>UnsafeTrait </span><span style="color:#8959a8;">for </span><span>MyStruct {
+</span><span>    </span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">safe_method_of_unsafe_trait</span><span>(</span><span style="color:#3e999f;">&amp;</span><span style="color:#f5871f;">self</span><span>) {
+</span><span>        println!(</span><span style="color:#718c00;">&quot;Method called!&quot;</span><span>);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">superpower_4</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> my_struct </span><span style="color:#3e999f;">=</span><span> MyStruct { i: </span><span style="color:#f5871f;">42 </span><span>};
+</span><span>
+</span><span>    </span><span style="color:#999999;">// Calling a safe method from an unsafe trait
+</span><span>    my_struct.</span><span style="color:#4271ae;">safe_method_of_unsafe_trait</span><span>();
+</span><span>}
+</span><span>
+</span><span style="color:#999999;">/* unsafe superpower 5: Accessing fields of a union.
+</span><span style="color:#999999;"> * It is unsafe because union can contain a different variant that we try to read,
+</span><span style="color:#999999;"> * so we could read some rubbish value.
+</span><span style="color:#999999;"> * */
+</span><span>
+</span><span>union MyUnion {
+</span><span>    int_value: </span><span style="color:#8959a8;">i32</span><span>,
+</span><span>    bool_value: </span><span style="color:#8959a8;">bool</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">main</span><span>() {
+</span><span>    </span><span style="color:#8959a8;">let</span><span> u </span><span style="color:#3e999f;">=</span><span> MyUnion { int_value: </span><span style="color:#f5871f;">42 </span><span>};
+</span><span>
+</span><span>    </span><span style="color:#8959a8;">unsafe </span><span>{
+</span><span>        </span><span style="color:#999999;">// Accessing a field of a union
+</span><span>        println!(</span><span style="color:#718c00;">&quot;Union value as int: </span><span style="color:#666969;">{}</span><span style="color:#718c00;">&quot;</span><span>, u.int_value);
+</span><span>
+</span><span>        </span><span style="color:#999999;">// Would result in UB, as the compiler may assume that bool is either 0 or 1 underneath.
+</span><span>        </span><span style="color:#999999;">// println!(&quot;Union value as bool: {}&quot;, u.bool_value);
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><sub>(Download the source code for this example: <a href="https://mimuw-jnp2-rust.github.io/lessons/16-unsafe/unsafe_superpowers.rs">unsafe_superpowers.rs</a>)</sub></p>
+<h2 id="safe-code-guarantees">Safe code guarantees</h2>
+<p>The single fundamental property of Safe Rust, <em>the soundness property</em>:</p>
+<p><strong>No matter what, Safe Rust can't cause Undefined Behavior.</strong></p>
+<p>This is a valid <em>sound</em> code, with a safe encapsulation over <code>unsafe</code> interior.</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">index</span><span>(</span><span style="color:#f5871f;">idx</span><span>: </span><span style="color:#8959a8;">usize</span><span>, </span><span style="color:#f5871f;">arr</span><span>: </span><span style="color:#3e999f;">&amp;</span><span>[</span><span style="color:#8959a8;">u8</span><span>]) -&gt; </span><span style="color:#c99e00;">Option</span><span>&lt;</span><span style="color:#8959a8;">u8</span><span>&gt; {
+</span><span>    </span><span style="color:#8959a8;">if</span><span> idx </span><span style="color:#3e999f;">&lt;</span><span> arr.</span><span style="color:#4271ae;">len</span><span>() {
+</span><span>        </span><span style="color:#8959a8;">unsafe </span><span>{
+</span><span>            </span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#3e999f;">*</span><span>arr.</span><span style="color:#4271ae;">get_unchecked</span><span>(idx))
+</span><span>        }
+</span><span>    } </span><span style="color:#8959a8;">else </span><span>{
+</span><span>        </span><span style="color:#c99e00;">None
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p><em>(Un)soundness</em> means that there exists a <em>possibility</em> to trigger UB.
+The following code is <em>unsound</em> (why? what has changed?):</p>
+<pre data-lang="rust" style="background-color:#ffffff;color:#4d4d4c;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#8959a8;">fn </span><span style="color:#4271ae;">index</span><span>(</span><span style="color:#f5871f;">idx</span><span>: </span><span style="color:#8959a8;">usize</span><span>, </span><span style="color:#f5871f;">arr</span><span>: </span><span style="color:#3e999f;">&amp;</span><span>[</span><span style="color:#8959a8;">u8</span><span>]) -&gt; </span><span style="color:#c99e00;">Option</span><span>&lt;</span><span style="color:#8959a8;">u8</span><span>&gt; {
+</span><span>    </span><span style="color:#8959a8;">if</span><span> idx </span><span style="color:#3e999f;">&lt;=</span><span> arr.</span><span style="color:#4271ae;">len</span><span>() {
+</span><span>        </span><span style="color:#8959a8;">unsafe </span><span>{
+</span><span>            </span><span style="color:#c99e00;">Some</span><span>(</span><span style="color:#3e999f;">*</span><span>arr.</span><span style="color:#4271ae;">get_unchecked</span><span>(idx))
+</span><span>        }
+</span><span>    } </span><span style="color:#8959a8;">else </span><span>{
+</span><span>        </span><span style="color:#c99e00;">None
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>But we only changed safe code! This shows that <code>unsafe</code> is unfortunately not perfectly scoped and isolated. We need to be extra careful when writing <code>unsafe</code> code.</p>
+<h2 id="reading">Reading</h2>
+<ul>
+<li>
+<p><a href="https://doc.rust-lang.org/book/ch19-01-unsafe-rust.html">The Book, Chapter 19.1</a></p>
+</li>
+<li>
+<p><a href="https://effective-rust.com/unsafe.html">Effective Rust - avoid writing unsafe code</a> - reminds that most of the "necessary" <code>unsafe</code> code is already implemented.</p>
+</li>
+<li>
+<p><a href="https://doc.rust-lang.org/nomicon/">The Rustonomicon</a>, especially chapter 1 <em>(Meet Safe and Unsafe)</em></p>
+</li>
+<li>
+<p><a href="https://www.reddit.com/r/rust/comments/16i8lo2/how_unpleasant_is_unsafe_rust/">How unpleasant is Unsafe Rust?</a></p>
+</li>
+<li>
+<p><a href="https://taesoo.kim/pubs/2021/bae:rudra.pdf">RUDRA: Finding Memory Safety Bugs in Rust at the Ecosystem Scale</a> - automatic static analyzer to find 3 most frequent subtle bugs in <code>unsafe</code> code:</p>
+<ol>
+<li>panic (unwind) safety bug (analogous to exception-handling guarantees in C++),</li>
+<li>higher-order safety invariant (assuming certain properties of the type that the generic is instantiated with that are not guaranteed by the type system, e.g., <em>purity</em>),</li>
+<li>propagating Send/Sync in Generic Types (implementing Send/Sync unconditionally for T, even if T contains non-Send/non-Sync types inside).</li>
+</ol>
+<p><strong>RUDRA found 264 previously unknown memory-safety bugs in 145 packages on crates.io!!!</strong></p>
+<p>Is Rust really a safe language...?</p>
+<p>Only transitively. <em>Safe Rust</em> is sound iff <code>unsafe</code> code called by it is sound too.</p>
+</li>
+</ul>
+
+
+    </div>
+  </div>
+
+  <div class="prev-link">
+    
+    
+  </div>
+
+  <div class="next-link">
+    
+    
+  </div>
+</div>
+
+
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/elasticlunr.min.js"></script>
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/search_index.en.js"></script>
+  
+  <script type="text/javascript" src="https://mimuw-jnp2-rust.github.io/book.js"></script>
+
+</body>
+
+</html>
