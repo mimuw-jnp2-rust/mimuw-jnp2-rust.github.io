@@ -8,7 +8,7 @@ lesson_date = 2034-10-02
 
 ![Logo](https://raw.githubusercontent.com/rust-lang/rust-artwork/refs/heads/master/logo/rust-logo-blk.svg)
 
-# A language empowering everyone to build reliable and efficient software.
+# A language empowering everyone to build reliable and efficient software
 
 ([There's also an unofficial "rustacean" logo.](https://rustacean.net/))
 
@@ -19,7 +19,9 @@ lesson_date = 2034-10-02
 - It is ergonomic and pleasant to use (static typing, expressive type system, helpful compiler
   warnings)
 - It
-  is [loved by programmers](https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-programming-scripting-and-markup-languages)
+  is [continuously](https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-programming-scripting-and-markup-languages)
+  [loved](https://survey.stackoverflow.co/2023/#section-admired-and-desired-programming-scripting-and-markup-languages)
+  [programmers](https://survey.stackoverflow.co/2025/technology#admired-and-desired-da-language-language-desire-admire).
 - It provides excellent tooling
 
 ## To discuss during class:
