@@ -1,9 +1,9 @@
 +++
 title = "Async: Part 2"
-date = 2025-12-09
+date = 2035-12-09
 weight = 1
 [extra]
-lesson_date = 2025-12-10
+lesson_date = 2035-12-10
 +++
 
 ## Reinventing futures
