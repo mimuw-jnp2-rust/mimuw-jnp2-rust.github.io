@@ -1,9 +1,9 @@
 +++
 title = "Macros: Part 2 (procedural)"
-date = 2026-01-07
+date = 2036-01-07
 weight = 1
 [extra]
-lesson_date = 2026-01-07
+lesson_date = 2036-01-07
 +++
 
 ## Obligatory reading

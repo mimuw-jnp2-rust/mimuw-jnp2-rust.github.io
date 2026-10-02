@@ -1,9 +1,9 @@
 +++
 title = "Design patterns"
-date = 2025-11-25
+date = 2035-11-25
 weight = 1
 [extra]
-lesson_date = 2025-11-26
+lesson_date = 2035-11-26
 +++
 
 ## Object-oriented programming and Rust

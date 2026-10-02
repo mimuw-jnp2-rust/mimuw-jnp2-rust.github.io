@@ -1,9 +1,9 @@
 +++
 title = "Smart Pointers"
-date = 2025-11-06
+date = 2035-11-06
 weight = 1
 [extra]
-lesson_date = 2025-11-06
+lesson_date = 2035-11-06
 +++
 
 # Working with the heap

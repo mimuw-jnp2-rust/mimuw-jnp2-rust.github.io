@@ -1,9 +1,9 @@
 +++
 title = "Ownership Model"
-date = 2025-10-08
+date = 2035-10-08
 weight = 1
 [extra]
-lesson_date = 2025-10-09
+lesson_date = 2035-10-09
 +++
 
 ## Why all the fuss?

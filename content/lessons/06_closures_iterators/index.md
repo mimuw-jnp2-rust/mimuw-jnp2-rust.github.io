@@ -1,9 +1,9 @@
 +++
 title = "Closures and Iterators"
-date = 2025-10-30
+date = 2035-10-30
 weight = 1
 [extra]
-lesson_date = 2025-10-30
+lesson_date = 2035-10-30
 +++
 
 # Closures
