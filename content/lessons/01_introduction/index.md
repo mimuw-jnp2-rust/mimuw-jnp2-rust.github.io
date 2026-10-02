@@ -20,7 +20,7 @@ lesson_date = 2034-10-02
   warnings)
 - It
   is [continuously](https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-programming-scripting-and-markup-languages)
-  [loved](https://survey.stackoverflow.co/2023/#section-admired-and-desired-programming-scripting-and-markup-languages)
+  [loved](https://survey.stackoverflow.co/2023/#section-admired-and-desired-programming-scripting-and-markup-languages) by
   [programmers](https://survey.stackoverflow.co/2025/technology#admired-and-desired-da-language-language-desire-admire).
 - It provides excellent tooling
 
