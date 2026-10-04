@@ -52,7 +52,9 @@ The additional work might be:
 - Contributing to a selected Rust open-source library.
 - Contributing to this course's materials.
 
-## Big project deadlines
+## Big project grading
+
+### Deadlines
 
 The deadlines for the big project (not to be confused with separate deadlines for the small projects) are set to the start of your class.
 If you have a class on Wednesday at 12:15 and the project deadline is 2026-11-04 - 2026-11-05, then your deadline is 2026-11-05, 12:15.
@@ -61,6 +63,14 @@ If you have a class on Wednesday at 12:15 and the project deadline is 2026-11-04
 2. 2026-11-12 - 2026-11-13: Final project ideas should be accepted by now.
 3. 2026-12-16 - 2026-12-17: Deadline for submitting the project.
 4. 2027-01-13 - 2027-01-14: Deadline for **optional** submission of the corrected version of the project, if settled so with the lab teacher after the first submission had significant flaws.
+
+### LLM rules
+
+- You can use LLM at any stage of the project.
+- You must declare how you used AI in the project.
+
+We will use the same data collection as described in [small task rules](#no-llms), to ensure correctness of your AI usage declarations.
+This work history will not influence the point you receive for this project.
 
 ## Small tasks grading
 
@@ -73,6 +83,13 @@ The deadlines are strict. After a deadline passes, we will publish our requireme
 - The code must be written on your own, **without any AI/LLM code generation**.
 - The task must **not** be fed to LLMs for any help.
 - In general, **you must not use LLMs for any part of solving those tasks**.
+
+We will make attempts to ensure those rules are followed. To do so, we will collect a history of your work as a snapshots of the files you work on.
+This data will be collected automatically through cargo tooling and stored in the same repository on a separate branch.
+It will be synced with upstream whenever you push any of your branches.
+Collected history of your will be used only to ensure that you follow the course rules.
+Since this is new change, at a later moment we may ask you for additional permissions to improve the detection process or your opinion on this approach.
+Any such requests will be fully optional, and such information will not impact your grade in any negative way.
 
 ### Gaining points
 
