@@ -70,7 +70,7 @@ If you have a class on Wednesday at 12:15 and the project deadline is 2026-11-04
 - You must declare how you used AI in the project.
 
 We will use the same data collection as described in [small task rules](#no-llms), to ensure correctness of your AI usage declarations.
-This work history will not influence the point you receive for this project.
+This work history will not influence the points you receive for this project.
 
 ## Small tasks grading
 
@@ -87,7 +87,7 @@ The deadlines are strict. After a deadline passes, we will publish our requireme
 We will make attempts to ensure those rules are followed. To do so, we will collect a history of your work as a snapshots of the files you work on.
 This data will be collected automatically through cargo tooling and stored in the same repository on a separate branch.
 It will be synced with upstream whenever you push any of your branches.
-Collected history of your will be used only to ensure that you follow the course rules.
+Collected history of your work will be used only to ensure that you follow the course rules.
 Since this is new change, at a later moment we may ask you for additional permissions to improve the detection process or your opinion on this approach.
 Any such requests will be fully optional, and such information will not impact your grade in any negative way.
 
