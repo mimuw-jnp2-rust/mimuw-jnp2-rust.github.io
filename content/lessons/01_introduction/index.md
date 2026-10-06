@@ -119,7 +119,7 @@ Even if you don't end up using Rust, learning it expands your horizons:
 
 ## Test assignment (not graded)
 
-Click [here](https://classroom.github.com/a/l3iF_TJU)
+Enter your gitlab username on [the form](https://forms.gle/M7uuaouC8wyq9zwm8).
 
 ## Obligatory reading
 
