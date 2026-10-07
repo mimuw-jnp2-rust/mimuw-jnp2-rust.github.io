@@ -1,9 +1,9 @@
 +++
 title = "Introduction to Rust"
-date = 2026-10-07
+date = 2026-10-06
 weight = 1
 [extra]
-lesson_date = 2026-10-07
+lesson_date = 2026-10-06
 +++
 
 ![Logo](https://raw.githubusercontent.com/rust-lang/rust-artwork/refs/heads/master/logo/rust-logo-blk.svg)
