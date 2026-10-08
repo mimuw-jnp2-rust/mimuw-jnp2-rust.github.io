@@ -18,22 +18,37 @@ Our learning/teaching materials are going to be:
 
 ## Final grade
 
-- 1/3 of the grade is based on small tasks.
-  - There will be 9 tasks.
-  - Each task will be graded on a scale of 0 to 3.
-  - You can get up to 24 points from the small tasks. It means that it is enough to do 8 tasks with a score of 3 points.
-  - You can solve the task between the end of the lesson and strictly before the start of the next lesson. The deadline is different for different lab groups.
-  - Note: we will have 14 (_TODO: verify this_) classes in total, so you can expect a task every week or two.
-- 1/3 of the grade is based on a big project. You can choose a topic yourself, but it must be accepted by us. The project can be done in groups of two (or bigger, if ambitious enough). The grading is as follows:
-  1. Usability - 2 points.
-  2. Usage of Rust functionalities - 3 points.
-  3. Programming challenges - 3 points.
-  4. Size of project - 1 point.
-  5. Quality of code - 1 point.
+There are 72 points to gain in total.
 
-  To score high on `Usability`, there shouldn't be any issues with running the project (be sure that all commands are running and that we will precisely know when and what to execute to test the project, if needed also try to give some reproduceable environment, e.g. docker). The `Usage of Rust functionalities` forces you to use harder features/bigger Rust libraries (async, wasm, gui, testing, macros, etc). The `Programming challenges` just means whether it was straightforward code that is simple to write, or something that required effort/thought/debugging. The `Size of project` just means how much features there are in the project, and how much meaningful code there is. If we don't have much comments about design of the code and there isn't any issues with readability, then `Quality of code` will be high.
+### Small Tasks
 
-- 1/3 of the grade is based on the final exam. The exam will be done in the lab, with no access to any notes or the Internet. The scope of the exam will be covered by the lessons, including obligatory reading. The difficulty of exam questions is going to vary, with easier questions to verify basic knowledge and harder questions to verify deeper insight.
+1/3 of the grade (24 points) is based on small tasks.
+
+- There will be 9 tasks.
+- Each task will be graded on a scale of 0 to 3.
+- You can get up to 24 points from the small tasks. It means that it is enough to do 8 tasks with a score of 3 points.
+- You can solve the task between the end of the lesson and strictly before the start of the next lesson. The deadline is different for different lab groups.
+- Note: we will have 14 (_TODO: verify this_) classes in total, so you can expect a task every week or two.
+
+### Big Project
+
+1/3 of the grade (24 points) is based on a big project. You can choose a topic yourself, but it must be accepted by us. The project can be done in groups of two (or bigger, if ambitious enough). The grading is as follows:
+
+1. Usability - 2 points.
+2. Usage of Rust functionalities - 3 points.
+3. Programming challenges - 3 points.
+4. Size of project - 1 point.
+5. Quality of code - 1 point.
+
+To score high on `Usability`, there shouldn't be any issues with running the project (be sure that all commands are running and that we will precisely know when and what to execute to test the project, if needed also try to give some reproduceable environment, e.g. docker). The `Usage of Rust functionalities` forces you to use harder features/bigger Rust libraries (async, wasm, gui, testing, macros, etc). The `Programming challenges` just means whether it was straightforward code that is simple to write, or something that required effort/thought/debugging. The `Size of project` just means how much features there are in the project, and how much meaningful code there is. If we don't have much comments about design of the code and there isn't any issues with readability, then `Quality of code` will be high.
+
+### Final Exam
+
+1/3 of the grade (24 points) is based on the final exam.
+
+- The exam will be done in the lab, with no access to any notes or the Internet.
+- The scope of the exam will be covered by the lessons, including obligatory reading.
+- The difficulty of exam questions is going to vary, with easier questions to verify basic knowledge and harder questions to verify deeper insight.
 
 ### Additional requirements to pass
 
@@ -42,7 +57,7 @@ Our learning/teaching materials are going to be:
 
 ### Passing threshold
 
-- We guarantee that gaining >=60% of all points + satisfying the above requirements will be enough to pass.
+- We guarantee that gaining >=60% of all points (44 points) + satisfying the above requirements will be enough to pass.
 - We might lower the passing threshold if we believe it's necessary.
 
 In specific, individual cases, it is possible to raise the grade by doing additional work, but it has to be agreed by us beforehand and it should be not easier than going through the standard path.
