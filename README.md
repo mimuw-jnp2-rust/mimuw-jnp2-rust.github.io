@@ -1,4 +1,4 @@
-# JNP 2: Rust
+# MIMUW Rust Course
 
 This repository uses [Zola](https://www.getzola.org/documentation/getting-started/installation/) to generate static websites. Requires zola version 0.15.3.
 
