@@ -1,9 +1,9 @@
 +++
 title = "Ownership Model"
-date = 2035-10-08
+date = 2026-10-14
 weight = 1
 [extra]
-lesson_date = 2035-10-09
+lesson_date = 2026-10-14
 +++
 
 ## Why all the fuss?
@@ -157,7 +157,7 @@ There are a few important things to note here:
 
 A good question to ask. Copying primitives is cheap. And it's not convenient for the programmer to have to always write `.clone()` after every primitive. If we take a look at the error from the previous example:
 
-```
+```txt
 move occurs because `s` has type `String`, which does not implement the `Copy` trait`
 ```
 
@@ -266,7 +266,7 @@ fn main() {
 
 Fortunately for us (and our poor friend just wanting to read), the compiler steps in and doesn't let us do that, printing the following message:
 
-```
+```text
 error[E0502]: cannot borrow `book` as mutable because it is also borrowed as immutable
   --> src/main.rs:14:14
    |
@@ -308,7 +308,7 @@ fn dangle() -> &String {
 
 we will get an adequate error:
 
-```
+```txt
 error[E0106]: missing lifetime specifier
  --> src/main.rs:5:16
   |
@@ -412,11 +412,9 @@ fn main() {
 
 ### Assignment 1 (graded)
 
-[ordering in Van Binh](https://classroom.github.com/a/ih0mIzmM)
+ordering in Van Binh. Individual repositories will be created on faculty Gitlab.
 
-Deadline: group-specific.
+Deadline:
 
-Grading:
-
-- 2 points for passing tests, `cargo fmt` and `cargo clippy`,
-- 1 point for manual code inspection ("code quality").
+- Wednesday group: 19.10, 23:59.
+- Thursday group: 20.10, 23:59.
