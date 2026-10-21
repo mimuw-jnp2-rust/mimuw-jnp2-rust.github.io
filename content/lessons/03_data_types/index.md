@@ -1,9 +1,9 @@
 +++
 title = "Data Types"
-date = 2035-10-15
+date = 2026-10-21
 weight = 1
 [extra]
-lesson_date = 2035-10-16
+lesson_date = 2026-10-21
 +++
 
 ## Aggregating data
@@ -147,6 +147,9 @@ So how do we handle situations which can fail? That's where the `Result` type co
 
 ## Assignment 2 (graded)
 
-[Communications](https://classroom.github.com/a/s7wihiAa)
+Communications. Individual repositories will be created on faculty Gitlab.
 
-Deadline: per-group.
+Deadline:
+
+- Wednesday group: 27.10, 23:59.
+- Thursday group: 28.10, 23:59.
