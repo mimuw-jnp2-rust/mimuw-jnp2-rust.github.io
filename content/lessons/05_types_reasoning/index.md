@@ -1,9 +1,9 @@
 +++
 title = "Reasoning About Types"
-date = 2035-10-20
+date = 2026-10-28
 weight = 1
 [extra]
-lesson_date = 2035-10-23
+lesson_date = 2026-10-28
 +++
 
 # Type traits
@@ -369,6 +369,9 @@ Example:
 
 ## Assignment 3 (graded)
 
-[Passage Pathing](https://classroom.github.com/a/XVoSKs94)
+Passage Pathing. Individual repositories will be created on faculty Gitlab.
 
-Deadline: per-group.
+Deadline:
+
+- Wednesday group: 03.11, 23:59.
+- Thursday group: 04.11, 23:59.
