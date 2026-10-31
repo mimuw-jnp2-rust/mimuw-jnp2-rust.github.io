@@ -34,11 +34,11 @@ There are 72 points to gain in total.
 
 1/3 of the grade (24 points) is based on a big project. You can choose a topic yourself, but it must be accepted by us. The project can be done in groups of two (or bigger, if ambitious enough). The grading is as follows:
 
-1. Usability - 2 points.
-2. Usage of Rust functionalities - 3 points.
-3. Programming challenges - 3 points.
-4. Size of project - 1 point.
-5. Quality of code - 1 point.
+1. Usability - 5 points.
+2. Usage of Rust functionalities - 7 points.
+3. Programming challenges - 6 points.
+4. Size of project - 3 points.
+5. Quality of code - 3 points.
 
 To score high on `Usability`, there shouldn't be any issues with running the project (be sure that all commands are running and that we will precisely know when and what to execute to test the project, if needed also try to give some reproduceable environment, e.g. docker). The `Usage of Rust functionalities` forces you to use harder features/bigger Rust libraries (async, wasm, gui, testing, macros, etc). The `Programming challenges` just means whether it was straightforward code that is simple to write, or something that required effort/thought/debugging. The `Size of project` just means how much features there are in the project, and how much meaningful code there is. If we don't have much comments about design of the code and there isn't any issues with readability, then `Quality of code` will be high.
 
