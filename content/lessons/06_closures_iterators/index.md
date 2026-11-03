@@ -1,9 +1,9 @@
 +++
 title = "Closures and Iterators"
-date = 2035-10-30
+date = 2026-11-04
 weight = 1
 [extra]
-lesson_date = 2035-10-30
+lesson_date = 2026-11-04
 +++
 
 # Closures
@@ -59,7 +59,7 @@ The following code sample shows how one can use closures as `dyn Trait` objects,
 ## Examples
 
 We'll go through the examples from [Rust by Example](https://doc.rust-lang.org/rust-by-example/fn/closures.html).
-More examples will be seen when working with iterators.
+More examples will be seen when working with iterators.add_one_v2
 
 # Iterators
 
@@ -93,6 +93,9 @@ We'll go through the official [docs](https://doc.rust-lang.org/stable/std/iter/)
 
 ## Assignment 4 (graded)
 
-[Lazy](https://classroom.github.com/a/dU8ig4tA)
+Lazy. Individual repositories will be created on faculty Gitlab.
 
-Deadline: per-group.
+Deadline:
+
+- Wednesday group: 10.11, 23:59. Reminder: next week classes are on Friday. This weak deadline remains unchanged.
+- Thursday group: 11.11, 23:59.
