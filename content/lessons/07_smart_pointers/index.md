@@ -1,9 +1,9 @@
 +++
 title = "Smart Pointers"
-date = 2035-11-06
+date = 2026-11-12
 weight = 1
 [extra]
-lesson_date = 2035-11-06
+lesson_date = 2026-11-12
 +++
 
 # Working with the heap
@@ -73,6 +73,9 @@ When storing an object on a heap, however, we can use it as a `dyn` object seaml
 
 ## Assignment 5 (graded)
 
-[Corporations](https://classroom.github.com/a/AhZZWwGD)
+Corporations. Individual repositories will be created on faculty Gitlab.
 
-Deadline: per-group.
+Deadline:
+
+- Both groups: 18.11 (Wednesday), 23:59.
+
