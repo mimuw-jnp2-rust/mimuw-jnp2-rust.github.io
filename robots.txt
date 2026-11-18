@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: https://mimuw-jnp2-rust.github.io/sitemap.xml
