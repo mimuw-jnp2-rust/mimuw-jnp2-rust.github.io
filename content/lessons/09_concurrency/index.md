@@ -1,9 +1,9 @@
 +++
 title = "Fearless concurrency"
-date = 2035-11-19
+date = 2026-11-18
 weight = 1
 [extra]
-lesson_date = 2035-11-19
+lesson_date = 2026-11-18
 +++
 
 ## Parallelism vs Concurrency
@@ -218,7 +218,9 @@ Why do that? Because thread synchronization is hard! [Rust prevents data races](
 
 # Assignment
 
-[This week's assignment](https://classroom.github.com/a/O2IG8iaI) is to write a "distributed" calculator.
+This week's assignment is to write a "distributed" calculator. Individual repositories will be created on faculty Gitlab.
+
 You should base your solution on the [final project from the book](https://doc.rust-lang.org/stable/book/ch21-00-final-project-a-web-server.html)
 
-NOTE: You have two weeks for this assignment. There isn't any new assignment next week.
+- Wednesday group: 24.11, 23:59.
+- Thursday group: 25.11, 23:59.
